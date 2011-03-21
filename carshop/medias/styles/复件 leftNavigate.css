@@ -1,0 +1,20 @@
+
+
+.leftNavigate {display:block; position:relative;background:url(/medias/images/buttom_line1.jpg);background-position:center bottom;background-repeat:no-repeat;font:12px Verdana, Arial, Helvetica;width:208px;margin:0;}
+
+.leftNavigate .upperdd {border-bottom:none; background: url(/medias/images/blu_bullets.gif) no-repeat scroll 0 7px; padding:5px 0 5px 15px;}
+
+
+.leftNavigate div a, .leftNavigate a:active, .leftNavigate a:visited {display:block; padding:5px 0 5px 15px; color:#000000; text-decoration:none; width:193px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;}
+
+.leftNavigate div a:hover {color:#000000;background:#BCDAFF url(/medias/images/blu_bullets.gif) no-repeat scroll 0 7px; padding-left:15px; width:208px;}
+
+.leftNavigate dd {position:absolute; top:0; width:195px; display:none; background:#ffffff; padding:0; margin:0;}
+
+.leftNavigate ul {width:195px; list-style:none;background:#BCDAFF;padding:0; margin:0;}
+
+.leftNavigate ul a, .leftNavigate ul:active, .leftNavigate ul a:visited {display:block; padding:5px 0 5px 15px; color:#000000; text-decoration:none; width:179px;border-bottom:none; background: url(/medias/images/blu_bullets2.gif) no-repeat scroll 0 7px transparent;}
+
+.leftNavigate ul a:hover {width:179px;color:#000000;background:#D7E7FE url(/medias/images/blu_bullets2.gif) no-repeat scroll 0 7px; padding-left:15px;}
+
+.leftNavigate ul li {border-bottom:1px solid #909090}
