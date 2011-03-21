@@ -1,10 +1,8 @@
 from django.conf.urls.defaults import *
-from django.views.generic import list_detail
-from carshop.system import views as system
+from carshop.system.views import *
 
 
 urlpatterns = patterns('',	
-	(r'^left_navi.html$', list_detail.object_list, system.getLeftNavi()),
 
 
 )

@@ -156,12 +156,12 @@ function SetTopSearchText()
 											{% for menuItem in leftNavigate %}
 											<dl class="leftNavigate">
 												<div id="titler{{ menuItem.firstMenu.parameter_sequence }}">
-													<a href="{{ menuItem.firstMenu.parameter_value }}" id="ddheader{{ menuItem.firstMenu.parameter_sequence }}" class="upperdd" onmouseover="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',1)" onmouseout="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',-1)">{{ menuItem.firstMenu.parameter_display_name }}</a>
+													<a href="/product/{{ menuItem.firstMenu.id }}.html" id="ddheader{{ menuItem.firstMenu.parameter_sequence }}" class="upperdd" onmouseover="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',1)" onmouseout="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',-1)">{{ menuItem.firstMenu.parameter_display_name }}</a>
 												</div>
 												<dd id="ddcontent{{ menuItem.firstMenu.parameter_sequence }}" onmouseover="cancelHide('{{ menuItem.firstMenu.parameter_sequence }}')" onmouseout="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',-1)">
 													<ul>
 													{% for secondMenu in menuItem.secondMenu %}
-													<li><a href="{{ secondMenu.parameter_value }}">{{ secondMenu.parameter_display_name }}</a></li>
+													<li><a href="/product/{{ menuItem.firstMenu.id }}/{{ secondMenu.id }}.html">{{ secondMenu.parameter_display_name }}</a></li>
 													{% endfor %}
 													</ul>
 												</dd>

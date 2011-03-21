@@ -1,9 +1,9 @@
 from django.conf.urls.defaults import *
-from carshop.customer import views as customer
+from carshop.customer.views import *
 
 urlpatterns = patterns('',	
-	(r'^money.html$', customer.view_that_asks_for_money),
-	(r'^buy.html$', customer.buy_my_item),
+	(r'^money.html$', view_that_asks_for_money),
+	(r'^buy.html$', buy_my_item),
 
 
 )

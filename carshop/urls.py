@@ -16,7 +16,7 @@ urlpatterns = patterns('',
 	(r'^medias/(?P<path>.*)$', 'django.views.static.serve',{'document_root': './medias'}),
     (r'^admin/', include(admin.site.urls)),
 	(r'^customer/', include('carshop.customer.urls')),
-	
+	(r'^product/', include('carshop.product.urls')),
 	
 	
 	(r'^index.html$', 'carshop.system.views.index'),
