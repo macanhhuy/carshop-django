@@ -17,12 +17,4 @@ class Manufacturer(models.Model):  # 制造商标
 		
 		
 		
-class ManufacturerAdmin(admin.ModelAdmin):
-	
-	list_display = ('manufacturer_name', 'iso_date_created',)
-	
-	def iso_date_created(self, obj):
-		return obj.date_created.isoformat()
-	iso_date_created.short_description = 'Date Created'
-	
-admin.site.register(Manufacturer, ManufacturerAdmin)
+
