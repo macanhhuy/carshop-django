@@ -16,47 +16,47 @@ VALUES
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Seat Covers', 'url', '', 1, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Seat Covers', 'url', '', 1, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Car Covers', 'url', '', 2, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Car Covers', 'url', '', 2, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Dash Covers', 'url', '', 3, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Dash Covers', 'url', '', 3, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Floormats', 'url', '', 4, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Floormats', 'url', '', 4, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Sunshield', 'url', '', 5, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Custom Sunshield', 'url', '', 5, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Universal Vehicle Covers', 'url', '', 6, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Universal Vehicle Covers', 'url', '', 6, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Universal Floormats', 'url', '', 7, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Universal Floormats', 'url', '', 7, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Motorcycle ATV Covers', 'url', '', 8, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Motorcycle ATV Covers', 'url', '', 8, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_parent_id`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Misc Auto Accessories', 'url', '', 9, 1, now(), (select l.id from language AS l where l.language_code='en'));
+	('product_first_menu', (select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1), 'Misc Auto Accessories', 'url', '', 9, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	"""], sql_down=["""
 	CREATE TABLE TMPXXXXX AS select p.id from parameter AS p where p.parameter_code='product_menu_root' limit 0,1;

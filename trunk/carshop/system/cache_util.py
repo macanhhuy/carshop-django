@@ -1,21 +1,21 @@
 # coding: utf-8
 
 from django.core.cache import cache
-from carshop.system.models import Language
+from carshop.system.models import Parameter
 
 def getAllLanguages():
 	languages = cache.get('languages')
 	if languages == None:
-		languages = Language.objects.all().order_by('language_sequence')
+		languages = Parameter.objects.filter(parameter_code='language', parameter_is_valid='1').order_by('parameter_sequence')
 		cache.set('languages', languages)
 	return languages
 
 def getLanguage(language_code=None, language_sequence=None):
 	languages = getAllLanguages()
 	for language in languages:
-		if language.language_code == language_code:
+		if language.parameter_value == language_code:
 			return language
-		if language.language_sequence == language_sequence:
+		if language.parameter_sequence == language_sequence:
 			return language
 	return None
 			

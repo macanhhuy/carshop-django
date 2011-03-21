@@ -4,33 +4,33 @@ from django.core.cache import cache
 from django.contrib import admin
 from django.contrib.auth import models as auth
 
-class Language(models.Model): # 语言表
-	language_name = models.CharField(max_length=32) # 语言名
-	language_code = models.CharField(max_length=10) # 语言代码
-	language_image = models.CharField(max_length=64, blank=True, null=True) # 语言图片(LOGO)？
-	language_directory = models.CharField(max_length=32, blank=True, null=True) # ？
-	language_sequence = models.IntegerField(blank=True, null=True) # 排序
+#class Language(models.Model): # 语言表
+#	language_name = models.CharField(max_length=32) # 语言名
+#	language_code = models.CharField(max_length=10) # 语言代码
+#	language_image = models.CharField(max_length=64, blank=True, null=True) # 语言图片(LOGO)？
+#	language_directory = models.CharField(max_length=32, blank=True, null=True) # ？
+#	language_sequence = models.IntegerField(blank=True, null=True) # 排序
 	
-	def __unicode__(self):
-		return self.language_name;
+#	def __unicode__(self):
+#		return self.language_name;
 	
-	class Meta:
-		db_table = "language"
+#	class Meta:
+#		db_table = "language"
 
 class Parameter(models.Model): # 基础参数表
 
 	VALID_CHOICES = ((1, u' 启用 '), (0, u' 禁用 '), (2, u' 其他 '))
 
-	id = models.AutoField('id', primary_key=True)
+	#id = models.AutoField('id', primary_key=True)
 	parameter_code = models.CharField(max_length=40) # 参数代码
-	parameter_parent = models.ForeignKey('self', 'id', null=True) # 父
+	parameter_parent = models.ForeignKey('self', related_name='parent', blank=True, null=True) # 父
 	parameter_display_name = models.CharField(max_length=40) # 参数显示名
 	parameter_value = models.CharField(max_length=40) # 参数值
 	parameter_desc = models.CharField(max_length=50, blank=True, null=True) # 参数描述
 	parameter_sequence = models.IntegerField() # 参数顺序
 	parameter_is_valid = models.IntegerField(default=1, choices=VALID_CHOICES) # 参数是否有效
 	time_parameter_created = models.DateTimeField() # 创建时间
-	parameter_language = models.ForeignKey(Language, blank=True, null=True) # 语言
+	parameter_language = models.ForeignKey('self', 'id', related_name='language', blank=True, null=True) # 语言
 	
 	def __unicode__(self):
 		return self.parameter_display_name
@@ -111,7 +111,7 @@ class LayoutBox(models.Model): # 模板配置表
 #class Discount(models.Model)
 
 class MetaTagCategoryDescription(models.Model): # 类别meta标签描述表
-	language = models.ForeignKey(Language) # 标签对应语言
+	language = models.ForeignKey(Parameter) # 标签对应语言
 	metatag_title = models.CharField(max_length=255) # 标签标题
 	metatag_keyword = models.TextField() # 标签关键字
 	metatag_desc = models.TextField(blank=True, null=True) # 标签描述
@@ -120,7 +120,7 @@ class MetaTagCategoryDescription(models.Model): # 类别meta标签描述表
 		db_table = "mattag_category_description"
 	
 class MetaTagProductDescription(models.Model): # 产品meta标签描述表
-	language = models.ForeignKey(Language) # 标签名
+	language = models.ForeignKey(Parameter) # 标签名
 	metatag_title = models.CharField(max_length=255) # 标签标题
 	metatag_keyword = models.TextField() # 标签关键字
 	metatag_desc = models.TextField(blank=True, null=True) # 标签描述
