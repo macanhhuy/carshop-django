@@ -9,7 +9,6 @@ logger = logging.getLogger(__name__)
 def getLeftNavigate(request):
 	language = request.LANGUAGE_CODE.upper()
 	leftNavigate = cache.get('LEFT_NAVIGATE_' + language)
-	print('LEFT_NAVIGATE_' + language)
 	if leftNavigate == None: # 无指定语言类型菜单缓存则进行数据库加载
 		languageObj = getLanguage(language_code=language)
 		if not languageObj:
