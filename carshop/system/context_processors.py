@@ -20,7 +20,7 @@ def getLeftNavigate(request):
 		firstMenu = Parameter.objects.filter(parameter_code='product_first_menu', parameter_is_valid=1, parameter_language=languageObj.id).order_by('parameter_sequence')
 		if not firstMenu:
 			logger.info('======无 ' + language + ' 纵向菜单项,返回默认菜单')
-			leftNavigate = cache.get('LEFT_NAVIGATE_' + getLanguage(language_sequence=1).language_code)		
+			leftNavigate = cache.get('LEFT_NAVIGATE_' + getLanguage(language_sequence=1).parameter_value)		
 			if not leftNavigate:
 				return {}
 			else:
@@ -53,7 +53,7 @@ def getTopNavigate(request):
 		topNavigate = Parameter.objects.filter(parameter_code='top_navigate', parameter_is_valid=1, parameter_language=languageObj.id).order_by('parameter_sequence')
 		if not topNavigate:
 			logger.info('======无 ' + language + ' 菜单项,返回默认菜单')
-			topNavigate = cache.get('TOP_NAVIGATE_' + getLanguage(language_sequence=1).language_code)
+			topNavigate = cache.get('TOP_NAVIGATE_' + getLanguage(language_sequence=1).parameter_value)
 			if not topNavigate:
 				return {}
 			else:

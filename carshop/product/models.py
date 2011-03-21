@@ -46,7 +46,7 @@ class ProductAttribute(models.Model): # 产品属性表
 
 class ProductDescription(models.Model): # 产品描述表
 	product = models.ForeignKey(Product) # 产品ID
-	language = models.ForeignKey(system.Language) # 语言ID
+	language = models.ForeignKey(system.Parameter) # 语言ID
 	product_name = models.CharField(max_length=64) # 产品名
 	product_desc = models.TextField(blank=True, null=True) # 产品描述
 	product_url = models.CharField(max_length=255, blank=True, null=True) # 产品URL

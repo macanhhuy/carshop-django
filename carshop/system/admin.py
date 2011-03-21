@@ -27,7 +27,12 @@ class ParameterAdmin(admin.ModelAdmin):
 		return obj.time_parameter_created.isoformat(' ')
 	iso_time_created.short_description = 'Time Created'
 	
-	pass
+	def formfield_for_foreignkey(self, db_field, request, **kwargs):
+		if db_field.name == "parameter_language":
+			kwargs["queryset"] = Parameter.objects.filter(parameter_code='language')
+			return db_field.formfield(**kwargs)
+		
+		return super(ParameterAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
 	
 class BulletinAdmin(admin.ModelAdmin):
@@ -45,8 +50,8 @@ class EmailArchiveAdmin(admin.ModelAdmin):
 class LayoutBoxAdmin(admin.ModelAdmin):
 	pass
 	
-class LanguageAdmin(admin.ModelAdmin):
-	pass
+#class LanguageAdmin(admin.ModelAdmin):
+#	pass
 	
 class MetaTagCategoryDescriptionAdmin(admin.ModelAdmin):
 	pass
@@ -60,6 +65,6 @@ admin.site.register(AddressFormat, AddressFormatAdmin)
 admin.site.register(Country, CountryAdmin)
 admin.site.register(EmailArchive, EmailArchiveAdmin)
 admin.site.register(LayoutBox, LayoutBoxAdmin)
-admin.site.register(Language, LanguageAdmin)
+#admin.site.register(Language, LanguageAdmin)
 admin.site.register(MetaTagCategoryDescription, MetaTagCategoryDescriptionAdmin)
 admin.site.register(MetaTagProductDescription, MetaTagProductDescriptionAdmin)

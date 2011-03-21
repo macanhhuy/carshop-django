@@ -5,7 +5,6 @@ from carshop.product.models import *
 
 class ProductAdmin(admin.ModelAdmin):
 	
-
 	fieldsets = (
 		(None, {
             'fields':('product_name', 'product_image_url', 'product_manufacturer', 'product_type', 'product_price', 'product_count',)
@@ -22,7 +21,6 @@ class ProductAdmin(admin.ModelAdmin):
 		
 		return super(ProductAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
-	
 	
 	
 class ProductAttributeAdmin(admin.ModelAdmin):
