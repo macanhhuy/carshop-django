@@ -7,5 +7,10 @@ from carshop.system.models import Parameter
 from carshop.system.context_processors import getLeftNavigate
 
 def index(request):
-	return render_to_response('index.html', {}, RequestContext(request))#, processors=[getLeftNavigate]))
+	return render_to_response('index.html', findTopProduct(), RequestContext(request))#, processors=[getLeftNavigate]))
 
+
+def findTopProduct():
+	return {}
+	
+	

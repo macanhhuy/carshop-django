@@ -12,7 +12,7 @@
 
 .leftNavigate ul {width:195px; list-style:none;background:#BCDAFF;padding:0; margin:0;}
 
-.leftNavigate ul a, .leftNavigate ul a:active, .leftNavigate ul a:visited {display:block; padding:5px 0 5px 15px; color:#000000; text-decoration:none; width:179px;border-bottom:none; background: url(/medias/images/blu_bullets2.gif) no-repeat scroll 0 9px ;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:normal}
+.leftNavigate ul a, .leftNavigate ul a:active, .leftNavigate ul a:visited {display:block; padding:5px 0 5px 13px; color:#000000; text-decoration:none; width:179px;border-bottom:none; background: url(/medias/images/blu_bullets2.gif) no-repeat scroll 0 9px ;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:normal}
 
 .leftNavigate ul a:hover {color:#000000;background:#D7E7FE url(/medias/images/blu_bullets2.gif) no-repeat scroll 0 9px; padding-left:15px;}
 
