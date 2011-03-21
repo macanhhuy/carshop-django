@@ -3,7 +3,6 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from paypal.pro.views import PayPalPro
 from carshop.paypal.standard.forms import PayPalPaymentsForm
-from carshop.system.context_processors import getLeftNavigate
 
 def view_that_asks_for_money(request):
 	
@@ -18,7 +17,7 @@ def view_that_asks_for_money(request):
 	}
 	
 	form = PayPalPaymentsForm(initial= paypal_dict)
-	context = RequestContext(request, {'form': form})#, processors=[getLeftNavigate])
+	context = RequestContext(request, {'form': form})
 	
 	return render_to_response('money.html', context)
 
