@@ -1,0 +1,1301 @@
+<html>
+	<head>
+		<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+	</head>
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head id="Head1">
+		<title>{% block title%} {% endblock %}</title> {% block meta %}{% endblock %}
+		<link href="/medias/styles/style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+	
+		<table width="979" cellpadding="0" cellspacing="0" border="0"
+			align="center">
+			<tr>
+				<td>
+					<!--Header Starts Here-->
+					<div id="PageHeader1_pnlHeader"
+						onKeyPress="javascript:return WebForm_FireDefaultButton(event, 'PageHeader1_imgGo')">
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="58%">
+									<a href="default.aspx.htm"><img
+											src="/medias/images/covers4auto_logo.jpg" alt="Covers4Auto"
+											style="float: left;" />
+									</a>
+									<div class="phonebg">
+										<b class="phone_t"> 1-888-234-6530 </b>
+										<br />
+										<b class="time"> Mon-Fri 8 am to 5 pm </b>
+									</div>
+								</td>
+								<td width="42%">
+									<ul class="order">
+										<li>
+											<a href="Cart.aspx.htm"> <img
+													src="/medias/images/shopping_cart.jpg" alt="Shopping Cart" />
+											</a>
+										</li>
+										<li>
+											<a
+												href="CustomerLogin.aspx-ReturnUrl=-account-myorder.aspx.htm">
+												<img src="/medias/images/order_status.jpg"
+													alt="Order Status" />
+											</a>
+										</li>
+										<li>
+											<a
+												href="javascript:if(confirm('https://www.covers4auto.com/Account/AccountInfo.aspx  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='https://www.covers4auto.com/Account/AccountInfo.aspx'">
+												<img src="/medias/images/my_account.jpg" alt="My Account" />
+											</a>
+										</li>
+										<li>
+											<input type="image" name="PageHeader1$imgBtnLogin"
+												id="PageHeader1_imgBtnLogin" title="Click here to login"
+												src="/medias/images/login.jpg" alt="Click here to login"
+												style="border-width: 0px;" />
+										</li>
+									</ul>
+
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<br />
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr class="line_blu" valign="top">
+											<td width="75%">
+												<ul class="head_link">
+													<li>
+														<a href="default.aspx.htm"
+															tppabs="http://www.covers4auto.com/default.aspx">Home</a>
+													</li>
+													<li>
+														<a href="shopbyvehicle.html"
+															tppabs="http://www.covers4auto.com/shopbyvehicle.html">View
+															All Make</a>
+													</li>
+													<li>
+														<a href="BestSellers.aspx.htm"
+															tppabs="http://www.covers4auto.com/BestSellers.aspx">Best
+															Sellers</a>
+													</li>
+													<li>
+														<a href="ClearanceSale.aspx.htm"
+															tppabs="http://www.covers4auto.com/ClearanceSale.aspx">Clearance
+															Sale</a>
+													</li>
+													<li>
+														<a href="NewArrivals.aspx.htm"
+															tppabs="http://www.covers4auto.com/NewArrivals.aspx">New
+															Arrivals</a>
+													</li>
+													<li>
+														<a href="Categories.aspx.htm"
+															tppabs="http://www.covers4auto.com/Categories.aspx">Products</a>
+													</li>
+													<li>
+														<a href="GiftCertificate.aspx.htm"
+															tppabs="https://www.covers4auto.com/GiftCertificate.aspx">Gift
+															Certificate</a>
+													</li>
+													<li>
+														<a href="FAQ.aspx.htm"
+															tppabs="http://www.covers4auto.com/FAQ.aspx">FAQ'S</a>
+													</li>
+													<li>
+														<a href="ContactUs.aspx.htm"
+															tppabs="http://www.covers4auto.com/ContactUs.aspx">Contact</a>
+													</li>
+												</ul>
+											</td>
+											<td width="25%">
+												<!--Search Starts Here-->
+												<table width="100%">
+													<tr>
+														<td height="18" width="60">
+														</td>
+														<td width="172">
+															<span class="search_box"> <input
+																	name="PageHeader1$txtSearchBox" type="text"
+																	value="Enter search text" id="PageHeader1_txtSearchBox"
+																	title="Enter search text" class="box1"
+																	onMouseOver="ClearSearchText();"
+																	onBlur="SetTopSearchText();" />
+															</span>
+															<span id="PageHeader1_RequiredFieldValidator1"
+																class="error" style="color: Red; display: none;"></span>
+														</td>
+														<td>
+															<input type="image" name="PageHeader1$imgGo"
+																id="PageHeader1_imgGo" src="/medias/images/go.jpg"
+																alt="Click here to search"
+																onClick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;PageHeader1$imgGo&quot;, &quot;&quot;, true, &quot;search&quot;, &quot;&quot;, false, false))"
+																style="border-width: 0px;" />
+														</td>
+													</tr>
+												</table>
+												<!--Search ends Here-->
+												<div id="PageHeader1_ValidationSummary1"
+													style="color: Red; display: none;">
+
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+
+					</div>
+					<script language="javascript" type="text/javascript">
+var txtserch='PageHeader1_txtSearchBox';
+function ClearSearchText()
+{
+	
+	if(document.getElementById(txtserch).value=="Enter search text")
+	{
+		document.getElementById(txtserch).value='';
+		document.getElementById(txtserch).focus();
+	}
+}
+function SetTopSearchText()
+{
+	if(document.getElementById(txtserch).value=='')
+	{
+		document.getElementById(txtserch).value='Enter search text';	
+	}
+}
+function CheckBlank()
+{
+	
+	var Value=document.getElementById(txtserch).value;
+	if(Value=="Enter search text")
+	{
+		return false;
+	}	
+	else
+	{
+		return true;
+		
+	}
+}
+
+</script>
+
+					<!--Header ends Here-->
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">
+					<!--body Starts Here-->
+					<table width="945" border="0" cellspacing="0" cellpadding="0"
+						align="center">
+						<tr>
+							<td width="220" valign="top" class="left_bg">
+
+								<table width="220" cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td>
+											<img src="/medias/images/our_products.jpg" alt="" width="220"
+												height="42" />
+										</td>
+									</tr>
+									<tr>
+										<td valign="top" class="border_blu">
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl00_pnlMainMenu">
+														<a href="custom_seat_covers.aspx.htm">Custom Seat
+															Covers</a>
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl00_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+												<ul class="sublinks">
+													<li>
+														<a href="neoprene_seat_covers.aspx.htm">Neoprene Seat
+															Covers</a>
+													</li>
+													<li>
+														<a href="genuine_leather_seat_covers.aspx.htm">Genuine
+															Leather Seat Covers</a>
+													</li>
+													<li>
+														<a href="ballistic_seat_covers.aspx.htm">Ballistic
+															Seat Covers</a>
+													</li>
+													<li>
+														<a href="poly_cotton_seat_covers.aspx.htm">Poly Cotton
+															Seat Covers</a>
+													</li>
+													<li>
+														<a href="saddle_blanket_seat_covers.aspx.htm">Saddle
+															Blanket Seat Covers</a>
+													</li>
+													<li>
+														<a href="spacer_mesh_seat_covers.aspx.htm">Spacer Mesh
+															Seat Covers</a>
+													</li>
+													<li>
+														<a href="tweed_seat_covers.aspx.htm">Tweed Seat Covers</a>
+													</li>
+													<li>
+														<a href="velour_seat_covers.aspx.htm">Velour Seat
+															Covers</a>
+													</li>
+													<li>
+														<a href="neosupreme_seat_covers.aspx.htm">NeoSupreme
+															Seat Covers</a>
+													</li>
+													<li>
+														<a href="leatherette_seat_covers.aspx.htm">Leatherette
+															Seat Covers</a>
+													</li>
+												</ul>
+											</div>
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl01_pnlMainMenu">
+														<a href="custom_car_covers.aspx.htm">Custom Car Covers</a>
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl01_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+												<ul class="sublinks">
+													<li>
+														<a href="stormproof_car_covers.aspx.htm"> Stormproof
+															Car Covers </a>
+													</li>
+													<li>
+														<a href="stretch_satin_car_covers.aspx.htm"> Stretch
+															Satin Car Covers </a>
+													</li>
+													<li>
+														<a href="autobody_armor_car_covers.aspx.htm"> Autobody
+															Armor Car Covers </a>
+													</li>
+													<li>
+														<a href="silverguard_car_covers.aspx.htm"> Silverguard
+															Car Covers </a>
+													</li>
+													<li>
+														<a href="silverguard_plus_car_covers.aspx.htm">
+															Silverguard Plus Car Covers </a>
+													</li>
+													<li>
+														<a href="coverbond-4_car_covers.aspx.htm"> Coverbond-4
+															Car Covers </a>
+													</li>
+													<li>
+														<a href="triguard_car_covers.aspx.htm"> Triguard Car
+															Covers </a>
+													</li>
+													<li>
+														<a href="mosom_plus_car_covers.aspx.htm"> Mosom Plus
+															Car Covers </a>
+													</li>
+
+												</ul>
+											</div>
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl02_pnlMainMenu">
+
+														<a href="custom_dash_covers.aspx.htm">
+															Custom Dash Covers </a>
+
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl02_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+
+												<ul class="sublinks">
+
+													<li>
+														<a href="poly_carpet_dashboard_covers.aspx.htm">
+															Poly Carpet Dashboard Covers </a>
+													</li>
+
+													<li>
+														<a href="velour_dashboard_covers.aspx.htm">
+															Velour Dashboard Covers </a>
+													</li>
+
+													<li>
+														<a href="molded_carpet_dashboard_covers.aspx.htm">
+															Molded Carpet Dashboard Covers </a>
+													</li>
+
+												</ul>
+
+											</div>
+
+
+
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl03_pnlMainMenu">
+
+														<a href="custom_floormats.aspx.htm">
+															Custom Floormats </a>
+
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl03_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+
+												<ul class="sublinks">
+
+													<li>
+														<a href="nylon_carpet_floor_mats.aspx.htm">
+															Nylon Carpet Floor Mats </a>
+													</li>
+
+													<li>
+														<a href="clear_nibbed__floor_mats.aspx.htm">
+															Clear Nibbed Floor Mats </a>
+													</li>
+
+													<li>
+														<a href="carpet-70_ounce_floor_mats.aspx.htm">
+															Carpet-70 Ounce Floor Mats </a>
+													</li>
+
+												</ul>
+
+											</div>
+
+
+
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl04_pnlMainMenu">
+
+														<a href="custom_sunshield.aspx.htm">
+															Custom Sunshield </a>
+
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl04_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+
+												<ul class="sublinks">
+
+													<li>
+														<a href="reflective_mylar_foam_sunshield.aspx.htm">
+															Reflective Mylar Foam Sunshield </a>
+													</li>
+
+												</ul>
+
+											</div>
+
+
+
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl05_pnlMainMenu">
+
+														<a href="universal_vehicle_covers.aspx.htm">
+															Universal Vehicle Covers </a>
+
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl05_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+
+												<ul class="sublinks">
+
+													<li>
+														<a href="universal_car_covers.aspx.htm">
+															Universal Car Covers </a>
+													</li>
+
+												</ul>
+
+											</div>
+
+
+
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl06_pnlMainMenu">
+
+														<a href="universal_floormats.aspx.htm">
+															Universal Floormats </a>
+
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl06_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+
+												<ul class="sublinks">
+
+													<li>
+														<a href="universal_floormats-1.aspx.htm">
+															Universal Floormats </a>
+													</li>
+
+												</ul>
+
+											</div>
+
+
+
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl07_pnlMainMenu">
+
+														<a href="motorcycle_atv_covers.aspx.htm">
+															Motorcycle ATV Covers </a>
+
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl07_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+
+												<ul class="sublinks">
+
+													<li>
+														<a href="motorcycle_covers.aspx.htm">
+															Motorcycle Covers </a>
+													</li>
+
+													<li>
+														<a href="atv_covers.aspx.htm">
+															ATV Covers </a>
+													</li>
+
+												</ul>
+
+											</div>
+
+
+
+											<ul class="link_black">
+												<li>
+													<div id="Left1_rptCategory_ctl08_pnlMainMenu">
+
+														<a href="misc_auto_accessories.aspx.htm">
+															Misc Auto Accessories </a>
+
+													</div>
+												</li>
+											</ul>
+											<div id="Left1_rptCategory_ctl08_pnlSubMenue"
+												class="popupMenu" style="width: 195px;">
+
+												<ul class="sublinks">
+
+													<li>
+														<a href="custom_masks_hood_protectors.aspx.htm">
+															Custom Masks Hood Protectors </a>
+													</li>
+
+													<li>
+														<a href="car_cover_storage_bags.aspx.htm">
+															Car Cover Storage Bags </a>
+													</li>
+
+													<li>
+														<a href="interior_accessories.aspx.htm">
+															Interior Accessories </a>
+													</li>
+
+												</ul>
+
+											</div>
+
+
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<br />
+											<img src="/medias/images/authorizedlogo.gif"
+												alt="Coverking Authorized Dealer" />
+											<br />
+											<br />
+										</td>
+									</tr>
+									<!-- New Row added in phase 2-->
+									<tr>
+										<td align="center" valign="top">
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<table width="80" border="0" cellpadding="2" cellspacing="0"
+												title="Click to Verify - This site chose Thawte SSL for secure e-commerce and confidential communications.">
+												<tr>
+
+													<td width="80" align="center" valign="top">
+														<script type="text/javascript"
+															src="getthawteseal-host_name=www.covers4auto.com&size=L&lang=en">
+														</script>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											<table width="218px" border="0" cellspacing="0"
+												cellpadding="0">
+												<tr>
+													<td valign="top">
+
+
+														<table width="100%" cellpadding="0" cellspacing="0"
+															border="0">
+															<tr>
+																<td align="left">
+																	<img src="/medias/images/getfreenewsletter.jpg"
+																		alt="Get Free Newsletter" />
+																	<br />
+																	<span class="text_ship2">Get special offers and
+																		updates</span>
+																</td>
+															</tr>
+															<tr>
+																<td align="center" height="55">
+																	<div id="Left1_SignupNewsletter1_UpdateProgress1"
+																		style="display: none;">
+
+																		<div class="pleasewait"
+																			style="z-index: 150; position: absolute; top: 450px;">
+																			<img src="/medias/images/loader.gif" alt="" />
+																		</div>
+
+																	</div>
+																	<div id="Left1_SignupNewsletter1_upNewsletter">
+
+
+																		<div id="Left1_SignupNewsletter1_pnlNewsletter"
+																			onKeyPress="javascript:return WebForm_FireDefaultButton(event, 'Left1_SignupNewsletter1_imgBtnNewsletter')">
+
+
+																			<input name="Left1$SignupNewsletter1$txtNewsletter"
+																				type="text" value="Enter email address"
+																				id="Left1_SignupNewsletter1_txtNewsletter"
+																				title="Enter your email address to signup for free newsletter"
+																				class="box1" onMouseOver="ClearText();"
+																				onBlur="SetSearchText();" />
+
+																			<div style="margin-top: 2px;">
+																				<input type="image"
+																					name="Left1$SignupNewsletter1$imgBtnNewsletter"
+																					id="Left1_SignupNewsletter1_imgBtnNewsletter"
+																					src="/medias/images/submit.gif"
+																					alt="Click here to signup free newsletter."
+																					onClick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Left1$SignupNewsletter1$imgBtnNewsletter&quot;, &quot;&quot;, true, &quot;newsletter&quot;, &quot;&quot;, false, false))"
+																					style="border-width: 0px;" />
+																			</div>
+																			<span class="text_ship2"> <span
+																				id="Left1_SignupNewsletter1_RequiredFieldValidator1"
+																				class="error" style="color: Red; display: none;"></span>
+																				<span
+																				id="Left1_SignupNewsletter1_RegularExpressionValidator1"
+																				style="color: Red; display: none;">Please
+																					enter valid email address.</span>
+																			</span>
+																			<div id="Left1_SignupNewsletter1_ValidationSummary1"
+																				style="color: Red; display: none;">
+
+																			</div>
+																			<p class="text5">
+																				<span id="Left1_SignupNewsletter1_lblNewsLetter"
+																					class="error" style="font-weight: bold;"></span>
+																			</p>
+
+
+																		</div>
+
+																	</div>
+																</td>
+															</tr>
+														</table>
+
+
+														<script language="javascript" type="text/javascript">
+var txtNewsletter='Left1_SignupNewsletter1_txtNewsletter';
+function ClearText()
+{
+	
+	if(document.getElementById(txtNewsletter).value=="Enter email address")
+	{
+		document.getElementById(txtNewsletter).value='';
+		document.getElementById(txtNewsletter).focus();
+		
+	}
+	
+	
+}
+function SetSearchText()
+{
+	if(document.getElementById(txtNewsletter).value=='')
+	{
+		document.getElementById(txtNewsletter).value='Enter email address';	
+	}
+}
+</script>
+														<img src="/medias/images/border9.jpg" alt="" />
+													</td>
+												</tr>
+												<tr>
+													<td valign="top">
+														<a href="ShippingPolicy.aspx.htm">
+															<img src="/medias/images/freeshipping2_img.jpg"
+																alt="Free Shipping" border="0" />
+														</a>
+														<br />
+														<p class="text5">
+															Free Shipping throughout USA
+															<br />
+															<br />
+															<span class="text_ship">Contact for International
+																Shipping</span>
+															<a href="ShippingPolicy.aspx.htm">
+																<img src="/medias/images/arrowl.gif"
+																	alt="" />
+															</a>
+														</p>
+														<img src="/medias/images/border9.jpg"
+															alt="" />
+													</td>
+												</tr>
+												<tr>
+													<td valign="top">
+														<a href="ReturnPolicy.aspx.htm">
+															<img src="/medias/images/easy_returns2.jpg"
+																alt="Easy Returns" />
+														</a>
+														<br />
+														<p class="text5">
+															Very easy and fair return policy
+															<a href="ReturnPolicy.aspx.htm">
+																<img src="/medias/images/arrowl.gif"
+																	alt="" />
+															</a>
+														</p>
+														<img src="/medias/images/border9.jpg" alt="" />
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+									<tr>
+										<td align="center">
+											<br />
+
+											<img src="/medias/images/satisfactions.jpg"
+												alt="100% Satisfaction" />
+										</td>
+									</tr>
+									<tr>
+										<td align="center" class="border_blu" valign="top"
+											style="height: 112px;">
+											<br />
+
+											<!-- liveperson starts here -->
+											<!-- <a id="_lpChatBtn" href='https://server.iad.liveperson.net/hc/10436059/?cmd=file&file=visitorWantsToChat&site=10436059&byhref=1&imageUrl=https://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a'
+                target='chat10436059' onclick="lpButtonCTTUrl = 'https://server.iad.liveperson.net/hc/10436059/?cmd=file&file=visitorWantsToChat&site=10436059&imageUrl=https://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a&referrer='+escape(document.location); lpButtonCTTUrl = (typeof(lpAppendVisitorCookies) != 'undefined' ? lpAppendVisitorCookies(lpButtonCTTUrl) : lpButtonCTTUrl); window.open(lpButtonCTTUrl,'chat10436059','width=475,height=400,resizable=yes');return false;">
+                <img src='https://server.iad.liveperson.net/hc/10436059/?cmd=repstate&site=10436059&channel=web&&ver=1&imageUrl=https://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a'
+                    name='hcIcon' border="0" alt="" /></a> <a href='https://solutions.liveperson.com/customer-service/?site=10436059&domain=server.iad.liveperson.net&origin=chatbutton'
+                        target='_blank' onclick="javascript:window.open('https://solutions.liveperson.com/customer-service/?site=10436059&domain=server.iad.liveperson.net&origin=chatbutton&referrer='+escape(document.location));return false;">
+                        <img src='https://server.iad.liveperson.net/hc/10436059/?cmd=rating&site=10436059&type=indicator'
+                            name='hcRating' alt='Customer Service Rating by LivePerson' border="0" /></a>
+							-->
+											<!-- liveperson Ends here -->
+										</td>
+									</tr>
+								</table>
+								<br />
+
+							</td>
+							<td width="725" valign="top">
+								<!--Middle Starts Here-->
+								<table width="703" border="0" cellspacing="0" cellpadding="0"
+									align="right">
+									<tr>
+										<td valign="top" height="45">
+											<a id="hypFirst" title="Free Shipping &amp; 20% Off"><img
+													title="Free Shipping &amp; 20% Off" src="/medias/images/First.gif"
+													alt="Free Shipping &amp; 20% Off"
+													style="border-width: 0px;" />
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td height="30" valign="top">
+											<a id="hypSecond" title="View All Makes"
+												href="shopbyvehicle.html"><img
+													title="View All Makes" src="/medias/images/Second.gif"
+													alt="View All Makes" style="border-width: 0px;" />
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td height="183" valign="top">
+											<a id="hypThird" title="Custom Car Cover"><img
+													title="Custom Car Cover" src="/medias/images/Third.gif"
+													alt="Custom Car Cover" style="border-width: 0px;" />
+											</a>
+											<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+												codebase="swflash.cab#version=7,0,19,0"
+												width="703" height="174" title="Custom Car Covers">
+												<param name="movie" value="/medias/flash/Third.swf" />
+												<param name="quality" value="high" />
+												<param name="wmode" value="transparent" />
+												<param name="bgcolor" value="000000" />
+												<embed src="/medias/flash/Third.swf"
+													quality="high"
+													pluginspage="http://www.macromedia.com/go/getflashplayer"
+													type="application/x-shockwave-flash" width="703"
+													height="174" wmode="transparent"></embed>
+											</object>
+										</td>
+									</tr>
+									<tr>
+										<td valign="top">
+											<table width="703" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td width="450" rowspan="2" align="left">
+														<a id="hypFourth" title="Best Car Seat Covers Deals"
+															href="custom_seat_covers.aspx.htm"><img
+																title="Best Car Seat Covers Deals" src="/medias/images/Fourth.gif"
+																alt="Best Car Seat Covers Deals"
+																style="border-width: 0px;" />
+														</a>
+													</td>
+													<td width="253" height="77" valign="top">
+														<a id="hypFifth"
+															title="Custom Molded Carpet Dashboard Covers"
+															href="molded_carpet_dashboard_covers.aspx.htm"><img
+																title="Custom Molded Carpet Dashboard Covers"
+																src="/medias/images/Fifth.gif"
+																alt="Custom Molded Carpet Dashboard Covers"
+																style="border-width: 0px;" />
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td valign="top">
+														<a id="hypSixth" title="Coverking Custom Floormats"
+															href="carpet-70_ounce_floor_mats.aspx.htm"><img
+																title="Coverking Custom Floormats" src="/medias/images/Sixth.gif"
+																alt="Coverking Custom Floormats"
+																style="border-width: 0px;" />
+														</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td height="5">
+										</td>
+									</tr>
+									<tr>
+										<td height="209" valign="top">
+											<table width="703" border="0" cellpadding="0" cellspacing="0">
+												<tr valign="top">
+													<td width="100%" class="border">
+														<div id="FeaturedProduct1_upFeaturedProduct">
+
+															<table width="99%" border="0" cellpadding="0"
+																cellspacing="0">
+																<tr>
+																	<td valign="Top">
+																		<!-- RepeaterColumns increased to 3 in phase 2-->
+																		<table id="FeaturedProduct1_dlFeaturedProduct"
+																			cellspacing="0" border="0"
+																			style="width: 100%; border-collapse: collapse;">
+																			<tr>
+																				<td valign="top" style="width: 33%;">
+																					<table width="96%" border="0" cellspacing="0"
+																						cellpadding="4">
+
+																						<tr valign="top">
+																							<td align="center">
+																								<a href="neoprene_seat_covers.aspx.htm"><img
+																										src="/medias/images/4.jpg"
+																										border="0" alt='Neoprene Seat Covers' />
+																								</a>
+																							</td>
+
+																						</tr>
+																						<tr>
+																							<td class="link_text" align="center">
+																								<a href="neoprene_seat_covers.aspx.htm">
+																									Neoprene Seat Covers </a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="2" class="desc">
+																								<ul>
+																									<li>
+																										Made of waterproof CR-grade Neoprene material
+																									</li>
+																									<li>
+																										Multi-layered construction for greater
+																										protection and comfort
+																									</li>
+																									<li>
+																										Custom tailored car seat covers for a perfect
+																										fit
+																									</li>
+																									<li>
+																										No additional cost for any kind of seat
+																										provisions.
+																									</li>
+																									<li>
+																										Strong, durable and effective, yet affordable
+																									</li>
+																									<li>
+																										Most suitable for indoor use
+																									</li>
+																									<li>
+																										Backed by one - year warranty
+																									</li>
+																								</ul>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																				<td valign="top" style="width: 33%;">
+																					<table width="96%" border="0" cellspacing="0"
+																						cellpadding="4">
+
+																						<tr valign="top">
+																							<td align="center">
+																								<a href="genuine_leather_seat_covers.aspx.htm"><img
+																										src="/medias/images/26.jpg"
+																										border="0" alt='Genuine Leather Seat Covers' />
+																								</a>
+																							</td>
+
+																						</tr>
+																						<tr>
+																							<td class="link_text" align="center">
+																								<a href="genuine_leather_seat_covers.aspx.htm">
+																									Genuine Leather Seat Covers </a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="2" class="desc">
+																								<ul>
+																									<li>
+																										Made of premium quality Italian leather
+																									</li>
+																									<li>
+																										Excellent for natural look and feel inside
+																										your vehicle
+																									</li>
+																									<li>
+																										Breathable material makes your seats cozy in
+																										winter and cool in hot summer
+																									</li>
+																									<li>
+																										Rigorously tested for 300 hours of UV
+																										weathering
+																									</li>
+																									<li>
+																										Backed by ONE year warranty
+																									</li>
+																								</ul>
+																								<input type="hidden" id="gwProxy" />
+																								<!--Session data-->
+																								<input type="hidden" onClick="jsCall();"
+																									id="jsProxy" />
+																								<div id="refHTML">
+																									&nbsp;
+																								</div>
+																								<input type="hidden" id="gwProxy" />
+																								<!--Session data-->
+																								<input type="hidden" id="jsProxy"
+																									onClick="jsCall();" />
+																								<div id="refHTML">
+																									&nbsp;
+																								</div>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																				<td valign="top" style="width: 33%;">
+																					<table width="96%" border="0" cellspacing="0"
+																						cellpadding="4">
+
+																						<tr valign="top">
+																							<td align="center">
+																								<a href="autobody_armor_car_covers.aspx.htm"><img
+																										src="/medias/images/136.jpg"
+																										border="0" alt='Autobody Armor Car Covers' />
+																								</a>
+																							</td>
+
+																						</tr>
+																						<tr>
+																							<td class="link_text" align="center">
+																								<a href="autobody_armor_car_covers.aspx.htm">
+																									Autobody Armor Car Covers </a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="2" class="desc">
+																								<ul>
+																									<li>
+																										Made of three layers for effective protection:
+																										Top knitted Polyester layer, middle
+																										Thermoplastic Polyurethane film layer, bottom
+																										Polyester felt layer.
+																									</li>
+																									<li>
+																										All Weather Protection.
+																									</li>
+																									<li>
+																										Superb Breathability.
+																									</li>
+																									<li>
+																										Greater UV Protection.
+																									</li>
+																									<li>
+																										Excellent Water Resistance.
+																									</li>
+																									<li>
+																										Backed by FOUR year warranty
+																									</li>
+																								</ul>
+																								<input type="hidden" id="gwProxy">
+																								<!--Session data-->
+																								</input>
+																								<input type="hidden" id="jsProxy"
+																									onClick="jsCall();" />
+																								<div id="refHTML">
+																									&nbsp;
+																								</div>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td valign="top" style="width: 33%;">
+																					<table width="96%" border="0" cellspacing="0"
+																						cellpadding="4">
+
+																						<tr valign="top">
+																							<td align="center">
+																								<a href="stormproof_car_covers.aspx.htm"><img
+																										src="/medias/images/14.jpg"
+																										border="0" alt='Stormproof Car Covers' />
+																								</a>
+																							</td>
+
+																						</tr>
+																						<tr>
+																							<td class="link_text" align="center">
+																								<a href="stormproof_car_covers.aspx.htm">
+																									Stormproof Car Covers </a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="2" class="desc">
+																								<ul>
+																									<li>
+																										Made of high density Polyester ultra-micro
+																										fibers
+																									</li>
+																									<li>
+																										All weather car covers for extreme weather
+																										conditions
+																									</li>
+																									<li>
+																										Unprocessed material provides protection for
+																										extended duration
+																									</li>
+																									<li>
+																										Superb UV resistance and excellent
+																										breathability
+																									</li>
+																									<li>
+																										Backed by a pro-rated, four year warranty
+																									</li>
+																								</ul>
+																								<p>
+																									&nbsp;
+																								</p>
+																								<input type="hidden" id="gwProxy" />
+																								<!--Session data-->
+																								<input type="hidden" onClick="jsCall();"
+																									id="jsProxy" />
+																								<div id="refHTML">
+																									&nbsp;
+																								</div>
+																								<input type="hidden" id="gwProxy">
+																								<!--Session data-->
+																								</input>
+																								<input type="hidden" id="jsProxy"
+																									onClick="jsCall();" />
+																								<div id="refHTML">
+																									&nbsp;
+																								</div>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																				<td valign="top" style="width: 33%;">
+																					<table width="96%" border="0" cellspacing="0"
+																						cellpadding="4">
+
+																						<tr valign="top">
+																							<td align="center">
+																								<a
+																									href="molded_carpet_dashboard_covers.aspx.htm"><img
+																										src="/medias/images/153.jpg"
+																										border="0"
+																										alt='Molded Carpet Dashboard Covers' />
+																								</a>
+																							</td>
+
+																						</tr>
+																						<tr>
+																							<td class="link_text" align="center">
+																								<a
+																									href="molded_carpet_dashboard_covers.aspx.htm">
+																									Molded Carpet Dashboard Covers </a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="2" class="desc">
+																								<ul>
+																									<li>
+																										Exceptionally tough dashboard covers with
+																										lifetime warranty
+																									</li>
+																									<li>
+																										Pre-molded using specific thermal process for
+																										snug fitting
+																									</li>
+																									<li>
+																										UV treated for greater UV protection
+																									</li>
+																									<li>
+																										Available in huge array of exciting colors
+																									</li>
+																									<li>
+																										Greater convenience and appealz
+																									</li>
+																									<li>
+																										<span
+																											id="ctl00_ContentPlaceHolder1_lblDescription">
+																										</span>
+																									</li>
+																									<li>
+																										Backed by LIFE TIME warranty
+																									</li>
+																								</ul>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																				<td valign="top" style="width: 33%;">
+																					<table width="96%" border="0" cellspacing="0"
+																						cellpadding="4">
+
+																						<tr valign="top">
+																							<td align="center">
+																								<a href="custom_masks_hood_protectors.aspx.htm"><img
+																										src="/medias/images/219.jpg"
+																										border="0" alt='' />
+																								</a>
+																							</td>
+
+																						</tr>
+																						<tr>
+																							<td class="link_text" align="center">
+																								<a href="custom_masks_hood_protectors.aspx.htm">
+																									Custom Masks Hood Protectors </a>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td colspan="2" class="desc">
+																								<ul>
+																									<li>
+																										Custom made masks and hood protectors provides
+																										perfect covering
+																									</li>
+																									<li>
+																										Soft inner nylon lining for snug fit and
+																										greater finish
+																									</li>
+																									<li>
+																										Effective auto accessory for hassle-free
+																										protection of your car front
+																									</li>
+																									<li>
+																										Rare combination of protection and style.
+																									</li>
+																								</ul>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																	</td>
+																</tr>
+																<tr>
+																	<td valign="Top" align="right">
+
+																	</td>
+																</tr>
+															</table>
+
+														</div>
+
+													</td>
+
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<!--Middle ends Here-->
+							</td>
+						</tr>
+					</table>
+					<!--body ends Here-->
+				</td>
+			</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</table>
+		
+		
+		
+		
+		
+		
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('PageHeader1_ValidationSummary1').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('PageHeader1_ValidationSummary1'));
+}
+
+document.getElementById('Left1_SignupNewsletter1_ValidationSummary1').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('Left1_SignupNewsletter1_ValidationSummary1'));
+}
+Sys.Application.initialize();
+
+document.getElementById('PageHeader1_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('PageHeader1_RequiredFieldValidator1'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl00_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl00_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl00_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl01_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl01_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl01_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl02_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl02_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl02_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl03_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl03_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl03_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl04_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl04_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl04_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl05_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl05_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl05_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl06_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl06_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl06_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl07_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl07_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl07_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.HoverMenuBehavior, {"DynamicServicePath":"default.aspx.htm"/*tpa=http://www.covers4auto.com/default.aspx*/,"HoverCssClass":"popupHover","PopDelay":10,"PopupPosition":4,"id":"Left1_rptCategory_ctl08_HoverMenuExtender1","popupElement":$get("Left1_rptCategory_ctl08_pnlSubMenue")}, null, null, $get("Left1_rptCategory_ctl08_pnlMainMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"Left1_SignupNewsletter1_upNewsletter","displayAfter":500,"dynamicLayout":true}, null, null, $get("Left1_SignupNewsletter1_UpdateProgress1"));
+});
+
+document.getElementById('Left1_SignupNewsletter1_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('Left1_SignupNewsletter1_RequiredFieldValidator1'));
+}
+
+document.getElementById('Left1_SignupNewsletter1_RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('Left1_SignupNewsletter1_RegularExpressionValidator1'));
+}
+//]]>
+</script>	
+		
+		
+		
+		
+	</body>
+</html>
+
+
+

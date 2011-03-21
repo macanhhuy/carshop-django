@@ -1,0 +1,1437 @@
+/* CSS Document */
+
+body {
+  margin:0; padding:0;
+  background:#EEEDED url("/medias/images/body_bg.jpg") repeat-y center top;
+  }
+   
+td {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#2F2B2B;
+   text-decoration:none;
+   }
+   
+.justify
+{
+	text-align:justify;
+}   
+   
+img 
+{
+	border:0;
+}      
+   
+a:hover {
+	color:#666666;
+	}
+	
+h1 
+{
+   background: url("/medias/images/h1_img.jpg") no-repeat 0px 0px;
+   font: 18px Tahoma, Arial, Helvetica, sans-serif;
+   color:#044fa2;
+   padding:3px 0 8px 31px
+   }	
+
+h2 {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:15px;
+   color:#B90000;
+   text-decoration:none;
+   font-weight:bold;
+   }
+   
+  h3 {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:14px;
+   color:#B90000;
+   text-decoration:none;
+   font-weight:bold;
+   }
+   
+.hr1 
+{	
+	border-bottom:1px dashed #d8d8d8;
+	width:80%;
+	height:0px;	
+	}
+
+.hr2 
+{	border-bottom:1px dashed #d8d8d8;
+	width:80%;
+	height:0px;
+}	
+   
+   
+/*Text here*/
+
+.top_link {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#B90000;
+	font-weight:normal;
+	text-decoration:none;
+	}
+
+.text1{
+   font-family: tahoma,arial, verdana ;
+   font-size:11px;
+   color:#000;
+   text-decoration:none;
+   font-weight:normal;
+   text-align:justify;
+   padding:0 7px 0 7px;
+   margin:0;
+   }
+   
+.textb{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#3a3939;
+   font-weight:bold;
+   text-align:right;
+   } 
+   
+ .textb1{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#6b6b6b;
+   font-weight:bold;
+   background-color:#ececec;
+   } 
+   
+.textb2{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:11px;
+   color:#3a3939;
+   font-weight:bold;
+   } 
+
+.textb_blu{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#2a4a70;
+   font-weight:bold;
+   display:block;
+   width:125px;
+   padding:5px 5px;
+   } 
+   
+  .link_p{
+   font:12px Arial, Helvetica, sans-serif;
+   color:#fd1616;
+   text-decoration:underline;
+   background:url("/medias/images/pdf_img.jpg") no-repeat 0 0;
+   padding:0 0 0 22px;
+   }
+
+
+.link_text{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:11px;
+   color:#000;
+   text-decoration:none;
+   font-weight:normal;
+   padding:4px 6px 0 4px;
+   }
+   
+   
+ .link_text a{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#007AA2;
+   text-decoration:underline;
+   font-weight:bold;
+   }
+ 
+ .linkhead1{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#e9442e;
+	font-weight:bold;
+	text-decoration:none;
+   } 
+    
+.text_bg2{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:16px;
+   color:#fb6868;
+   font-weight:bold;
+   background-color:#f2f2f2;
+   }  
+
+.text_blu{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:14px;
+   color:#fb6868;
+   font-weight:bold;
+   } 
+   
+.phone_t {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#306cac;
+	font-style:italic;
+	}
+	
+.time {
+	font-family:tahoma;
+	font-size:11px;
+	color:#3d3d3d;
+	font-weight:bold;
+	}	
+	
+.text_r {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#B90000;
+	font-weight:bold;
+	text-decoration:none;
+	}
+	
+.text_r2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#b90000;
+	font-weight:bold;
+	text-decoration:underline;
+	}
+	
+.text_r12 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#044fa2;
+	font-weight:bold;
+	text-decoration:underline;
+	}
+	
+.text_blu2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#147cbf;
+	font-weight:bold;
+
+	}	
+	
+.text_b2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#147cbf;
+	font-weight:bold;
+	}
+
+.desc ul
+{
+	margin:5px 0 0 0px;
+	padding:5px 0 0 0px;
+}
+
+.desc ul li
+{
+	 background: url("/medias/images/redbul.gif") no-repeat 5px 5px;
+	 list-style-type:none;
+	 margin:0;
+	 padding:0 0 0 15px;
+}		  
+
+.desc p
+{
+	margin:5px 0 0 7px;
+}
+
+.prod_desc
+{
+	margin:5px 0 0 7px;
+}
+
+.prod_desc ul
+{
+	margin:5px 0 0 0px;
+	padding:5px 0 0 0px;
+}
+
+.prod_desc ul li
+{
+	 background: url("/medias/images/redbul.gif") no-repeat 5px 5px;
+	 list-style-type:none;
+	 margin:0;
+	 padding:0 0 0 15px;
+}	
+
+.prod_desc p
+{
+	margin:5px 0 0 0px;
+}
+
+.textbblu {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:15px;
+   color:#217cc9;
+   }	
+
+.textbred {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:15px;
+   color:#b90000;
+   }
+   
+   .text_bluh{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:14px;
+   color:#004795;
+   }
+   
+.textlogo{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:20px;
+   color:#b90000;
+   width:100px;
+   float:left;
+   padding-top:20px;
+   }
+   
+
+/*Link here*/
+
+.pager_link{
+   font:11px verdana;
+   color:#3d3d3d;
+   border:1px solid #b7b7b7;
+   padding:2px 4px 2px 4px;
+   display:block;
+   float:left;
+   margin-right:4px;
+   display:inline;
+   } 
+   
+.pager_act{
+   font:11px verdana;
+   color:#3d3d3d;
+   border:1px solid #bababa;
+   padding:2px 4px 2px 4px;
+   display:block;
+   float:left;
+    margin-right:4px;
+    background-color:#ebebeb;
+    display:inline;
+   }    
+
+ul.list
+{
+	margin:5px 0 0 0;
+	padding:5px 0 0 0;
+	font-family:Arial, Helvetica, sans-serif;
+   font-size:11px;
+   color:#2F2B2B;
+   text-decoration:none;
+}
+
+ul.list li
+{
+	list-style-image:url("/medias/images/arrow.jpg");
+	margin:0 0 0 14px;
+	background-position:top left;
+	line-height:14px;	
+	}
+
+.note_link{
+   font-family: tahoma, arial, verdana;
+   font-size:12px;
+   color:#065DBA;
+   text-decoration:underline;
+   font-weight:normal;
+   padding:2px 0px 4px 25px;
+   background-image:url("/medias/images/ft_img.jpg");
+   background-repeat:no-repeat;
+   background-position:left top;
+   display:none;
+   visibility:hidden;
+   width:100px;
+   }
+
+.readmore{
+   font-family: Tahoma, arial, verdana ;
+   font-size:10px;
+   color:#065DBA;
+   text-decoration:underline;
+   font-weight:normal;
+   padding:0px 2px 0 5px;
+ 	}
+
+.home_link{
+   font-family:verdana, arial, tahoma ;
+   font-size:11px;
+   color:#2F2B2B;
+   text-decoration:underline;
+   font-weight:normal;
+   background-image:url("/medias/images/aero_blu.jpg");
+   background-repeat:no-repeat;
+   background-position:right;
+   padding:4px 10px 4px 8px;
+ 	}
+ 	
+ .link_l{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#2a4a70;
+   text-decoration:underline;
+ 	}
+	
+.link_blu{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:14px;
+   color:#2a4a70;
+   text-decoration:underline;
+   font-weight:bold;
+   padding:0px 2px 4px 0px;
+ 	}	
+ 	
+ .link_blu:hover{
+   text-decoration:none;
+ 	}
+	
+.home_blu{
+   font-family:verdana, arial, tahoma ;
+   font-size:11px;
+   color:#065CB9;
+   text-decoration:none;
+   font-weight:bold;
+   padding:4px 10px 4px 8px;
+ 	}
+	
+.home_blu:hover{
+   font-family:verdana, arial, tahoma ;
+   font-size:11px;
+   color:#AE0000;
+   text-decoration:none;
+   font-weight:bold;
+   padding:4px 10px 4px 8px;
+ 	}
+ 
+ ul.order {
+	margin:0;
+	padding:0px;
+	}
+	
+.order li {
+	list-style:none;
+	padding:0 12px 0 0;
+	float:left;
+	}
+
+
+ul.head_link {
+	margin:3px 0 0 0;
+	padding:3px 0 0 0;
+	}
+	
+ul.head_link li {
+	list-style:none;
+	padding:0;
+	float:left;
+	background-image:url("/medias/images/blu_line.jpg");
+	background-repeat:no-repeat;
+	background-position:right;
+	}
+	
+ul.head_link li a {
+	list-style:none;
+	padding:0 10px 0 11px;
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+	}
+
+.head_link li a:hover {
+	color:#000;
+	border-bottom:2px solid #fcde14;
+	}
+	
+ul.link_black {
+	margin:0 0 0 5px;
+	padding:0 0 0 5px;
+	}
+	
+ul.link_black li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	background-image:url("/medias/images/buttom_line1.jpg");
+	background-repeat:no-repeat;
+	background-position:bottom;
+	}	
+	
+ul.link_black li a {
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#3e3e3e;
+	font-weight:bold;
+	text-decoration:none;
+	background:url("/medias/images/blu_bullets.gif") no-repeat 0px 7px;
+	padding:5px 0 5px 15px;
+	display:block;
+	width:193px;
+	}
+	
+ul.sublinks {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:195px;
+	}
+	
+ul.sublinks li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	background-image:url("/medias/images/none.jpg");
+	background-repeat:no-repeat;
+	background-position:bottom;
+	background-color:#bcdaff;
+	border-bottom:1px solid #909090;
+	}
+	
+ul.sublinks li:hover {
+	background-image:url("/medias/images/scat_hover.jpg");
+	background-repeat:repeat-x;
+	background-position:top left;
+	}		
+	
+ul.sublinks li a {
+    font-family:verdana;
+	font-size:11px;
+	color:#3e3e3e;
+	font-weight:normal;
+	text-decoration:none;
+	background:url("/medias/images/blu_bullets2.gif") no-repeat 5px 10px;
+	padding:5px 0 5px 15px;
+	display:block;
+	width:180px;
+	}
+	
+ul.sublinks li a:hover {
+    color:#8c8686;
+	background: url("/medias/images/blu_bullets2.gif") no-repeat 5px 10px;
+	padding:5px 0 5px 17px;
+	}		
+	
+.grey_link {
+	font: 12px Arial, Helvetica, Verdana, sans-serif;
+	color:#2A4A70;
+	font-weight:normal;
+	text-decoration:none;
+	padding:0 8px 0 5px;
+	}
+	
+.link_red{
+   font-family:Arial;
+   font-size:12px;
+   color:#dc0000;
+   text-decoration:underline;
+   font-weight:normal;
+   padding:0px 4px 0 4px;
+ 	}	
+ 	
+ul.link_faq
+{
+	list-style:none;
+	margin:5px 0 0 0; 
+	padding:5px 0 0 0;
+	width:650px;	
+}
+
+ul.link_faq li
+{
+	margin:5px 20px 5px 0;
+	float:left;
+	}
+	
+ul.link_faq li a
+{
+	font: 12px Arial, Helvetica, sans-serif;
+	text-decoration:underline;
+	background:url("/medias/images/bullets_faq.gif"/*tpa=http://www.covers4auto.com/images/bullets_faq.gif*/) no-repeat 2px 2px;
+	color:#474747;
+	width:280px;
+	display:block;
+	padding:2px 0 2px 20px;
+}
+
+
+ul.slink
+{
+	padding: 0 0 0 40px;
+	margin: 0;
+	list-style:none;
+}
+
+ul.slink li
+{
+	padding: 0;
+	margin: 0;
+}
+
+ul.slink li a
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	font-weight:normal;
+	text-decoration: none;
+	padding: 3px 3px 3px 18px;
+	width:150px;
+	background: url("/medias/images/redbul.gif"/*tpa=http://www.covers4auto.com/images/redbul.gif*/) no-repeat 5px 7px;
+	display:block;
+}
+
+ul.slink li a:hover 
+{
+	background-color:#f8f7f7;
+}
+	
+	
+/*Background and border selectors*/
+
+.timebg2 
+{
+	background:url("/medias/images/openhr.jpg"/*tpa=http://www.covers4auto.com/images/openhr.jpg*/) no-repeat;
+	width:170px;
+	padding:6px 0 0 40px;
+	margin:0 0 0 50px;
+}
+
+.blu_bg {
+	background-image:url("/medias/images/conblu1_line.jpg"/*tpa=http://www.covers4auto.com/images/conblu1_line.jpg*/);
+	background-repeat:repeat-x;
+	}
+	
+.blu_bgb
+{
+	background-color:#f9f8f8;
+	border-bottom:1px solid #dadada;
+	font-size:4px;
+	}
+	
+.blu_rl {
+	background-color:#f9f8f8;
+	border-left:1px solid #dadada;
+	border-right:1px solid #dadada;
+	}
+
+.table_s 
+{
+	margin:0px;
+	padding:0px;
+	border-collapse:collapse;
+	}
+	
+.table_s td
+{
+	font-family:Arial;
+	font-size:12px;
+	color:#2A4A70;
+	text-decoration:none;
+	font-weight:bold;
+	border:1px solid #dadada;
+	padding:2px;
+	}
+
+.table_b2 
+{
+	padding:0px;
+	margin:0px;
+	border:1px solid #c0bfbf;
+	}
+
+.table_b2 th 
+{
+	font-family:Arial;
+	font-size:12px;
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
+	background-color:#00b2ee;
+	text-align:left;
+	padding:4px;
+}
+
+.table_b3 
+{
+	border:1px solid #00b2ed;
+	border-collapse:collapse;
+	}
+
+.table_b3 th 
+{
+	font-family:Arial;
+	font-size:12px;
+	color:#fff;
+	font-weight:bold;
+	background-color:#00b2ee;
+	text-align:left;
+	padding:4px;
+	background-image:url("/medias/images/head_bg.jpg"/*tpa=http://www.covers4auto.com/images/head_bg.jpg*/);
+	background-position:top left;
+	background-repeat:repeat-x;	
+}
+
+.table_b3 td
+{
+	padding:4px;
+	line-height:20px;
+}
+
+.table_b5
+{
+	border:1px solid #00b2ed;
+	background-color:#2f75bb;
+	border-collapse:collapse;
+	}
+	
+.table_b5 th
+{
+	border-right:1px solid #00b2ed;
+	padding:4px;
+	background-color:#2f75bb;
+	background-image:url("/medias/images/head_bg.jpg"/*tpa=http://www.covers4auto.com/images/head_bg.jpg*/);
+	background-position:top left;
+	background-repeat:repeat-x;
+	font-weight:bold;
+	color:#ffffff;
+	}	
+
+.tabgrid 
+{
+	border:1px solid #00b2ed;
+	background-color:#2f75bb;
+	border-collapse:collapse;
+	}
+	
+.tabgrid th {
+	border-right:1px solid #00b2ed;
+	padding:4px;
+	background-color:#2f75bb;
+	background-image:url("/medias/images/head_bg.jpg"/*tpa=http://www.covers4auto.com/images/head_bg.jpg*/);
+	background-position:top left;
+	background-repeat:repeat-x;
+	font-size:12px;
+	font-weight:bold;
+	color:#ffffff;
+	}	
+	
+.tabgrid td {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	border:1px solid #00b2ed;
+	padding:4px;
+	background-color:#fefefe;
+	}	
+	
+#tdcompact {}	
+	
+#tdcompact td {
+	padding:0px;
+	vertical-align:top;
+	}		
+
+.border_tab {
+	border:1px solid #f0efef;
+	background-color:#F8F8F8;
+	padding:4px;
+	}
+	
+.border_tab5 {
+	border:1px solid #f0efef;
+	background-color:#F8F8F8;
+	}
+	
+.table_b4 
+{
+	padding:0px;
+	margin:0px;
+	border:1px solid #c0bfbf;
+	}
+
+.border_b {
+	border-bottom:1px solid #CECECE;
+	background-color:#F8F8F8;
+	}
+	
+.border_rl {
+	border-left:1px solid #CECECE;
+	border-right:1px solid #CECECE;
+	background-color:#F8F8F8;
+	}
+.border_r {
+	border-right:1px solid #CECECE;
+	}	
+
+.con_bg {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#494949;
+	font-weight:bold;
+	text-decoration:underline;
+	padding:0 0 0 5px;
+	background: url("/medias/images/sub_con5.jpg"/*tpa=http://www.covers4auto.com/images/sub_con5.jpg*/) repeat-x;
+	}
+
+.border_heading {
+	background-color:#E9E9E9;
+	height:24px;
+	}
+
+.border {
+	border:1px solid #E8E8E8;
+	background-color:#FBFBFB;
+	}
+	
+.border2 {
+	border:1px solid #F4F4F4;
+	background-color:#fff;
+	}
+	
+.border1 {
+	border:1px solid #E8E8E8;
+	background-color:#F5F5F5;
+	}
+	
+.border4 {
+	border:1px solid #E8E8E8;
+	background-color:#f5f5f5;
+	}	
+	
+.imgborder {
+	border:2px solid #eee;
+	padding:2px;
+	background-color:#fff;
+	display:block;
+	}
+	
+.imgborder:hover {
+	border:2px solid #a4a4a4;
+	}		
+
+.border_blu {
+	border-left:1px solid #00B2ED;
+	border-right:1px solid #00B2ED;
+	background-image:url("/medias/images/grey_line.jpg"/*tpa=http://www.covers4auto.com/images/grey_line.jpg*/);
+	background-repeat:repeat-y;
+	padding:0 0 0 10px;
+	margin:0 0 0 0;
+	}
+	
+.left_bg {
+	background: url("/medias/images/left_bg.gif"/*tpa=http://www.covers4auto.com/images/left_bg.gif*/) repeat-y 0px 10px;
+	}	
+
+
+.line_blu {
+	background-image:url("/medias/images/b_line.jpg"/*tpa=http://www.covers4auto.com/images/b_line.jpg*/);
+	background-repeat:repeat-x;
+	height:50px;
+	}
+	
+.search_bg {
+	background-image:url("/medias/images/search_bg.jpg"/*tpa=http://www.covers4auto.com/images/search_bg.jpg*/);
+	background-repeat:no-repeat;
+	}
+	
+.phonebg {
+	background: url("/medias/images/phonebg.jpg"/*tpa=http://www.covers4auto.com/images/phonebg.jpg*/) no-repeat 0px 0px;
+	width:200px;
+	float:left;
+	margin:7px 0 0 30px;
+	padding:6px 0 0 60px;
+	height:38px;
+	}
+	
+.ad_pop {
+  margin:0; padding:0;
+  background:#EEEDED center top;
+  display:none;
+  }	
+  
+.gc_bg {
+	background: url("/medias/images/gc_bg.jpg"/*tpa=http://www.covers4auto.com/images/gc_bg.jpg*/) no-repeat 100px 250px;
+	}
+	
+.border3 {
+	border:1px solid #F4F4F4;
+	background-color:#fff;
+	border-collapse:collapse;
+	}
+	
+.border3 td 
+{
+	border:1px solid #F4F4F4;
+	padding:4px;
+	background-color:#fff;
+	}
+	
+.bggray
+{
+	background-color:#b7edff;
+	}
+				  
+	
+/*box selectors*/
+
+.box1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000;
+	width:160px;
+	border:1px solid #a7a6aa;
+	padding-left:2px;
+	background-color:#fff!important;
+	}
+	
+.box3 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000;
+	width:100px;
+	border:1px solid #a7a6aa;
+	padding-left:2px;
+	background-color:#fff!important;
+	}
+	
+.dropdown {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000;
+	width:170px;
+	border:1px solid #a7a6aa;
+	background-color:#fff;
+	}
+
+.search_box input {
+	background:url("/medias/images/entsrch.gif"/*tpa=http://www.covers4auto.com/images/entsrch.gif*/) no-repeat;
+	font-family:tahoma, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#2d50aa;
+	width:145px !important;
+	height:12px !important;
+	border:1px solid #fff !important;
+	margin:0;
+	padding:1px 0 1px 20px;
+	}
+
+.space1 {
+	padding:5px 8px 0 8px;
+	margin:5px 8px 0 8px;
+	}
+	
+.space_r {
+	float:left;
+	}
+	
+.space_r3 {
+	margin-right:40px;
+	}
+	
+.space_rl 
+{
+	padding:0 25px 0 0;
+}
+	
+.tab_bg {
+	background-image:url("/medias/images/line2.jpg"/*tpa=http://www.covers4auto.com/images/line2.jpg*/);
+	background-repeat:repeat-x;
+	background-position:top;
+	background-color:#ffffff;
+	border:1px solid #E7E7E7;
+	}
+	
+.price {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#CC0000;
+	font-weight:bold;
+	text-decoration:none;
+	}
+	
+.price2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#CC0000;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:right;
+	}
+	
+.error {
+	font-family:verdana;
+	font-size:10px;
+	color:#CC0000;
+	font-weight:normal;
+	text-decoration:none;
+	}	
+
+.star {
+	font-family:verdana;
+	font-size:10px;
+	color:#CC0000;
+	font-weight:normal;
+	text-decoration:none;
+	}
+	
+/*Divs selectors starts here*/	
+
+.colors 
+{
+	width:32px;
+	height:32px;
+	border:2px solid #eee;	
+	float:left;
+	margin:2px;
+	cursor:pointer;
+	padding:2px;
+	background-color:#fff;
+	}
+	
+.colors:hover
+{
+	border:2px solid #bbb;
+	}	
+	
+.colors_int 
+{
+	width:20px;
+	height:20px;
+	}	
+
+.tab {
+	background-color:#000;
+}
+	
+.spaceldiv{
+visibility:hidden;
+position:absolute;
+width:690px;
+}
+
+.div_width {
+background-color:#FFFFFF;
+border:7px solid #d5d5d5;
+text-align:justify;
+padding:8px;
+}
+	
+.over
+{
+	background-image:url("/medias/images/btn_black.jpg"/*tpa=http://www.covers4auto.com/images/btn_black.jpg*/);
+	background-repeat:no-repeat;
+	background-position:left top;
+	color:#ececec;
+    font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding:5px 0 5px 0;
+	cursor :pointer;
+	width:120px;
+	text-align:center;
+	display:block;
+}
+
+.out
+{
+	background-image:url("/medias/images/btn_gray.jpg"/*tpa=http://www.covers4auto.com/images/btn_gray.jpg*/);
+	background-repeat:no-repeat;
+	background-position:left top;
+	color:#212121;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding:5px 0 5px 0;
+	cursor:default;
+	width:120px;
+	text-align:center;
+	display:block;
+}
+/*Process Window*/
+.PleaseWait
+{
+	margin:250px 0 0 0;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	padding:3px;
+	width:200px;
+	height:150px;
+	font:italic bold 12px tahoma;
+	text-align:center;
+	color:#CC0000;
+	position:relative;
+}
+
+/*Modal Popup*/
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	
+}
+
+.modalPopup {
+	background-color:#ffffdd;
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	padding:3px;
+	width:250px;
+}
+
+.sampleStyleA {
+	background-color:#FFF;
+}
+
+.sampleStyleB {
+	background-color:#FFF;
+	font-family:monospace;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.sampleStyleC {
+	background-color:#ddffdd;
+	font-family:sans-serif;
+	font-size:10pt;
+	font-style:italic;
+}
+
+.sampleStyleD {
+	background-color:Blue;
+	color:White;
+	font-family:Arial;
+	font-size:10pt;
+}
+
+/*Popup Control*/
+.popupControl{
+	background-color:White;
+	position:absolute;
+	visibility:hidden;
+}
+/*Hover Menu*/
+.popupMenu {
+	position:relative;
+	visibility:hidden;
+	opacity:1.0;
+	filter: alpha(opacity=100);
+}
+
+.popupHover {	
+	background-repeat:repeat-x;
+	background-position:left top;
+	background-color:#bcdaff;	
+}
+/*Tab*/
+.OuterTableCellOverlay
+        {             
+            width: 99%;
+            height: 5000px;
+            position: absolute;
+            background-color: white;
+            z-index: 999;
+	        filter:alpha(opacity=85);
+	        -moz-opacity:0.85;
+	        padding-top: 25%;
+	        padding-left: 30%;
+        }
+        
+.InnerTableCellOverlay
+{
+    text-align: center;              
+    width: 99%;
+    border: 1px solid black;
+    padding: 10px;
+    color:#ffffff;
+    background-color:red;
+    z-index: 998;
+    filter:alpha(opacity=100);
+    -moz-opacity:1.00;
+}
+
+/*Tab panel selectors starts here*/
+
+.CustomTabStyle .ajax__tab_header 
+{
+	font-family:arial,verdana,tahoma,helvetica;
+	font-size:12px;
+	font-weight:bold;
+	background:url("/medias/images/tab-line.gif"/*tpa=http://www.covers4auto.com/images/tabimages/tab-line.gif*/) repeat-x bottom;
+	color:#fff;
+	}
+.CustomTabStyle .ajax__tab_outer 
+{
+	padding-right:1px;
+	background:url("/medias/images/tab-right.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-right.jpg*/) no-repeat top right;
+	height:25px;
+	margin-right:1px;
+	}
+.CustomTabStyle .ajax__tab_inner 
+{
+	padding-left:3px;
+	background:url("/medias/images/tab-left.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-left.jpg*/) no-repeat;
+	}
+.CustomTabStyle .ajax__tab_tab 
+{
+	height:18px;
+	padding:4px 6px 4px 6px; 
+	background:url("/medias/images/tab.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab.jpg*/) repeat-x;
+	}
+.CustomTabStyle .ajax__tab_hover .ajax__tab_outer 
+{
+	background:url("/medias/images/tab-active-right.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-active-right.jpg*/) no-repeat top right;
+	}
+.CustomTabStyle .ajax__tab_hover .ajax__tab_inner 
+{
+	background:url("/medias/images/tab-active-left.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-active-left.jpg*/) no-repeat;
+	}
+.CustomTabStyle .ajax__tab_hover .ajax__tab_tab 
+{
+	background:url("/medias/images/tab-hover.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-hover.jpg*/) repeat-x;
+	color:#000;
+	}
+.CustomTabStyle .ajax__tab_active .ajax__tab_outer 
+{
+	background:url("/medias/images/tab-active-right.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-active-right.jpg*/) no-repeat top right;
+	}
+.CustomTabStyle .ajax__tab_active .ajax__tab_inner 
+{
+	background:url("/medias/images/tab-active-left.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-active-left.jpg*/) no-repeat;
+	}
+.CustomTabStyle .ajax__tab_active .ajax__tab_tab 
+{
+	background:url("/medias/images/tab-active.jpg"/*tpa=http://www.covers4auto.com/images/tabimages/tab-active.jpg*/) repeat-x; 
+	color:#000;
+	}
+.CustomTabStyle .ajax__tab_body 
+{
+	font-family:verdana,tahoma,helvetica;
+	font-size:10pt;
+	border:1px solid #999999;
+	border-top:0;
+	padding:2px 8px 8px 8px;
+	background-color:#ffffff;
+}
+.slink1 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	font-weight:normal;
+	text-decoration: none;
+	padding: 3px 0px 3px 5px;
+	width:200px!important;
+}
+
+.slink1 a
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	font-weight:normal;
+	text-decoration: none;
+	padding: 3px 0px 3px 5px;
+	width:200px!important;
+}
+
+.slink1 a:hover 
+{
+	width:200px!important;
+	background:#f8f7f7;
+	padding:3px 0 3px 5px;
+}
+
+.sign_txt {
+   font:bold 11px Verdana,Arial, Helvetica, sans-serif;
+   color:#fff;
+   text-decoration:none;
+   background:#1194da;
+   vertical-align:top;
+   padding:3px 0 0 5px;
+   text-align:center;
+   }
+  
+ .text5{
+   font-family: tahoma,arial, verdana ;
+   font-size:11px;
+   color:#b20687;
+   text-decoration:none;
+   font-weight:normal;
+   text-align:left;
+   padding:0 7px 0 25px;
+   margin:0;
+   }
+  .text_ship{
+   font-family: tahoma,arial, verdana ;
+   font-size:11px;
+   color:#023d7f;
+   text-decoration:none;
+   font-weight:normal;
+   padding:0 0px 0 0px;
+   margin:0;
+   }
+  
+ .text_ship2{
+   font-family: tahoma,arial, verdana ;
+   font-size:11px;
+   color:#023d7f;
+   text-decoration:none;
+   font-weight:normal;
+   padding:0 0px 0 25px;
+   margin:0;
+   }
+   
+.textb1bg{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+   color:#fff;
+   font-weight:bold;
+   background-image:url("/medias/images/head_bg.jpg"/*tpa=http://www.covers4auto.com/images/head_bg.jpg*/);
+   padding:0 0 0 5px;
+   height:20px;
+   } 
+
+.txt_l{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:13px;
+   color:#f22121;
+   text-decoration:underline;
+   font-weight:normal;
+   cursor:pointer;
+   }
+   
+.linku 
+{
+	margin:0px 0 5px 0;
+	padding:0px;
+}
+.linku li
+{
+	list-style-type:none;
+	font-family:Arial;
+	font-size:12px;
+	color:#3a3939;
+	font-weight:normal;
+	background:url("/medias/images/orgbull.jpg"/*tpa=http://www.covers4auto.com/images/orgbull.jpg*/) no-repeat 0px 5px;
+	padding:1px 0 1px 10px;
+}
+
+.linku2 
+{
+	margin:0px 0 5px 0;
+	padding:0px;
+}
+.linku2 li
+{
+	list-style-type:none;
+	font-family:Arial;
+	font-size:12px;
+	color:#3a3939;
+	background:url("/medias/images/orgbull.jpg"/*tpa=http://www.covers4auto.com/images/orgbull.jpg*/) no-repeat 0px 5px;
+	padding:1px 0 1px 10px;
+}
+.LoaderWait
+{
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	padding:3px;
+	width:200px;
+	height:150px;
+	font:italic bold 12px tahoma;
+	text-align:center;
+	color:#CC0000;
+	position:absolute;
+	top:400px;
+}
+
+.divl
+{
+	width:250px;
+	font:12px tahoma;
+	color:#000;
+	position:absolute;
+	top:250px;
+	background:#fff6de;
+	border:1px solid #f0d48a;
+	padding:0 4px 10px 4px;
+}
+.divl h1
+{
+	margin:0px;
+	padding:8px 0 0 30px;
+}
+.border_tabb {
+	border:1px solid #f0efef;
+	background-color:#F8F8F8;
+	}
+.blu_tab 
+{
+	background:url("/medias/images/head_bg.jpg"/*tpa=http://www.covers4auto.com/images/head_bg.jpg*/) repeat-x 0 0;
+	font:bold 13px tahoma;
+	color:#fefefe;
+	text-decoration:none;
+	height:22px;
+	text-align:center;
+}
+.blu_tab2
+{
+	background:url("/medias/images/head_bg.jpg"/*tpa=http://www.covers4auto.com/images/head_bg.jpg*/) repeat-x 0 0;
+	font:bold 13px tahoma;
+	color:#fefefe;
+	text-decoration:none;
+	height:22px;
+	text-align:center;
+}
+.blu_line 
+{
+	background:url("/medias/images/blu_tabline.jpg"/*tpa=http://www.covers4auto.com/images/blu_tabline.jpg*/) repeat-y 0 0;
+	font:bold 11px tahoma;
+	color:#004188;
+	text-decoration:none;
+	vertical-align:top;
+	padding:3px 8px 0 8px;
+}
+
+.blu_line2 
+{
+	background:url("/medias/images/blu_tabline2.jpg"/*tpa=http://www.covers4auto.com/images/blu_tabline2.jpg*/) repeat-y 0 0;
+	font:bold 11px tahoma;
+	color:#004188;
+	text-decoration:none;
+	vertical-align:middle;
+}
+
+.linku2
+{
+	margin:5px 0 5px 0;
+	padding:0px;
+}
+.linku2 li
+{
+	list-style-type:none;
+	font:bold 11px tahoma;
+	color:#6b6a6a;
+	background:url("/medias/images/arrow_b.jpg"/*tpa=http://www.covers4auto.com/images/arrow_b.jpg*/) no-repeat 0px 5px;
+	padding:1px 0 1px 13px;
+}
+
+.linku3
+{
+	margin:20px 0 5px 0;
+	padding:0px;
+}
+.linku3 li
+{
+	list-style-type:none;
+	font:bold 13px Verdana;
+	color:#3a3939;
+	background:url("/medias/images/orgbull.jpg"/*tpa=http://www.covers4auto.com/images/orgbull.jpg*/) no-repeat 0px 5px;
+	padding:1px 0 1px 10px;
+}
