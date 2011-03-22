@@ -17,7 +17,7 @@ def getLeftNavigate(request):
 				logger.info('======语言未初始化')
 				return {}
 
-		firstMenu = Parameter.objects.filter(parameter_code='product_first_menu', parameter_is_valid=1, parameter_language=languageObj.id).order_by('parameter_sequence')
+		firstMenu = Parameter.objects.filter(parameter_code='product_top_type', parameter_is_valid=1, parameter_language=languageObj.id).order_by('parameter_sequence')
 		if not firstMenu:
 			logger.info('======无 ' + language + ' 纵向菜单项,返回默认菜单')
 			leftNavigate = cache.get('LEFT_NAVIGATE_' + getLanguage(language_sequence=1).parameter_value)		

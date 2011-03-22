@@ -7,6 +7,7 @@ from carshop.product.models import *
 def customSeatCovers(request, productTypeId, productSubTypeId=None):
 	if productSubTypeId:
 		print(productTypeId + ' -- ' + productSubTypeId)
+		
 	else:
 		print(productTypeId)
 		
