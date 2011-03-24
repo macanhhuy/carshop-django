@@ -1,5 +1,5 @@
 # coding: utf-8
-
+import datetime
 from django.contrib import admin
 from carshop.product.models import *
 from django.db.models.query import QuerySet
@@ -15,6 +15,8 @@ class ProductAdmin(admin.ModelAdmin):
 		}),
 	)
 	
+	list_display = ('product_name', 'product_manufacturer', 'product_type', 'product_price',)
+	
 	def formfield_for_foreignkey(self, db_field, request, **kwargs):
 		from django.db import connection
 		cursor = connection.cursor()
@@ -24,7 +26,17 @@ class ProductAdmin(admin.ModelAdmin):
 			return db_field.formfield(**kwargs)
 		
 		return super(ProductAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
-
+	
+	def save_model(self, request, obj, form, change):
+		if not obj.product_added_user_id:
+			obj.product_added_user_id = request.user.id
+		obj.product_modified_user_id = request.user.id
+		
+		now = datetime.datetime.now()
+		if not obj.time_product_register:
+			obj.time_product_register = now
+		obj.time_product_modified = now
+		obj.save()
 	
 	
 class ProductAttributeAdmin(admin.ModelAdmin):
