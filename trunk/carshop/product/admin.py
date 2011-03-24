@@ -2,6 +2,7 @@
 
 from django.contrib import admin
 from carshop.product.models import *
+from django.db.models.query import QuerySet
 
 class ProductAdmin(admin.ModelAdmin):
 	
@@ -15,8 +16,11 @@ class ProductAdmin(admin.ModelAdmin):
 	)
 	
 	def formfield_for_foreignkey(self, db_field, request, **kwargs):
+		from django.db import connection
+		cursor = connection.cursor()
 		if db_field.name == "product_type":
-			kwargs["queryset"] = system.Parameter.objects.filter(parameter_parent=system.Parameter.objects.get(parameter_code='product_type_root').id)
+			kwargs["queryset"] = system.Parameter.objects.extra(where = ["parameter_parent_id in (select p2.id from parameter p2 where p2.parameter_code='product_top_type')",])
+
 			return db_field.formfield(**kwargs)
 		
 		return super(ProductAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
