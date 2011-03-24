@@ -10,6 +10,9 @@ class Manufacturer(models.Model):  # 制造商标
 	manufacturer_image = models.CharField(max_length=255, blank=True, null=True) # 制造商图片(LOGO)
 	manufacturer_desc = models.CharField(max_length=2000, blank=True, null=True) # 描述
 	
+	def __unicode__(self):
+		return self.manufacturer_name
+	
 	class Meta:
 		db_table = 'manufacturer'
 
