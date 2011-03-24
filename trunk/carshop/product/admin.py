@@ -15,7 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
 		}),
 	)
 	
-	list_display = ('product_name', 'product_manufacturer', 'product_type', 'product_price',)
+	list_display = ('product_name', 'product_manufacturer', 'product_type', 'product_price', 'product_count', )
 	
 	def formfield_for_foreignkey(self, db_field, request, **kwargs):
 		from django.db import connection
