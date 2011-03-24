@@ -22,6 +22,8 @@ urlpatterns = patterns('',
 	(r'^index.html$', 'carshop.system.views.index'),
 	(r'^$', 'carshop.system.views.index'),
 	
+	(r'^allManufacturer.html', 'carshop.manufacturer.views.allManufacturer')
+	
 	
 	#(r'^index$', 'carshop.system.views.index'),
 	
