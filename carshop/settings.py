@@ -81,6 +81,7 @@ MIDDLEWARE_CLASSES = (
 	'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+	'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -120,6 +121,7 @@ INSTALLED_APPS = (
 	'carshop.order',
 	'carshop.product',
 	'carshop.system',
+	'debug_toolbar',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -141,3 +143,9 @@ logging.basicConfig(
 	filename = 'log/filelog.log',
 ) 
 
+try:
+	from settings_debug_toolbar import *
+except ImportError:
+	print('ssssssssssssssssssss')
+	pass
+	

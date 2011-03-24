@@ -6,7 +6,7 @@ from carshop.product.models import *
 
 
 def customSeatCovers(request, productTypeId, productSubTypeId=None):
-	from django.db import connection, transaction
+	from django.db import connection
 	cursor = connection.cursor()
 	
 	products = []
