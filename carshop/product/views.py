@@ -9,15 +9,10 @@ def customSeatCovers(request, productTypeId, productSubTypeId=None):
 	from django.db import connection
 	cursor = connection.cursor()
 	
-	products = []
 	if productSubTypeId:
-		productSubType = Parameter.objects.filter(id=productSubTypeId, parameter_parent=productTypeId)
-		if productSubType:
-			cursor.execute("select p.* from product as p where p.product_type_id=%s", [productSubTypeId,])
-			products = cursor.fetchone()
-		
+		products = Product.objects.extra(where=['product_type_id=%s and exists (select * from parameter as par where par.parameter_parent_id=%s and par.id=%s)',], params=[productSubTypeId, productTypeId, productSubTypeId,])
 	else:
-		print(productTypeId)
+		products = Product.objects.extra(where=['product_type_id in (select par.id from parameter as par where par.parameter_parent_id=%s)',], params=[productTypeId,])
 		
 		
 	return render_to_response('product.html', {'products':products}, RequestContext(request))

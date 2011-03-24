@@ -7,6 +7,10 @@
 
 {% if not products %}
 	don't have this products
+{% else  %}
+	{% for product in products %}
+		{{product.product_name}}<br />
+	{% endfor %}
 {% endif %}
 
 {% endblock %}
