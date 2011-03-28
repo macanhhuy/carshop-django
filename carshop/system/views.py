@@ -13,8 +13,9 @@ def index(request):
 def findTopProduct():
 	return {}
 	
-	
+
 def login(request):
-	return {}
+	return None
 	
+
 	
