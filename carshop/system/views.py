@@ -14,3 +14,7 @@ def findTopProduct():
 	return {}
 	
 	
+def login(request):
+	return {}
+	
+	
