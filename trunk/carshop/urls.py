@@ -21,6 +21,7 @@ urlpatterns = patterns('',
 	
 	(r'^index.html$', 'carshop.system.views.index'),
 	(r'^$', 'carshop.system.views.index'),
+	(r'^login$', 'carshop.system.views.login'),
 	
 	(r'^allManufacturer.html', 'carshop.manufacturer.views.allManufacturer')
 	
