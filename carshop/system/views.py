@@ -16,6 +16,9 @@ def findTopProduct():
 
 def login(request):
 	return None
+
 	
+def toRegister(request):
+	return render_to_response('register.html', {}, RequestContext(request))
 
 	

@@ -23,7 +23,9 @@ urlpatterns = patterns('',
 	(r'^$', 'carshop.system.views.index'),
 
 	(r'^login$', 'carshop.system.views.login'),
-
+	(r'^register', 'carshop.system.views.register'),
+	(r'^toRegister', 'carshop.system.views.toRegister'),
+	
 	
 	(r'^allManufacturer.html', 'carshop.manufacturer.views.allManufacturer'),
 	

@@ -1,4 +1,4 @@
-function showMask(){  
+function showLogin(){  
 	var width=document.body.scrollWidth;  
 	var height=document.body.scrollHeight;  
 	var left=width/2-$("#maskDisplay").width()/2;  

@@ -13,23 +13,23 @@
 	opacity: 0.3;           /* 支持CSS3的浏览器（FF 1.5也支持）*/ 
 }  
 
-.maskDisplay{  
-	display: none;  
-	z-index:100;  
-	background:#FAFCFD;  
-	background-repeat:no-repeat;  
-	text-align: left;  
-	left:50%;/*FF IE7*/ 
-	top:20%;/*FF IE7*/ 
-	margin-left:-200px!important;/*FF IE7 该值为本身宽的一半 */ 
-	margin-top:-20px!important;/*FF IE7 该值为本身高的一半*/ 
-	margin-left:0px;  
-	margin-top:0px;  
-	width:400px;  
-	height:250px;  
-	position:fixed!important;/*FF IE7*/ 
-	position:absolute;/*IE6*/ 
-	_top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/ 
+.maskDisplay{
+	display: none;
+	z-index:100;
+	background:#FAFCFD;
+	background-repeat:no-repeat;
+	text-align: left;
+	left:50%;/*FF IE7*/
+	top:20%;/*FF IE7*/
+	margin-left:-170px!important;/*FF IE7 该值为本身宽的一半 */
+	margin-top:-20px!important;/*FF IE7 该值为本身高的一半*/
+	margin-left:0px;
+	margin-top:0px;
+	width:340px;
+	height:200px;
+	position:fixed!important;/*FF IE7*/
+	position:absolute;/*IE6*/
+	_top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
 
 	_left: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollLeft + (document.documentElement.clientWidth-this.offsetWidth) :/*IE6*/ document.body.scrollLeft + (document.body.clientWidth - this.clientWidth)/2);/*IE5 IE5.5*/
 	
@@ -40,7 +40,7 @@
 .maskDisplay input {
 	font: 110% Arial, Helvetica, sans-serif;
 	width: 160px;
-	padding: 5px 3px 3px 7px;
+	padding: 2px 0px 0px 4px;
 
 	border-top: 1px solid #e6e6e6;
 	border-right: 1px solid #E2E2E2;
@@ -68,7 +68,7 @@
 }
 
 .maskDisplay .formbody {
-	padding:2em;
+	padding:1em 0 0 2em;
 	background-color:#e9f1f4;
 	overflow:hidden;
 	border-style:solid;
@@ -78,6 +78,10 @@
 	-moz-border-radius:0 0 3px 3px;
 	-webkit-border-radius:0 0 3px 3px;
 	font-Weight:bold;
+}
+
+.maskDisplay label {
+	
 }
 
 .maskDisplay input[type="submit"]{
@@ -108,7 +112,7 @@
 	box-shadow:0 1px 4px rgba(0,0,0,0.3);
 	cursor:pointer;
 	margin-left:1px;
-	padding:0 13px;
+	padding:0 5px;
 	-webkit-font-smoothing:subpixel-antialiased!important;
 }
 

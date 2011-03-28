@@ -51,8 +51,7 @@
 													alt="Order Status" /> </a>
 										</li>
 										<li>
-											<a
-												href="javascript:if(confirm('https://www.covers4auto.com/Account/AccountInfo.aspx  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='https://www.covers4auto.com/Account/AccountInfo.aspx'">
+											<a href="/toRegister">
 												<img src="/medias/images/my_account.jpg" alt="My Account" />
 											</a>
 										</li>
@@ -60,7 +59,7 @@
 											<input type="image" name="PageHeader1$imgBtnLogin"
 												id="PageHeader1_imgBtnLogin" title="Click here to login"
 												src="/medias/images/login.jpg" alt="Click here to login"
-												style="border-width: 0px;" onclick="showMask()" />
+												style="border-width: 0px;" onclick="showLogin()" />
 										</li>
 									</ul>
 
@@ -460,9 +459,9 @@ function SetSearchText()
 		<form method="post" method="/login">
 			<div class="formbody">
 				<label for="username">Username:<input type="text" id="username" name="username" /></label><br /><br />
-				<label for="password">Password:<input type="password" id="password" name="password" /></label><br />
+				<label for="password">Password:<input type="password" id="password" name="password" /></label>
 				(<a href="#">forgot password</a>)<br /><br />
-				<label class="submit_btn"><input type="submit" value="Log in" /></label><br />
+				<label class="submit_btn"><input type="submit" value="Log in" /></label><br /><br />
 			</div>
 		</form>
 	</div> 
