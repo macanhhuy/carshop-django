@@ -111,11 +111,11 @@ def generateCountry():
 
 
 
-def generateSql():
+def generateIso():
 	f = open('country_temp.txt')
 
 
 
 
-#generateSql()
+generateIso()
 	
