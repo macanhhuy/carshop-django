@@ -25,6 +25,7 @@ urlpatterns = patterns('',
 	(r'^login$', 'carshop.system.views.login'),
 	(r'^register', 'carshop.system.views.register'),
 	(r'^toRegister', 'carshop.system.views.toRegister'),
+	(r'^findState/(?P<countryIso>[a-zA-Z]{3})', 'carshop.system.views.findState'),
 	
 	
 	(r'^allManufacturer.html', 'carshop.manufacturer.views.allManufacturer'),

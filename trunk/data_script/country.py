@@ -139,4 +139,78 @@ def generateIso():
 	f_temp.close()
 
 #generateIso()
+
+sql_country = """
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_extension_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES"""
+
+sql_state_city = """
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_parent_id`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES"""
+
+def generateSql():
+	dataCount = 1
+	basePath = './temp/'
+	f_result = open('country_result.txt')
+	f_sql = open('country_sql.txt', 'w')
+	
+	result_content = f_result.readlines()
+	f_result.close()
+	
+	for i in range(0, len(result_content)):
+		country = re.split('\t', result_content[i].replace('\n', ''))
+		print('start country: %s ' %(country[1]))
+		if len(country) == 4:
+			f_sql.write('/********** start country: %s **********/\n' %(country[1]))
+			f_sql.write("%s ('%s', '%s', '%s', '%s', %s, %s, %s);\n" %(sql_country, 'country_code', country[1], country[3], country[2], str(i+1), '1', 'now()'))
+		elif len(country) == 2:
+			f_sql.write('/********** start %s **********/\n' %(country[1]))
+			f_sql.write("%s ('%s', '%s', '%s', '%s', %s, %s, %s);\n" %(sql_country, 'country_code', country[1], '', '', str(i+1), '0', 'now()'))
+		else:
+			print(u'异常: %s' %(result_content[i]))
+		
+		dataCount += 1
+		
+		f_state = open(basePath + country[0] + '/' + country[0] + '.txt')
+		index_state = 1
+		for state_line in f_state:
+			if state_line.startswith("	obj.options[obj.options.length] = new Option('"):
+				state_line = state_line.replace("	obj.options[obj.options.length] = new Option('", '')
+				state_line = state_line.replace("');\n", '')
+				state = re.split("','", state_line)
+				print('    start state: %s ' %(state[0]))
+				f_sql.write('/*========= start state: %s =========*/\n' %(state[0]))
+				f_sql.write("%s ('%s', '%s', '%s', (select p.id from parameter as p where p.parameter_code='country_code' and p.parameter_display_name='%s' limit 0,1), %s, %s, %s);\n" %(sql_state_city, 'state_code', state[0], state[0], country[1], str(index_state), '1', 'now()'))
+				
+				dataCount += 1
+				f_sql.write('/*--------- start city ---------*/\n')
+				f_city = open(basePath + country[0] + '/city_' + state[1] + '.txt')
+				index_city = 1
+				for city_line in f_city:
+					if city_line.startswith("	obj.options[obj.options.length] = new Option('"):
+						city_line = city_line.replace("	obj.options[obj.options.length] = new Option('", '')
+						city = re.split("','", city_line)
+						f_sql.write("%s ('%s', '%s', '%s', (select p.id from parameter as p where p.parameter_code='state_code' and p.parameter_display_name='%s' limit 0,1), %s, %s, %s);\n" %(sql_state_city, 'city_code', city[0], city[0], state[0], str(index_city), '1', 'now()'))
+						print('        city: %s OK' %(city[0]))
+						dataCount += 1
+						index_city += 1
+				
+				f_city.close()
+				f_sql.write('/*--------- end city ---------*/\n')
+				
+				index_state += 1
+				f_sql.write('/*========= end state: %s =========*/\n' %(state[0]))
+				print('    end state: %s ' %(state[0]))
+		f_state.close()
+		
+
+		f_sql.write('/********** end country: %s **********/\n' %(country[1]))
+		print('end country: %s ' %(country[1]))
+		print str(dataCount)
+		
+	f_sql.close()
+	
+generateSql()	
 	

@@ -46,11 +46,11 @@
 45	Cocos (Keeling) Is.	CC	CCK
 48	Colombia	Co	COL
 47	Comoros	KM	COM
-41	Congo Dem. Rep	CG	COG
-40	Congo Republic
+41	Congo Dem. Rep
+40	Congo Republic	CG	COG
 54	Cook Islands	CK	COK
 50	Costa Rica	CR	CR
-108	Cote d'Ivoire	CI	CIV
+108	Cote d\'Ivoire	CI	CIV
 98	Croatia	HR	HRV
 52	Cuba	CU	CUB
 55	Cyprus	CY	CYP
@@ -72,7 +72,7 @@
 71	Fiji	FJ	FJI
 70	Finland	FI	FIN
 76	France	FR	FRA
-77	French Antarctic
+77	French Antarctic	TF	ATF
 69	French Guiana	GF	GUF
 75	French Polynesia	PF	PYF
 79	Gabon	GA	GAB
@@ -88,7 +88,7 @@
 88	Guam	GU	GUM
 90	Guatemala	GT	GTM
 84	Guernsey
-91	Guinea	PG	PNG
+91	Guinea
 175	Guinea-Bissau
 92	Guyana	GY	GUY
 94	Haiti	HT	HTI
@@ -113,11 +113,11 @@
 121	Kazakhstan	KZ	KAZ
 114	Kenya	KE	KEN
 117	Kiribati	KI	KIR
-116	Korea North
-118	Korea South
+116	Korea North	KP	PRK
+118	Korea South	KR	KOR
 120	Kuwait	KW	KWT
 115	Kyrgyzstan	KG	KGZ
-122	Laos
+122	Laos	LA	LAO
 124	Latvia	LV	LVA
 123	Lebanon	LB	LBN
 129	Lesotho	LS	LSO
@@ -127,7 +127,7 @@
 125	Lithuania	LT	LTU
 130	Luxembourg	LU	LUX
 134	Macau	MO	MAC
-140	Macedonia (FYR)
+140	Macedonia (FYR)	MK	MKD
 132	Madagascar	MG	MDG
 139	Malawi	MW	MWI
 150	Malaysia	MY	MYS
@@ -160,7 +160,7 @@
 157	Nigeria	NG	NGA
 153	Niue	NU	NIU
 154	Norfolk Island	NF	NFK
-49	Northern Mariana Is.
+49	Northern Mariana Is.	MP	MNP
 159	Norway	NO	NOR
 147	Oman	OM	OMN
 169	Pakistan	PK	PAK
@@ -180,23 +180,23 @@
 179	Romania	RO	ROM
 182	Russia	RU	RUS
 183	Rwanda	RW	RWA
-190	Saint Helena
+190	Saint Helena	Sh	SHN
 197	Saint Lucia
 236	Samoa	AS	ASM
-193	San Marino
-211	Sao Tome & Principe
+193	San Marino	SM	SMR
+211	Sao Tome & Principe	St	STp
 184	Saudi Arabia	SA	SAU
 189	Senegal	SN	SEN
 238	Serbia & Montenegro
-187	Seychelles
-192	Sierra Leone
+187	Seychelles	SC	SYC
+192	Sierra Leone	SL	SLE
 194	Singapore	SG	SGP
 127	Slovakia	SK	SVK
 191	Slovenia	SI	SVN
 29	Solomon Islands	SB	SLB
 195	Somalia	SO	SOM
 188	South Africa	ZA	ZAF
-201	South Georgia Island
+201	South Georgia Island	GS	SGS
 196	Spain	ES	ESP
 39	Sri Lanka	LK	LKA
 186	St Kitts & Nevis
@@ -204,7 +204,7 @@
 227	St Vincent Grenadines
 198	Sudan	SD	SDN
 162	Suriname	SR	SUR
-199	Svalbard & Jan Mayen
+199	Svalbard & Jan Mayen	SJ	SJM
 237	Swaziland	SZ	SWZ
 200	Sweden	SE	SWE
 203	Switzerland	CH	CHE
@@ -220,7 +220,7 @@
 212	Tunisia	TN	TUN
 214	Turkey	TR	TUR
 217	Turkmenistan	TM	TKM
-207	Turks & Caicos Is.
+207	Turks & Caicos Is.	TC	TCA
 215	Tuvalu	TV	TUV
 219	Uganda	UG	UGA
 222	Ukraine	UA	UKR
@@ -232,9 +232,9 @@
 226	Uzbekistan	UZ	UZB
 156	Vanuatu	VU	VUT
 228	Venezuela	VE	VEN
-230	Vietnam
-229	Virgin Islands (British)
-231	Virgin Islands (US)
+230	Vietnam	VN	VNM
+229	Virgin Islands (British)	VG	VGB
+231	Virgin Islands (US)	VI	VIR
 234	Wallis and Futuna	WF	WLF
 235	Western Sahara	EH	ESH
 239	Yemen	YE	YEM
