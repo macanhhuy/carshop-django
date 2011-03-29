@@ -19,6 +19,7 @@ def login(request):
 
 	
 def toRegister(request):
-	return render_to_response('register.html', {}, RequestContext(request))
+	countries = Parameter.objects.filter(parameter_code='country')
+	return render_to_response('register.html', {'countries': countries}, RequestContext(request))
 
 	
