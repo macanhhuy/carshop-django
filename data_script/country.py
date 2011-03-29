@@ -112,10 +112,31 @@ def generateCountry():
 
 
 def generateIso():
-	f = open('country_temp.txt')
+	f_temp = open('country_temp.txt')
+	f_iso = open('country_iso_a.txt')
+	f_result = open('country_result.txt', 'w')
 
+	iso_temp = f_iso.readlines()
+	f_iso.close()
 
+	for line in f_temp:
+		c_temp = re.split('\t', line)
+		isFind = False
+		for iso_line in iso_temp:
+			c_iso = re.split('\t', iso_line)
+			#print('%s *** %s' %(c_iso[0].replace('\n', ''), c_temp[1].replace('\n', '')))
+			if c_iso[0].replace('\n', '').find(c_temp[1].replace('\n', '')) >= 0:
+				f_result.write(line.replace('\n', '') + '\t' + c_iso[1] + '\t' + c_iso[2] + '\n')
+				isFind = True
+				break
+		if not isFind:
+			f_result.write(line)
 
+		print('complete: %s' %(c_temp[1]))
 
-generateIso()
+	f_result.close()
+	
+	f_temp.close()
+
+#generateIso()
 	
