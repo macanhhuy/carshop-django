@@ -54,7 +54,7 @@
 98	Croatia	HR	HRV
 52	Cuba	CU	CUB
 55	Cyprus	CY	CYP
-68	Czech Republic
+68	Czech Republic	CZ	CZE
 56	Denmark	DK	DNK
 57	Djibouti	DJ	DJI
 58	Dominica	DO	DOM
@@ -92,7 +92,7 @@
 175	Guinea-Bissau
 92	Guyana	GY	GUY
 94	Haiti	HT	HTI
-96	Heard & McDonald Is
+96	Heard & McDonald Is	HM	HMD
 232	Holy See (Vatican City)
 97	Honduras	HN	HND
 95	Hong Kong	HK	HKG
