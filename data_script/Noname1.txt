@@ -1,0 +1,757 @@
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Angola','AO', 1, 1, now())
+
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Afghanistan', 'AF', 2, 1, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Albania', 'AL	3	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Algeria', 'DZ	4	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Andorra', 'AD	5	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Anguilla', 'AI	6	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Antigua and Barbuda', 'AG	7	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Argentina', 'AR	8	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Armenia', 'AM	9	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Australia', 'AU	10	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Austria', 'AT	11	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Azerbaijan', 'AZ	12	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Bahamas', 'BS	13	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Bahrain', 'BH	14	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Bangladesh', 'BD	15	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Barbados', 'BB	16	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Belarus', 'BY	17	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Belgium', 'BE	18	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Belize', 'BZ	19	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Benin', 'BJ	20	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Bermuda Is.', 'BM	21	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Bolivia', 'BO	22	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Botswana', 'BW	23	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Brazil', 'BR	24	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Brunei', 'BN	25	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Bulgaria', 'BG	26	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Burkina-faso', 'BF	27	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Burma', 'MM	28	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Burundi', 'BI	29	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Cameroon', 'CM	30	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Canada', 'CA	31	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Central African Republic', 'CF	32	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Chad', 'TD	33	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Chile', 'CL	34	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'China', 'CN	35	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Colombia', 'CO	36	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Congo', 'CG	37	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Cook Is.', 'CK	38	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Costa Rica', 'CR	39	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Cuba', 'CU	40	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Cyprus', 'CY	41	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Czech Republic', 'CZ	42	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Denmark', 'DK	43	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Djibouti', 'DJ	44	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Dominica Rep.', 'DO	45	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Ecuador', 'EC	46	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Egypt', 'EG	47	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'EI Salvador', 'SV	48	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Estonia', 'EE	49	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Ethiopia', 'ET	50	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Fiji', 'FJ	51	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Finland', 'FI	52	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'France', 'FR	53	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'French Guiana', 'GF	54	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Gabon', 'GA	55	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Gambia', 'GM	56	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Georgia', 'GE	57	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Germany', 'DE	58	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Ghana', 'GH	59	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Gibraltar', 'GI	60	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Greece', 'GR	61	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Grenada', 'GD	62	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Guam', 'GU	63	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Guatemala', 'GT	64	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Guinea', 'GN	65	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Guyana', 'GY	66	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Haiti', 'HT	67	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Honduras', 'HN	68	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Hongkong', 'HK	69	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Hungary', 'HU	70	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Iceland', 'IS	71	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'India', 'IN	72	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Indonesia', 'ID	73	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Iran', 'IR	74	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Iraq', 'IQ	75	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Ireland', 'IE	76	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Israel', 'IL	77	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Italy', 'IT	78	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Jamaica', 'JM	79	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Japan', 'JP	80	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Jordan	JO	81	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Kampuchea (Cambodia )', 'KH	82	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Kazakstan', 'KZ	83	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Kenya', 'KE	84	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Korea', 'KR	85	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Kuwait', 'KW	86	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Kyrgyzstan', 'KG	87	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Laos', 'LA	88	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Latvia', 'LV	89	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Lebanon', 'LB	90	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Lesotho', 'LS	91	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Liberia', 'LR	92	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Libya', 'LY	93	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Liechtenstein', 'LI	94	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Lithuania', 'LT	95	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Luxembourg', 'LU	96	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Macao', 'MO	97	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Madagascar', 'MG	98	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Malawi', 'MW	99	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Malaysia', 'MY	100	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Maldives', 'MV	101	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Mali', 'ML	102	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Malta', 'MT	103	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Mariana Is', '104	, 0	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Martinique', '',105	, 0	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Mauritius', 'MU	106	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Mexico', 'MX	107	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Moldova Republic of', 'MD	108	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Monaco', 'MC	109	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Mongolia', 'MN	110	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Montserrat Is', 'MS	111	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Morocco', 'MA	112	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Mozambique', 'MZ	113	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Namibia', 'NA	114	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Nauru', 'NR	115	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Nepal', 'NP	116	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Netheriands Antilles', '',117	, 0	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Netherlands', 'NL	118	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'New Zealand', 'NZ	119	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Nicaragua', 'NI	120	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Niger', 'NE	121	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Nigeria', 'NG	122	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'North Korea', 'KP	123	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Norway', 'NO	124	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Oman', 'OM	125	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Pakistan', 'PK	126	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Panama', 'PA	127	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Papua New Cuinea', 'PG	128	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Paraguay', 'PY	129	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Peru', 'PE	130	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Philippines', 'PH	131	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Poland', 'PL	132	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'French Polynesia', 'PF	133	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Portugal', 'PT	134	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Puerto Rico', 'PR	135	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Qatar', 'QA	136	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Reunion', '',137	, 0	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Romania	RO	138	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Russia', 'RU	139	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Saint Lueia', 'LC	140	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Saint Vincent', 'VC	141	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Samoa Eastern', '',142	, 0	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Samoa Western', '', 143	, 0	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'San Marino', 'SM	144	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Sao Tome and Principe', 'ST	145	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Saudi Arabia', 'SA	146	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Senegal', 'SN	147	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Seychelles', 'SC	148	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Sierra Leone', 'SL	149	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Singapore', 'SG	150	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Slovakia', 'SK	151	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Slovenia', 'SI	152	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Solomon Is', 'SB	153	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Somali', 'SO	154	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'South Africa', 'ZA	155	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Spain', 'ES	156	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Sri Lanka', 'LK	157	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'St.Lucia', 'LC	158	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'St.Vincent', 'VC	159	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Sudan', 'SD	160	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Suriname', 'SR	161	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Swaziland', 'SZ	162	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Sweden', 'SE	163	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Switzerland', 'CH	164	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Syria', 'SY	165	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Taiwan', 'TW	166	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Tajikstan', 'TJ	167	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Tanzania', 'TZ	168	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Thailand', 'TH	169	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Togo', 'TG	170	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Tonga', 'TO	171	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Trinidad and Tobago', 'TT	172	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Tunisia', 'TN	173	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Turkey', 'TR	174	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Turkmenistan', 'TM	175	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Uganda', 'UG	176	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Ukraine', 'UA	177	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'United Arab Emirates', 'AE	178	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'United Kiongdom', 'GB	179	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'United States of America', 'US	180	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Uruguay', 'UY	181	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Uzbekistan', 'UZ	182	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Venezuela', 'VE	183	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Vietnam', 'VN	184	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Yemen', 'YE	185	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Yugoslavia', 'YU	186	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Zimbabwe', 'ZW	187	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Zaire', 'ZR	188	, 1	, now())
+INSERT INTO parameter
+	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+VALUES
+ ('country', 'Zambia', 'ZM	189	, 1	, now())
