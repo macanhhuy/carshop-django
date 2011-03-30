@@ -141,13 +141,13 @@ def generateIso():
 #generateIso()
 
 sql_country = """
-INSERT INTO parameter
-	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_extension_value`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+INSERT INTO country_state_city
+	(`name`, `country_iso_code_2`, `country_iso_code_3`, `sequence`, `is_valid`)
 VALUES"""
 
 sql_state_city = """
-INSERT INTO parameter
-	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_parent_id`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`)
+INSERT INTO country_state_city
+	(`name`, `parent_id`, `sequence`, `is_valid`)
 VALUES"""
 
 def generateSql():
@@ -164,10 +164,10 @@ def generateSql():
 		print('start country: %s ' %(country[1]))
 		if len(country) == 4:
 			f_sql.write('/********** start country: %s **********/\n' %(country[1]))
-			f_sql.write("%s ('%s', '%s', '%s', '%s', %s, %s, %s);\n" %(sql_country, 'country_code', country[1], country[3], country[2], str(i+1), '1', 'now()'))
+			f_sql.write("%s ('%s', '%s', '%s', %s, %s);\n" %(sql_country, country[1], country[2], country[3], str(i+1), '1'))
 		elif len(country) == 2:
 			f_sql.write('/********** start %s **********/\n' %(country[1]))
-			f_sql.write("%s ('%s', '%s', '%s', '%s', %s, %s, %s);\n" %(sql_country, 'country_code', country[1], '', '', str(i+1), '0', 'now()'))
+			f_sql.write("%s ('%s', '%s', '%s', %s, %s);\n" %(sql_country, country[1], '', '', str(i+1), '0'))
 		else:
 			print(u'异常: %s' %(result_content[i]))
 		
@@ -182,7 +182,7 @@ def generateSql():
 				state = re.split("','", state_line)
 				print('    start state: %s ' %(state[0]))
 				f_sql.write('/*========= start state: %s =========*/\n' %(state[0]))
-				f_sql.write("%s ('%s', '%s', '%s', (select p.id from parameter as p where p.parameter_code='country_code' and p.parameter_display_name='%s' limit 0,1), %s, %s, %s);\n" %(sql_state_city, 'state_code', state[0], state[0], country[1], str(index_state), '1', 'now()'))
+				f_sql.write("%s ('%s', (select csc.id from country_state_city as csc where csc.name='%s' and csc.parent_id is null), %s, %s);\n" %(sql_state_city, state[0], country[1], str(index_state), '1'))
 				
 				dataCount += 1
 				f_sql.write('/*--------- start city ---------*/\n')
@@ -192,7 +192,7 @@ def generateSql():
 					if city_line.startswith("	obj.options[obj.options.length] = new Option('"):
 						city_line = city_line.replace("	obj.options[obj.options.length] = new Option('", '')
 						city = re.split("','", city_line)
-						f_sql.write("%s ('%s', '%s', '%s', (select p.id from parameter as p where p.parameter_code='state_code' and p.parameter_display_name='%s' limit 0,1), %s, %s, %s);\n" %(sql_state_city, 'city_code', city[0], city[0], state[0], str(index_city), '1', 'now()'))
+						f_sql.write("%s ('%s', (select csc.id from country_state_city as csc where csc.name='%s' and csc.parent_id = (select csc1.id from country_state_city as csc1 where csc1.name='%s' and csc1.parent_id is null) limit 0,1), %s, %s);\n" %(sql_state_city, city[0], state[0], country[1], str(index_city), '1'))
 						print('        city: %s OK' %(city[0]))
 						dataCount += 1
 						index_city += 1
@@ -212,5 +212,5 @@ def generateSql():
 		
 	f_sql.close()
 	
-#generateSql()	
+generateSql()	
 	
