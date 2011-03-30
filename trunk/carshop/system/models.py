@@ -63,14 +63,19 @@ class AddressFormat(models.Model): # 地址格式表
 	
 	
 
-class Country(models.Model): # 国家表
-	country_name = models.CharField(max_length=64) # 国家名
-	country_iso_code_2 = models.CharField(max_length=2) # 2位ISO代码
-	country_iso_code_3 = models.CharField(max_length=3) # 3位ISO代码
-	address_format = models.ForeignKey(AddressFormat) # 国家地址格式
+class CountryStateCity(models.Model): # 国家、州、省、城市 表
 	
+	VALID_CHOICES = ((1, u' 启用 '), (0, u' 禁用 '), (2, u' 其他 '))
+
+	name = models.CharField(max_length=64) # 名
+	country_iso_code_2 = models.CharField(max_length=2, blank=True, null=True) # 2位ISO代码
+	country_iso_code_3 = models.CharField(max_length=3, blank=True, null=True) # 3位ISO代码
+	parent = models.ForeignKey('self', related_name='country_state_city_parent', blank=True, null=True)
+	address_format = models.ForeignKey(AddressFormat, blank=True, null=True) # 地址格式
+	sequence =models.IntegerField() # 顺序
+	is_valid = models.IntegerField(default=1, choices=VALID_CHOICES) # 是否有效
 	class Meta:
-		db_table = "country"
+		db_table = "country_state_city"
 
 	
 class EmailArchive(models.Model): # 邮件存档表

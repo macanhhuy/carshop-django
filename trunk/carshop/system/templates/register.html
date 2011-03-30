@@ -5,32 +5,54 @@
 {% block main %}
 <script language="javascript" type="text/javascript">
 function countryChange(countrySelect){
+	var stateSelect = document.getElementById('state');
 	if(countrySelect.value != -1){
-		$.getJSON("/findState/" + countrySelect.value,
+		$.getJSON("/findStateOrCity/" + countrySelect.value,
 			function(data) {
-				var stateJsonValue = eval(data);
-				var stateSelect = document.getElementById('state');
 				stateSelect.options.length = 0;
 				stateSelect.options.add(new Option("Select...", "-1"));
-				for(var state in stateJsonValue){
-					stateSelect.options.add(new Option(stateJsonValue[state].fields.parameter_display_name,stateJsonValue[state].pk));
+				for(var state in data){
+					stateSelect.options.add(new Option(data[state].fields.name,data[state].pk));
 				}
 		});
-		
+	}
+	else{
+		stateSelect.options.length = 0;
+		stateSelect.options.add(new Option("Select...", "-1"));
 	}
 }
+
+function stateChange(stateSelect){
+	var citySelect = document.getElementById('city');
+	if(stateSelect.value != -1){
+		$.getJSON("/findStateOrCity/" + stateSelect.value,
+			function(data) {
+				citySelect.options.length = 0;
+				citySelect.options.add(new Option("Select...", "-1"));
+				for(var state in data){
+					citySelect.options.add(new Option(data[state].fields.name,data[state].pk));
+				}
+		});
+	}
+	else{
+		citySelect.options.length = 0;
+		citySelect.options.add(new Option("Select...", "-1"));
+	}
+}
+
 </script>
-<div style="padding:0 0 0 17em;">
-	<table width="70%" border="0" cellspacing="0" cellpadding="0">
+<div style="padding:0 0 0 7em;">
+	<table width="90%" border="0" cellspacing="0" cellpadding="0">
 		<tr>
-			<td width="2%">
-				<img src="/medias/images/conblu1.jpg" alt="" />
+			<td width="2%" style="width:17px;background:url(/medias/images/conblu1.jpg) no-repeat">
+				
 			</td>
 			<td width="96%" class="blu_bg" align="center">
-				<img src="/medias/images/n_cust.jpg" alt="New Customer Sign Up" />
+				<img style="display:block;" src="/medias/images/n_cust.jpg" alt="New Customer Sign Up" />
 			</td>
-			<td width="2%">
-				<img src="/medias/images/conblu2.jpg" alt="" /></td>
+			<td width="2%" style="width:17px;background:url(/medias/images/conblu2.jpg) no-repeat">
+				
+			</td>
 		</tr>
 		<tr>
 			<td colspan="3" class="blu_rl">
@@ -47,6 +69,7 @@ function countryChange(countrySelect){
 										<div class="PleaseWait" style="z-index: 150; position: absolute;">
 											<img src="/medias/images/loader.gif" alt="" /></div>
 									</div>
+									<form action="/register" method="post">
 									<table cellpadding="4" cellspacing="0" border="0" width="100%">
 										<tr id="">
 											<td colspan="2" class="text_bg2" align="center">
@@ -70,21 +93,18 @@ function countryChange(countrySelect){
 											</td>
 										</tr>
 										<tr>
-											<td class="textb">Company:</td>
-											<td>
-												<input name="" type="text" maxlength="100" id="" class="box1" />
+											<td class="textb" width="40%" valign="top">
+																Email Address: <b class="star">*</b></td>
+											<td width="60%">
+												<input name="" type="text" maxlength="200" id="" class="box1" />
+												<span id="" class="error" style="color:Red;display:none;">Required.</span>
+												<span id="" style="color:Red;display:none;">Invalid Email ID</span>
 											</td>
 										</tr>
 										<tr>
 											<td class="textb" valign="top">Address: <b class="star">*</b></td>
 											<td>
-											<textarea name="" rows="2" cols="20" id="" class="box1"></textarea>
-											<span id="" class="error" style="color:Red;display:none;">Required.</span></td>
-										</tr>
-										<tr>
-											<td class="textb" valign="top">City: <b class="star">*</b></td>
-											<td>
-											<input name="" type="text" maxlength="100" id="" class="box1" />
+											<textarea name="" rows="3" cols="20" id="" class="box1"></textarea>
 											<span id="" class="error" style="color:Red;display:none;">Required.</span></td>
 										</tr>
 										<tr>
@@ -99,7 +119,7 @@ function countryChange(countrySelect){
 												<select name="country" onchange="countryChange(this)" id="country" class="dropdown">
 													<option value="-1">Select...</option>
 													{% for country in countries %}
-													<option value="{{ country.parameter_value }}">{{ country.parameter_display_name }}</option>
+													<option value="{{ country.id }}">{{ country.name }}</option>
 													{% endfor %}
 												</select>
 											<span id="" class="error" style="color:Red;display:none;">Required.</span></td>
@@ -107,7 +127,7 @@ function countryChange(countrySelect){
 										<tr>
 											<td class="textb">State:<b class="star">*</b></td>
 											<td>
-												<select name="state" id="state" class="dropdown">
+												<select name="state" id="state" onchange="stateChange(this)" class="dropdown">
 													<option value="-1">Select...</option>
 												</select>
 											</td>
@@ -115,9 +135,15 @@ function countryChange(countrySelect){
 										<tr>
 											<td class="textb">City:<b class="star">*</b></td>
 											<td>
-												<select name="" id="" disabled="disabled" class="dropdown">
+												<select name="city" id="city" class="dropdown">
 													<option value="-1">Select...<option>
 												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="textb">Company:</td>
+											<td>
+												<input name="" type="text" maxlength="100" id="" class="box1" />
 											</td>
 										</tr>
 										<tr>
@@ -132,6 +158,13 @@ function countryChange(countrySelect){
 												<input name="" type="text" maxlength="20" id="" class="box1" />
 											</td>
 										</tr>
+										<tr id="">
+											<td colspan="2" class="textb" style="text-align:center;">
+												Would you like to subscribe for free Newsletter? :
+												<input id="" type="radio" name="aa" value="yes" checked="checked" /><label for="">Yes</label>
+												<input id="" type="radio" name="aa" value="no" /><label for="">No</label>
+											</td>
+										</tr>
 										<tr>
 											<td colspan="2" width="100%">
 												<div id="" onkeypress="" style="width:100%;">
@@ -141,19 +174,17 @@ function countryChange(countrySelect){
 																LOGIN INFORMATION</td>
 														</tr>
 														<tr>
-															<td class="textb" width="40%" valign="top">
-																Email Address: <b class="star">*</b></td>
-															<td width="60%">
-																<input name="" type="text" maxlength="200" id="" class="box1" />
-																<span id="" class="error" style="color:Red;display:none;">Required.</span>
-																<span id="" style="color:Red;display:none;">Invalid Email ID</span>
-															</td>
+															<td class="textb" valign="top">
+																Username: <b class="star">*</b></td>
+															<td>
+																<input name="username" type="text" maxlength="30" id="" class="box1" />
+																<span id="" class="error" style="color:Red;display:none;">Required.</span></td>
 														</tr>
 														<tr>
 															<td class="textb" valign="top">
 																Password: <b class="star">*</b></td>
 															<td>
-																<input name="" type="password" maxlength="30" id="" class="box1" />
+																<input name="password" type="password" maxlength="30" id="" class="box1" />
 																<span id="" class="error" style="color:Red;display:none;">Required.</span></td>
 														</tr>
 														<tr>
@@ -168,25 +199,16 @@ function countryChange(countrySelect){
 												</div>
 											</td>
 										</tr>
-										<tr id="">
-											<td colspan="2" class="textb">
-												Would you like to subscribe for free Newsletter? :
-												<table id="" border="0">
-													<tr>
-														<td><input id="" type="radio" name="" value="yes" checked="checked" /><label for="">Yes</label></td><td><input id="" type="radio" name="" value="no" /><label for="">No</label></td>
-													</tr>
-												</table>
-											</td>
-										</tr>
 										<tr>
 											<td>
 											</td>
 											<td>
-												<input type="image" name="" id="" src="/medias/images/buttons/submit_btn.gif" alt="Submit" onclick="" style="border-width:0px;" />
+												<input type="submit" name="" id="" src="/medias/images/buttons/submit_btn.gif" alt="Submit" onclick="" value="Submit" style="border-width:0px;" />
 												<input type="image" name="" id="" src="/medias/images/buttons/reset.gif" alt="Reset" onclick="" style="border-width:0px;" />
 											</td>
 										</tr>
 									</table>
+									</form>
 							</div>
 						</td>
 					</tr>

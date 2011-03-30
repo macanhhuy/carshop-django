@@ -41,8 +41,8 @@ class BulletinAdmin(admin.ModelAdmin):
 class AddressFormatAdmin(admin.ModelAdmin):
 	pass
 	
-class CountryAdmin(admin.ModelAdmin):
-	pass
+#class CountryAdmin(admin.ModelAdmin):
+#	pass
 	
 class EmailArchiveAdmin(admin.ModelAdmin):
 	pass
@@ -62,7 +62,7 @@ class MetaTagProductDescriptionAdmin(admin.ModelAdmin):
 admin.site.register(Parameter, ParameterAdmin)
 admin.site.register(Bulletin, BulletinAdmin)
 admin.site.register(AddressFormat, AddressFormatAdmin)
-admin.site.register(Country, CountryAdmin)
+#admin.site.register(Country, CountryAdmin)
 admin.site.register(EmailArchive, EmailArchiveAdmin)
 admin.site.register(LayoutBox, LayoutBoxAdmin)
 #admin.site.register(Language, LanguageAdmin)
