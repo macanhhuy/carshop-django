@@ -40,6 +40,19 @@ function stateChange(stateSelect){
 	}
 }
 
+checkForm(){
+
+
+
+	return true;
+}
+
+function submit(){
+	if(checkForm())
+		document.registerForm.submit();
+	return false;
+}
+
 </script>
 <div style="padding:0 0 0 7em;">
 	<table width="90%" border="0" cellspacing="0" cellpadding="0">
@@ -69,7 +82,7 @@ function stateChange(stateSelect){
 										<div class="PleaseWait" style="z-index: 150; position: absolute;">
 											<img src="/medias/images/loader.gif" alt="" /></div>
 									</div>
-									<form action="/register" method="post">
+									<form action="/register" name="registerForm" method="post">
 									<table cellpadding="4" cellspacing="0" border="0" width="100%">
 										<tr id="">
 											<td colspan="2" class="text_bg2" align="center">
@@ -203,7 +216,7 @@ function stateChange(stateSelect){
 											<td>
 											</td>
 											<td>
-												<input type="submit" name="" id="" src="/medias/images/buttons/submit_btn.gif" alt="Submit" onclick="" value="Submit" style="border-width:0px;" />
+												<input type="image" name="" id="" src="/medias/images/buttons/submit_btn.gif" alt="Submit" onclick="submit()" value="Submit" style="border-width:0px;" />
 												<input type="image" name="" id="" src="/medias/images/buttons/reset.gif" alt="Reset" onclick="" style="border-width:0px;" />
 											</td>
 										</tr>
