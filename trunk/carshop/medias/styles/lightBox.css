@@ -3,7 +3,7 @@
 .lightbox {
 	width:340px;
 	height:200px;
-	background:#FFFFFF;
+	background:#e9f1f4;
 	line-height:20px;
 	margin:0;
 	padding:0;
@@ -19,6 +19,7 @@
 	border-left: 1px solid #e6e6e6;
 }
 
+
 .lightbox h1 {
 	color:#fff;
 	font-size:16px;
@@ -26,6 +27,10 @@
 	background: url("/medias/images/login_h1.gif");
 	margin:0;padding:8px 18px;
 
+}
+
+.lightbox form {
+	margin-bottom: 0;
 }
 
 .lightbox table {
@@ -43,11 +48,12 @@
 }
 
 .lightbox label {
+	float:left;
 	margin:0;
-	padding:0;
+	padding:0 0 0 0;
 }
 
-.lightbox .btn_submit {
+.btn_submit {
 	display:inline-block;
 	height:34px;
 	padding-top:10;
@@ -73,17 +79,19 @@
 	box-shadow:0 1px 4px rgba(0,0,0,0.3);
 	cursor:pointer;
 
-
 	-webkit-font-smoothing:subpixel-antialiased!important;
 }
 
-.lightbox .input {
+.lightbox .text {
 	height:20px;
 }
 
-.lightbox .input:focus {
+.lightbox .text:focus {
 	border: solid 1px #3b9acc;
 }
+
+
+
 
 
 

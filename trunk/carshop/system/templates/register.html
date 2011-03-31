@@ -7,13 +7,16 @@
 function countryChange(countrySelect){
 	var stateSelect = document.getElementById('state');
 	if(countrySelect.value != -1){
-		$.getJSON("/findStateOrCity/" + countrySelect.value,
-			function(data) {
+		new Ajax.Request('/findStateOrCity/' + countrySelect.value, {
+			method:'get',
+			onSuccess: function(transport){
+				var jsonData = transport.responseText.evalJSON();
 				stateSelect.options.length = 0;
 				stateSelect.options.add(new Option("Select...", "-1"));
-				for(var state in data){
-					stateSelect.options.add(new Option(data[state].fields.name,data[state].pk));
+				for(var i=0;i<jsonData.length;i++){
+					stateSelect.options.add(new Option(jsonData[i].fields.name,jsonData[i].pk));
 				}
+			}
 		});
 	}
 	else{
@@ -25,13 +28,16 @@ function countryChange(countrySelect){
 function stateChange(stateSelect){
 	var citySelect = document.getElementById('city');
 	if(stateSelect.value != -1){
-		$.getJSON("/findStateOrCity/" + stateSelect.value,
-			function(data) {
+		new Ajax.Request('/findStateOrCity/' + stateSelect.value, {
+			method:'get',
+			onSuccess: function(transport){
+				var jsonData = transport.responseText.evalJSON();
 				citySelect.options.length = 0;
 				citySelect.options.add(new Option("Select...", "-1"));
-				for(var state in data){
-					citySelect.options.add(new Option(data[state].fields.name,data[state].pk));
+				for(var i=0;i<jsonData.length;i++){
+					citySelect.options.add(new Option(jsonData[i].fields.name,jsonData[i].pk));
 				}
+			}
 		});
 	}
 	else{
@@ -40,7 +46,7 @@ function stateChange(stateSelect){
 	}
 }
 
-checkForm(){
+function checkForm(){
 
 
 
@@ -149,7 +155,7 @@ function submit(){
 											<td class="textb">City:<b class="star">*</b></td>
 											<td>
 												<select name="city" id="city" class="dropdown">
-													<option value="-1">Select...<option>
+													<option value="-1">Select...</option>
 												</select>
 											</td>
 										</tr>

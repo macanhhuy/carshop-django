@@ -37,6 +37,7 @@ def findStateOrCity(reqeust, countryId):
 	format = 'json'
 	mimetype = 'application/javascript'
 	data = serializers.serialize(format, states)
+	print(data)
 	return HttpResponse(data,mimetype)
 	
 
