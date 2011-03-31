@@ -1,15 +1,15 @@
 # coding: utf-8
+
+from django.contrib.auth.models import User
 from django.db import models
 from django.contrib import admin
-from django.contrib.auth import models as auth
 from carshop.product import models as product
-from carshop.customer import models as customer
 from carshop.system import models as system
 
 
 class Order(models.Model): # 订单表
 
-	customer = models.ForeignKey(customer.Customer) # 客户ID
+	customer = models.ForeignKey(User) # 客户ID
 	customer_name = models.CharField(max_length=64) # 客户名
 	customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
 	customer_street_address = models.CharField(max_length=64) # 客户街道地址
@@ -92,11 +92,11 @@ class OrderProductDownload(models.Model): # 订单下载表
 	
 class OrderStatus(models.Model): # 订单状态表
 	order = models.ForeignKey(Order) # 订单ID
-	customer = models.ForeignKey(customer.Customer) # 客户ID
+	customer = models.ForeignKey(User, related_name="customer_user") # 客户ID
 	order_status = models.ForeignKey(system.Parameter, related_name='order_status') # 订单状态
 	time_update_status = models.DateTimeField() # 状态更新时间
 	time_pass = models.DateTimeField() # 确认时间
-	order_pass_use = models.ForeignKey(auth.User) # 确认管理人
+	order_pass_use = models.ForeignKey(User, related_name="manager_user") # 确认管理人
 	order_send_type = models.ForeignKey(system.Parameter, related_name='order_send_type') # 发送状态
 	
 	class Meta:

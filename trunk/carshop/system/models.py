@@ -74,6 +74,10 @@ class CountryStateCity(models.Model): # 国家、州、省、城市 表
 	address_format = models.ForeignKey(AddressFormat, blank=True, null=True) # 地址格式
 	sequence =models.IntegerField() # 顺序
 	is_valid = models.IntegerField(default=1, choices=VALID_CHOICES) # 是否有效
+	
+	def __unicode__(self):
+		return self.name
+	
 	class Meta:
 		db_table = "country_state_city"
 
