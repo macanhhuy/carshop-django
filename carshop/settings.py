@@ -139,11 +139,11 @@ PAYPAL_WPP_SIGNATURE = "AKmUkXSpzyIk02Gvvi3fVluSBs3WAvhvJ3e5WlKhRgX6XYDLQFd.7xHi
 
 
 
-logging.basicConfig(  
-	level = logging.DEBUG,
-	format = '%(asctime)s %(levelname)s %(module)s.%(funcName)s Line:%(lineno)d %(message)s',
-	filename = 'log/filelog.log',
-) 
+#logging.basicConfig(  
+#	level = logging.DEBUG,
+#	format = '%(asctime)s %(levelname)s %(module)s.%(funcName)s Line:%(lineno)d %(message)s',
+#	filename = 'log/filelog.log',
+#)
 
 try:
 	from settings_debug_toolbar import *
