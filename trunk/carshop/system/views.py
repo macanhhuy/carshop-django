@@ -7,6 +7,7 @@ from django.utils.translation import gettext as _
 
 from carshop.system.models import Parameter, CountryStateCity
 from carshop.system.context_processors import getLeftNavigate
+from carshop.system.forms import RegisterForm
 
 def index(request):
 	return render_to_response('index.html', findTopProduct(), RequestContext(request))#, processors=[getLeftNavigate]))
@@ -28,8 +29,10 @@ def register(request):
 		print('cc')
 	
 def toRegister(request):
+	
+	form = RegisterForm()
 	countries = CountryStateCity.objects.extra(where=['parent_id is null',])
-	return render_to_response('register.html', {'countries': countries}, RequestContext(request))
+	return render_to_response('register.html', {'countries': countries, 'form': form}, RequestContext(request))
 
 	
 def findStateOrCity(reqeust, countryId):

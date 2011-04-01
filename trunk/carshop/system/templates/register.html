@@ -101,21 +101,21 @@ function submit(){
 										<tr>
 											<td class="textb" width="40%" valign="top">First Name: <b class="star">*</b></td>
 											<td width="60%">
-												<input name="" type="text" maxlength="40" id="" class="box1" />
+												{{ form.first_name }}
 												<span id="" class="error" style="color:Red;display:none;">Required.</span>
 											</td>
 										</tr>
 										<tr>
 											<td class="textb">Last Name:<b class="star">*</b></td>
 											<td>
-											<input name="" type="text" maxlength="40" id="" class="box1" /><span id="" class="error" style="color:Red;display:none;">Required.</span>
+												{{ form.last_name }}
 											</td>
 										</tr>
 										<tr>
 											<td class="textb" width="40%" valign="top">
 																Email Address: <b class="star">*</b></td>
 											<td width="60%">
-												<input name="" type="text" maxlength="200" id="" class="box1" />
+												{{ form.email }}
 												<span id="" class="error" style="color:Red;display:none;">Required.</span>
 												<span id="" style="color:Red;display:none;">Invalid Email ID</span>
 											</td>
@@ -180,8 +180,8 @@ function submit(){
 										<tr id="">
 											<td colspan="2" class="textb" style="text-align:center;">
 												Would you like to subscribe for free Newsletter? :
-												<input id="" type="radio" name="aa" value="yes" checked="checked" /><label for="">Yes</label>
-												<input id="" type="radio" name="aa" value="no" /><label for="">No</label>
+												<input id="yyy" type="radio" name="aa" value="yes" checked="checked" /><label for="yyy">Yes</label>
+												<input id="nnn" type="radio" name="aa" value="no" /><label for="nnn">No</label>
 											</td>
 										</tr>
 										<tr>
