@@ -8,6 +8,7 @@ from django.utils.translation import gettext as _
 from carshop.system.models import Parameter, CountryStateCity
 from carshop.system.context_processors import getLeftNavigate
 from carshop.system.forms import RegisterForm
+from carshop.system.utils import NoStyleErrorList
 
 def index(request):
 	return render_to_response('index.html', findTopProduct(), RequestContext(request))#, processors=[getLeftNavigate]))
@@ -23,16 +24,21 @@ def login(request):
 	
 def register(request):
 	if request.method == 'POST':
-		print(request.POST['username'])
-	
+		form = RegisterForm(request.POST, error_class=NoStyleErrorList)
+		if form.is_valid():
+			return HttpResponse(form.cleaned_data['username'])
 	else:
-		print('cc')
+		form = RegisterForm(error_class=NoStyleErrorList)
+
+	countries = CountryStateCity.objects.extra(where=['parent_id is null',])
+	return render_to_response('register.html', {'form': form, 'countries': countries}, RequestContext(request))
 	
 def toRegister(request):
 	
-	form = RegisterForm()
+	form = RegisterForm(error_class=NoStyleErrorList)
+	
 	countries = CountryStateCity.objects.extra(where=['parent_id is null',])
-	return render_to_response('register.html', {'countries': countries, 'form': form}, RequestContext(request))
+	return render_to_response('register.html', {'form': form, 'countries': countries}, RequestContext(request))
 
 	
 def findStateOrCity(reqeust, countryId):
