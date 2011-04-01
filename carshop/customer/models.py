@@ -12,6 +12,8 @@ class CustomerInfo(models.Model): # 客户表
 		(u'M', u'Male'),(u'F', u'Female'),
 	)
 	
+	RECEIVE_CHOICES = ((u'Y', u'Yes'), (u'N', u'No'))
+	
 	customer = models.ForeignKey(User, primary_key=True) # 用户id
 	
 	customer_phone_no = models.CharField(max_length=32) # 客户电话
@@ -20,7 +22,11 @@ class CustomerInfo(models.Model): # 客户表
 	
 	customer_address = models.CharField(max_length=200) # 客户地址
 	customer_zip = models.CharField(max_length=10) # 客户邮编
-
+	
+	customer_company = models.CharField(max_length=100) # 客户公司
+	
+	customer_is_receive_email = models.CharField(max_length=2, choices=RECEIVE_CHOICES) # 是否接收Email
+	
 	customer_status = models.ForeignKey(Parameter, related_name='customer_status', blank=True, null=True) # 客户状态
 	customer_level = models.ForeignKey(Parameter, related_name='customer_level', blank=True, null=True) # 客户等级
 	customer_integral = models.IntegerField(blank=True, null=True) # 客户积分
