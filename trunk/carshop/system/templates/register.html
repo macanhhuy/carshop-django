@@ -7,7 +7,6 @@
 function countryChange(countrySelect){
 	var stateSelect = document.getElementById('state');
 	if(countrySelect.value != -1){
-		alert("ssssss");
 		new Ajax.Request('/findStateOrCity/' + countrySelect.value, {
 			method:'get',
 			onSuccess: function(transport){
