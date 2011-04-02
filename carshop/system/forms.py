@@ -6,6 +6,10 @@ from carshop.system.models import CountryStateCity
 
 class RegisterForm(forms.Form):
 	
+	#def __init__(self, *args, **kwargs):
+	#	self.fields['first_name'].error_messages['required'] = 'fuck you'
+	#	super(Myform, self).__init__(*args, **kwargs)
+	
 	RECEIVE_CHOICES = ((u'Y', u'Yes'), (u'N', u'No'))
 	
 	COUNTRY_CHOICES = [(u'-1', u'Select...'),]
@@ -14,7 +18,7 @@ class RegisterForm(forms.Form):
 	
 	STATE_CITY_CHOICES = [(u'-1', u'Select...'),]
 		
-	first_name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class':'box1'}))
+	first_name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class':'box1'}), error_messages={'required': 'fcuk you!!!'})
 	last_name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class':'box1'}))
 	email = forms.EmailField(widget=forms.TextInput(attrs={'class':'box1'}))
 	address = forms.CharField(max_length=200, widget=forms.Textarea(attrs={'class':'box1', 'rows':'3', 'cols':'20'}))

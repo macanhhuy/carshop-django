@@ -29,16 +29,12 @@ def register(request):
 			return HttpResponse(form.cleaned_data['username'])
 	else:
 		form = RegisterForm(error_class=NoStyleErrorList)
-
-	countries = CountryStateCity.objects.extra(where=['parent_id is null',])
-	return render_to_response('register.html', {'form': form, 'countries': countries}, RequestContext(request))
+	
+	return render_to_response('register.html', {'form': form}, RequestContext(request))
 	
 def toRegister(request):
-	
 	form = RegisterForm(error_class=NoStyleErrorList)
-	
-	countries = CountryStateCity.objects.extra(where=['parent_id is null',])
-	return render_to_response('register.html', {'form': form, 'countries': countries}, RequestContext(request))
+	return render_to_response('register.html', {'form': form}, RequestContext(request))
 
 	
 def findStateOrCity(reqeust, countryId):
