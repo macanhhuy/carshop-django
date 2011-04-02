@@ -5,7 +5,7 @@
 {% block main %}
 <script language="javascript" type="text/javascript">
 function countryChange(countrySelect){
-	var stateSelect = document.getElementById('state');
+	var stateSelect = document.getElementById('id_state');
 	if(countrySelect.value != -1){
 		new Ajax.Request('/findStateOrCity/' + countrySelect.value, {
 			method:'get',
@@ -26,7 +26,7 @@ function countryChange(countrySelect){
 }
 
 function stateChange(stateSelect){
-	var citySelect = document.getElementById('city');
+	var citySelect = document.getElementById('id_city');
 	if(stateSelect.value != -1){
 		new Ajax.Request('/findStateOrCity/' + stateSelect.value, {
 			method:'get',
@@ -144,17 +144,13 @@ function submit(){
 										<tr>
 											<td class="textb">State:<b class="star">*</b></td>
 											<td>
-												<select name="state" id="state" onchange="stateChange(this)" class="dropdown">
-													<option value="-1">Select...</option>
-												</select>
+												{{ form.state }}
 											</td>
 										</tr>
 										<tr>
 											<td class="textb">City:<b class="star">*</b></td>
 											<td>
-												<select name="city" id="city" class="dropdown">
-													<option value="-1">Select...</option>
-												</select>
+												{{ form.city }}
 											</td>
 										</tr>
 										<tr>
