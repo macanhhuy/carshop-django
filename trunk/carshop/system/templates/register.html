@@ -138,43 +138,44 @@ function submit(){
 										<tr>
 											<td class="textb">Country:<b class="star">*</b></td>
 											<td>
-												{{ form.country }}
+												{{ form.country }}<span id="" class="error" style="color:Red;">{{ form.country.errors }}</span>
 											</td>
 										</tr>
 										<tr>
 											<td class="textb">State:<b class="star">*</b></td>
 											<td>
-												{{ form.state }}
+												{{ form.state }}<span id="" class="error" style="color:Red;">{{ form.state.errors }}</span>
 											</td>
 										</tr>
 										<tr>
 											<td class="textb">City:<b class="star">*</b></td>
 											<td>
-												{{ form.city }}
+												{{ form.city }}<span id="" class="error" style="color:Red;">{{ form.city.errors }}</span>
 											</td>
 										</tr>
 										<tr>
 											<td class="textb">Company:</td>
 											<td>
-												{{ form.company }}
+												{{ form.company }}<span id="" class="error" style="color:Red;">{{ form.company.errors }}</span>
 											</td>
 										</tr>
 										<tr>
 											<td class="textb">Phone Number:</td>
 											<td>
-												{{ form.phone_number }}
+												{{ form.phone_number }}<span id="" class="error" style="color:Red;">{{ form.phone_numbererrors }}</span>
 											</td>
 										</tr>
 										<tr>
 											<td class="textb">Fax Number:</td>
 											<td>
-												{{ form.fax_number }}
+												{{ form.fax_number }}<span id="" class="error" style="color:Red;">{{ form.fax_number.errors }}</span>
 											</td>
 										</tr>
 										<tr id="">
 											<td colspan="2" class="textb" style="text-align:center;">
 												Would you like to subscribe for free Newsletter? :
 												{{ form.receive_email }}
+												<span id="" class="error" style="color:Red;">{{ form.receive_email.errors }}</span>
 											</td>
 										</tr>
 										<tr>
