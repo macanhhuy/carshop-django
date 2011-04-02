@@ -25,6 +25,6 @@ class RegisterForm(forms.Form):
 	receive_email = forms.CharField(max_length=2, widget=forms.RadioSelect(renderer=NonStyleRadioFieldRenderer, choices=RECEIVE_CHOICES))
 	
 	username = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class':'box1'}))
-	password = forms.CharField(max_length=128, widget=forms.TextInput(attrs={'class':'box1'}))
+	password = forms.CharField(max_length=128, widget=forms.PasswordInput(attrs={'class':'box1'}))
 	
 	
