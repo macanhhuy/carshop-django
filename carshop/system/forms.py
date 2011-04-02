@@ -7,8 +7,8 @@ from carshop.system.models import CountryStateCity
 class RegisterForm(forms.Form):
 	
 	#def __init__(self, *args, **kwargs):
+	#	super(RegisterForm, self).__init__(*args, **kwargs)
 	#	self.fields['first_name'].error_messages['required'] = 'fuck you'
-	#	super(Myform, self).__init__(*args, **kwargs)
 	
 	RECEIVE_CHOICES = ((u'Y', u'Yes'), (u'N', u'No'))
 	
