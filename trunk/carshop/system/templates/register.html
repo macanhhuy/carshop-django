@@ -138,15 +138,7 @@ function submit(){
 										<tr>
 											<td class="textb">Country:<b class="star">*</b></td>
 											<td>
-												<select name="country" onchange="countryChange(this)" id="country" class="dropdown">
-													<option value="-1">Select...</option>
-													{% for country in countries %}
-													<option value="{{ country.id }}">{{ country.name }}</option>
-													{% endfor %}
-												</select>
-												
 												{{ form.country }}
-												
 											</td>
 										</tr>
 										<tr>
