@@ -33,7 +33,7 @@ def register(request):
 	return render_to_response('register.html', {'form': form}, RequestContext(request))
 	
 def toRegister(request):
-	form = RegisterForm(error_class=NoStyleErrorList)
+	form = RegisterForm(initial={'receive_email': 'Y'}, error_class=NoStyleErrorList)
 	return render_to_response('register.html', {'form': form}, RequestContext(request))
 
 	
