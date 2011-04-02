@@ -2,19 +2,23 @@
 
 from django import forms
 from carshop.system.widgets import NonStyleRadioFieldRenderer
-
+from carshop.system.models import CountryStateCity
 
 class RegisterForm(forms.Form):
 	
 	RECEIVE_CHOICES = ((u'Y', u'Yes'), (u'N', u'No'))
-
+	
+	CSC_CHOICES = [(u'-1', u'Select...'),]
+	for csc in CountryStateCity.objects.raw('SELECT id, name FROM country_state_city where parent_id is null'):
+		CSC_CHOICES.append((csc.id, csc.name))
+		
 	first_name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class':'box1'}))
 	last_name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class':'box1'}))
 	email = forms.EmailField(widget=forms.TextInput(attrs={'class':'box1'}))
 	address = forms.CharField(max_length=200, widget=forms.Textarea(attrs={'class':'box1', 'rows':'3', 'cols':'20'}))
 	zip = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'class':'box1'}))
 	
-	country = forms.IntegerField(widget=forms.Select(attrs={'class':'dropdown','onchange':'countryChange(this)'}))
+	country = forms.IntegerField(widget=forms.Select(attrs={'class':'dropdown','onchange':'countryChange(this)'}, choices=CSC_CHOICES))
 	state = forms.IntegerField(widget=forms.Select(attrs={'class':'dropdown','onchange':'stateChange(this)'}))
 	city = forms.IntegerField(widget=forms.Select(attrs={'class':'dropdown'}))
 	
