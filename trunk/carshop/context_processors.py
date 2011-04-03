@@ -1,8 +1,8 @@
 # coding: utf-8
 import logging
 from django.core.cache import cache
-from carshop.system.models import Parameter
-from carshop.system.cache_util import *
+from carshop.models import Parameter
+from carshop.cache_util import *
 
 logger = logging.getLogger(__name__)
 

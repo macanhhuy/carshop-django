@@ -1,7 +1,7 @@
 # coding:utf-8
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from carshop.system.models import Parameter
+from carshop.models import Parameter
 from carshop.product.models import *
 
 

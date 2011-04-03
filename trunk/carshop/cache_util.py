@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from django.core.cache import cache
-from carshop.system.models import Parameter
+from carshop.models import Parameter
 
 def getAllLanguages():
 	languages = cache.get('languages')

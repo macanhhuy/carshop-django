@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.contrib import admin
 from carshop.product import models as product
-from carshop.system import models as system
+from carshop.models import Parameter, AddressFormat
 
 
 class Order(models.Model): # 订单表
@@ -20,7 +20,7 @@ class Order(models.Model): # 订单表
 	customer_country = models.CharField(max_length=32) # 客户国家
 	customer_telephone = models.CharField(max_length=32) # 客户电话
 	customer_email_address = models.CharField(max_length=96) # 客户EMAIL
-	customer_address_format = models.ForeignKey(system.AddressFormat, related_name='customer_address_format') # 客户地址格式
+	customer_address_format = models.ForeignKey(AddressFormat, related_name='customer_address_format') # 客户地址格式
 	
 	delivery_name = models.CharField(max_length=64) # 送货人名
 	delivery_company = models.CharField(max_length=64, blank=True, null=True) # 送货公司
@@ -30,7 +30,7 @@ class Order(models.Model): # 订单表
 	delivery_postcode = models.CharField(max_length=10) # 
 	delivery_state = models.CharField(max_length=32, blank=True, null=True) # 
 	delivery_country = models.CharField(max_length=32) # 
-	delivery_address_format = models.ForeignKey(system.AddressFormat, related_name='delivery_address_format') # 
+	delivery_address_format = models.ForeignKey(AddressFormat, related_name='delivery_address_format') # 
 	
 	billing_name = models.CharField(max_length=64) # 
 	billing_company = models.CharField(max_length=64, blank=True, null=True) # 
@@ -40,7 +40,7 @@ class Order(models.Model): # 订单表
 	billing_postcode = models.CharField(max_length=10) # 
 	billing_state = models.CharField(max_length=32, blank=True, null=True) # 
 	billing_country = models.CharField(max_length=32) # 
-	billing_address_format = models.ForeignKey(system.AddressFormat, related_name='billing_address_format') # 
+	billing_address_format = models.ForeignKey(AddressFormat, related_name='billing_address_format') # 
 	
 	payment_method = models.CharField(max_length=128) # 付款方式
 	payment_module_code = models.CharField(max_length=32) # ？
@@ -93,18 +93,18 @@ class OrderProductDownload(models.Model): # 订单下载表
 class OrderStatus(models.Model): # 订单状态表
 	order = models.ForeignKey(Order) # 订单ID
 	customer = models.ForeignKey(User, related_name="customer_user") # 客户ID
-	order_status = models.ForeignKey(system.Parameter, related_name='order_status') # 订单状态
+	order_status = models.ForeignKey(Parameter, related_name='order_status') # 订单状态
 	time_update_status = models.DateTimeField() # 状态更新时间
 	time_pass = models.DateTimeField() # 确认时间
 	order_pass_use = models.ForeignKey(User, related_name="manager_user") # 确认管理人
-	order_send_type = models.ForeignKey(system.Parameter, related_name='order_send_type') # 发送状态
+	order_send_type = models.ForeignKey(Parameter, related_name='order_send_type') # 发送状态
 	
 	class Meta:
 		db_table = "order_status"
 
 class OrderStatusHistory(models.Model): # 订单状态历史表
 	order = models.ForeignKey(Order) # 订单ID
-	status = models.ForeignKey(system.Parameter) # 订单状态
+	status = models.ForeignKey(Parameter) # 订单状态
 	time_added = models.DateTimeField() # 添加时间
 	#customer_notified
 	comment = models.TextField() # 注释

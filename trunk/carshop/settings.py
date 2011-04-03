@@ -91,8 +91,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 	#'django.core.context_processors.debug',
 	#'django.core.context_processors.i18n',
 	#'django.core.context_processors.media',
-	'carshop.system.context_processors.getLeftNavigate',
-	'carshop.system.context_processors.getTopNavigate'
+	'carshop.context_processors.getLeftNavigate',
+	'carshop.context_processors.getTopNavigate'
 )
 
 ROOT_URLCONF = 'carshop.urls'
@@ -116,13 +116,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
 	'django.contrib.admin',
 	'paypal.standard.ipn',
+	'carshop',
 	'carshop.paypal.standard',
 	'carshop.paypal.pro',
 	'carshop.customer',
 	'carshop.manufacturer',
 	'carshop.order',
 	'carshop.product',
-	'carshop.system',
+
 	'debug_toolbar',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',

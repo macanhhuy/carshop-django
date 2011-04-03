@@ -12,10 +12,10 @@ from django.core import serializers
 from django.db import IntegrityError
 from django.utils.translation import gettext as _
 
-from carshop.system.models import Parameter, CountryStateCity
-from carshop.system.context_processors import getLeftNavigate
-from carshop.system.forms import RegisterForm
-from carshop.system.utils import NoStyleErrorList
+from carshop.models import Parameter, CountryStateCity
+from carshop.context_processors import getLeftNavigate
+from carshop.forms import RegisterForm
+from carshop.utils import NoStyleErrorList
 
 from carshop.customer.models import CustomerInfo
 
