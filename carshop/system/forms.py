@@ -9,6 +9,7 @@ class RegisterForm(forms.Form):
 	#def __init__(self, *args, **kwargs):
 	#	super(RegisterForm, self).__init__(*args, **kwargs)
 	#	self.fields['first_name'].error_messages['required'] = 'fuck you'
+	GENDER_CHOICES = ((u'-1', u'Select...'), (u'M', u'Male'),(u'F', u'Female'),)
 	
 	RECEIVE_CHOICES = ((u'Y', u'Yes'), (u'N', u'No'))
 	
@@ -27,6 +28,8 @@ class RegisterForm(forms.Form):
 	country = forms.IntegerField(widget=forms.Select(attrs={'class':'dropdown','onchange':'countryChange(this)'}, choices=COUNTRY_CHOICES))
 	state = forms.IntegerField(widget=forms.Select(attrs={'class':'dropdown','onchange':'stateChange(this)'}, choices=STATE_CITY_CHOICES))
 	city = forms.IntegerField(widget=forms.Select(attrs={'class':'dropdown'}, choices=STATE_CITY_CHOICES))
+	
+	gender = forms.CharField(max_length=2, required=False, widget=forms.Select(attrs={'class':'dropdown'}, choices=GENDER_CHOICES))
 	
 	company = forms.CharField(max_length=100, required=False, widget=forms.TextInput(attrs={'class':'box1'}))
 	phone_number = forms.CharField(max_length=32, required=False, widget=forms.TextInput(attrs={'class':'box1'}))

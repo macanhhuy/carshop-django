@@ -842,18 +842,18 @@ ul.slink li a:hover
 	
 .phonebg {
 	background: url("/medias/images/phonebg.jpg") no-repeat 0px 0px;
-	width:200px;
+	width:160px;
 	float:left;
-	margin:7px 0 0 30px;
+	margin:7px 0 0 10px;
 	padding:6px 0 0 60px;
 	height:38px;
-	}
+}
 	
 .ad_pop {
-  margin:0; padding:0;
-  background:#EEEDED center top;
-  display:none;
-  }	
+	margin:0; padding:0;
+	background:#EEEDED center top;
+	display:none;
+}	
   
 .gc_bg {
 	background: url("/medias/images/gc_bg.jpg") no-repeat 100px 250px;

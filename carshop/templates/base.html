@@ -14,20 +14,61 @@
 		<script src="/medias/scripts/prototype.js" type="text/javascript"></script>
 		<script src="/medias/scripts/leftNavigate.js" type="text/javascript"></script>
 		<script src="/medias/scripts/lightBox.js" type="text/javascript"></script>
+		
 	</head>
 	<body>
+		<script language="javascript" type="text/javascript">
+		
+function postLogin(){
+	var form = $('loginForm')
+	new Ajax.Request('/login', {
+		method: 'POST',
+		parameters: Form.serialize(form),
+		onSuccess: function(transport) {
+			var result = transport.responseText.split(',');
+			var resultCode = Number(result[0]);
+			switch(resultCode){
+				case 1:
+					closeLoginWin();
+					//$("PageHeader1_imgBtnLogin").style.display = 'none';
+					//var username_a = $("username_a");
+					//username_a.style.display = 'block';
+					//username_a.href = "";
+					//username_a.innerHTML = result[1];
+					
+					var login_li = $('login_li');
+					login_li.innerHTML = '<a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;" href="#" >' + result[1] + '</a><a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;" href="/logout">Log out</a>'
+					
+					break;
+				case 2:
+					alert('error');
+					break;
+				case 3:
+					alert('error');
+					break;
+				default:
+					
+					break;
+			}
+			
+		}
+	}); 
+	
+	return false
+}
+		
+		</script>
 
 		<table width="979" cellpadding="0" cellspacing="0" border="0"
 			align="center">
 			<tr>
 				<td>
 					<!--Header Starts Here-->
-					<div id="PageHeader1_pnlHeader"
-						onKeyPress="javascript:return WebForm_FireDefaultButton(event, 'PageHeader1_imgGo')">
+					<div id="PageHeader1_pnlHeader"	onKeyPress="">
 
 						<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td width="58%">
+								<td width="50%">
 									<a href="default.aspx.htm"><img
 											src="/medias/images/covers4auto_logo.jpg" alt="Covers4Auto"
 											style="float: left;" /> </a>
@@ -37,7 +78,7 @@
 										<b class="time"> Mon-Fri 8 am to 5 pm </b>
 									</div>
 								</td>
-								<td width="42%">
+								<td width="50%">
 									<ul class="order">
 										<li>
 											<a href="Cart.aspx.htm"> <img
@@ -55,11 +96,16 @@
 												<img src="/medias/images/my_account.jpg" alt="My Account" />
 											</a>
 										</li>
-										<li>
+										<li id="login_li">
+											{% if not user.is_authenticated %}
 											<input type="image" name="PageHeader1$imgBtnLogin"
 												id="PageHeader1_imgBtnLogin" title="Click here to login"
 												src="/medias/images/login.jpg" alt="Click here to login"
 												style="border-width: 0px;" onclick="showLoginWin()" />
+											{% else %}
+											<a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;" href="#" >{{ user.username }}</a>
+											<a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;" href="/logout">Log out</a>
+											{% endif %}
 										</li>
 									</ul>
 
@@ -240,7 +286,7 @@ function SetTopSearchText()
 
 
 																		<div id="Left1_SignupNewsletter1_pnlNewsletter"
-																			onKeyPress="javascript:return WebForm_FireDefaultButton(event, 'Left1_SignupNewsletter1_imgBtnNewsletter')">
+																			onKeyPress="">
 
 
 																			<input name="Left1$SignupNewsletter1$txtNewsletter"
@@ -456,7 +502,7 @@ function SetSearchText()
 <div id="loginWin" class="lightbox">
 	<a href="#" class="maskClose" onclick="closeLoginWin()"><img src="/medias/images/closelabel.png"  /></a>
 	<h1>Log in</h1>
-	<form method="post" method="/login">
+	<form id="loginForm">
 		<table>
 			<tr><td>
 				<label for="username">Username:<input type="text" id="username" name="username" class="text" /></label>
@@ -469,7 +515,7 @@ function SetSearchText()
 					<label for="checkcode">checkcode:<input style="width:65px;" type="text" id="checkcode" name="checkcode" class="text" />&nbsp;&nbsp;&nbsp;</label><img src="/medias/images/check.jpg" />
 			</td></tr>
 			<tr><td>
-				<input style="padding-bottom:10px;" type="submit" value="Log in" class="btn_submit" />
+				<input style="padding-bottom:10px;" onclick="return postLogin()" type="submit" value="Log in" class="btn_submit" />
 			</td></tr>
 		</table>
 	</form>
@@ -479,7 +525,6 @@ function SetSearchText()
 
 	</body>
 	<script>
-	
 var loginWin = new LightBox("loginWin");
 loginWin.Center = true;
 loginWin.OverLay.Color = "#000";
