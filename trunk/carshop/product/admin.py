@@ -21,7 +21,7 @@ class ProductAdmin(admin.ModelAdmin):
 		from django.db import connection
 		cursor = connection.cursor()
 		if db_field.name == "product_type":
-			kwargs["queryset"] = system.Parameter.objects.extra(where = ["parameter_parent_id in (select p2.id from parameter p2 where p2.parameter_code='product_top_type')",])
+			kwargs["queryset"] = Parameter.objects.extra(where = ["parameter_parent_id in (select p2.id from parameter p2 where p2.parameter_code='product_top_type')",])
 
 			return db_field.formfield(**kwargs)
 		
@@ -46,7 +46,7 @@ class ProductDescriptionAdmin(admin.ModelAdmin):
 
 	def formfield_for_foreignkey(self, db_field, request, **kwargs):
 		if db_field.name == "language":
-			kwargs["queryset"] = system.Parameter.objects.filter(parameter_code='language')
+			kwargs["queryset"] = Parameter.objects.filter(parameter_code='language')
 			return db_field.formfield(**kwargs)
 		
 		return super(ProductDescriptionAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
