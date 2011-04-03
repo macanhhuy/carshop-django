@@ -1,8 +1,9 @@
 # coding: utf-8
 import datetime
 from django.contrib import admin
-from carshop.customer.models import *
+from django.contrib.auth.models import User
 
+from carshop.customer.models import *
 from carshop.models import Parameter
 
 
@@ -82,6 +83,11 @@ class CustomerInfoAdmin(admin.ModelAdmin):
 			'fields': ('customer_status', 'customer_level', 'customer_integral', )
 		}),
 	)
+	
+	list_display = ('customer_name', 'customer_address', 'customer_gender')
+	
+	def customer_name(self, obj):
+		return obj.customer.username
 	
 	def formfield_for_foreignkey(self, db_field, request, **kwargs):
 		if db_field.name == "customer_status":

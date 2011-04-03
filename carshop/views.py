@@ -37,12 +37,12 @@ def login_view(request):
 		password = request.POST['password']
 		user = authenticate(username=username, password=password)
 		if user is not None:
-			if user.is_active:
-				login(request, user)
-				print('1,' + user.username)
-				return HttpResponse('1,' + user.username)
-			else:
-				return HttpResponse('3,')
+			#if user.is_active:
+			login(request, user)
+			print('1,' + user.username)
+			return HttpResponse('1,' + user.username)
+			#else:
+			#	return HttpResponse('3,')
 		else:
 			return HttpResponse('2,')
 	
