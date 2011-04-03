@@ -19,14 +19,14 @@ urlpatterns = patterns('',
 	(r'^product/', include('carshop.product.urls')),
 	
 	
-	(r'^index.html$', 'carshop.system.views.index'),
-	(r'^$', 'carshop.system.views.index'),
+	(r'^index.html$', 'carshop.views.index'),
+	(r'^$', 'carshop.views.index'),
 
-	(r'^login$', 'carshop.system.views.login_view'),
-	(r'^logout$', 'carshop.system.views.logout_view'),
-	(r'^register$', 'carshop.system.views.register'),
-	(r'^toRegister$', 'carshop.system.views.toRegister'),
-	(r'^findStateOrCity/(?P<countryId>\d{1,6})$', 'carshop.system.views.findStateOrCity'),
+	(r'^login$', 'carshop.views.login_view'),
+	(r'^logout$', 'carshop.views.logout_view'),
+	(r'^register$', 'carshop.views.register'),
+	(r'^toRegister$', 'carshop.views.toRegister'),
+	(r'^findStateOrCity/(?P<countryId>\d{1,6})$', 'carshop.views.findStateOrCity'),
 	
 	
 	(r'^allManufacturer.html', 'carshop.manufacturer.views.allManufacturer'),

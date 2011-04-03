@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib import admin
 from django.contrib.auth import models as auth
 from carshop.manufacturer import models as manufacturer
-from carshop.system import models as system
+from carshop.models import Parameter
 	
 	
 class Product(models.Model): #
@@ -12,7 +12,7 @@ class Product(models.Model): #
 	product_image_url = models.CharField(max_length=100, blank=True, null=True) # 图片地址
 	product_manufacturer = models.ForeignKey(manufacturer.Manufacturer) # 制造商
 	
-	product_type = models.ForeignKey(system.Parameter, related_name='product_type') # 物品类别
+	product_type = models.ForeignKey(Parameter, related_name='product_type') # 物品类别
 	product_price = models.FloatField()	# 价格
 	product_order_desc = models.CharField(max_length=1000) # 订购说明
 	product_count = models.IntegerField() # 库存
@@ -21,9 +21,9 @@ class Product(models.Model): #
 	time_product_available = models.DateTimeField(blank=True, null=True) # 到期时间?
 	product_added_user = models.ForeignKey(auth.User, related_name='product_added_user') # 添加人员
 	product_modified_user = models.ForeignKey(auth.User, related_name='product_modified_user') # 修改人员
-	product_status = models.ForeignKey(system.Parameter, related_name='product_status', blank=True, null=True) # 产品状态
+	product_status = models.ForeignKey(Parameter, related_name='product_status', blank=True, null=True) # 产品状态
 	product_weight = models.FloatField(blank=True, null=True) # 产品重
-	product_tax = models.ForeignKey(system.Parameter, related_name='product_tax', blank=True, null=True) # 税 外键
+	product_tax = models.ForeignKey(Parameter, related_name='product_tax', blank=True, null=True) # 税 外键
 	product_quantity_order_min = models.IntegerField(default=1) # 单次购买最小数量
 	product_quantity_order_max = models.IntegerField(default=999) # 单次购买最大数量
 	product_sequence = models.IntegerField(blank=True, null=True) # 排序
@@ -46,7 +46,7 @@ class ProductAttribute(models.Model): # 产品属性表
 
 class ProductDescription(models.Model): # 产品描述表
 	product = models.ForeignKey(Product) # 产品ID
-	language = models.ForeignKey(system.Parameter) # 语言ID
+	language = models.ForeignKey(Parameter) # 语言ID
 	product_name = models.CharField(max_length=64) # 产品名
 	product_desc = models.TextField(blank=True, null=True) # 产品描述
 	product_url = models.CharField(max_length=255, blank=True, null=True) # 产品URL

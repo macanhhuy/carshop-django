@@ -3,7 +3,7 @@ import datetime
 from django.contrib import admin
 from carshop.customer.models import *
 
-from carshop.system.models import Parameter
+from carshop.models import Parameter
 
 
 #class CustomerAdmin(admin.ModelAdmin):

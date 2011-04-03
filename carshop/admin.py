@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from django.contrib import admin
-from carshop.system.models import *
+from carshop.models import *
 
 class ParameterAdmin(admin.ModelAdmin):
 	#inlines = [

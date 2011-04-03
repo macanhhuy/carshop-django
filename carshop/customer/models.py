@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.core.cache import cache
 from django.contrib import admin
-from carshop.system.models import Parameter, CountryStateCity
+from carshop.models import Parameter, CountryStateCity
 from carshop.product import models as product
 
 class CustomerInfo(models.Model): # 客户表

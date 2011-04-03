@@ -1,8 +1,8 @@
 # -*- coding:utf-8
 
 from django import forms
-from carshop.system.widgets import NonStyleRadioFieldRenderer
-from carshop.system.models import CountryStateCity
+from carshop.widgets import NonStyleRadioFieldRenderer
+from carshop.models import CountryStateCity
 
 class RegisterForm(forms.Form):
 	

@@ -37,7 +37,7 @@ function postLogin(){
 					//username_a.innerHTML = result[1];
 					
 					var login_li = $('login_li');
-					login_li.innerHTML = '<a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;" href="#" >' + result[1] + '</a><a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;" href="/logout">Log out</a>'
+					login_li.innerHTML = '<span style="display:block;font-weight:bold;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;">Welcome&nbsp;<a style="text-decoration:none;color:#545454;" href="#" >' + result[1] + '</a></span><a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;" href="/logout">Log out</a>'
 					
 					break;
 				case 2:
@@ -103,7 +103,7 @@ function postLogin(){
 												src="/medias/images/login.jpg" alt="Click here to login"
 												style="border-width: 0px;" onclick="showLoginWin()" />
 											{% else %}
-											<a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;" href="#" >{{ user.username }}</a>
+											<span style="display:block;font-weight:bold;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;">Welcome&nbsp;<a style="text-decoration:none;color:#545454;" href="#" >{{ user.username }}</a></span>
 											<a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;" href="/logout">Log out</a>
 											{% endif %}
 										</li>
