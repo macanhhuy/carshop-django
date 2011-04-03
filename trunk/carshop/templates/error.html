@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Error{% endblock %}
+
+{% block main %}
+	
+	<h1>your have a error:</h1><br />
+	<p>{{ e }}</p>
+	<p>{{ traceback_msg }}</p>
+
+{% endblock %}
