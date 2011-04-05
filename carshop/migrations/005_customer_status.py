@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding: utf-8
 
 from dmigrations.mysql import migrations as m
 import datetime
