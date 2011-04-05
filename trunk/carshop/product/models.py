@@ -10,7 +10,7 @@ class Product(models.Model): #
 	product_name = models.CharField(max_length=100) # 名称
 	product_model = models.CharField(max_length=62, blank=True, null=True)
 	product_image_url = models.CharField(max_length=100, blank=True, null=True) # 图片地址
-	product_manufacturer = models.ForeignKey(manufacturer.Manufacturer) # 制造商
+	product_manufacturer = models.ForeignKey(manufacturer.Manufacturer, blank=True, null=True) # 制造商
 	
 	product_type = models.ForeignKey(Parameter, related_name='product_type') # 物品类别
 	product_price = models.FloatField()	# 价格
@@ -55,11 +55,24 @@ class ProductDescription(models.Model): # 产品描述表
 	class Meta:
 		db_table = 'product_description'
 
+
 #class Coupon(models.Model): # 优惠券
 
+
+class CarManufacturer(models.Model):  # 汽车制造商
+	name = models.CharField(u'', max_length=50) # 名字
+	time_added = models.DateTimeField() # 注册时间/添加时间
+	time_modified = models.DateTimeField() # 最后修改时间
+	manufacturer_image = models.CharField(max_length=255, blank=True, null=True) # 制造商图片(LOGO)
+	manufacturer_desc = models.CharField(max_length=2000, blank=True, null=True) # 描述
 	
+	def __unicode__(self):
+		return self.name
 	
+	class Meta:
+		db_table = 'car_manufacturer'
 
 
+#class Product
 
 

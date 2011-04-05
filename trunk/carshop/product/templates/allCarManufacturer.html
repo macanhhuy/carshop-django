@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}All Manufacturer{% endblock %}
+
+{% block main %}
+<h1>All Manufacturer</h1>
+{% if not carManufacturers %}
+	没有厂商
+{% else  %}
+	<table cellspacing="1" cellpadding="4" border="0" bgcolor="#666666" align="center" width="700">
+	{% for cm in carManufacturers %}
+		<tr><td bgcolor="#ffffff">
+		{{ cm.name }}
+		</td></tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+{% endblock %}
