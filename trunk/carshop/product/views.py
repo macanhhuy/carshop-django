@@ -6,7 +6,6 @@ from carshop.product.models import *
 
 def findByCarManufacturer(request):
 	carManufacturers = CarManufacturer.objects.all().order_by('name')
-	print carManufacturers
 	return render_to_response('allCarManufacturer.html', {'carManufacturers': carManufacturers}, RequestContext(request))
 
 def findProductById(request, productTypeId, productSubTypeId=None):
