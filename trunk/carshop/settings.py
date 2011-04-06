@@ -108,29 +108,32 @@ import os
 DMIGRATIONS_DIR = os.path.join(os.path.dirname(__file__), 'migrations')
 
 INSTALLED_APPS = (
-	'dmigrations',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
 	'django.contrib.admin',
-	'paypal.standard.ipn',
+	
 	'carshop',
 	'carshop.paypal.standard',
 	'carshop.paypal.pro',
+	'carshop.paypal.standard.ipn',
+	
 	'carshop.customer',
 	'carshop.manufacturer',
 	'carshop.order',
 	'carshop.product',
-
+	
+	'dmigrations',
 	'debug_toolbar',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+	'seo',
 )
 
+SEO_FOR_MODELS = [
+	'carshop.product.models.Product',
+	'carshop.product.models.CarManufacturer',
+]
 
 PAYPAL_RECEIVER_EMAIL = 'xtwxfxk@gmail.com'
 PAYPAL_TEST = True
@@ -145,6 +148,8 @@ PAYPAL_WPP_SIGNATURE = "AKmUkXSpzyIk02Gvvi3fVluSBs3WAvhvJ3e5WlKhRgX6XYDLQFd.7xHi
 #	format = '%(asctime)s %(levelname)s %(module)s.%(funcName)s Line:%(lineno)d %(message)s',
 #	filename = 'log/filelog.log',
 #)
+
+
 
 try:
 	from settings_debug_toolbar import *

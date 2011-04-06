@@ -41,8 +41,8 @@ def requestProduct():
 	home_replace_url = "{{ home_url }}"
 	
 	sql = '''
-	INSERT INTO manufacturer(manufacturer_name, date_created, time_added, time_modified, manufacturer_desc)
-	VALUES('%s', %s, %s, %s, '%s');\n\n'''
+	INSERT INTO car_manufacturer(name, time_added, time_modified, manufacturer_desc)
+	VALUES('%s', %s, %s, '%s');\n\n'''
 	
 	f_make = open('makeUrl.txt')
 	p_name = re.compile('>.*<')
@@ -72,11 +72,11 @@ def requestProduct():
 			desc = desc.replace('www.covers4auto.com', '{{ home_url }}')
 			desc = desc.replace("'", "\'")
 		
-			f_product_sql.write(sql %(name, 'now()', 'now()', 'now()', desc))
+			f_product_sql.write(sql %(name, 'now()', 'now()', desc))
 		
 		except Exception, e:
 			print(e)
-			f_product_sql.write(sql %(name, 'now()', 'now()', 'now()', ''))
+			f_product_sql.write(sql %(name, 'now()', 'now()', ''))
 		
 		print('%s complete' %(name))
 		
