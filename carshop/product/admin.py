@@ -4,7 +4,12 @@ from django.contrib import admin
 from django.db.models.query import QuerySet
 from carshop.product.models import *
 
+from rollyourown.seo.admin import get_inline
+from carshop.seo import CarShopMetadata
+
 class ProductAdmin(admin.ModelAdmin):
+	
+	inlines = [get_inline(CarShopMetadata)]
 	
 	fieldsets = (
 		(None, {

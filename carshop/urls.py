@@ -1,9 +1,13 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
 
+from rollyourown.seo.admin import register_seo_admin
+from carshop.seo import CarShopMetadata
+
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 admin.autodiscover()
+register_seo_admin(admin.site, CarShopMetadata)
 
 urlpatterns = patterns('',
     # Example:

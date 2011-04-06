@@ -1,14 +1,4 @@
 {% extends "base.html" %}
-{% load seo_tags %}
-
-{% block meta %}
-	<meta name="description" content="{% seo description for object %}" />
-	<meta name="keywords" content="{% seo keywords for object %}" />
-{% endblock %}
-
-{% block title %}
-	{% seo title for object %}
-{% endblock %}
 
 {% block main %}
 <h1>All Manufacturer</h1>
