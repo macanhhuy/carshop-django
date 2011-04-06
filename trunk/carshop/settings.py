@@ -88,6 +88,7 @@ MIDDLEWARE_CLASSES = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
 	'django.core.context_processors.auth',
+	'django.core.context_processors.request',
 	#'django.core.context_processors.debug',
 	#'django.core.context_processors.i18n',
 	#'django.core.context_processors.media',
@@ -127,13 +128,9 @@ INSTALLED_APPS = (
 	
 	'dmigrations',
 	'debug_toolbar',
-	'seo',
+	'rollyourown.seo',
 )
 
-SEO_FOR_MODELS = [
-	'carshop.product.models.Product',
-	'carshop.product.models.CarManufacturer',
-]
 
 PAYPAL_RECEIVER_EMAIL = 'xtwxfxk@gmail.com'
 PAYPAL_TEST = True
