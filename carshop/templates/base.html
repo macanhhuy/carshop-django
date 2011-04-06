@@ -6,7 +6,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head id="Head1">
-		<title>{% block title %} {% endblock %}</title> {% block meta %}{% endblock %}
+		{% block meta %}{% endblock %}
+	
+		<title>{% block title %} {% endblock %}</title> 
 		<link href="/medias/styles/style.css" type="text/css" rel="stylesheet" />
 		<link href="/medias/styles/leftNavigate.css" type="text/css" rel="stylesheet" />
 		<link href="/medias/styles/lightBox.css" type="text/css" rel="stylesheet" />
