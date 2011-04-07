@@ -59,19 +59,24 @@ class ProductDescription(models.Model): # 产品描述表
 #class Coupon(models.Model): # 优惠券
 
 
-class CarManufacturer(models.Model):  # 汽车制造商
-	name = models.CharField(u'', max_length=50) # 名字
+class ProductionFor(models.Model):  # 车辆表
+	name = models.CharField(u'name', max_length=50) # 名字
 	time_added = models.DateTimeField() # 注册时间/添加时间
 	time_modified = models.DateTimeField() # 最后修改时间
-	manufacturer_image = models.CharField(max_length=255, blank=True, null=True) # 制造商图片(LOGO)
-	manufacturer_desc = models.CharField(max_length=2000, blank=True, null=True) # 描述
+	image = models.CharField(max_length=255, blank=True, null=True) # 制造商图片(LOGO)
+	desc = models.CharField(max_length=2000, blank=True, null=True) # 描述
 	
 	def __unicode__(self):
 		return self.name
 	
 	class Meta:
-		db_table = 'car_manufacturer'
+		db_table = 'production_for'
 
+		
+class ProductionForAndProductType(models.Model): # 
+	pass
+	
+	
 
 #class Product
 

@@ -33,7 +33,7 @@ urlpatterns = patterns('',
 	(r'^findStateOrCity/(?P<countryId>\d{1,6})$', 'carshop.views.findStateOrCity'),
 	
 	
-	(r'^findByCarManufacturer.html', 'carshop.product.views.findByCarManufacturer'),
+	(r'^allCar.html', 'carshop.product.views.allCar'),
 	
 	
 	#(r'^index$', 'carshop.system.views.index'),

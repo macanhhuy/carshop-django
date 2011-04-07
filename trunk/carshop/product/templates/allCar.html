@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1>All Manufacturer</h1>
-{% if not carManufacturers %}
+<h1>All Car</h1>
+{% if not cars %}
 	没有厂商
 {% else  %}
 	<table cellspacing="1" cellpadding="4" border="0" bgcolor="#666666" align="center" width="700">
-	{% for cm in carManufacturers %}
+	{% for cm in cars %}
 		{% cycle '<tr>' '' '' '' %}
-			<td bgcolor="#ffffff">
-				{{ cm.name }}
+			<td bgcolor="#F4F4F4">
+				<a style="text-decoration:none;color:#00B2ED;" href="/product/car/{{ cm.id }}.html">{{ cm.name }}</a>
 			</td>
 		{% cycle '' '' '' '</tr>' %}
 	{% endfor %}

@@ -101,7 +101,7 @@ function postLogin(){
 											{% if not user.is_authenticated %}
 											<input type="image" name="PageHeader1$imgBtnLogin"
 												id="PageHeader1_imgBtnLogin" title="Click here to login"
-												src="/medias/images/login.jpg" alt="Click here to login"
+												src="/medias/images/login.png" alt="Click here to login"
 												style="border-width: 0px;" onclick="showLoginWin()" />
 											{% else %}
 											<span style="display:block;font-weight:bold;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;">Welcome&nbsp;<a style="text-decoration:none;color:#545454;" href="#" >{{ user.username }}</a></span>
@@ -414,7 +414,7 @@ function SetSearchText()
 								<br />
 
 							</td>
-							<td width="725" valign="top">
+							<td width="725" valign="top" style="padding-left:20px;">
 								{% block main %}{% endblock %}
 							</td>
 						</tr>

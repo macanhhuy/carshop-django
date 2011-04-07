@@ -1,12 +1,14 @@
-# coding:utf-8
+# -*- coding:utf-8
+
+from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from carshop.models import Parameter
 from carshop.product.models import *
 
-def findByCarManufacturer(request):
-	carManufacturers = CarManufacturer.objects.all().order_by('name')
-	return render_to_response('allCarManufacturer.html', {'carManufacturers': carManufacturers}, RequestContext(request))
+def allCar(request):
+	cars = list(ProductionFor.objects.raw('select pf.id, pf.name from production_for as pf order by pf.name'))
+	return render_to_response('allCar.html', {'cars': cars}, RequestContext(request))
 
 def findProductById(request, productTypeId, productSubTypeId=None):
 	from django.db import connection
@@ -19,3 +21,14 @@ def findProductById(request, productTypeId, productSubTypeId=None):
 		
 		
 	return render_to_response('product.html', {'products':products}, RequestContext(request))
+	
+	
+def findProductByCarId(request, carId):
+	try:
+		car = ProductionFor.objects.get(id=carId)
+		
+		
+		return render_to_response('productByCarId.html', {'car': car}, RequestContext(request))
+		
+	except ProductionFor.DoesNotExist:
+		return render_to_response('error.html', {'e': u'don\'t have this car'}, RequestContext(request))
