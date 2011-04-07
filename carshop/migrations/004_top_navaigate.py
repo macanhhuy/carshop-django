@@ -12,7 +12,7 @@ VALUES
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('top_navigate', 'View All Make', '/findByCarManufacturer.html', '', 2, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
+	('top_navigate', 'View All Make', '/allCar.html', '', 2, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
@@ -59,7 +59,7 @@ VALUES
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('top_navigate', '制造商', '/findByCarManufacturer.html', '', 2, 1, now(), (select l.id from parameter AS l where l.parameter_value='ZH-CN' and l.parameter_code='language'));
+	('top_navigate', '制造商', '/allCar.html', '', 2, 1, now(), (select l.id from parameter AS l where l.parameter_value='ZH-CN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
