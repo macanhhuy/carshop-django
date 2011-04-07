@@ -11,3 +11,4 @@ class CarShopMetadata(seo.Metadata):
 	
 	class Meta:
 		seo_models = ('product', )
+		#seo_views = ('product', 'carshop')
