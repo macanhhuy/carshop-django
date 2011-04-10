@@ -7,20 +7,31 @@ from carshop.product.models import *
 from rollyourown.seo.admin import get_inline
 from carshop.seo import CarShopMetadata
 
+class ProductDescriptionInline(admin.StackedInline):
+	model = ProductDescription
+	extra = 1
+	
+	def formfield_for_foreignkey(self, db_field, request, **kwargs):
+		if db_field.name == "language":
+			kwargs["queryset"] = Parameter.objects.filter(parameter_code='language')
+			return db_field.formfield(**kwargs)
+		
+		return super(ProductDescriptionInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
+
 class ProductAdmin(admin.ModelAdmin):
 	
-	inlines = [get_inline(CarShopMetadata)]
+	inlines = [ProductDescriptionInline, get_inline(CarShopMetadata), ]
 	
 	fieldsets = (
 		(None, {
-			'fields':('product_name', 'product_image_url', 'product_manufacturer', 'product_type', 'product_price', 'product_count',)
+			'fields':('product_name', 'product_image', 'product_for', 'product_desc', 'product_type', 'product_price', 'product_count',)
 		}),
 		('Advanced options', {
 			'fields': ()
 		}),
 	)
 	
-	list_display = ('product_name', 'product_manufacturer', 'product_type', 'product_price', 'product_count', )
+	list_display = ('product_name', 'product_for', 'product_type', 'product_price', 'product_count', )
 	
 	def formfield_for_foreignkey(self, db_field, request, **kwargs):
 		from django.db import connection
@@ -56,12 +67,11 @@ class ProductDescriptionAdmin(admin.ModelAdmin):
 		
 		return super(ProductDescriptionAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
-	pass
 	
 class ProductionForAdmin(admin.ModelAdmin):
 	pass
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(ProductAttribute, ProductAttributeAdmin)
-admin.site.register(ProductDescription, ProductDescriptionAdmin)
+#admin.site.register(ProductAttribute, ProductAttributeAdmin)
+#admin.site.register(ProductDescription, ProductDescriptionAdmin)
 admin.site.register(ProductionFor, ProductionForAdmin)
