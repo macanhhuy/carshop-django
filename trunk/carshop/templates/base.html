@@ -211,7 +211,7 @@ function SetTopSearchText()
 												<dd id="ddcontent{{ menuItem.firstMenu.parameter_sequence }}" onmouseover="cancelHide('{{ menuItem.firstMenu.parameter_sequence }}')" onmouseout="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',-1)">
 													<ul>
 													{% for secondMenu in menuItem.secondMenu %}
-													<li><a href="/product/{{ menuItem.firstMenu.id }}/{{ secondMenu.id }}.html">{{ secondMenu.parameter_display_name }}</a></li>
+													<li><a href="/product/{{ menuItem.firstMenu.id }}/{{ secondMenu.id }}.html">{{ secondMenu.product_name }}</a></li>
 													{% endfor %}
 													</ul>
 												</dd>

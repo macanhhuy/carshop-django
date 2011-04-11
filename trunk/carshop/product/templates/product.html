@@ -1,24 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}buy{% endblock %}
+{% block title %}Product{% endblock %}
 
 {% block main %}
-<h1>{{ type.parameter_display_name }}</h1>
 
-{% if not products %}
-	don't have this products
-{% else  %}
-	{% for product in products %}
-		{{product.product_name}}<br />
-	{% endfor %}
-	
+{% if not product %}
+	don't have this product
+{% else %}
+	<h1>{{ product.product_name }}</h1>
+
 	<table width="100%" border="0" cellspacing="0" cellpadding="4" bgcolor="#f6f6f6">
 		<tr id="ctl00_ContentPlaceHolder1_trListPrice">
 			<td width="30%" class="textb">
 				List Price:
 			</td>
 			<td width="70%">
-				<span id="ctl00_ContentPlaceHolder1_lblListPrice">USD {{ type.product_price }}</span>
+				<span id="ctl00_ContentPlaceHolder1_lblListPrice">USD {{ product.product_price }}</span>
 			</td>
 		</tr>
 		<tr id="ctl00_ContentPlaceHolder1_trCovers4AutoPrice">
