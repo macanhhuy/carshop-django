@@ -3,6 +3,7 @@ import logging
 from django.core.cache import cache
 from carshop.models import Parameter
 from carshop.cache_util import *
+from carshop.product.models import Product
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +18,7 @@ def getLeftNavigate(request):
 				logger.info('======语言未初始化')
 				return {}
 
-		firstMenu = Parameter.objects.filter(parameter_code='product_top_type', parameter_is_valid=1, parameter_language=languageObj.id).order_by('parameter_sequence')
+		firstMenu = Parameter.objects.filter(parameter_code='product_category', parameter_is_valid=1, parameter_language=languageObj.id).order_by('parameter_sequence')
 		if not firstMenu:
 			logger.info('======无 ' + language + ' 纵向菜单项,返回默认菜单')
 			leftNavigate = cache.get('LEFT_NAVIGATE_' + getLanguage(language_sequence=1).parameter_value)		
@@ -29,7 +30,7 @@ def getLeftNavigate(request):
 		leftNavigate = []
 		for menuItem in firstMenu:
 			item = {'firstMenu': menuItem}
-			secondMenu = Parameter.objects.filter(parameter_parent=menuItem.id, parameter_is_valid=1, parameter_language=languageObj.id).order_by('parameter_sequence')
+			secondMenu = Product.objects.filter(product_category=menuItem.id)
 	
 			if not secondMenu == None:
 				item['secondMenu'] = secondMenu

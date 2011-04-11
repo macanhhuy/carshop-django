@@ -24,20 +24,20 @@ class ProductAdmin(admin.ModelAdmin):
 	
 	fieldsets = (
 		(None, {
-			'fields':('product_name', 'product_image', 'product_for', 'product_desc', 'product_type', 'product_price', 'product_count',)
+			'fields':('product_name', 'product_image', 'car', 'product_desc', 'product_category', 'product_price', 'product_count',)
 		}),
 		('Advanced options', {
 			'fields': ()
 		}),
 	)
 	
-	list_display = ('product_name', 'product_for', 'product_type', 'product_price', 'product_count', )
+	list_display = ('product_name', 'car', 'product_category', 'product_price', 'product_count', )
 	
 	def formfield_for_foreignkey(self, db_field, request, **kwargs):
 		from django.db import connection
 		cursor = connection.cursor()
-		if db_field.name == "product_type":
-			kwargs["queryset"] = Parameter.objects.extra(where = ["parameter_parent_id in (select p2.id from parameter p2 where p2.parameter_code='product_top_type')",])
+		if db_field.name == "product_category":
+			kwargs["queryset"] = Parameter.objects.filter(parameter_code='product_category')
 
 			return db_field.formfield(**kwargs)
 		
@@ -68,10 +68,10 @@ class ProductDescriptionAdmin(admin.ModelAdmin):
 		return super(ProductDescriptionAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
 	
-class ProductionForAdmin(admin.ModelAdmin):
+class CarAdmin(admin.ModelAdmin):
 	pass
 
 admin.site.register(Product, ProductAdmin)
 #admin.site.register(ProductAttribute, ProductAttributeAdmin)
 #admin.site.register(ProductDescription, ProductDescriptionAdmin)
-admin.site.register(ProductionFor, ProductionForAdmin)
+admin.site.register(Car, CarAdmin)

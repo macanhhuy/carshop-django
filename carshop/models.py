@@ -27,7 +27,6 @@ class Parameter(models.Model): # 基础参数表
 	parameter_display_name = models.CharField(max_length=40) # 参数显示名
 	parameter_value = models.CharField(max_length=40, blank=True, null=True) # 参数值
 	parameter_extension_value = models.CharField(max_length=40, blank=True, null=True) # 备用值
-	parameter_image = models.ImageField(upload_to='product_images', blank=True, null=True)
 	parameter_desc = models.TextField(max_length=50, blank=True, null=True) # 参数描述
 	parameter_sequence = models.IntegerField() # 参数顺序
 	parameter_is_valid = models.IntegerField(default=1, choices=VALID_CHOICES) # 参数是否有效
