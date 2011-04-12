@@ -30,10 +30,10 @@ def getLeftNavigate(request):
 		leftNavigate = []
 		for menuItem in firstMenu:
 			item = {'firstMenu': menuItem}
-			secondMenu = Product.objects.filter(product_category=menuItem.id)
+			#secondMenu = Product.objects.filter(product_category=menuItem.id)
 	
-			if not secondMenu == None:
-				item['secondMenu'] = secondMenu
+			#if not secondMenu == None:
+			#	item['secondMenu'] = secondMenu
 			leftNavigate.append(item)
 			
 		cache.set('LEFT_NAVIGATE_' + language, leftNavigate)

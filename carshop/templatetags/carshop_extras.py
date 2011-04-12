@@ -25,5 +25,35 @@ def get_range(value):
 	"""
 	return range(0, value)
 	
+@register.filter()
+def product_general(product):
+	'''
+		
+	'''
+	
+	return '''
+<div class="product1">
+	<div>
+		<a href="/product/%s.html" >
+			<img src="/medias/images/%s" >
+		</a>
+	</div
+	<div>
+		<strong>
+			<a href="/product/%s.html" >
+				%s
+			</a>
+		</strong>
+	</div>
+	<div>
+		<em>
+			<strong>
+				%s
+			</strong>
+		</em>
+		
+	</div>
+</div>''' %(str(product.id), product.product_image, str(product.id), product.product_name, str(product.product_price))
+	
 	
 	

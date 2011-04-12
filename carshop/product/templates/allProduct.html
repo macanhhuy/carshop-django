@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load carshop_extras %}
+
+{% block title %}Product{% endblock %}
+
+{% block main %}
+
+{% if not products %}
+	don't have this product
+{% else %}
+	{% for product in products %}
+		{{ product|product_general|safe }}
+	{% endfor %}
+{% endif %}
+
+{% endblock %}

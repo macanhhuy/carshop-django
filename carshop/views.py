@@ -125,8 +125,8 @@ def findStateOrCity(reqeust, countryId):
 
 	
 	
-def checkcode(request):
-	im = Image.new('RGBA',(52,18),(256,256,256,256))
+def checkcode(request, time):
+	im = Image.new('RGBA',(52,22),(256,256,256,256))
 	draw = ImageDraw.Draw(im)
 	rands = [random.randint(0, 9), random.randint(0, 9), random.randint(0, 9), random.randint(0, 9)]
 	draw.text((2,0), str(rands[0]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill=random.randint(0, 256))
