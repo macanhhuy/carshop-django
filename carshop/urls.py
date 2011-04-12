@@ -32,6 +32,7 @@ urlpatterns = patterns('',
 	(r'^toRegister$', 'carshop.views.toRegister'),
 	(r'^findStateOrCity/(?P<countryId>\d{1,6})$', 'carshop.views.findStateOrCity'),
 	
+	(r'^checkcode.gif', 'carshop.views.checkcode'),
 	
 	(r'^allCar.html', 'carshop.product.views.allCar'),
 	
