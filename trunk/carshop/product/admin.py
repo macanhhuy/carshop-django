@@ -53,8 +53,7 @@ class ProductAdmin(admin.ModelAdmin):
 			obj.time_product_register = now
 		obj.time_product_modified = now
 		obj.save()
-	
-	
+
 class ProductAttributeAdmin(admin.ModelAdmin):
 	pass
 	
@@ -67,6 +66,16 @@ class ProductDescriptionAdmin(admin.ModelAdmin):
 		
 		return super(ProductDescriptionAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
+		
+class ProductBrandAttributeInline(admin.StackedInline):
+	model = ProductBrandAttribute
+	extra = 1
+		
+class ProductBrandAdmin(admin.ModelAdmin):
+	inlines = [ProductBrandAttributeInline, ] 
+	
+	pass
+	
 	
 class CarAdmin(admin.ModelAdmin):
 	pass
@@ -75,3 +84,6 @@ admin.site.register(Product, ProductAdmin)
 #admin.site.register(ProductAttribute, ProductAttributeAdmin)
 #admin.site.register(ProductDescription, ProductDescriptionAdmin)
 admin.site.register(Car, CarAdmin)
+admin.site.register(ProductBrand, ProductBrandAdmin)
+
+

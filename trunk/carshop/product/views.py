@@ -36,3 +36,10 @@ def findProductByCarId(request, carId):
 		
 	except Car.DoesNotExist:
 		return render_to_response('error.html', {'e': u'don\'t have this car'}, RequestContext(request))
+
+	
+def allProduct(request):
+	
+	products = Product.objects.all()
+	return render_to_response('allProduct.html', {'products': products}, RequestContext(request))
+	
