@@ -19,6 +19,8 @@ from carshop.utils import NoStyleErrorList
 
 from carshop.customer.models import CustomerInfo
 
+import Image, ImageDraw, ImageFont, md5, random, cStringIO
+
 def index(request):
 	return render_to_response('index.html', findTopProduct(), RequestContext(request))#, processors=[getLeftNavigate]))
 
@@ -120,6 +122,24 @@ def findStateOrCity(reqeust, countryId):
 	#print(data)
 	return HttpResponse(data,mimetype)
 	
+
+	
+	
+def checkcode(request):
+	im = Image.new('RGBA',(52,18),(50,50,50,50))
+	draw = ImageDraw.Draw(im)
+	rands = [random.randint(0, 9), random.randint(0, 9), random.randint(0, 9), random.randint(0, 9)]
+	draw.text((2,0), str(rands[0]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='white')
+	draw.text((14,0), str(rands[1]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='yellow')
+	draw.text((27,0), str(rands[2]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='yellow')
+	draw.text((40,0), str(rands[3]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='white') 
+	del draw
+	request.session['checkcode'] = rands
+	buf = cStringIO.StringIO()
+	im.save(buf, 'gif')
+	return HttpResponse(buf.getvalue(),'image/gif')
+
+
 
 	
 	
