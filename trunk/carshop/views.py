@@ -126,13 +126,13 @@ def findStateOrCity(reqeust, countryId):
 	
 	
 def checkcode(request):
-	im = Image.new('RGBA',(52,18),(50,50,50,50))
+	im = Image.new('RGBA',(52,18),(256,256,256,256))
 	draw = ImageDraw.Draw(im)
 	rands = [random.randint(0, 9), random.randint(0, 9), random.randint(0, 9), random.randint(0, 9)]
-	draw.text((2,0), str(rands[0]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='white')
-	draw.text((14,0), str(rands[1]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='yellow')
-	draw.text((27,0), str(rands[2]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='yellow')
-	draw.text((40,0), str(rands[3]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill='white') 
+	draw.text((2,0), str(rands[0]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill=random.randint(0, 256))
+	draw.text((14,0), str(rands[1]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill=random.randint(0, 256))
+	draw.text((27,0), str(rands[2]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill=random.randint(0, 256))
+	draw.text((40,0), str(rands[3]), font=ImageFont.truetype("tahomabd.TTF", random.randrange(12,18)), fill=random.randint(0, 256)) 
 	del draw
 	request.session['checkcode'] = rands
 	buf = cStringIO.StringIO()
