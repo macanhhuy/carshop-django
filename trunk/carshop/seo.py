@@ -10,5 +10,6 @@ class CarShopMetadata(seo.Metadata):
 	heading = seo.Tag(name="h1")
 	
 	class Meta:
-		seo_models = ('product', )
+		#seo_models = ('product', )
 		#seo_views = ('product', 'carshop')
+		pass

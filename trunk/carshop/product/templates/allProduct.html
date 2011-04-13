@@ -13,4 +13,16 @@
 	{% endfor %}
 {% endif %}
 
+<script language="javascript">
+
+function checkNum(obj){
+
+	if(!obj.value.match(/^\d+$/)){
+		obj.value = "";
+	}
+
+}
+
+
+</script>
 {% endblock %}

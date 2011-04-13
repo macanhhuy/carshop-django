@@ -527,9 +527,6 @@ function refreshCheckCode(){
 	document.getElementById('checkCodeImg').src="/checkcode/"+timenow;
 }
 
-var timenow = new Date().getTime();
-document.getElementById('checkCodeImg').src="/checkcode/"+timenow;
-
 </script>
 
 	</body>
@@ -540,6 +537,7 @@ loginWin.OverLay.Color = "#000";
 
 function showLoginWin(){
 	loginWin.Show();
+	refreshCheckCode();
 }
 
 function closeLoginWin(){
