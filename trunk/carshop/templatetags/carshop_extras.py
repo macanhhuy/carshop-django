@@ -34,8 +34,8 @@ def product_general(product):
 	return '''
 <div class="product1">
 	<div>
-		<a href="/product/%s.html" >
-			<img src="/medias/images/%s" >
+		<a href="/product/%s.html" border="2" >
+			<img width="200" height="180" src="/medias/images/%s" >
 		</a>
 	</div
 	<div>
