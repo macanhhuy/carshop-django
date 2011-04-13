@@ -33,29 +33,33 @@ def product_general(product):
 	
 	return '''
 <div class="product1">
-	<div>
-		<a href="/product/%s.html">
-			<img src="/medias/images/%s" >
-		</a>
-	</div>
-	<div>
-		<strong>
-			<a href="/product/%s.html" >
-				%s
+	<ul>
+		<li>
+			<a href="/product/%s.html">
+				<img src="/medias/images/%s" >
 			</a>
-		</strong>
-	</div>
-	<div>
-		<em>
+		</li>
+		<li>
 			<strong>
-				price: $%s
+				<a href="/product/%s.html" >
+					%s
+				</a>
 			</strong>
-		</em>
-	</div>
-	<div>
-		<input type="text" value="1" class="qty" onblur="checkNum(this)" /> qty
-		<input onclick="" type="button" value="ADD TO CART" class="add_cart" />
-	</div>
+		</li>
+		<li>
+			<em>
+				<strong>
+					price: $%s
+				</strong>
+			</em>
+		</li>
+		<li>
+			<input type="text" value="1" class="qty" onblur="checkNum(this)" /> qty
+		</li>
+		<li>
+			<input onclick="" type="button" value="ADD TO CART" class="add_cart" />
+		</li>
+	</ul>
 </div>''' %(str(product.id), product.product_image, str(product.id), product.product_name, str(product.product_price))
 	
 	
