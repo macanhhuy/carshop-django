@@ -22,7 +22,7 @@ VALUES
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('top_navigate', 'Clearance Sale', '', '', 4, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
+	('top_navigate', 'Brand Daquan', '', '', 4, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
@@ -32,7 +32,7 @@ VALUES
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
 VALUES
-	('top_navigate', 'Products', '', '', 6, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
+	('top_navigate', 'Products', '/allProduct.html', '', 6, 1, now(), (select l.id from parameter AS l where l.parameter_value='EN' and l.parameter_code='language'));
 	
 	INSERT INTO parameter
 	(`parameter_code`, `parameter_display_name`, `parameter_value`, `parameter_desc`, `parameter_sequence`, `parameter_is_valid`, `time_parameter_created`, `parameter_language_id`)
