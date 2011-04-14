@@ -36,12 +36,12 @@ def product_general(product):
 	<ul>
 		<li>
 			<a href="/product/%s.html">
-				<img src="/medias/images/%s" >
+				<img src="/medias/images/%s" title="%s">
 			</a>
 		</li>
-		<li>
+		<li style="height:45px;">
 			<strong>
-				<a href="/product/%s.html" >
+				<a href="/product/%s.html" title="%s">
 					%s
 				</a>
 			</strong>
@@ -54,13 +54,13 @@ def product_general(product):
 			</em>
 		</li>
 		<li>
-			<input type="text" value="1" class="qty" onblur="checkNum(this)" /> qty
+			<input type="text" value="1" class="qty" onblur="checkNum(this)"/> qty
 		</li>
 		<li>
-			<input onclick="" type="button" value="ADD TO CART" class="add_cart" />
+			<input onclick="" type="button" value="ADD TO CART" class="add_cart"/>
 		</li>
 	</ul>
-</div>''' %(str(product.id), product.product_image, str(product.id), product.product_name, str(product.product_price))
+</div>''' %(str(product.id), product.product_image, product.product_name, str(product.id), product.product_name, product.product_name, str(product.product_price))
 	
 	
 	
