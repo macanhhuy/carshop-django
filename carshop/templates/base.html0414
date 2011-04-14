@@ -192,7 +192,229 @@ function SetTopSearchText()
 					<table width="945" border="0" cellspacing="0" cellpadding="0"
 						align="center">
 						<tr>
-							<td width="945" valign="top" style="padding-left:20px;">
+							<td width="220" valign="top" class="left_bg">
+
+								<table width="220" cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td>
+											<img src="/medias/images/our_products.jpg" alt="" width="220"
+												height="42" />
+										</td>
+									</tr>
+									<tr>
+										<td valign="top" class="border_blu">
+											{% for menuItem in leftNavigate %}
+											<dl class="leftNavigate">
+												<div id="titler{{ menuItem.firstMenu.parameter_sequence }}">
+													<a href="/product/{{ menuItem.firstMenu.id }}.html" id="ddheader{{ menuItem.firstMenu.parameter_sequence }}" class="upperdd" onmouseover="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',1)" onmouseout="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',-1)">{{ menuItem.firstMenu.parameter_display_name }}</a>
+												</div>
+												<dd id="ddcontent{{ menuItem.firstMenu.parameter_sequence }}" onmouseover="cancelHide('{{ menuItem.firstMenu.parameter_sequence }}')" onmouseout="ddMenu('{{ menuItem.firstMenu.parameter_sequence }}',-1)">
+													<ul>
+													{% for secondMenu in menuItem.secondMenu %}
+													<li><a href="/product/{{ menuItem.firstMenu.id }}/{{ secondMenu.id }}.html">{{ secondMenu.product_name }}</a></li>
+													{% endfor %}
+													</ul>
+												</dd>
+											</dl>
+											
+											{% endfor %}
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<br />
+											<img src="/medias/images/authorizedlogo.gif"
+												alt="Coverking Authorized Dealer" />
+											<br />
+											<br />
+										</td>
+									</tr>
+									<!-- New Row added in phase 2-->
+									<tr>
+										<td align="center" valign="top">
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<table width="80" border="0" cellpadding="2" cellspacing="0"
+												title="Click to Verify - This site chose Thawte SSL for secure e-commerce and confidential communications.">
+												<tr>
+
+													<td width="80" align="center" valign="top">
+														
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											<table width="218px" border="0" cellspacing="0"
+												cellpadding="0">
+												<tr>
+													<td valign="top">
+
+
+														<table width="100%" cellpadding="0" cellspacing="0"
+															border="0">
+															<tr>
+																<td align="left">
+																	<img src="/medias/images/getfreenewsletter.jpg"
+																		alt="Get Free Newsletter" />
+																	<br />
+																	<span class="text_ship2">Get special offers and
+																		updates</span>
+																</td>
+															</tr>
+															<tr>
+																<td align="center" height="55">
+																	<div id="Left1_SignupNewsletter1_UpdateProgress1"
+																		style="display: none;">
+
+																		<div class="pleasewait"
+																			style="z-index: 150; position: absolute; top: 450px;">
+																			<img src="/medias/images/loader.gif" alt="" />
+																		</div>
+
+																	</div>
+																	<div id="Left1_SignupNewsletter1_upNewsletter">
+
+
+																		<div id="Left1_SignupNewsletter1_pnlNewsletter"
+																			onKeyPress="">
+
+
+																			<input name="Left1$SignupNewsletter1$txtNewsletter"
+																				type="text" value="Enter email address"
+																				id="Left1_SignupNewsletter1_txtNewsletter"
+																				title="Enter your email address to signup for free newsletter"
+																				class="box1" onMouseOver="ClearText();"
+																				onBlur="SetSearchText();" />
+
+																			<div style="margin-top: 2px;">
+																				<input type="image"
+																					name="Left1$SignupNewsletter1$imgBtnNewsletter"
+																					id="Left1_SignupNewsletter1_imgBtnNewsletter"
+																					src="/medias/images/submit.gif"
+																					alt="Click here to signup free newsletter."
+																					onClick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Left1$SignupNewsletter1$imgBtnNewsletter&quot;, &quot;&quot;, true, &quot;newsletter&quot;, &quot;&quot;, false, false))"
+																					style="border-width: 0px;" />
+																			</div>
+																			<span class="text_ship2"> <span
+																				id="Left1_SignupNewsletter1_RequiredFieldValidator1"
+																				class="error" style="color: Red; display: none;"></span>
+																				<span
+																				id="Left1_SignupNewsletter1_RegularExpressionValidator1"
+																				style="color: Red; display: none;">Please
+																					enter valid email address.</span> </span>
+																			<div id="Left1_SignupNewsletter1_ValidationSummary1"
+																				style="color: Red; display: none;">
+
+																			</div>
+																			<p class="text5">
+																				<span id="Left1_SignupNewsletter1_lblNewsLetter"
+																					class="error" style="font-weight: bold;"></span>
+																			</p>
+
+
+																		</div>
+
+																	</div>
+																</td>
+															</tr>
+														</table>
+
+
+														<script language="javascript" type="text/javascript">
+var txtNewsletter='Left1_SignupNewsletter1_txtNewsletter';
+function ClearText()
+{
+	
+	if(document.getElementById(txtNewsletter).value=="Enter email address")
+	{
+		document.getElementById(txtNewsletter).value='';
+		document.getElementById(txtNewsletter).focus();
+		
+	}
+	
+	
+}
+function SetSearchText()
+{
+	if(document.getElementById(txtNewsletter).value=='')
+	{
+		document.getElementById(txtNewsletter).value='Enter email address';	
+	}
+}
+</script>
+														<img src="/medias/images/border9.jpg" alt="" />
+													</td>
+												</tr>
+												<tr>
+													<td valign="top">
+														<a href="ShippingPolicy.aspx.htm"> <img
+																src="/medias/images/freeshipping2_img.jpg"
+																alt="Free Shipping" border="0" /> </a>
+														<br />
+														<p class="text5">
+															Free Shipping throughout USA
+															<br />
+															<br />
+															<span class="text_ship">Contact for International
+																Shipping</span>
+															<a href="ShippingPolicy.aspx.htm"> <img
+																	src="/medias/images/arrowl.gif" alt="" /> </a>
+														</p>
+														<img src="/medias/images/border9.jpg" alt="" />
+													</td>
+												</tr>
+												<tr>
+													<td valign="top">
+														<a href="ReturnPolicy.aspx.htm"> <img
+																src="/medias/images/easy_returns2.jpg"
+																alt="Easy Returns" /> </a>
+														<br />
+														<p class="text5">
+															Very easy and fair return policy
+															<a href="ReturnPolicy.aspx.htm"> <img
+																	src="/medias/images/arrowl.gif" alt="" /> </a>
+														</p>
+														<img src="/medias/images/border9.jpg" alt="" />
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+
+									<tr>
+										<td align="center">
+											<br />
+
+											<img src="/medias/images/satisfactions.jpg"
+												alt="100% Satisfaction" />
+										</td>
+									</tr>
+									<tr>
+										<td align="center" class="border_blu" valign="top"
+											style="height: 112px;">
+											<br />
+
+											<!-- liveperson starts here -->
+
+											<!-- liveperson Ends here -->
+										</td>
+									</tr>
+								</table>
+								<br />
+
+							</td>
+							<td width="725" valign="top" style="padding-left:20px;">
 								{% block main %}{% endblock %}
 							</td>
 						</tr>
@@ -200,7 +422,11 @@ function SetTopSearchText()
 					<!--body ends Here-->
 				</td>
 			</tr>
-
+			<tr>
+				<td>
+					<img src="/medias/images/products_bottom.jpg" style="margin-left: 17px;" alt="" />
+				</td>
+			</tr>
 			<tr>
 				<td valign="top">
 					<br />

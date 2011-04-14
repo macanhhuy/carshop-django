@@ -39,7 +39,7 @@ def product_general(product):
 				<img src="/medias/images/%s" title="%s">
 			</a>
 		</li>
-		<li style="height:45px;">
+		<li style="height:40px;">
 			<strong>
 				<a href="/product/%s.html" title="%s">
 					%s
@@ -48,8 +48,8 @@ def product_general(product):
 		</li>
 		<li>
 			<em>
-				<strong>
-					price: $%s
+				<strong style="color:red;font-size:14px;font-style:normal;">
+					$%s
 				</strong>
 			</em>
 		</li>
