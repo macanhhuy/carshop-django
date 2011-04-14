@@ -4,7 +4,7 @@
 
 {% block main %}
 								<!--Middle Starts Here-->
-								<table width="945" border="0" cellspacing="0" cellpadding="0"
+								<table width="703" border="0" cellspacing="0" cellpadding="0"
 									align="right">
 									<tr>
 										<td valign="top" height="45">
