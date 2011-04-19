@@ -16,6 +16,7 @@ from carshop.models import Parameter, CountryStateCity
 from carshop.context_processors import getLeftNavigate
 from carshop.forms import RegisterForm
 from carshop.utils import NoStyleErrorList
+from carshop.product.models import Product
 
 from carshop.customer.models import CustomerInfo
 
@@ -26,7 +27,7 @@ def index(request):
 
 
 def findTopProduct():
-	return {}
+	return {'products': Product.objects.all()[0:8]}
 	
 def logout_view(request):
 	logout(request)

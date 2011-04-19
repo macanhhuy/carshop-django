@@ -20,7 +20,7 @@ class ProductDescriptionInline(admin.StackedInline):
 
 class ProductAdmin(admin.ModelAdmin):
 	
-	inlines = [ProductDescriptionInline, get_inline(CarShopMetadata), ]
+	inlines = [ProductDescriptionInline, ]#get_inline(CarShopMetadata), ]
 	
 	fieldsets = (
 		(None, {
