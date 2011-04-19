@@ -4,8 +4,8 @@ from django.contrib import admin
 from rollyourown.seo.admin import register_seo_admin
 from carshop.seo import CarShopMetadata
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
+import settings
+
 admin.autodiscover()
 register_seo_admin(admin.site, CarShopMetadata)
 
@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-	(r'^medias/(?P<path>.*)$', 'django.views.static.serve',{'document_root': './medias'}),
+	(r'^medias/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
     (r'^admin/', include(admin.site.urls)),
 	(r'^customer/', include('carshop.customer.urls')),
 	(r'^product/', include('carshop.product.urls')),
