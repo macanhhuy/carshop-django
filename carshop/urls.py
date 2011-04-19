@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-	(r'^medias/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
+	(r'^medias/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.STATIC_PATH}),
     (r'^admin/', include(admin.site.urls)),
 	(r'^customer/', include('carshop.customer.urls')),
 	(r'^product/', include('carshop.product.urls')),
