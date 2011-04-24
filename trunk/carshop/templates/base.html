@@ -15,7 +15,20 @@
 		<script src="/medias/scripts/prototype.js" type="text/javascript"></script>
 		<script src="/medias/scripts/leftNavigate.js" type="text/javascript"></script>
 		<script src="/medias/scripts/lightBox.js" type="text/javascript"></script>
+		<script type="text/javascript" language="javascript" >
 		
+function joinCart(id){
+	var qty = $('qty' + id).value;
+	new Ajax.Request('/cart/' + id + "/" + qty, {
+		method: 'POST',
+		onSuccess: function(transport) {
+			alert(transport.responseText);
+		}
+	}); 
+
+}
+		
+		</script>
 	</head>
 	<body>
 		<script language="javascript" type="text/javascript">

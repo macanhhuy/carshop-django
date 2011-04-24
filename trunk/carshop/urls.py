@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 from django.conf.urls.defaults import *
 from django.contrib import admin
 
@@ -21,12 +23,14 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 	(r'^customer/', include('carshop.customer.urls')),
 	(r'^product/', include('carshop.product.urls')),
+	(r'^cart/', include('carshop.cart.urls')),
 	
 	
 	(r'^index.html$', 'carshop.views.index'),
 	(r'^$', 'carshop.views.index'),
 
-	(r'^login$', 'carshop.views.login_view'),
+	(r'^login/$', 'carshop.views.login'),
+	#(r'^login$', 'carshop.views.login_view'),
 	(r'^logout$', 'carshop.views.logout_view'),
 	(r'^register$', 'carshop.views.register'),
 	(r'^toRegister$', 'carshop.views.toRegister'),

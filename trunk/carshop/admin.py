@@ -53,11 +53,11 @@ class LayoutBoxAdmin(admin.ModelAdmin):
 #class LanguageAdmin(admin.ModelAdmin):
 #	pass
 	
-class MetaTagCategoryDescriptionAdmin(admin.ModelAdmin):
-	pass
+#class MetaTagCategoryDescriptionAdmin(admin.ModelAdmin):
+#	pass
 	
-class MetaTagProductDescriptionAdmin(admin.ModelAdmin):
-	pass
+#class MetaTagProductDescriptionAdmin(admin.ModelAdmin):
+#	pass
 	
 admin.site.register(Parameter, ParameterAdmin)
 admin.site.register(Bulletin, BulletinAdmin)
@@ -66,5 +66,5 @@ admin.site.register(AddressFormat, AddressFormatAdmin)
 admin.site.register(EmailArchive, EmailArchiveAdmin)
 admin.site.register(LayoutBox, LayoutBoxAdmin)
 #admin.site.register(Language, LanguageAdmin)
-admin.site.register(MetaTagCategoryDescription, MetaTagCategoryDescriptionAdmin)
-admin.site.register(MetaTagProductDescription, MetaTagProductDescriptionAdmin)
+#admin.site.register(MetaTagCategoryDescription, MetaTagCategoryDescriptionAdmin)
+#admin.site.register(MetaTagProductDescription, MetaTagProductDescriptionAdmin)

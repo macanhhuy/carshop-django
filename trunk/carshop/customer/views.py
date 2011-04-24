@@ -2,7 +2,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from paypal.pro.views import PayPalPro
-from carshop.paypal.standard.forms import PayPalPaymentsForm
+from paypal.standard.forms import PayPalPaymentsForm
 
 def view_that_asks_for_money(request):
 	

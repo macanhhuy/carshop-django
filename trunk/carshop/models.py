@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding:utf-8 -*-
 from django.db import models
 from django.core.cache import cache
 from django.contrib import admin
@@ -120,23 +120,23 @@ class LayoutBox(models.Model): # 模板配置表
 
 #class Discount(models.Model)
 
-class MetaTagCategoryDescription(models.Model): # 类别meta标签描述表
-	language = models.ForeignKey(Parameter) # 标签对应语言
-	metatag_title = models.CharField(max_length=255) # 标签标题
-	metatag_keyword = models.TextField() # 标签关键字
-	metatag_desc = models.TextField(blank=True, null=True) # 标签描述
+#class MetaTagCategoryDescription(models.Model): # 类别meta标签描述表
+#	language = models.ForeignKey(Parameter) # 标签对应语言
+#	metatag_title = models.CharField(max_length=255) # 标签标题
+#	metatag_keyword = models.TextField() # 标签关键字
+#	metatag_desc = models.TextField(blank=True, null=True) # 标签描述
 	
-	class Meta:
-		db_table = "mattag_category_description"
+#	class Meta:
+#		db_table = "metatag_category_description"
 	
-class MetaTagProductDescription(models.Model): # 产品meta标签描述表
-	language = models.ForeignKey(Parameter) # 标签名
-	metatag_title = models.CharField(max_length=255) # 标签标题
-	metatag_keyword = models.TextField() # 标签关键字
-	metatag_desc = models.TextField(blank=True, null=True) # 标签描述
+#class MetaTagProductDescription(models.Model): # 产品meta标签描述表
+#	language = models.ForeignKey(Parameter) # 标签名
+#	metatag_title = models.CharField(max_length=255) # 标签标题
+#	metatag_keyword = models.TextField() # 标签关键字
+#	metatag_desc = models.TextField(blank=True, null=True) # 标签描述
 	
-	class Meta:
-		db_table = "mattag_product_description"
+#	class Meta:
+#		db_table = "metatag_product_description"
 
 #class CustomerInline(admin.TabularInline):
 #	model = customer.Customer
@@ -145,7 +145,7 @@ class MetaTagProductDescription(models.Model): # 产品meta标签描述表
 	
 
 
-def cache_load():
-	cache.set('customer_status_code', Parameter.objects.filter(parameter_code='customer_status_code'))
+#def cache_load():
+#	cache.set('customer_status_code', Parameter.objects.filter(parameter_code='customer_status_code'))
 	
 #cache_load()
