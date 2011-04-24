@@ -54,13 +54,13 @@ def product_general(product):
 			</em>
 		</li>
 		<li>
-			<input type="text" value="1" class="qty" onblur="checkNum(this)"/> qty
+			<input type="text" value="1" class="qty" id="qty%s" onblur="checkNum(this)"/> qty
 		</li>
 		<li>
-			<input onclick="" type="button" value="ADD TO CART" class="add_cart"/>
+			<input onclick="joinCart('%s')" type="button" value="ADD TO CART" class="add_cart"/>
 		</li>
 	</ul>
-</div>''' %(str(product.id), product.product_image, product.product_name, str(product.id), product.product_name, product.product_name, str(product.product_price))
+</div>''' %(str(product.id), product.product_image, product.product_name, str(product.id), product.product_name, product.product_name, str(product.product_price), str(product.id), str(product.id),)
 	
 	
 	

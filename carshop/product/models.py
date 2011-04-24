@@ -33,7 +33,7 @@ class Product(models.Model): #
 	product_desc = models.TextField(u'产品描述', blank=True, null=True) # 产品描述
 	
 	product_category = models.ForeignKey(Parameter, related_name='product_category') # 物品类别
-	product_price = models.FloatField()	# 价格
+	product_price = models.DecimalField(max_digits=18, decimal_places=2) # 价格
 	product_order_desc = models.CharField(u'订购说明', max_length=1000, blank=True, null=True) # 订购说明
 	product_count = models.IntegerField() # 库存
 	time_product_register = models.DateTimeField() # 上架时间

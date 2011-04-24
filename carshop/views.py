@@ -1,4 +1,4 @@
-# -*- coding:utf-8
+# -*- coding:utf-8 -*-
 
 import traceback
 
@@ -32,7 +32,15 @@ def findTopProduct():
 def logout_view(request):
 	logout(request)
 	return HttpResponseRedirect('/index.html')
+
+def login(request):
 	
+	if request.method == 'POST':
+		pass
+	else:
+		return render_to_response('login.html', {}, RequestContext(request))
+		
+
 def login_view(request):
 	
 	if request.method == 'POST':

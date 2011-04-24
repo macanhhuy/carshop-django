@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding:utf-8 -*-
 import datetime
 from django.contrib import admin
 from django.db.models.query import QuerySet
@@ -20,7 +20,7 @@ class ProductDescriptionInline(admin.StackedInline):
 
 class ProductAdmin(admin.ModelAdmin):
 	
-	inlines = [ProductDescriptionInline, ]#get_inline(CarShopMetadata), ]
+	inlines = [ProductDescriptionInline, get_inline(CarShopMetadata), ]
 	
 	fieldsets = (
 		(None, {

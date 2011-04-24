@@ -117,15 +117,15 @@ INSTALLED_APPS = (
 	'django.contrib.admin',
 	
 	'carshop',
-	'carshop.paypal.standard',
-	'carshop.paypal.pro',
-	'carshop.paypal.standard.ipn',
-	
 	'carshop.customer',
 	'carshop.manufacturer',
 	'carshop.order',
 	'carshop.product',
+	'carshop.cart',
 	
+	'paypal.standard',
+	'paypal.pro',
+	'paypal.standard.ipn',
 	'dmigrations',
 	'debug_toolbar',
 	'rollyourown.seo',
