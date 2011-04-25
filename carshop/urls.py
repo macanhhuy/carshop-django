@@ -39,8 +39,13 @@ urlpatterns = patterns('',
 	(r'^checkcode/(?P<time>\d{13})$', 'carshop.views.checkcode'),
 	
 	(r'^allCar.html$', 'carshop.product.views.allCar'),
-	(r'^allProduct.html$', 'carshop.product.views.allProduct')
+	(r'^allProduct.html$', 'carshop.product.views.allProduct'),
 	
 	#(r'^index$', 'carshop.system.views.index'),
+	
+	(r'^paypal_ipn$', 'carshop.views.paypal_ipn'),
+	(r'^paypal_return$', 'carshop.views.paypal_return'),
+	(r'^paypal_cancel$', 'carshop.views.paypal_cancel'),
+	
 	
 )

@@ -7,16 +7,16 @@ from paypal.standard.forms import PayPalPaymentsForm
 def view_that_asks_for_money(request):
 	
 	paypal_dict = {
-		'business': 'xtwxfxk@gmail.com',
-		'amount': '10000000.00',
-		'item_name': 'Car Seat',
+		'business': 'xtwxfx_1303744118_biz@gmail.com',
+		'amount': '300.00',
+		'item_name': 'Car Seats',
 		'invoice': 'unique-invoice-id',
-		'notify_url': 'http://localhost:8000/carshop_ipn.html',
-		'return_url': 'http://localhost:8000/carshop_return.html',
-		'cancel_return': 'http://localhost:8000/carshop_cancel.html',
+		'notify_url': 'http://localhost:8000/paypal_ipn',
+		'return_url': 'http://localhost:8000/paypal_return',
+		'cancel_return': 'http://localhost:8000/paypal_cancel',
 	}
 	
-	form = PayPalPaymentsForm(initial= paypal_dict)
+	form = PayPalPaymentsForm(initial = paypal_dict)
 	context = RequestContext(request, {'form': form})
 	
 	return render_to_response('money.html', context)
