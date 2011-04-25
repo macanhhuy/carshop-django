@@ -150,5 +150,15 @@ def checkcode(request, time):
 
 
 
-	
+def paypal_ipn(request):
+	return HttpResponse('ipn')
+
+
+def paypal_return(request):
+	return HttpResponse('return')
+
+
+def paypal_cancel(request):
+	return HttpResponse('cancel')
+
 	
