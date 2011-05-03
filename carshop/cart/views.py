@@ -7,7 +7,11 @@ from cart import CartManager
 
 #@login_required(login_url='/login/')
 def add_cart(request, productId, quantity):
-	
+
+	if not request.user.is_authenticated():
+		redirect = {'login' : '/login/'}
+		return HttpResponse(redirect)
+
 	product = Product.objects.get(id=productId)
 	
 	#CartManager.cart.add(product, product.product_price, quantity)

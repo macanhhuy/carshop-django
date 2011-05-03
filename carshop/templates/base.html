@@ -22,6 +22,9 @@ function joinCart(id){
 	new Ajax.Request('/cart/' + id + "/" + qty, {
 		method: 'POST',
 		onSuccess: function(transport) {
+			if(transport.login){
+				window.location.href = transport.login;
+			}
 			alert(transport.responseText);
 		}
 	}); 
