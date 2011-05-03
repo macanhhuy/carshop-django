@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from django.http import HttpResponse, HttpResponseRedirect
+from django.utils import simplejson
 from django.contrib.auth.decorators import login_required
 from carshop.product.models import Product
 from cart import CartManager
@@ -10,7 +11,7 @@ def add_cart(request, productId, quantity):
 
 	if not request.user.is_authenticated():
 		redirect = {'login' : '/login/'}
-		return HttpResponse(redirect)
+		return HttpResponse(simplejson.dumps(redirect))
 
 	product = Product.objects.get(id=productId)
 	
