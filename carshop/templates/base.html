@@ -22,12 +22,11 @@ function joinCart(id){
 	new Ajax.Request('/cart/' + id + "/" + qty, {
 		method: 'POST',
 		onSuccess: function(transport) {
-			var response = transport.responseText.evalJSON();
-			if(response.login){
-				window.location.href = response.login;
-				alert(response.login);
-			}
-			
+			//var response = transport.responseText.evalJSON();
+			//if(response.login){
+			//	window.location.href = response.login;
+			//}
+			alert(transport.responseText);
 		}
 	}); 
 
@@ -100,7 +99,7 @@ function postLogin(){
 								<td width="50%">
 									<ul class="order">
 										<li>
-											<a href="Cart.aspx.htm"> <img
+											<a href="/cart/cart.html"> <img
 													src="/medias/images/shopping_cart.jpg" alt="Shopping Cart" />
 											</a>
 										</li>
