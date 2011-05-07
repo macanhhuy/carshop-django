@@ -42,7 +42,12 @@ urlpatterns = patterns('',
 	(r'^allProduct.html$', 'carshop.product.views.allProduct'),
 	
 	#(r'^index$', 'carshop.system.views.index'),
+
 	
+	#########################################
+	#
+	#
+	#########################################
 	(r'^paypal_ipn$', 'carshop.views.paypal_ipn'),
 	(r'^paypal_return$', 'carshop.views.paypal_return'),
 	(r'^paypal_cancel$', 'carshop.views.paypal_cancel'),
