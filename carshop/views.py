@@ -33,15 +33,25 @@ def logout_view(request):
 	logout(request)
 	return HttpResponseRedirect('/index.html')
 
-def login(request):
-	
+def login_view(request):
 	if request.method == 'POST':
-		pass
+		username = request.POST['username']
+		password = request.POST['password']
+		user = authenticate(username=username, password=password)
+		if user is not None:
+			login(request, user)
+			redirect_url = request.session.get('redirect_url')
+			if redirect_url:
+				return HttpResponseRedirect(redirect_url)
+			else:
+				return HttpResponseRedirect('index.html')
+		else:
+			return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
 	else:
 		return render_to_response('login.html', {}, RequestContext(request))
 		
 
-def login_view(request):
+def login_ajax(request):
 	
 	if request.method == 'POST':
 		username = request.POST['username']
@@ -161,4 +171,6 @@ def paypal_return(request):
 def paypal_cancel(request):
 	return HttpResponse('cancel')
 
-	
+
+def paypal_success(request):
+	return HttpResponse('success')

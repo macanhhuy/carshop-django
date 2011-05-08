@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load carshop_extras %}
+
+{% block title %}cart{% endblock %}
+
+{% block main %}
+<script type="text/javascript">
+
+
+
+</script>
+<table border="0" style="border-collapse: separate;">
+	<tr><th></th>
+		<th></th>
+		<th>name</th>
+		<th>unit price</th>
+		<th>quantity</th>
+		<td></td>
+	</tr>
+	{% for item in items %}
+		<tr>
+			<td><input type="hidden" value="{{ item.id }}" /></td>
+			<td><input type="hidden" value="{{ item.object_id }}" /></td>
+			<td>{{ item.object_name }}</td>
+			<td>{{ item.unit_price }}</td>
+			<td>{{ item.quantity }}</td>
+			<td><a href="/cart/remote/{{ item.id }}">remove</a></td>
+		</tr>
+
+	{% endfor %}
+</table>
+
+	<a href="/cart/checkout" alt="checkout">checkout</a>
+
+{% endblock %}
