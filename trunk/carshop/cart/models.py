@@ -9,6 +9,7 @@ from django.contrib.contenttypes import generic
 
 class Cart(models.Model):
 	user = models.ForeignKey(User, blank=True, null=True)
+	session = models.CharField(max_length=40, blank=True, null=True)
 	creation_date = models.DateTimeField(verbose_name=_('creation date'))
 	checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
 	
@@ -34,6 +35,7 @@ class CartItem(models.Model):
 	# product as generic relation
 	content_type = models.ForeignKey(ContentType)
 	object_id = models.PositiveIntegerField()
+	object_name = models.CharField(max_length=100)
 
 	objects = ItemManager()
 
@@ -55,6 +57,7 @@ class CartItem(models.Model):
 	def set_product(self, product):
 		self.content_type = ContentType.objects.get_for_model(type(product))
 		self.object_id = product.pk
+		self.object_name = product.product_name
 
 	product = property(get_product, set_product)
 

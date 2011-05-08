@@ -25,7 +25,8 @@ class CartManager:
 			yield item
 
 	def new(self, request):
-		cart = Cart(creation_date=datetime.datetime.now())
+		self.session_key = request.session.session_key
+		cart = Cart(session=request.session.session_key,creation_date=datetime.datetime.now())
 		cart.save()
 		request.session[CART_ID] = cart.id
 		return cart
@@ -38,6 +39,11 @@ class CartManager:
 		item.quantity = quantity
 		item.save()
 
+	def getItems(self, request):
+		items = CartItem.objects.filter(cart=request.session[CART_ID])
+		return items
+
+	
 	def remove(self, product):
 		try:
 			item = CartItem.objects.get(
