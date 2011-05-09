@@ -32,12 +32,15 @@ class CartManager:
 		return cart
 
 	def add(self, product, unit_price, quantity=1):
-		item = CartItem()
-		item.cart = self.cart
-		item.product = product
-		item.unit_price = unit_price
-		item.quantity = quantity
-		item.save()
+		try:
+			item = CartItem()
+			item.cart = self.cart
+			item.product = product
+			item.unit_price = str(unit_price)
+			item.quantity = quantity
+			item.save()
+		except Exception, e:
+			print e
 
 	def getItems(self, request):
 		items = CartItem.objects.filter(cart=request.session[CART_ID])
