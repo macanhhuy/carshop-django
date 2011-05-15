@@ -7,7 +7,7 @@ from paypal.standard.forms import PayPalPaymentsForm
 def view_that_asks_for_money(request):
 	
 	paypal_dict = {
-		'business': 'xtwxfx_1303744118_biz@gmail.com',
+		'business': 'xtwxfx_1305362526_biz@gmail.com',
 		'amount': '300.00',
 		'item_name': 'Car Seats',
 		'invoice': 'unique-invoice-id',

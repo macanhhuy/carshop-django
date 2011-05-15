@@ -2,13 +2,14 @@
 
 from django.contrib.auth.models import User
 from django.db import models
-from django.contrib import admin
 from carshop.product import models as product
 from carshop.models import Parameter, AddressFormat
 
+from carshop.db.models import *
 
 class Order(models.Model): # 订单表
 
+	id = UUIDField(primary_key=True, editable=False)
 	customer = models.ForeignKey(User) # 客户ID
 	customer_name = models.CharField(max_length=64) # 客户名
 	customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
