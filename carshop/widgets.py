@@ -4,9 +4,6 @@ from django.utils.encoding import force_unicode
 from django.utils.safestring import mark_safe
 from django.forms.widgets import RadioFieldRenderer
 
-
-
-
 class NonStyleRadioFieldRenderer(RadioFieldRenderer):
 
 	def render(self):
