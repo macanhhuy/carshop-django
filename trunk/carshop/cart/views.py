@@ -24,6 +24,8 @@ def add_cart(request, productId, quantity):
 
 	return HttpResponse('add success')
 
+def del_cart(request, itemId):
+	CartItem.objects.filter(pk=itemId, cart=Cart.objects.get())
 
 def cart_view(request):
 	cartManager = CartManager(request)
