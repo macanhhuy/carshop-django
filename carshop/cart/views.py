@@ -25,7 +25,12 @@ def add_cart(request, productId, quantity):
 	return HttpResponse('add success')
 
 def del_cart(request, itemId):
-	CartItem.objects.filter(pk=itemId, cart=Cart.objects.get())
+	cartManager = CartManager(request)
+	
+	cartManager.remove(Product.objects.get(pk=itemId))
+
+	items = cartManager.getItems(request)
+	return render_to_response('cart.html', {'items': items}, RequestContext(request))
 
 def cart_view(request):
 	cartManager = CartManager(request)
