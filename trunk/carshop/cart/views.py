@@ -27,7 +27,7 @@ def add_cart(request, productId, quantity):
 def del_cart(request, itemId):
 	cartManager = CartManager(request)
 	
-	cartManager.remove(Product.objects.get(pk=itemId))
+	cartManager.remove(itemId)
 
 	items = cartManager.getItems(request)
 	return render_to_response('cart.html', {'items': items}, RequestContext(request))
