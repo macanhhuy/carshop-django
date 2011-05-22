@@ -3,17 +3,17 @@
 import datetime
 from models import *
 
-CART_ID = 'CART-ID'
+CART_OBJ = 'CART-OBJ'
 
 class ItemDoesNotExist(Exception):
 	pass
 
 class CartManager:
 	def __init__(self, request):
-		cart_id = request.session.get(CART_ID)
-		if cart_id:
+		cart = request.session.get(CART_OBJ)
+		if cart:
 			try:
-				cart = Cart.objects.get(id=cart_id, checked_out=False)
+				cart = Cart.objects.get(id=cart.id, checked_out=False)
 			except Cart.DoesNotExist:
 				cart = self.new(request)
 		else:
@@ -27,8 +27,10 @@ class CartManager:
 	def new(self, request):
 		self.session_key = request.session.session_key
 		cart = Cart(session=request.session.session_key,creation_date=datetime.datetime.now())
+		if request.user.is_authenticated():
+			cart.user = request.user
 		cart.save()
-		request.session[CART_ID] = cart.id
+		request.session[CART_OBJ] = cart
 		return cart
 
 	def add(self, product, unit_price, quantity=1):
@@ -43,15 +45,19 @@ class CartManager:
 			print e
 
 	def getItems(self, request):
-		items = CartItem.objects.filter(cart=request.session[CART_ID])
+		if not request.session[CART_OBJ].user and request.user.is_authenticated():
+			request.session[CART_OBJ].user = request.user
+			request.session[CART_OBJ].save()
+
+		items = CartItem.objects.filter(cart=request.session[CART_OBJ])
 		return items
 
 	
-	def remove(self, product):
+	def remove(self, itemId):
 		try:
 			item = CartItem.objects.get(
 				cart=self.cart,
-				product=product,
+				pk=itemId,
 			)
 		except CartItem.DoesNotExist:
 			raise ItemDoesNotExist

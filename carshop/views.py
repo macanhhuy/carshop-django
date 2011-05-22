@@ -23,6 +23,7 @@ from carshop.customer.models import CustomerInfo
 import Image, ImageDraw, ImageFont, md5, random, cStringIO
 
 def index(request):
+	print('3 ' + request.session['CART-OBJ'].session + ' | ' + request.session.session_key)
 	return render_to_response('index.html', findTopProduct(), RequestContext(request))#, processors=[getLeftNavigate]))
 
 
@@ -30,7 +31,9 @@ def findTopProduct():
 	return {'products': Product.objects.all()[0:8]}
 	
 def logout_view(request):
+	print('1 ' + request.session['CART-OBJ'].session + ' | ' + request.session.session_key)
 	logout(request)
+	print('2 ' + request.session['CART-OBJ'].session + ' | ' + request.session.session_key)
 	return HttpResponseRedirect('/index.html')
 
 def login_view(request):
