@@ -1512,3 +1512,13 @@ padding:8px;
 	border-right: solid 1px #7A9792;
 }
 
+.cartItem {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 3px;
+    MARGIN: 0px 8px;
+    PADDING-TOP: 8px;
+    BORDER-BOTTOM: #a8a8a8 1px dashed;
+    HEIGHT: 30px;
+    TEXT-ALIGN: right;
+}
