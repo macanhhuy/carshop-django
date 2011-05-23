@@ -10,26 +10,16 @@
 
 
 </script>
-<table border="0" style="border-collapse: separate;">
-	<tr><th></th>
-		<th></th>
-		<th>name</th>
-		<th>unit price</th>
-		<th>quantity</th>
-		<td></td>
-	</tr>
-	{% for item in items %}
-		<tr>
-			<td><input type="hidden" value="{{ item.id }}" /></td>
-			<td><input type="hidden" value="{{ item.object_id }}" /></td>
-			<td>{{ item.object_name }}</td>
-			<td>{{ item.unit_price }}</td>
-			<td><input type="text" class="qty" value="{{ item.quantity }}" ></td>
-			<td><a href="/cart/remove/{{ item.id }}">remove</a></td>
-		</tr>
 
+		<b>name</b>
+		<b>unit price</b>
+		<b>quantity</b>
+
+
+	{% for item in items %}
+		{{ item|cart_item_general|safe }}
 	{% endfor %}
-</table>
+
 
 	<a href="/cart/checkout" alt="checkout">checkout</a>
 
