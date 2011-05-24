@@ -43,6 +43,10 @@ def cart_view(request):
     return render_to_response('cart.html', {'items': items}, RequestContext(request))
 
 
+
+        
+    
+    
 def checkout(request):
     if not request.user.is_authenticated():
         request.session['redirect_url'] = '/cart/cart.html'#request.path
