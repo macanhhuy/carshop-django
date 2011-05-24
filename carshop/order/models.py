@@ -21,32 +21,32 @@ class Order(models.Model): # 订单表
     customer_country = models.CharField(max_length=32) # 客户国家
     customer_telephone = models.CharField(max_length=32) # 客户电话
     customer_email_address = models.CharField(max_length=96) # 客户EMAIL
-    customer_address_format = models.ForeignKey(AddressFormat, related_name='customer_address_format') # 客户地址格式
+    customer_address_format = models.ForeignKey(AddressFormat, related_name='customer_address_format', blank=True, null=True) # 客户地址格式
 
-    delivery_name = models.CharField(max_length=64) # 送货人名
+    delivery_name = models.CharField(max_length=64, blank=True, null=True) # 送货人名
     delivery_company = models.CharField(max_length=64, blank=True, null=True) # 送货公司
-    delivery_street_address = models.CharField(max_length=64) # 送货(人/公司？)街道地址
+    delivery_street_address = models.CharField(max_length=64, blank=True, null=True) # 送货(人/公司？)街道地址
     delivery_suburb = models.CharField(max_length=32, blank=True, null=True) # 送货(人/公司?)所在区
-    delivery_city = models.CharField(max_length=32) # 送货
-    delivery_postcode = models.CharField(max_length=10) #
+    delivery_city = models.CharField(max_length=32, blank=True, null=True) # 送货
+    delivery_postcode = models.CharField(max_length=10, blank=True, null=True) #
     delivery_state = models.CharField(max_length=32, blank=True, null=True) #
-    delivery_country = models.CharField(max_length=32) #
-    delivery_address_format = models.ForeignKey(AddressFormat, related_name='delivery_address_format') #
+    delivery_country = models.CharField(max_length=32, blank=True, null=True) #
+    delivery_address_format = models.ForeignKey(AddressFormat, related_name='delivery_address_format', blank=True, null=True) #
 
-    billing_name = models.CharField(max_length=64) #
+    billing_name = models.CharField(max_length=64, blank=True, null=True) #
     billing_company = models.CharField(max_length=64, blank=True, null=True) #
-    billing_street_address = models.CharField(max_length=64) #
+    billing_street_address = models.CharField(max_length=64, blank=True, null=True) #
     billing_suburb = models.CharField(max_length=32, blank=True, null=True) #
-    billing_city = models.CharField(max_length=32) #
-    billing_postcode = models.CharField(max_length=10) #
+    billing_city = models.CharField(max_length=32, blank=True, null=True) #
+    billing_postcode = models.CharField(max_length=10, blank=True, null=True) #
     billing_state = models.CharField(max_length=32, blank=True, null=True) #
-    billing_country = models.CharField(max_length=32) #
-    billing_address_format = models.ForeignKey(AddressFormat, related_name='billing_address_format') #
+    billing_country = models.CharField(max_length=32, blank=True, null=True) #
+    billing_address_format = models.ForeignKey(AddressFormat, related_name='billing_address_format', blank=True, null=True) #
 
-    payment_method = models.CharField(max_length=128) # 付款方式
-    payment_module_code = models.CharField(max_length=32) # ？
-    shipping_method = models.CharField(max_length=128) # 购买方式
-    shipping_module_code = models.CharField(max_length=32) #
+    payment_method = models.CharField(max_length=128, blank=True, null=True) # 付款方式
+    payment_module_code = models.CharField(max_length=32, blank=True, null=True) # ？
+    shipping_method = models.CharField(max_length=128, blank=True, null=True) # 购买方式
+    shipping_module_code = models.CharField(max_length=32, blank=True, null=True) #
 
     #coupon_code
     time_purchased = models.DateTimeField(blank=True, null=True) # 购置时间
