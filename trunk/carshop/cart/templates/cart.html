@@ -5,22 +5,21 @@
 {% block title %}cart{% endblock %}
 
 {% block main %}
-<script type="text/javascript">
+    <script type="text/javascript">
 
 
+    </script>
 
-</script>
-
-		<b>name</b>
-		<b>unit price</b>
-		<b>quantity</b>
-
-
-	{% for item in items %}
-		{{ item|cart_item_general|safe }}
-	{% endfor %}
+    <b>name</b>
+    <b>unit price</b>
+    <b>quantity</b>
 
 
-	<a href="/cart/checkout" alt="checkout">checkout</a>
+    {% for item in items %}
+        {{ item|cart_item_general|safe }}
+    {% endfor %}
+
+
+    <a href="/cart/checkout" alt="checkout">checkout</a>
 
 {% endblock %}

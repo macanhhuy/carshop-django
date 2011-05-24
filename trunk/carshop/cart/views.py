@@ -12,55 +12,59 @@ from cart import CartManager
 
 #@login_required(login_url='/login/')
 def add_cart(request, productId, quantity):
-	#if not request.user.is_authenticated():
-	#	redirect = {'login' : '/login/'}
-	#	return HttpResponse(simplejson.dumps(redirect))
+    #if not request.user.is_authenticated():
+    #	redirect = {'login' : '/login/'}
+    #	return HttpResponse(simplejson.dumps(redirect))
 
-	product = Product.objects.get(id=productId)
+    product = Product.objects.get(id=productId)
 
-	#CartManager.cart.add(product, product.product_price, quantity)
-	cartManager = CartManager(request)
-	cartManager.add(product, product.product_price, quantity)
+    #CartManager.cart.add(product, product.product_price, quantity)
+    cartManager = CartManager(request)
+    cartManager.add(product, product.product_price, quantity)
 
-	return HttpResponse('add success')
+    return HttpResponse('add success')
+
 
 def del_cart(request, itemId):
-	cartManager = CartManager(request)
-	
-	cartManager.remove(itemId)
+    cartManager = CartManager(request)
 
-	items = cartManager.getItems(request)
-	return render_to_response('cart.html', {'items': items}, RequestContext(request))
+    cartManager.remove(itemId)
+
+    items = cartManager.getItems(request)
+    return render_to_response('cart.html', {'items': items}, RequestContext(request))
+
 
 def cart_view(request):
-	cartManager = CartManager(request)
+    cartManager = CartManager(request)
 
-	items = cartManager.getItems(request)
+    items = cartManager.getItems(request)
 
-	return render_to_response('cart.html', {'items': items}, RequestContext(request))
+    print request.META
+    return render_to_response('cart.html', {'items': items}, RequestContext(request))
+
 
 def checkout(request):
-	if not request.user.is_authenticated():
-		request.session['redirect_url'] = request.path
-		return HttpResponseRedirect('/login.html')
+    if not request.user.is_authenticated():
+        request.session['redirect_url'] = '/cart/cart.html'#request.path
+        return HttpResponseRedirect('/login.html')
 
-	cartManager = CartManager(request)
-	items = cartManager.getItems(request)
-	amount = 0.0
-	for item in items:
-		amount + amount + float(item.quantity * item.unit_price)
+    cartManager = CartManager(request)
+    items = cartManager.getItems(request)
+    amount = 0.0
+    for item in items:
+        amount + amount + float(item.quantity * item.unit_price)
 
-	item = {"amt": amount,
-		"inv": "inventory",
-		"custom": "tracking",
-		"cancelurl": "http://localhost:8000/paypal_cancel",
-		"returnurl": "http://localhost:8000/paypal_return"}
+    item = {"amt": amount,
+            "inv": "inventory",
+            "custom": "tracking",
+            "cancelurl": "http://localhost:8000/paypal_cancel",
+            "returnurl": "http://localhost:8000/paypal_return"}
 
-	kw = {"item": item,
-		"payment_template": "checkout.html",
-		"confirm_template": "confirmation.html",
-		"success_url": "/paypal_success"
-	}
-	ppp = PayPalPro(**kw)
-	return ppp(request)
+    kw = {"item": item,
+          "payment_template": "checkout.html",
+          "confirm_template": "confirmation.html",
+          "success_url": "/paypal_success"
+    }
+    ppp = PayPalPro(**kw)
+    return ppp(request)
 		

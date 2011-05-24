@@ -5,21 +5,25 @@ from carshop.order.models import *
 
 
 class OrderAdmin(admin.ModelAdmin):
-	pass
-	
+    pass
+
+
 class OrderProductAdmin(admin.ModelAdmin):
-	pass
-	
+    pass
+
+
 class OrderProductDownloadAdmin(admin.ModelAdmin):
-	pass
-	
+    pass
+
+
 class OrderStatusAdmin(admin.ModelAdmin):
-	pass
-	
+    pass
+
+
 class OrderStatusHistoryAdmin(admin.ModelAdmin):
-	pass
-	
-	
+    pass
+
+
 admin.site.register(Order, OrderAdmin)
 admin.site.register(OrderProduct, OrderProductAdmin)
 admin.site.register(OrderProductDownload, OrderProductDownloadAdmin)
