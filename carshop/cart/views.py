@@ -39,17 +39,15 @@ def cart_view(request):
 
     items = cartManager.getItems(request)
 
-    print request.META
+    #print request.META
     return render_to_response('cart.html', {'items': items}, RequestContext(request))
 
 
-
-        
     
     
 def checkout(request):
     if not request.user.is_authenticated():
-        request.session['redirect_url'] = '/cart/cart.html'#request.path
+        request.session['redirect_url'] = '/order/generateOrder'#request.path
         return HttpResponseRedirect('/login.html')
 
     cartManager = CartManager(request)
