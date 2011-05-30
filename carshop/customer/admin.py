@@ -77,6 +77,15 @@ class CustomerBasketAdmin(admin.ModelAdmin):
 
 class CustomerAdmin(admin.ModelAdmin):
 
+    fieldsets = (
+    (None, {
+        'fields': (
+        'username', 'password', 'customer_phone_no', 'customer_fax_no', 'customer_gender', 'customer_address', 'customer_zip', )
+    }),
+    ('Advanced options', {
+        'fields': ('customer_status', 'customer_level', 'customer_integral', )
+    }),
+    )
 
     list_display = ('full_name', 'customer_address', 'customer_gender')
 

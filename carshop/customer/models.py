@@ -9,7 +9,7 @@ from django.db.models.signals import post_save
 from carshop.models import Parameter, CountryStateCity
 from carshop.product import models as product
 
-class Customer(models.Model): # 客户表
+class Customer(User): # 客户表
     GENDER_CHOICES = (
         (u'M', u'Male'), (u'F', u'Female'),
     )
@@ -17,7 +17,6 @@ class Customer(models.Model): # 客户表
     RECEIVE_CHOICES = ((u'Y', u'Yes'), (u'N', u'No'))
 
     #customer = models.ForeignKey(User, primary_key=True) # 用户id
-    customer = models.OneToOneField(User)
     
     customer_phone_no = models.CharField(max_length=32) # 客户电话
     customer_fax_no = models.CharField(max_length=32, blank=True, null=True) # 客户传真

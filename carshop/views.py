@@ -106,8 +106,13 @@ def register(request):
                 fax_number = form.cleaned_data['fax_number']
                 receive_email = form.cleaned_data['receive_email']
 
-                customer = Customer(username, email, password)
-                
+                #customer = Customer(username, email, password)
+                customer = Customer()
+
+                customer.username = username
+                customer.email = email
+                customer.set_password(password)
+
                 customer.first_name = first_name
                 customer.last_name = last_name
                 customer.is_staff = True
