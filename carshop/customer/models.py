@@ -4,18 +4,21 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.core.cache import cache
 from django.contrib import admin
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
 from carshop.models import Parameter, CountryStateCity
 from carshop.product import models as product
 
-class CustomerInfo(models.Model): # 客户表
+class Customer(models.Model): # 客户表
     GENDER_CHOICES = (
-    (u'M', u'Male'), (u'F', u'Female'),
+        (u'M', u'Male'), (u'F', u'Female'),
     )
 
     RECEIVE_CHOICES = ((u'Y', u'Yes'), (u'N', u'No'))
 
-    customer = models.ForeignKey(User, primary_key=True) # 用户id
-
+    #customer = models.ForeignKey(User, primary_key=True) # 用户id
+    customer = models.OneToOneField(User)
+    
     customer_phone_no = models.CharField(max_length=32) # 客户电话
     customer_fax_no = models.CharField(max_length=32, blank=True, null=True) # 客户传真
     customer_gender = models.CharField(max_length=2, choices=GENDER_CHOICES) # 客户性别
@@ -39,11 +42,16 @@ class CustomerInfo(models.Model): # 客户表
         return ("%s %s" % (self.customer_firstname, self.customer_lastname))
 
     class Meta:
-        db_table = 'customer_info'
+        db_table = 'customer'
 
+def create_user_profile(sender, instance, created, **kwargs):  
+    if created:  
+        profile, created = Customer.objects.get_or_create(user=instance)  
+
+post_save.connect(create_user_profile, sender=User) 
 
 class CustomerMessage(models.Model): # 客户留言表
-    customer = models.ForeignKey(User, primary_key=True) # 用户id
+    customer = models.ForeignKey(Customer, primary_key=True) # 用户id
     message = models.CharField(max_length=2000) # 留言内容
     time_created = models.DateTimeField() # 留言日期
     message_type = models.ForeignKey(Parameter) # 留言类别
@@ -53,7 +61,7 @@ class CustomerMessage(models.Model): # 客户留言表
 
 
 class CustomerBasket(models.Model): # 购物篮
-    customer = models.ForeignKey(User, primary_key=True) # 用户id
+    customer = models.ForeignKey(Customer, primary_key=True) # 用户id
     product = models.ForeignKey(product.Product) # 产品ID
     product_quantity = models.IntegerField() # 产品数量
     product_price = models.FloatField() # 产品价格

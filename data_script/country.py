@@ -212,5 +212,5 @@ def generateSql():
 		
 	f_sql.close()
 	
-#generateSql()	
+generateSql()	
 	
