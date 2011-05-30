@@ -110,28 +110,31 @@ import os
 
 DMIGRATIONS_DIR = os.path.join(os.path.dirname(__file__), 'migrations')
 
+AUTH_PROFILE_MODULE = 'carshop.customer.Customer'
+
 INSTALLED_APPS = (
-'django.contrib.auth',
-'django.contrib.contenttypes',
-'django.contrib.sessions',
-'django.contrib.sites',
-'django.contrib.messages',
-'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.admin',
 
-'carshop',
-'carshop.customer',
-'carshop.manufacturer',
-'carshop.order',
-'carshop.product',
-'carshop.cart',
+    'carshop',
+    'carshop.customer',
+    'carshop.manufacturer',
+    'carshop.order',
+    'carshop.product',
+    'carshop.cart',
 
-'paypal.standard',
-'paypal.pro',
-'paypal.standard.ipn',
-'dmigrations',
-'debug_toolbar',
-'rollyourown.seo',
+    'paypal.standard',
+    'paypal.pro',
+    'paypal.standard.ipn',
+    'dmigrations',
+    'debug_toolbar',
+    'rollyourown.seo',
 )
+
 
 PAYPAL_RECEIVER_EMAIL = 'xtwxfxk@gmail.com'
 PAYPAL_TEST = True

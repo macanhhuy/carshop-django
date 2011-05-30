@@ -75,21 +75,13 @@ class CustomerBasketAdmin(admin.ModelAdmin):
     pass
 
 
-class CustomerInfoAdmin(admin.ModelAdmin):
-    fieldsets = (
-    (None, {
-        'fields': (
-        'customer', 'customer_phone_no', 'customer_fax_no', 'customer_gender', 'customer_address', 'customer_zip', )
-    }),
-    ('Advanced options', {
-        'fields': ('customer_status', 'customer_level', 'customer_integral', )
-    }),
-    )
+class CustomerAdmin(admin.ModelAdmin):
 
-    list_display = ('customer_name', 'customer_address', 'customer_gender')
 
-    def customer_name(self, obj):
-        return obj.customer.username
+    list_display = ('full_name', 'customer_address', 'customer_gender')
+
+#    def customer_name(self, obj):
+#        return obj.customer.username
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "customer_status":
@@ -101,8 +93,11 @@ class CustomerInfoAdmin(admin.ModelAdmin):
         if db_field.name == 'customer_level':
             kwargs["queryset"] = Parameter.objects.filter(parameter_code='customer_level_code')
             return db_field.formfield(**kwargs)
-        return super(CustomerInfoAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
-
+        return super(CustomerAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
+    
+    def full_name(self, obj):
+        return ("%s %s" % (self.customer_firstname, self.customer_lastname))
+    
 admin.site.register(CustomerMessage, CustomerMessageAdmin)
 admin.site.register(CustomerBasket, CustomerBasketAdmin)
-admin.site.register(CustomerInfo, CustomerInfoAdmin)
+admin.site.register(Customer, CustomerAdmin)

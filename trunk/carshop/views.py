@@ -18,7 +18,7 @@ from carshop.forms import RegisterForm
 from carshop.utils import NoStyleErrorList
 from carshop.product.models import Product
 
-from carshop.customer.models import CustomerInfo
+from carshop.customer.models import Customer
 
 import Image, ImageDraw, ImageFont, md5, random, cStringIO
 
@@ -86,11 +86,11 @@ def register(request):
                 first_name = form.cleaned_data['first_name']
                 last_name = form.cleaned_data['last_name']
 
-                user = User.objects.create_user(username, email, password)
-                user.first_name = first_name
-                user.last_name = last_name
-                user.is_staff = True
-                user.save()
+                #user = User.objects.create_user(username, email, password)
+                #user.first_name = first_name
+                #user.last_name = last_name
+                #user.is_staff = True
+                #user.save()
 
                 address = form.cleaned_data['address']
                 zip = form.cleaned_data['zip']
@@ -106,23 +106,27 @@ def register(request):
                 fax_number = form.cleaned_data['fax_number']
                 receive_email = form.cleaned_data['receive_email']
 
-                customerInfo = CustomerInfo()
-                customerInfo.customer = user
-                customerInfo.customer_address = address
-                customerInfo.customer_zip = zip
+                customer = Customer(username, email, password)
+                
+                customer.first_name = first_name
+                customer.last_name = last_name
+                customer.is_staff = True
+                
+                customer.customer_address = address
+                customer.customer_zip = zip
 
-                customerInfo.customer_country = CountryStateCity.objects.get(id=country)
-                customerInfo.customer_state = CountryStateCity.objects.get(id=state)
-                customerInfo.customer_city = CountryStateCity.objects.get(id=city)
+                customer.customer_country = CountryStateCity.objects.get(id=country)
+                customer.customer_state = CountryStateCity.objects.get(id=state)
+                customer.customer_city = CountryStateCity.objects.get(id=city)
 
-                customerInfo.customer_gender = gender
+                customer.customer_gender = gender
 
-                customerInfo.customer_company = company
-                customerInfo.customer_phone_no = phone_number
-                customerInfo.customer_fax_no = fax_number
-                customerInfo.customer_is_receive_email = receive_email
+                customer.customer_company = company
+                customer.customer_phone_no = phone_number
+                customer.customer_fax_no = fax_number
+                customer.customer_is_receive_email = receive_email
 
-                customerInfo.save()
+                customer.save()
             except Exception, e:
                 return render_to_response('error.html', {'e': e, 'traceback_msg': traceback.format_exc()},
                                           RequestContext(request))
