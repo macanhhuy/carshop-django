@@ -11,7 +11,8 @@ def checkout(request):
         request.session['redirect_url'] = '/order/checkout'
         return HttpResponseRedirect('/login.html')
     
-    orderForm = OrderForm()
+    orderForm = OrderForm(request)
+    
     
     return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
 
