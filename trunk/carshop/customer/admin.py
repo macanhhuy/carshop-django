@@ -80,14 +80,14 @@ class CustomerAdmin(admin.ModelAdmin):
     fieldsets = (
     (None, {
         'fields': (
-        'username', 'password', 'customer_phone_no', 'customer_fax_no', 'customer_gender', 'customer_address', 'customer_zip', )
+        'customer_phone_no', 'customer_fax_no', 'customer_gender', 'customer_address', 'customer_zip', )
     }),
     ('Advanced options', {
         'fields': ('customer_status', 'customer_level', 'customer_integral', )
     }),
     )
 
-    list_display = ('full_name', 'customer_address', 'customer_gender')
+    list_display = ('customer_name', 'customer_address', 'customer_gender')
 
 #    def customer_name(self, obj):
 #        return obj.customer.username
@@ -104,8 +104,8 @@ class CustomerAdmin(admin.ModelAdmin):
             return db_field.formfield(**kwargs)
         return super(CustomerAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
     
-    def full_name(self, obj):
-        return ("%s %s" % (self.customer_firstname, self.customer_lastname))
+    #def full_name(self, obj):
+    #    return ("%s %s" % (self.customer_firstname, self.customer_lastname))
     
 admin.site.register(CustomerMessage, CustomerMessageAdmin)
 admin.site.register(CustomerBasket, CustomerBasketAdmin)

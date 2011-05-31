@@ -1,4 +1,6 @@
 # -*- coding:utf-8 -*-
+import datetime
+
 from django.db import models
 from django.core.cache import cache
 from django.contrib import admin
@@ -150,3 +152,30 @@ class LayoutBox(models.Model): # 模板配置表
 #	cache.set('customer_status_code', Parameter.objects.filter(parameter_code='customer_status_code'))
 
 #cache_load()
+
+class UserManager(auth.UserManager):
+    def create_user(self, username, email, password=None, first_name=None, last_name=None):
+        """
+        Creates and saves a User with the given username, e-mail and password.
+        """
+        now = datetime.datetime.now()
+
+        # Normalize the address by lowercasing the domain part of the email
+        # address.
+        try:
+            email_name, domain_part = email.strip().split('@', 1)
+        except ValueError:
+            pass
+        else:
+            email = '@'.join([email_name, domain_part.lower()])
+
+        user = self.model(username=username, email=email, is_staff=False,
+                         is_active=True, is_superuser=False, last_login=now,
+                         date_joined=now)
+
+        user.set_password(password)
+        user.first_name = first_name
+        user.last_name = last_name
+        user.save(using=self._db)
+        return user
+
