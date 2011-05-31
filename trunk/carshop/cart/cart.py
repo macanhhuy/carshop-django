@@ -55,6 +55,7 @@ class CartManager:
 
 
     def remove(self, itemId):
+        # 做数据保存以便给用户发邮件(用户登录的情况下)
         try:
             item = CartItem.objects.get(
                 cart=self.cart,
