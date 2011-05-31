@@ -4,13 +4,15 @@ from django.template import RequestContext
 from paypal.pro.views import PayPalPro
 from paypal.standard.forms import PayPalPaymentsForm
 
+import uuid
+
 def view_that_asks_for_money(request):
 	
 	paypal_dict = {
-		'business': 'xtwxfx_1305362526_biz@gmail.com',
+		'business': 'xtwxfx_1303744118_biz@gmail.com',
 		'amount': '300.00',
 		'item_name': 'Car Seats',
-		'invoice': 'unique-invoice-id',
+		'invoice': uuid.uuid1(),
 		'notify_url': 'http://localhost:8000/paypal_ipn',
 		'return_url': 'http://localhost:8000/paypal_return',
 		'cancel_return': 'http://localhost:8000/paypal_cancel',

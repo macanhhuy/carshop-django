@@ -177,10 +177,12 @@ def paypal_ipn(request):
 
 
 def paypal_return(request):
+    print request
     return HttpResponse('return')
 
 
 def paypal_cancel(request):
+    print request
     return HttpResponse('cancel')
 
 
