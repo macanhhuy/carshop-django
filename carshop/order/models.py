@@ -1,26 +1,26 @@
 # -*- coding: utf-8 -*-
 
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 from django.db import models
 from carshop.product import models as product
 from carshop.models import Parameter, AddressFormat
-
+from carshop.customer.models import Customer
 from carshop.db.models import *
 
 class Order(models.Model): # 订单表
 
     id = UUIDField(primary_key=True, editable=False)
-    customer = models.ForeignKey(User) # 客户ID
-    customer_name = models.CharField(max_length=64) # 客户名
+    customer = models.ForeignKey(Customer) # 客户ID
+    customer_name = models.CharField(max_length=64) # 客户名(接收人)
     customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
-    customer_street_address = models.CharField(max_length=64) # 客户街道地址
+    customer_street_address = models.CharField(max_length=64, blank=True, null=True) # 客户街道地址
     customer_suburb = models.CharField(max_length=32, blank=True, null=True) # 客户住宅区
-    customer_city = models.CharField(max_length=32) # 客户城市
-    customer_postcode = models.CharField(max_length=10) # 客户邮编
+    customer_city = models.CharField(max_length=32, blank=True, null=True) # 客户城市
+    customer_postcode = models.CharField(max_length=10, blank=True, null=True) # 客户邮编
     customer_state = models.CharField(max_length=32, blank=True, null=True) # 客户所在州
-    customer_country = models.CharField(max_length=32) # 客户国家
-    customer_telephone = models.CharField(max_length=32) # 客户电话
-    customer_email_address = models.CharField(max_length=96) # 客户EMAIL
+    customer_country = models.CharField(max_length=32, blank=True, null=True) # 客户国家
+    customer_telephone = models.CharField(max_length=32, blank=True, null=True) # 客户电话
+    customer_email_address = models.CharField(max_length=96, blank=True, null=True) # 客户EMAIL
     customer_address_format = models.ForeignKey(AddressFormat, related_name='customer_address_format', blank=True, null=True) # 客户地址格式
 
     delivery_name = models.CharField(max_length=64, blank=True, null=True) # 送货人名
@@ -94,11 +94,11 @@ class OrderProductDownload(models.Model): # 订单下载表
 
 class OrderStatus(models.Model): # 订单状态表
     order = models.ForeignKey(Order) # 订单ID
-    customer = models.ForeignKey(User, related_name="customer_user") # 客户ID
+    customer = models.ForeignKey(Customer, related_name="customer_user") # 客户ID
     order_status = models.ForeignKey(Parameter, related_name='order_status') # 订单状态
     time_update_status = models.DateTimeField() # 状态更新时间
     time_pass = models.DateTimeField() # 确认时间
-    order_pass_use = models.ForeignKey(User, related_name="manager_user") # 确认管理人
+    order_pass_use = models.ForeignKey(Customer, related_name="manager_user") # 确认管理人
     order_send_type = models.ForeignKey(Parameter, related_name='order_send_type') # 发送状态
 
     class Meta:

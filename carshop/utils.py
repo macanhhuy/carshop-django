@@ -9,4 +9,3 @@ class NoStyleErrorList(ErrorList):
     def no_style(self):
         return u'%s' % ''.join([u'%s' % e for e in self])
 	
-	

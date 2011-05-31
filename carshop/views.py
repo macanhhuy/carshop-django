@@ -12,7 +12,7 @@ from django.core import serializers
 from django.db import IntegrityError
 from django.utils.translation import gettext as _
 
-from carshop.models import Parameter, CountryStateCity
+from carshop.models import Parameter, CountryStateCity, UserManager
 from carshop.context_processors import getLeftNavigate
 from carshop.forms import RegisterForm
 from carshop.utils import NoStyleErrorList
@@ -107,31 +107,27 @@ def register(request):
                 receive_email = form.cleaned_data['receive_email']
 
                 #customer = Customer(username, email, password)
-                customer = Customer()
-
-                customer.username = username
-                customer.email = email
-                customer.set_password(password)
-
-                customer.first_name = first_name
-                customer.last_name = last_name
-                customer.is_staff = True
+                user = User.objects.create_user(username, email, password)
+                user.first_name = first_name
+                user.last_name = last_name
+                user.save()
                 
-                customer.customer_address = address
-                customer.customer_zip = zip
+                user.get_profile().customer_name = user.get_full_name()
+                user.get_profile().customer_address = address
+                user.get_profile().customer_zip = zip
 
-                customer.customer_country = CountryStateCity.objects.get(id=country)
-                customer.customer_state = CountryStateCity.objects.get(id=state)
-                customer.customer_city = CountryStateCity.objects.get(id=city)
+                user.get_profile().customer_country = CountryStateCity.objects.get(id=country)
+                user.get_profile().customer_state = CountryStateCity.objects.get(id=state)
+                user.get_profile().customer_city = CountryStateCity.objects.get(id=city)
 
-                customer.customer_gender = gender
+                user.get_profile().customer_gender = gender
 
-                customer.customer_company = company
-                customer.customer_phone_no = phone_number
-                customer.customer_fax_no = fax_number
-                customer.customer_is_receive_email = receive_email
+                user.get_profile().customer_company = company
+                user.get_profile().customer_phone_no = phone_number
+                user.get_profile().customer_fax_no = fax_number
+                user.get_profile().customer_is_receive_email = receive_email
 
-                customer.save()
+                user.get_profile().save()
             except Exception, e:
                 return render_to_response('error.html', {'e': e, 'traceback_msg': traceback.format_exc()},
                                           RequestContext(request))

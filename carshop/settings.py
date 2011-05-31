@@ -110,7 +110,7 @@ import os
 
 DMIGRATIONS_DIR = os.path.join(os.path.dirname(__file__), 'migrations')
 
-AUTH_PROFILE_MODULE = 'carshop.customer.Customer'
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     'rollyourown.seo',
 )
 
+AUTH_PROFILE_MODULE = 'customer.Customer'
 
 PAYPAL_RECEIVER_EMAIL = 'xtwxfxk@gmail.com'
 PAYPAL_TEST = True
