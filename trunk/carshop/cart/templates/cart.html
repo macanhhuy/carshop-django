@@ -19,7 +19,8 @@
         {{ item|cart_item_general|safe }}
     {% endfor %}
 
-
+    Total Price: {{ totalPrice }}
+    <br />
     <a href="/order/checkout" alt="checkout">checkout</a>
 
 {% endblock %}

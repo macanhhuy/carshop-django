@@ -41,7 +41,7 @@ class Cart(models.Model):
     user = models.ForeignKey(User, blank=True, null=True)
     creation_date = models.DateTimeField(verbose_name=_('creation date'))
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
-
+    
     objects = CartManager()
 
     def put_into_cart(self, product, quantity):
@@ -53,6 +53,15 @@ class Cart(models.Model):
     def show_cart_items(self):
         return CartItem.objects.filter(cart=self)
 
+    @property
+    def get_total_price(self):
+        cartItem = CartItem.objects.filter(cart=self)
+        total_price = 0
+        if cartItem is not None:
+            for item in cartItem:
+                total_price = total_price + item.unit_price * item.quantity
+            
+        return total_price
     class Meta:
         db_table = 'cart'
         ordering = ('-creation_date',)
