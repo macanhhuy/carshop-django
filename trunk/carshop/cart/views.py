@@ -8,7 +8,8 @@ from django.contrib.auth.decorators import login_required
 from paypal.pro.views import PayPalPro
 from paypal.standard.forms import PayPalPaymentsForm
 from carshop.product.models import Product
-from cart import CartManager
+
+from .models import *
 
 #@login_required(login_url='/login/')
 def add_cart(request, productId, quantity):
@@ -19,25 +20,27 @@ def add_cart(request, productId, quantity):
     product = Product.objects.get(id=productId)
 
     #CartManager.cart.add(product, product.product_price, quantity)
-    cartManager = CartManager(request)
-    cartManager.add(product, product.product_price, quantity)
+    try:
+        cart = Cart.objects.get_or_create_from_request(request)
+        cart.put_into_cart(product, quantity)
+    except Exception, e:
+        print e
 
     return HttpResponse('add success')
 
 
 def del_cart(request, itemId):
-    cartManager = CartManager(request)
+    cart = Cart.objects.get_or_create_from_request(request)
+    cart.put_out_cart(itemId)
 
-    cartManager.remove(itemId)
-
-    items = cartManager.getItems(request)
-    return render_to_response('cart.html', {'items': items}, RequestContext(request))
+    return HttpResponseRedirect('/cart/cart.html')
+    #items = cart.show_cart_items()
+    #return render_to_response('cart.html', {'items': items}, RequestContext(request))
 
 
 def cart_view(request):
-    cartManager = CartManager(request)
-
-    items = cartManager.getItems(request)
+    cart = Cart.objects.get_or_create_from_request(request)
+    items = cart.show_cart_items()
 
     #print request.META
     return render_to_response('cart.html', {'items': items}, RequestContext(request))
@@ -50,8 +53,8 @@ def checkout(request):
         request.session['redirect_url'] = '/order/generateOrder'#request.path
         return HttpResponseRedirect('/login.html')
 
-    cartManager = CartManager(request)
-    items = cartManager.getItems(request)
+    cart = Cart.objects.get_or_create_from_request(request)
+    items = cart.show_cart_items()
     amount = 0.0
     for item in items:
         amount + amount + float(item.quantity * item.unit_price)
