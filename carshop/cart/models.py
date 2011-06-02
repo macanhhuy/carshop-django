@@ -53,6 +53,9 @@ class Cart(models.Model):
     def show_cart_items(self):
         return CartItem.objects.filter(cart=self)
 
+    def clean_cart(self):
+        CartItem.objects.extra(where=['cart_id=' + str(self.pk),]).delete()
+
     @property
     def get_total_price(self):
         cartItem = CartItem.objects.filter(cart=self)

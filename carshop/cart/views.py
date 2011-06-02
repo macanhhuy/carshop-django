@@ -12,7 +12,7 @@ from carshop.product.models import Product
 from .models import *
 
 #@login_required(login_url='/login/')
-def add_cart(request, productId, quantity):
+def add_item(request, productId, quantity):
     #if not request.user.is_authenticated():
     #	redirect = {'login' : '/login/'}
     #	return HttpResponse(simplejson.dumps(redirect))
@@ -29,7 +29,7 @@ def add_cart(request, productId, quantity):
     return HttpResponse('add success')
 
 
-def del_cart(request, itemId):
+def remove_item(request, itemId):
     cart = Cart.objects.get_or_create_from_request(request)
     cart.put_out_cart(itemId)
 
@@ -45,8 +45,11 @@ def cart_view(request):
     #print request.META
     return render_to_response('cart.html', {'items': items, 'totalPrice': cart.get_total_price}, RequestContext(request))
 
-
+def clean_cart(request):
+    cart = Cart.objects.get_or_create_from_request(request)
+    cart.clean_cart()
     
+    return HttpResponseRedirect('/cart/cart.html')
     
 def checkout(request):
     if not request.user.is_authenticated():
