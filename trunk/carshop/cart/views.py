@@ -43,7 +43,7 @@ def cart_view(request):
     items = cart.show_cart_items()
 
     #print request.META
-    return render_to_response('cart.html', {'items': items, 'totalPrice': cart.get_total_price}, RequestContext(request))
+    return render_to_response('cart.html', {'items': items, 'totalPrice': cart.total_price}, RequestContext(request))
 
 def clean_cart(request):
     cart = Cart.objects.get_or_create_from_request(request)
