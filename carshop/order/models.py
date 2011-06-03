@@ -11,29 +11,30 @@ class Order(models.Model): # 订单表
 
     id = UUIDField(primary_key=True, editable=False)
     customer = models.ForeignKey(Customer) # 客户ID
-    customer_name = models.CharField(max_length=64) # 客户名(接收人)
-    customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
-    customer_street_address = models.CharField(max_length=64, blank=True, null=True) # 客户街道地址
-    customer_suburb = models.CharField(max_length=32, blank=True, null=True) # 客户住宅区
-    customer_city = models.CharField(max_length=32, blank=True, null=True) # 客户城市
-    customer_postcode = models.CharField(max_length=10, blank=True, null=True) # 客户邮编
-    customer_state = models.CharField(max_length=32, blank=True, null=True) # 客户所在州
-    customer_country = models.CharField(max_length=32, blank=True, null=True) # 客户国家
-    customer_telephone = models.CharField(max_length=32, blank=True, null=True) # 客户电话
-    customer_email_address = models.CharField(max_length=96, blank=True, null=True) # 客户EMAIL
-    customer_address_format = models.ForeignKey(AddressFormat, related_name='customer_address_format', blank=True, null=True) # 客户地址格式
+#    customer_name = models.CharField(max_length=64) # 客户名(接收人)
+#    customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
+#    customer_street_address = models.CharField(max_length=64, blank=True, null=True) # 客户街道地址
+#    customer_suburb = models.CharField(max_length=32, blank=True, null=True) # 客户住宅区
+#    customer_city = models.CharField(max_length=32, blank=True, null=True) # 客户城市
+#    customer_postcode = models.CharField(max_length=10, blank=True, null=True) # 客户邮编
+#    customer_state = models.CharField(max_length=32, blank=True, null=True) # 客户所在州
+#    customer_country = models.CharField(max_length=32, blank=True, null=True) # 客户国家
+#    customer_telephone = models.CharField(max_length=32, blank=True, null=True) # 客户电话
+#    customer_email_address = models.CharField(max_length=96, blank=True, null=True) # 客户EMAIL
+#    customer_address_format = models.ForeignKey(AddressFormat, related_name='customer_address_format', blank=True, null=True) # 客户地址格式
 
-    delivery_name = models.CharField(max_length=64, blank=True, null=True) # 送货人名
-    delivery_company = models.CharField(max_length=64, blank=True, null=True) # 送货公司
-    delivery_street_address = models.CharField(max_length=64, blank=True, null=True) # 送货(人/公司？)街道地址
-    delivery_suburb = models.CharField(max_length=32, blank=True, null=True) # 送货(人/公司?)所在区
-    delivery_city = models.CharField(max_length=32, blank=True, null=True) # 送货
-    delivery_postcode = models.CharField(max_length=10, blank=True, null=True) #
-    delivery_state = models.CharField(max_length=32, blank=True, null=True) #
-    delivery_country = models.CharField(max_length=32, blank=True, null=True) #
-    delivery_address_format = models.ForeignKey(AddressFormat, related_name='delivery_address_format', blank=True, null=True) #
+#    delivery_name = models.CharField(max_length=64, blank=True, null=True) # 送货人名
+#    delivery_company = models.CharField(max_length=64, blank=True, null=True) # 送货公司
+#    delivery_street_address = models.CharField(max_length=64, blank=True, null=True) # 送货(人/公司？)街道地址
+#    delivery_suburb = models.CharField(max_length=32, blank=True, null=True) # 送货(人/公司?)所在区
+#    delivery_city = models.CharField(max_length=32, blank=True, null=True) # 送货
+#    delivery_postcode = models.CharField(max_length=10, blank=True, null=True) #
+#    delivery_state = models.CharField(max_length=32, blank=True, null=True) #
+#    delivery_country = models.CharField(max_length=32, blank=True, null=True) #
+#    delivery_address_format = models.ForeignKey(AddressFormat, related_name='delivery_address_format', blank=True, null=True) #
 
-    billing_name = models.CharField(max_length=64, blank=True, null=True) #
+    billing_first_name = models.CharField(max_length=30) #
+    billing_last_name = models.CharField(max_length=30)#
     billing_company = models.CharField(max_length=64, blank=True, null=True) #
     billing_street_address = models.CharField(max_length=64, blank=True, null=True) #
     billing_suburb = models.CharField(max_length=32, blank=True, null=True) #

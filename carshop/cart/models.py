@@ -29,7 +29,7 @@ class CartManager(models.Manager):
             cart = self.get_from_request(request)
             if cart is None:
                 user = request.user if request.user.is_authenticated() else None
-                cart = self.create(session=request.session.session_key, user=user, creation_date=datetime.datetime.now())
+                cart = self.create(session=request.session.session_key, user=user)
                 request.session[CART_OBJ] = cart.pk
         except Exception, e:
             print e
@@ -39,7 +39,7 @@ class CartManager(models.Manager):
 class Cart(models.Model):
     session = models.CharField(max_length=40, blank=True, null=True)
     user = models.ForeignKey(User, blank=True, null=True)
-    creation_date = models.DateTimeField(verbose_name=_('creation date'))
+    creation_date = models.DateTimeField(verbose_name=_('creation date'), default=datetime.datetime.now())
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
     
     objects = CartManager()
@@ -57,12 +57,12 @@ class Cart(models.Model):
         CartItem.objects.extra(where=['cart_id=' + str(self.pk),]).delete()
 
     @property
-    def get_total_price(self):
+    def total_price(self):
         cartItem = CartItem.objects.filter(cart=self)
         total_price = 0
         if cartItem is not None:
             for item in cartItem:
-                total_price = total_price + item.unit_price * item.quantity
+                total_price = total_price + item.total_price
             
         return total_price
     class Meta:
@@ -128,10 +128,11 @@ class CartItem(models.Model):
     def __unicode__(self):
         return u''
 
+    @property
     def total_price(self):
         return self.quantity * self.unit_price
 
-    total_price = property(total_price)
+#    total_price = property(total_price)
 
     # product
     def get_product(self):
