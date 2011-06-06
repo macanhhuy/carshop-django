@@ -6,11 +6,43 @@ from carshop.product import models as product
 from carshop.models import Parameter, AddressFormat
 from carshop.customer.models import Customer
 from carshop.db.models import *
+from ..cart.models import Cart
+
+
+class OrderManager(models.Manager):
+
+    def create_from_cart(self, **kwargs):
+
+        if 'cart' in kwargs:
+            try:
+                order = self.get(cart=kwargs['cart'])
+            except Order.DoesNotExist, e:
+                self.create(kwargs)
+                return None
+            except Exception, e:
+                print e
+            else:
+                return order
+        else:
+            return None
+
+    def create(self, **kwargs):
+        if 'cart' in kwargs:
+            try:
+                order = self.get(cart=kwargs['cart'])
+            except Order.DoesNotExist, e:
+                return super(OrderManager, self).create(**kwargs)
+            except Exception, e:
+                print e
+            else:
+                return order
+        return None
 
 class Order(models.Model): # 订单表
 
     id = UUIDField(primary_key=True, editable=False)
     customer = models.ForeignKey(Customer) # 客户ID
+    cart = models.OneToOneField(Cart)
 #    customer_name = models.CharField(max_length=64) # 客户名(接收人)
 #    customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
 #    customer_street_address = models.CharField(max_length=64, blank=True, null=True) # 客户街道地址
@@ -56,6 +88,9 @@ class Order(models.Model): # 订单表
     currency = models.CharField(max_length=3, blank=True, null=True) # ?
     #paypal_ipn
     ip_address = models.CharField(max_length=96) # 下单IP
+
+
+    objects = OrderManager()
 
     class Meta:
         db_table = "order"
