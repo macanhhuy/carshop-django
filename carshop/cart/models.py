@@ -14,6 +14,7 @@ class CartManager(models.Manager):
             cart = self.get(pk=request.session.get(CART_OBJ))
             if cart.user is None and request.user.is_authenticated():
                 cart.user = request.user
+                cart.session = request.session.session_key
                 cart.save()
         except Cart.DoesNotExist, e:
             # log
