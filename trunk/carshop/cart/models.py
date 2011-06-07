@@ -57,6 +57,15 @@ class Cart(models.Model):
     def clean_cart(self):
         CartItem.objects.extra(where=['cart_id=' + str(self.pk),]).delete()
 
+    def flush(self, request):
+        self.session = request.session.session_key
+
+        user = request.user if request.user.is_authenticated() else None
+        self.user = user
+        
+        self.save()
+        request.session[CART_OBJ] = self.pk
+
     @property
     def total_price(self):
         cartItem = CartItem.objects.filter(cart=self)
@@ -68,7 +77,7 @@ class Cart(models.Model):
         return total_price
     class Meta:
         db_table = 'cart'
-        ordering = ('-creation_date',)
+        ordering = ('creation_date',)
 
     def __unicode__(self):
         return unicode(self.creation_date)
@@ -95,7 +104,7 @@ class ItemManager(models.Manager):
 
     def add_item(self, cart, product, quantity):
         try:
-            cartItem = self.get(object_id=product.pk)
+            cartItem = self.get(cart=cart, object_id=product.pk)
         except CartItem.DoesNotExist, e:
             self.create(cart=cart, product=product, quantity=quantity)
         else:

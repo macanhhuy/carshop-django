@@ -97,6 +97,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 'carshop.context_processors.getTopNavigate'
 )
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 300
+
+
 ROOT_URLCONF = 'carshop.urls'
 
 TEMPLATE_DIRS = (

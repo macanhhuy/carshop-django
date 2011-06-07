@@ -5,8 +5,9 @@
 
 {% block main %}
 
-{{ orderForm.as_p }}
-
+<table class="order">
+{{ orderForm.as_table }}
+</table>
 <!--
 <p>Receiver:<input type="text" name="receiver"></p>
 <p>Localtion:<input type="text" name="location"></p>

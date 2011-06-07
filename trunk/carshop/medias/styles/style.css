@@ -1467,3 +1467,10 @@ ul.slink li a:hover {
     HEIGHT: 30px;
     TEXT-ALIGN: right;
 }
+
+.order input{
+    border-top: solid 1px #7A9792;
+    border-bottom: solid 1px #7A9792;
+    border-left: solid 1px #7A9792;
+    border-right: solid 1px #7A9792;
+}
