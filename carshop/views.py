@@ -19,6 +19,7 @@ from carshop.utils import NoStyleErrorList
 from carshop.product.models import Product
 
 from carshop.customer.models import Customer
+from .cart.models import Cart
 
 import Image, ImageDraw, ImageFont, md5, random, cStringIO
 
@@ -33,7 +34,11 @@ def findTopProduct():
 
 def logout_view(request):
 #	print('1 ' + request.session['CART-OBJ'].session + ' | ' + request.session.session_key)
+    cart = Cart.objects.get_or_create_from_request(request)
+
     logout(request)
+
+    cart.flush(request)
     #	print('2 ' + request.session['CART-OBJ'].session + ' | ' + request.session.session_key)
     return HttpResponseRedirect('/index.html')
 
@@ -44,12 +49,14 @@ def login_view(request):
         password = request.POST['password']
         user = authenticate(username=username, password=password)
         if user is not None:
+            cart = Cart.objects.get_or_create_from_request(request)
             login(request, user)
+            cart.flush(request)
             redirect_url = request.session.get('redirect_url')
             if redirect_url:
                 return HttpResponseRedirect(redirect_url)
             else:
-                return HttpResponseRedirect('index.html')
+                return HttpResponseRedirect('/index.html')
         else:
             return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
     else:
