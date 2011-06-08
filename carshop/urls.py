@@ -8,6 +8,8 @@ from carshop.seo import CarShopMetadata
 
 import settings
 
+from .views import *
+
 admin.autodiscover()
 register_seo_admin(admin.site, CarShopMetadata)
 
@@ -27,32 +29,29 @@ urlpatterns = patterns(
     (r'^cart/', include('carshop.cart.urls')),
     (r'^order/', include('carshop.order.urls')),
 
-    (r'^index.html$', 'carshop.views.index'),
-    (r'^$', 'carshop.views.index'),
+    (r'^index.html$', index),
+    (r'^$', index),
 
-    (r'^login.html$', 'carshop.views.login_view'),
+    (r'^login.html$', login_view),
     #(r'^login$', 'carshop.views.login_ajax'),
-    (r'^logout$', 'carshop.views.logout_view'),
-    (r'^register$', 'carshop.views.register'),
-    (r'^toRegister$', 'carshop.views.toRegister'),
-    (r'^findStateOrCity/(?P<countryId>\d{1,6})$', 'carshop.views.findStateOrCity'),
+    (r'^logout$', logout_view),
+    (r'^register$', register),
+    (r'^toRegister$', toRegister),
+    (r'^findStateOrCity/(?P<countryId>\d{1,6})$', findStateOrCity),
 
-    (r'^checkcode/(?P<time>\d{13})$', 'carshop.views.checkcode'),
+    (r'^checkcode/(?P<time>\d{13})$', checkcode),
 
-    (r'^allCar.html$', 'carshop.product.views.allCar'),
-    (r'^allProduct.html$', 'carshop.product.views.allProduct'),
-
-    #(r'^index$', 'carshop.system.views.index'),
-
+#    (r'^allCar.html$', 'carshop.product.views.allCar'),
+#    (r'^allProduct.html$', 'carshop.product.views.allProduct'),
 
     #########################################
     #
     #
     #########################################
-    (r'^paypal_success$', 'carshop.views.paypal_success'),
-    (r'^paypal_ipn$', 'carshop.views.paypal_ipn'),
-    (r'^paypal_return$', 'carshop.views.paypal_return'),
-    (r'^paypal_cancel$', 'carshop.views.paypal_cancel'),
+    (r'^paypal_success$', paypal_success),
+    (r'^paypal_ipn$', paypal_ipn),
+    (r'^paypal_return$', paypal_return),
+    (r'^paypal_cancel$', paypal_cancel),
 
 
 )
