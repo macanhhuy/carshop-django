@@ -39,10 +39,10 @@ urlpatterns = patterns(
     (r'^toRegister$', toRegister),
     (r'^findStateOrCity/(?P<countryId>\d{1,6})$', findStateOrCity),
 
-    (r'^checkcode/(?P<time>\d{13})$', checkcode),
+#    (r'^checkcode/(?P<time>\d{13})$', checkcode),
 
-#    (r'^allCar.html$', 'carshop.product.views.allCar'),
-#    (r'^allProduct.html$', 'carshop.product.views.allProduct'),
+    (r'^allCar.html$', 'carshop.product.views.allCar'),
+    (r'^allProduct.html$', 'carshop.product.views.allProduct'),
 
     #########################################
     #
