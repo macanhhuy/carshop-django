@@ -84,7 +84,7 @@ MIDDLEWARE_CLASSES = (
 'django.middleware.locale.LocaleMiddleware',
 'django.contrib.auth.middleware.AuthenticationMiddleware',
 'django.contrib.messages.middleware.MessageMiddleware',
-'debug_toolbar.middleware.DebugToolbarMiddleware',
+#'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -110,9 +110,9 @@ TEMPLATE_DIRS = (
 './templates',
 )
 
-import os
+#import os
 
-DMIGRATIONS_DIR = os.path.join(os.path.dirname(__file__), 'migrations')
+#DMIGRATIONS_DIR = os.path.join(os.path.dirname(__file__), 'migrations')
 
 
 
@@ -135,7 +135,7 @@ INSTALLED_APPS = (
     'paypal.pro',
     'paypal.standard.ipn',
     'dmigrations',
-    'debug_toolbar',
+#    'debug_toolbar',
     'rollyourown.seo',
 )
 
@@ -157,8 +157,8 @@ PAYPAL_WPP_SIGNATURE = "AKmUkXSpzyIk02Gvvi3fVluSBs3WAvhvJ3e5WlKhRgX6XYDLQFd.7xHi
 
 
 
-try:
-    from settings_debug_toolbar import *
-except ImportError, e:
-    logger.error(e)
-    pass
+#try:
+#    from settings_debug_toolbar import *
+#except ImportError, e:
+#    logger.error(e)
+#    pass

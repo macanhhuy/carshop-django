@@ -7,7 +7,7 @@ urlpatterns = patterns(
     '',
     (r'^(?P<productId>\d{1,3})/(?P<quantity>\d{1,3})$', add_item),
     (r'^remove/(?P<itemId>\d{1,3})$', remove_item),
-    (r'^clean', clean_cart),
+    (r'^clean$', clean_cart),
     (r'^cart.html$', cart_view),
 
 
