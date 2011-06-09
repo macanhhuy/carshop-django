@@ -51,28 +51,28 @@ def clean_cart(request):
     
     return HttpResponseRedirect('/cart/cart.html')
     
-def checkout(request):
-    if not request.user.is_authenticated():
-        request.session['redirect_url'] = '/order/generateOrder'#request.path
-        return HttpResponseRedirect('/login.html')
+#def checkout(request):
+#    if not request.user.is_authenticated():
+#        request.session['redirect_url'] = '/order/generateOrder'#request.path
+#        return HttpResponseRedirect('/login.html')
 
-    cart = Cart.objects.get_or_create_from_request(request)
-    items = cart.show_cart_items()
-    amount = 0.0
-    for item in items:
-        amount + amount + float(item.quantity * item.unit_price)
+#    cart = Cart.objects.get_or_create_from_request(request)
+#    items = cart.show_cart_items()
+#    amount = 0.0
+#    for item in items:
+#        amount + amount + float(item.quantity * item.unit_price)
 
-    item = {"amt": amount,
-            "inv": "inventory",
-            "custom": "tracking",
-            "cancelurl": "http://localhost:8000/paypal_cancel",
-            "returnurl": "http://localhost:8000/paypal_return"}
+#    item = {"amt": amount,
+#            "inv": "inventory",
+#            "custom": "tracking",
+#            "cancelurl": "http://localhost:8000/paypal_cancel",
+#            "returnurl": "http://localhost:8000/paypal_return"}
 
-    kw = {"item": item,
-          "payment_template": "checkout.html",
-          "confirm_template": "confirmation.html",
-          "success_url": "/paypal_success"
-    }
-    ppp = PayPalPro(**kw)
-    return ppp(request)
+#    kw = {"item": item,
+#          "payment_template": "checkout.html",
+#          "confirm_template": "confirmation.html",
+#          "success_url": "/paypal_success"
+#    }
+#    ppp = PayPalPro(**kw)
+#    return ppp(request)
 		

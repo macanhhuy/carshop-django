@@ -44,20 +44,25 @@ def logout_view(request):
 
 
 def login_view(request):
+
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            cart = Cart.objects.get_or_create_from_request(request)
-            login(request, user)
-            cart.flush(request)
-            redirect_url = request.session.get('redirect_url')
-            if redirect_url:
-                return HttpResponseRedirect(redirect_url)
+        try:
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                cart = Cart.objects.get_or_create_from_request(request)
+                login(request, user)
+                cart.flush(request)
+                redirect_url = request.session.get('redirect_url')
+                if redirect_url:
+                    return HttpResponseRedirect(redirect_url)
+                else:
+                    return HttpResponseRedirect('/index.html')
             else:
-                return HttpResponseRedirect('/index.html')
-        else:
+                return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
+        except Exception, e:
+            print('22222\n' + e)
             return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
     else:
         return render_to_response('login.html', {}, RequestContext(request))
