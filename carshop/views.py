@@ -56,6 +56,7 @@ def login_view(request):
                 cart.flush(request)
                 redirect_url = request.session.get('redirect_url')
                 if redirect_url:
+                    request.session['redirect_url'] = None
                     return HttpResponseRedirect(redirect_url)
                 else:
                     return HttpResponseRedirect('/index.html')
