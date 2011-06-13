@@ -1,13 +1,14 @@
 # -*- coding:utf-8 -*-
 
 import traceback
-
+import urlparse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm
 from django.core.cache import cache
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, QueryDict
 from django.core import serializers
 from django.db import IntegrityError
 from django.utils.translation import gettext as _
@@ -43,7 +44,7 @@ def logout_view(request):
     return HttpResponseRedirect('/index.html')
 
 
-def login_view(request):
+def login_view(request, redirect=None):
 
     if request.method == 'POST':
         try:
@@ -54,16 +55,13 @@ def login_view(request):
                 cart = Cart.objects.get_or_create_from_request(request)
                 login(request, user)
                 cart.flush(request)
-                redirect_url = request.session.get('redirect_url')
-                if redirect_url:
-                    request.session['redirect_url'] = None
-                    return HttpResponseRedirect(redirect_url)
+                if redirect:
+                    return HttpResponseRedirect('/' + redirect)
                 else:
                     return HttpResponseRedirect('/index.html')
             else:
                 return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
         except Exception, e:
-            print('22222\n' + e)
             return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
     else:
         return render_to_response('login.html', {}, RequestContext(request))
@@ -201,3 +199,19 @@ def paypal_cancel(request):
 
 def paypal_success(request):
     return HttpResponse('success')
+
+
+def redirect_to_login(next, login_url=None,
+                      redirect_field_name=None):
+    """
+    Redirects the user to the login page, passing the given 'next' page
+    """
+    if not login_url:
+        login_url = settings.LOGIN_URL
+
+    if redirect_field_name:
+        login_url_parts = list(urlparse.urlparse(login_url + redirect_field_name))
+    else:
+        login_url_parts = list(urlparse.urlparse(login_url))
+
+    return HttpResponseRedirect(urlparse.urlunparse(login_url_parts))

@@ -75,3 +75,12 @@ def cart_item_general(cartItem):
     <a href="/cart/remove/%s">remove</a>
 </div>
     ''' % (cartItem.id, cartItem.object_id, cartItem.object_name, cartItem.unit_price, cartItem.quantity, cartItem.id,)
+
+
+@register.filter()
+def check_end_sprit(url):
+
+    if url.endswith('/'):
+        return url
+    else:
+        return url + '/'

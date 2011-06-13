@@ -32,7 +32,7 @@ urlpatterns = patterns(
     (r'^index.html$', index),
     (r'^$', index),
 
-    (r'^login.html$', login_view),
+    (r'^login/(?P<redirect>.*)$', login_view),
     #(r'^login$', 'carshop.views.login_ajax'),
     (r'^logout$', logout_view),
     (r'^register$', register),
