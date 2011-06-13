@@ -8,7 +8,7 @@ from .models import *
 from .forms import *
 from ..cart.models import Cart
 
-@login_required(redirect_field_name='/order/checkout', login_url='/login')
+@login_required(redirect_field_name='/order/checkout/', login_url='/login')
 def checkout(request):
     #if not request.user.is_authenticated():
     #    return redirect('/login/order/checkout')
@@ -36,7 +36,7 @@ def generate_order(request):
     return render_to_response('order.html', {}, RequestContext(request))
 
 
-@login_required((redirect_field_name='/order/checkout', login_url='/login')
+@login_required(redirect_field_name='/order/checkout', login_url='/login')
 def save_order(request):
     if request.method == 'POST':
         orderForm = OrderForm(request.POST)
