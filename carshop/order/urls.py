@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from django.conf.urls.defaults import *
-from carshop.order.views import *
+from .views import *
 
 urlpatterns = patterns(
     '',
