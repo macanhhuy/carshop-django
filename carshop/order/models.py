@@ -26,12 +26,23 @@ class OrderManager(models.Manager):
         else:
             return None
 
-    def create(self, **kwargs):
-        if 'cart' in kwargs:
+    def create(self, cart=None, **kwargs):
+#        if 'cart' in kwargs:
+#            try:
+#                order = self.get(cart=kwargs['cart'])
+#            except Order.DoesNotExist, e:
+#                return super(OrderManager, self).create(**kwargs)
+#            except Exception, e:
+#                print e
+#            else:
+#                return order
+#        return None
+
+        if cart:
             try:
-                order = self.get(cart=kwargs['cart'])
+                order = self.get(cart=cart)
             except Order.DoesNotExist, e:
-                return super(OrderManager, self).create(**kwargs)
+                return super(OrderManager, self).create(cart=cart, **kwargs)
             except Exception, e:
                 print e
             else:

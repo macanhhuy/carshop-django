@@ -6,7 +6,7 @@ from carshop.order.views import *
 urlpatterns = patterns(
     '',
     (r'^generateOrder$', generate_order),
-    (r'^checkout$', checkout),
-
+    (r'^checkout/$', checkout),
+    (r'^saveOrder$', save_order),
 
 )
