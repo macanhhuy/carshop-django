@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #from django.forms.util import ErrorList
 from django.forms import ModelForm
-from carshop.order.models import *
+from .models import *
 
 class OrderForm(ModelForm):
 
