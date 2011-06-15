@@ -8,11 +8,8 @@ from .models import *
 from .forms import *
 from ..cart.models import Cart
 
-@login_required(redirect_field_name='/order/checkout/', login_url='/login')
+@login_required(redirect_field_name='/order/checkout', login_url='/login')
 def checkout(request):
-    #if not request.user.is_authenticated():
-    #    return redirect('/login/order/checkout')
-
     cart = Cart.objects.get_or_create_from_request(request)
 
     order = Order.objects.create(cart=cart,
@@ -29,9 +26,6 @@ def checkout(request):
 
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def generate_order(request):
-#    if not request.user.is_authenticated():
-#        request.session['redirect_url'] = '/cart/cart.html'
-#        return HttpResponseRedirect('/login.html')
 
     return render_to_response('order.html', {}, RequestContext(request))
 
