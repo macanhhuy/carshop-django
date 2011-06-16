@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 
+import random
 import urlparse
 try:
     from functools import wraps
@@ -8,6 +9,7 @@ except ImportError:
 
 from django.conf import settings
 from django.utils.decorators import available_attrs
+from django.utils.hashcompat import md5_constructor
 
 def user_passes_test(test_func, login_url=None, redirect_field_name=None):
     """
@@ -47,3 +49,31 @@ def login_required(function=None, redirect_field_name=None, login_url=None):
     if function:
         return actual_decorator(function)
     return actual_decorator
+    
+if hasattr(random, 'SystemRandom'):
+    randrange = random.SystemRandom().randrange
+else:
+    randrange = random.randrange
+_MAX_CSRF_KEY = 18446744073709551616L
+ 
+def _get_new_submit_key():
+    return md5_constructor("%s%s" % (randrange(0, _MAX_CSRF_KEY), settings.SECRET_KEY)).hexdigest()
+
+def anti_resubmit(page_key=None):
+    def decorator(view_func):
+        @wraps(view_func, assigned=available_attrs(view_func))
+        def _wrapped_view(request, *args, **kwargs):
+            if request.method == 'GET':
+                request.session['%s_submit' % page_key] = _get_new_submit_key()
+            elif request.method == 'POST':
+                old_key = request.session.get('%s_submit' % page_key, None)
+                if old_key is None:# and old_key != request.POST.get('%s_submit' % page_key, None):
+                    from django.http import HttpResponse
+                    return HttpResponse('dont\'t resubmit')
+                else:
+                    del request.session['%s_submit' % page_key]
+            return view_func(request, *args, **kwargs)
+        return _wrapped_view
+    return decorator
+    
+    
