@@ -26,7 +26,7 @@ class OrderManager(models.Manager):
         else:
             return None
 
-    def create(self, cart=None, **kwargs):
+    def create_or_get(self, cart=None, **kwargs):
 #        if 'cart' in kwargs:
 #            try:
 #                order = self.get(cart=kwargs['cart'])
