@@ -17,7 +17,8 @@ class OrderForm(ModelForm):
     class Meta:
         model = Order
 
-        fields = ('billing_first_name',
+        fields = ('id',
+                  'billing_first_name',
                   'billing_last_name',
                   'billing_company',
                   'billing_street_address',
