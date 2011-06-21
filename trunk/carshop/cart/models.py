@@ -51,7 +51,8 @@ class Cart(models.Model):
     def put_out_cart(self, item_id):
         CartItem.objects.remote_item(self, item_id)
 
-    def show_cart_items(self):
+    @property
+    def cart_items(self):
         return CartItem.objects.filter(cart=self)
 
     def clean_cart(self):

@@ -34,13 +34,13 @@ def remove_item(request, itemId):
     cart.put_out_cart(itemId)
 
     return HttpResponseRedirect('/cart/cart.html')
-    #items = cart.show_cart_items()
+    #items = cart.cart_items
     #return render_to_response('cart.html', {'items': items}, RequestContext(request))
 
 
 def cart_view(request):
     cart = Cart.objects.get_or_create_from_request(request)
-    items = cart.show_cart_items()
+    items = cart.cart_items
 
     #print request.META
     return render_to_response('cart.html', {'items': items, 'totalPrice': cart.total_price}, RequestContext(request))
@@ -57,7 +57,7 @@ def clean_cart(request):
 #        return HttpResponseRedirect('/login.html')
 
 #    cart = Cart.objects.get_or_create_from_request(request)
-#    items = cart.show_cart_items()
+#    items = cart.cart_items
 #    amount = 0.0
 #    for item in items:
 #        amount + amount + float(item.quantity * item.unit_price)

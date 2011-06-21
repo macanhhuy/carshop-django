@@ -11,7 +11,10 @@ from ..cart.models import Cart
 
 class OrderManager(models.Manager):
 
-    def create_from_cart(self, **kwargs):
+    def merge_order(self, orders):
+        pass
+
+    def create_from_cart(self, request, **kwargs):
 
         if 'cart' in kwargs:
             try:
@@ -26,34 +29,26 @@ class OrderManager(models.Manager):
         else:
             return None
 
-    def create_or_get(self, cart=None, **kwargs):
-#        if 'cart' in kwargs:
-#            try:
-#                order = self.get(cart=kwargs['cart'])
-#            except Order.DoesNotExist, e:
-#                return super(OrderManager, self).create(**kwargs)
-#            except Exception, e:
-#                print e
-#            else:
-#                return order
-#        return None
+    def create_or_get(self, request, cart=None, **kwargs):
 
         if cart:
             try:
-                order = self.get(cart=cart)
+                order = self.get(customer=request.user)
             except Order.DoesNotExist, e:
-                return super(OrderManager, self).create(cart=cart, **kwargs)
+                order = super(OrderManager, self).create(customer=request.user, **kwargs)
             except Exception, e:
                 print e
-            else:
-                return order
+                return None
+            cart_items = cart.cart_items
+            Orderproduct.objects.add_or_update_order_products(order, items)
+            return order
         return None
 
 class Order(models.Model): # 订单表
 
     id = UUIDField(primary_key=True, editable=False)
     customer = models.ForeignKey(Customer) # 客户ID
-    cart = models.OneToOneField(Cart)
+#    cart = models.OneToOneField(Cart)
 #    customer_name = models.CharField(max_length=64) # 客户名(接收人)
 #    customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
 #    customer_street_address = models.CharField(max_length=64, blank=True, null=True) # 客户街道地址
@@ -107,19 +102,48 @@ class Order(models.Model): # 订单表
         db_table = "order"
 
 
+class OrderProductManager(models.Manager):
+
+    def add_or_update_order_products(self, order, items):
+        orderProducts = self.filter(order=order)
+
+        for item in items:
+            if orderProducts is not None:
+                for orderProduct in orderProducts:
+                    if item.object_id == orderproduct.product_id and item.quantity != orderProduct.product_quantity:
+                        orderProduct.product_quantity = item.quantity
+                        orderProduct.save()
+                    continue
+
+            self.create(order=order, product_id=item.object_id, product_name=item.object_name, product_quantity=item.quantity, product_unit_price=item.unit_price, product_final_price=item.unit_price)
+
+
+    def add_order_products(self, order, items):
+        for item in items:
+            self.create(order=order, product_id=item.object_id, product_name=item.object_name, product_quantity=item.quantity, product_unit_price=item.unit_price, product_final_price=item.unit_price)
+
+    def add_order_product(self, order, item):
+        self.create(order=order, product_id=item.object_id, product_name=item.object_name, product_quantity=item.quantity, product_unit_price=item.unit_price, product_final_price=item.unit_price)
+
+    def remove_order_product(self):
+        pass
+
+
 class OrderProduct(models.Model): # 订单项表
     order = models.ForeignKey(Order) # 订单ID
     product = models.ForeignKey(product.Product) # 产品ID
     product_name = models.CharField(max_length=64)
     product_quantity = models.IntegerField() # 产品数量
-    product_price = models.FloatField() # 产品单价
+    product_unit_price = models.FloatField() # 产品单价
     product_final_price = models.FloatField() # 产品最终单价
-    product_tax = models.FloatField() # 产品税
-    onetime_charge = models.FloatField() # 一次性付款数目？
+    product_tax = models.FloatField(blank=True, null=True) # 产品税
+    onetime_charge = models.FloatField(blank=True, null=True) # 一次性付款数目？
 
     #product_is_free # 是否免费
     #product_discount = models.ForeignKey(Discount) # 优惠券ID
-    product_prid = models.CharField(max_length=36) #
+    product_prid = models.CharField(max_length=36, blank=True, null=True) #
+
+    objects = OrderProductManager()
 
     class Meta:
         db_table = "order_product"
