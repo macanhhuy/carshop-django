@@ -43,6 +43,9 @@ class OrderManager(models.Manager):
                 return None
             cart_items = cart.cart_items
             OrderProduct.objects.add_or_update_order_products(order, cart_items)
+            if order.order_total_price != cart.total_price:
+                order.order_total_price = cart.total_price
+                order.save()
             return order
         return None
 
@@ -109,20 +112,16 @@ class OrderProductManager(models.Manager):
     def add_or_update_order_products(self, order, items):
         orderProducts = self.filter(order=order)
 
-        pk = items[0].object_id
-        product = Product.objects.get(pk=pk)
-        orderss = orderProducts.get(product=product)
-
         for item in items:
-            if orderProducts is not None:
+            if len(orderProducts) != 0:
                 for orderProduct in orderProducts:
                     if item.object_id == orderProduct.product_id and item.quantity != orderProduct.product_quantity:
                         orderProduct.product_quantity = item.quantity
                         orderProduct.save()
                         break
-                    continue
-
-            self.create(order=order, product_id=item.object_id, product_name=item.object_name, product_quantity=item.quantity, product_unit_price=item.unit_price, product_final_price=item.unit_price)
+                    
+            else:
+                self.create(order=order, product_id=item.object_id, product_name=item.object_name, product_quantity=item.quantity, product_unit_price=item.unit_price, product_final_price=item.unit_price)
 
 
     def add_order_products(self, order, items):
