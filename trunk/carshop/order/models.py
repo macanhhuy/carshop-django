@@ -2,12 +2,11 @@
 
 #from django.contrib.auth.models import User
 from django.db import models
-from carshop.product import models as product
-from carshop.models import Parameter, AddressFormat
-from carshop.customer.models import Customer
-from carshop.db.models import *
+from ..product.models import Product
+from ..models import Parameter, AddressFormat
+from ..customer.models import Customer
+from ..db.models import *
 from ..cart.models import Cart
-
 
 class OrderManager(models.Manager):
 
@@ -29,18 +28,21 @@ class OrderManager(models.Manager):
         else:
             return None
 
-    def create_or_get(self, request, cart=None, **kwargs):
+    def create_or_get(self, cart=None, **kwargs):
 
         if cart:
             try:
-                order = self.get(customer=request.user)
+                if 'customer' in kwargs:
+                    order = self.get(customer=kwargs['customer'])
+                else:
+                    order = super(OrderManager, self).create(**kwargs)
             except Order.DoesNotExist, e:
-                order = super(OrderManager, self).create(customer=request.user, **kwargs)
+                order = super(OrderManager, self).create(**kwargs)
             except Exception, e:
                 print e
                 return None
             cart_items = cart.cart_items
-            Orderproduct.objects.add_or_update_order_products(order, items)
+            OrderProduct.objects.add_or_update_order_products(order, cart_items)
             return order
         return None
 
@@ -107,12 +109,17 @@ class OrderProductManager(models.Manager):
     def add_or_update_order_products(self, order, items):
         orderProducts = self.filter(order=order)
 
+        pk = items[0].object_id
+        product = Product.objects.get(pk=pk)
+        orderss = orderProducts.get(product=product)
+
         for item in items:
             if orderProducts is not None:
                 for orderProduct in orderProducts:
-                    if item.object_id == orderproduct.product_id and item.quantity != orderProduct.product_quantity:
+                    if item.object_id == orderProduct.product_id and item.quantity != orderProduct.product_quantity:
                         orderProduct.product_quantity = item.quantity
                         orderProduct.save()
+                        break
                     continue
 
             self.create(order=order, product_id=item.object_id, product_name=item.object_name, product_quantity=item.quantity, product_unit_price=item.unit_price, product_final_price=item.unit_price)
@@ -131,7 +138,7 @@ class OrderProductManager(models.Manager):
 
 class OrderProduct(models.Model): # 订单项表
     order = models.ForeignKey(Order) # 订单ID
-    product = models.ForeignKey(product.Product) # 产品ID
+    product = models.ForeignKey(Product) # 产品ID
     product_name = models.CharField(max_length=64)
     product_quantity = models.IntegerField() # 产品数量
     product_unit_price = models.FloatField() # 产品单价
