@@ -6,7 +6,7 @@ from .views import *
 urlpatterns = patterns(
     '',
     (r'^generateOrder$', generate_order),
-    (r'^checkout$', checkout),
+    (r'^checkout/(?P<orderId>.{36})$', checkout),
     (r'^saveOrder$', save_order),
 
 )

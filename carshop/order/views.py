@@ -4,13 +4,15 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.views.decorators.cache import never_cache
+from paypal.standard.forms import PayPalPaymentsForm
 from ..decorators import login_required, anti_resubmit
 from .models import *
 from .forms import *
 from ..cart.models import Cart
 
+
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
-def checkout(request):
+def checkout(request, orderId):
 #    cart = Cart.objects.get_or_create_from_request(request)
 
 #    order = Order.objects.create_or_get(cart=cart,
@@ -23,7 +25,24 @@ def checkout(request):
 #    orderForm = OrderForm(instance=order)
 
 #    return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
-    return HttpResponse('sfasdfafasfdasdf')
+
+    order = Order.objects.get(pk=orderId)
+
+    paypal_dict = {
+        'business': 'xtwxfx_1303744118_biz@gmail.com',
+        'amount': order.order_total_price,
+        'item_name': 'Car Seats',
+        'invoice': orderId,
+        'notify_url': 'http://localhost:8000/paypal_ipn',
+        'return_url': 'http://localhost:8000/paypal_return',
+        'cancel_return': 'http://localhost:8000/paypal_cancel',
+        }
+
+    form = PayPalPaymentsForm(initial=paypal_dict)
+    context = RequestContext(request, {'form': form})
+
+    return render_to_response('checkout.html', context)
+
 
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def generate_order(request):
@@ -47,7 +66,7 @@ def save_order(request):
         orderForm = OrderForm(request.POST, instance=order)
         if orderForm.is_valid():
             orderForm.save()
-            return redirect('/order/checkout')
+            return redirect('/order/checkout/' + order.pk)
         else:
             return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
 
