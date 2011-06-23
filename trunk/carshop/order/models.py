@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #from django.contrib.auth.models import User
+import datetime
 from django.db import models
 from ..product.models import Product
 from ..models import Parameter, AddressFormat
@@ -51,6 +52,14 @@ class OrderManager(models.Manager):
 
 class Order(models.Model): # 订单表
 
+    STATUS_CHOICES = (
+        (u'1', u'unpaid'),
+        (u'2', u'paid'),
+        (u'3', u'delivery'),
+        (u'4', u'confirmed'),
+        (u'5', u'over'),
+    )
+
     id = UUIDField(primary_key=True, editable=False)
     customer = models.ForeignKey(Customer) # 客户ID
 #    cart = models.OneToOneField(Cart)
@@ -99,7 +108,7 @@ class Order(models.Model): # 订单表
     currency = models.CharField(max_length=3, blank=True, null=True) # ?
     #paypal_ipn
     ip_address = models.CharField(max_length=96) # 下单IP
-
+    order_status = models.CharField(max_length=2, choices=STATUS_CHOICES) # 订单状态
 
     objects = OrderManager()
 
@@ -171,12 +180,11 @@ class OrderProductDownload(models.Model): # 订单下载表
 
 class OrderStatus(models.Model): # 订单状态表
     order = models.ForeignKey(Order) # 订单ID
-    customer = models.ForeignKey(Customer, related_name="customer_user") # 客户ID
     order_status = models.ForeignKey(Parameter, related_name='order_status') # 订单状态
-    time_update_status = models.DateTimeField() # 状态更新时间
+    time_status = models.DateTimeField(default=datetime.datetime.now) # 添加时间
     time_pass = models.DateTimeField() # 确认时间
-    order_pass_use = models.ForeignKey(Customer, related_name="manager_user") # 确认管理人
-    order_send_type = models.ForeignKey(Parameter, related_name='order_send_type') # 发送状态
+    order_pass_use = models.ForeignKey(Customer, related_name="manager_user", blank=True, null=True) # 确认管理人
+    order_send_type = models.ForeignKey(Parameter, related_name='order_send_type', blank=True, null=True) # 发送状态
 
     class Meta:
         db_table = "order_status"
@@ -185,9 +193,9 @@ class OrderStatus(models.Model): # 订单状态表
 class OrderStatusHistory(models.Model): # 订单状态历史表
     order = models.ForeignKey(Order) # 订单ID
     status = models.ForeignKey(Parameter) # 订单状态
-    time_added = models.DateTimeField() # 添加时间
+    time_added = models.DateTimeField(default=datetime.datetime.now) # 添加时间
     #customer_notified
-    comment = models.TextField() # 注释
+    comment = models.TextField(blank=True, null=True) # 注释
 
     class Meta:
         db_table = "order_status_history"

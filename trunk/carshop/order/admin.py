@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from django.contrib import admin
-from carshop.order.models import *
+from .models import *
 
 
 class OrderAdmin(admin.ModelAdmin):
