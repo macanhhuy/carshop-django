@@ -18,6 +18,10 @@
 		<script type="text/javascript" language="javascript" >
 		
 function joinCart(id){
+    var mouseMsgDiv = $('mouseMsgDiv')
+
+    mouseMsgDiv.style.display = 'block';
+    mouseMsgDiv.innerHTML = 'add to cart';
 	var qty = $('qty' + id).value;
 	new Ajax.Request('/cart/' + id + "/" + qty, {
 		method: 'POST',
@@ -26,12 +30,46 @@ function joinCart(id){
 			//if(response.login){
 			//	window.location.href = response.login;
 			//}
-			alert(transport.responseText);
+			//alert(transport.responseText);
+            if('true' == transport.responseText){
+                mouseMsgDiv.innerHTML = 'add success';
+            }
 		}
 	}); 
 
 }
-		
+
+var IE = document.all?true:false;
+if (!IE) document.captureEvents(Event.MOUSEMOVE)
+
+document.onmousemove = getMouseXY;
+
+var tempX = 0;
+var tempY = 0;
+
+function getMouseXY(e) {
+	if (IE) { // grab the x-y pos.s if browser is IE
+		tempX = event.clientX + document.body.scrollLeft;
+		tempY = event.clientY + document.body.scrollTop;
+	}
+	else {  // grab the x-y pos.s if browser is NS
+		tempX = e.pageX;
+		tempY = e.pageY;
+	}
+
+	if (tempX < 0){tempX = 0;}
+	if (tempY < 0){tempY = 0;}
+
+	var mouseMsgDiv = $('mouseMsgDiv')
+    mouseMsgDiv.style.display = 'block';
+    mouseMsgDiv.style.position = 'absolute';
+	mouseMsgDiv.style.top = tempX;
+    mouseMsgDiv.style.left = tempY;
+
+    //mouseMsgDiv.innerHTML = tempX;
+	return true;
+}
+
 		</script>
 	</head>
 	<body>
@@ -523,6 +561,11 @@ function SetSearchText()
 	</form>
 </div>
 
+
+
+<div id="mouseMsgDiv" sytle="position: absolute; display:block; width:20px; height:180px; color: #345456;">
+
+</div>
 <!--
 <script language="javascript">
 
