@@ -8,7 +8,9 @@
     <table>
     <tr><th>id</th><th>total price</th></tr>
     {% for order in orders %}
-        <tr><td>{{ order.id }}</td><td>{{ order.order_total_price }}</td></tr>
+        <tr><td>{{ order.id }}</td>
+            <td>{{ order.order_total_price }}</td>
+        </tr>
     {% endfor %}
     </table>
 {% endblock %}

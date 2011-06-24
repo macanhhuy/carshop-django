@@ -54,7 +54,7 @@ def save_order(request):
         orderForm = OrderForm(request.POST, instance=order)
         if orderForm.is_valid():
             orderForm.save()
-            return redirect('/order/checkout/' + order.pk)
+            return redirect('/order/checkout' + order.pk)
         else:
             return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
 

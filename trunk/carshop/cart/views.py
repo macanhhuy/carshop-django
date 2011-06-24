@@ -25,8 +25,9 @@ def add_item(request, productId, quantity):
         cart.put_into_cart(product, quantity)
     except Exception, e:
         print e
+        return HttpResponse('false')
 
-    return HttpResponse('add success')
+    return HttpResponse('true')
 
 
 def remove_item(request, itemId):
@@ -40,10 +41,10 @@ def remove_item(request, itemId):
 
 def cart_view(request):
     cart = Cart.objects.get_or_create_from_request(request)
-    items = cart.cart_items
 
+    
     #print request.META
-    return render_to_response('cart.html', {'items': items, 'totalPrice': cart.total_price}, RequestContext(request))
+    return render_to_response('cart.html', {'items': cart.cart_items, 'totalPrice': cart.total_price}, RequestContext(request))
 
 def clean_cart(request):
     cart = Cart.objects.get_or_create_from_request(request)
