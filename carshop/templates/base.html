@@ -1,6 +1,7 @@
 {% load seo %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1">
     <meta http-equiv=Content-Type content='text/html; charset=utf-8'>
@@ -13,115 +14,19 @@
     <link href="/medias/styles/leftNavigate.css" type="text/css" rel="stylesheet"/>
     <link href="/medias/styles/lightBox.css" type="text/css" rel="stylesheet"/>
 
-    <script src="/medias/scripts/prototype.js" type="text/javascript"></script>
+    <script src="/medias/scripts/jquery-1.5.1.js" type="text/javascript"></script>
     <script src="/medias/scripts/leftNavigate.js" type="text/javascript"></script>
-    <script src="/medias/scripts/lightBox.js" type="text/javascript"></script>
+    <!--<script src="/medias/scripts/lightBox.js" type="text/javascript"></script>-->
     <script type="text/javascript" language="javascript">
 
 
     </script>
 </head>
 <body>
+
 <script language="javascript" type="text/javascript">
 
-    function postLogin() {
-        var form = $('loginForm')
-        new Ajax.Request('/login', {
-                    method: 'POST',
-                    parameters: Form.serialize(form),
-                    onSuccess: function(transport) {
-                        var result = transport.responseText.split(',');
-                        var resultCode = Number(result[0]);
-                        switch (resultCode) {
-                            case 1:
-                                closeLoginWin();
-                                //$("PageHeader1_imgBtnLogin").style.display = 'none';
-                                //var username_a = $("username_a");
-                                //username_a.style.display = 'block';
-                                //username_a.href = "";
-                                //username_a.innerHTML = result[1];
 
-                                var login_li = $('login_li');
-                                login_li.innerHTML = '<span style="display:block;font-weight:bold;color:#545454;float:left;padding:3px 0 0 0;margin-right:10px;">Welcome&nbsp;<a style="text-decoration:none;color:#545454;" href="#" >' + result[1] + '</a></span><a style="display:block;font-weight:bold;text-decoration:none;color:#545454;float:left;padding:3px 0 0 0;" href="/logout">Log out</a>'
-
-                                break;
-                            case 2:
-                                alert('error');
-                                break;
-                            case 3:
-                                alert('error');
-                                break;
-                            default:
-
-                                break;
-                        }
-
-                    }
-                });
-
-        return false
-    }
-
-
-    var IE = document.all ? true : false;
-    if (!IE) document.captureEvents(Event.MOUSEMOVE)
-
-    var tempX = 0;
-    var tempY = 0;
-
-    function getMouseXY(e) {
-        if (IE) { // grab the x-y pos.s if browser is IE
-            tempX = event.clientX + document.body.scrollLeft;
-            tempY = event.clientY + document.body.scrollTop;
-        }
-        else {  // grab the x-y pos.s if browser is NS
-            tempX = e.pageX;
-            tempY = e.pageY;
-        }
-
-        if (tempX < 0) {
-            tempX = 0;
-        }
-        if (tempY < 0) {
-            tempY = 0;
-        }
-
-        var mouseMsgDiv = $('mouseMsgDiv')
-        mouseMsgDiv.style.display = 'block';
-        mouseMsgDiv.style.position = 'absolute';
-        mouseMsgDiv.style.top = tempY.toString() + "px";
-        mouseMsgDiv.style.left = (tempX + 20).toString() + "px";
-
-        //mouseMsgDiv.innerHTML = tempX + " | " + tempY + " | " + document.body.scrollLeft + " | " + document.body.scrollTop;
-        return true;
-    }
-
-
-    function joinCart(id) {
-        document.onmousemove = getMouseXY;
-
-        var mouseMsgDiv = $('mouseMsgDiv')
-        mouseMsgDiv.innerHTML = "<img src='/medias/images/loading_icon.gif'>"
-
-        mouseMsgDiv.style.display = 'block';
-        var qty = $('qty' + id).value;
-        new Ajax.Request('/cart/' + id + "/" + qty, {
-                    method: 'POST',
-                    onSuccess: function(transport) {
-                        //var response = transport.responseText.evalJSON();
-                        //if(response.login){
-                        //	window.location.href = response.login;
-                        //}
-                        //alert(transport.responseText);
-                        if ('true' == transport.responseText) {
-                            //mouseMsgDiv.innerHTML = 'add success';
-                        }
-
-                       // document.onmousemove = null;
-                    }
-                });
-
-    }
 </script>
 
 <table width="979" cellpadding="0" cellspacing="0" border="0"
@@ -547,7 +452,7 @@
 </tr>
 </table>
 
-
+<!--
 <div id="loginWin" class="lightbox">
     <a href="#" class="maskClose" onclick="closeLoginWin()"><img src="/medias/images/closelabel.png"/></a>
 
@@ -569,9 +474,9 @@
             </tr>
             <tr>
                 <td>
-                    <!--
+                    <! --
                     <label for="checkcode">checkcode:<input style="width:65px;" type="text" id="checkcode" name="checkcode" class="text" />&nbsp;&nbsp;&nbsp;</label><a href="#"><img id="checkCodeImg" src="" onclick="refreshCheckCode()" /></a>
-                    -->
+                    - ->
                 </td>
             </tr>
             <tr>
@@ -583,10 +488,10 @@
         </table>
     </form>
 </div>
+-->
 
+<div id="mouseMsgDiv" style="display:none;position: absolute">
 
-<div id="mouseMsgDiv" sytle="position: absolute; display:none; width:20px; height:180px;top:10px;left:10px;">
-    sdfsdfsdfsdf
 </div>
 <!--
 <script language="javascript">
@@ -598,9 +503,61 @@ function refreshCheckCode(){
 
 </script>
 -->
+<script>
+
+    function joinCart(id) {
+        $("#mouseMsgDiv").html("<img src='/medias/images/loading_icon.gif'>");
+        $("#mouseMsgDiv").show();
+        $(document).mousemove(function(e) {
+            $("#mouseMsgDiv").css({
+                        top: (e.pageY) + "px",
+                        left: (e.pageX + 15) + "px"
+                    });
+        });
+
+        
+        var qty = $('#qty' + id).attr("value");
+        /*        new Ajax.Request('/cart/' + id + "/" + qty, {
+         method: 'POST',
+         onSuccess: function(transport) {
+         //alert(transport.responseText);
+         if ('true' == transport.responseText) {
+         //mouseMsgDiv.innerHTML = 'add success';
+         }
+
+         $(document).mousemove(function(e) {
+         });
+         }
+         });
+         */
+
+        $.ajax({url:'/cart/' + id + "/" + qty,
+                    type: 'post',
+                    success: function(data, status) {
+                        //alert(data);
+                        //alert(status);
+                        $("#mouseMsgDiv").html("<img src='/medias/images/yes.gif'>");
+                        $("#mouseMsgDiv").hide(3000);
+                        //$(document).unbind("mousemove");
+                    },
+                    error: function(xhr, desc, err) {
+                        //alert(xhr);
+                        //alert("Desc: " + desc + "\nErr:" + err);
+                        $("#mouseMsgDiv").html("<img src='/medias/images/no.gif'>");
+                        /*$(document).mousemove(function(e) {
+                            $("#mouseMsgDiv").hide("slow");
+                        });*/
+                        $(document).unbind("mousemove");
+                    }
+                });
+    }
+
+</script>
 
 </body>
+<!--
 <script>
+
     var loginWin = new LightBox("loginWin");
     loginWin.Center = true;
     loginWin.OverLay.Color = "#000";
@@ -615,6 +572,7 @@ function refreshCheckCode(){
     }
 
 </script>
+-->
 </html>
 
 
