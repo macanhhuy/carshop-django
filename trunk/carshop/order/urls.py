@@ -9,4 +9,5 @@ urlpatterns = patterns(
     (r'^checkout/(?P<orderId>.{36})$', checkout),
     (r'^saveOrder$', save_order),
     (r'^orderStatus.html$', order_status),
+    (r'^paypalReturn$', paypal_return),
 )
