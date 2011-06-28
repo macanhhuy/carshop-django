@@ -48,7 +48,7 @@ def cart_view(request):
 
 def clean_cart(request):
     cart = Cart.objects.get_or_create_from_request(request)
-    cart.clean_cart()
+    cart.clean_cart(request)
     
     return HttpResponseRedirect('/cart/cart.html')
     

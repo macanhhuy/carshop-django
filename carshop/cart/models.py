@@ -55,8 +55,10 @@ class Cart(models.Model):
     def cart_items(self):
         return CartItem.objects.filter(cart=self)
 
-    def clean_cart(self):
+    def clean_cart(self, request):
         CartItem.objects.extra(where=['cart_id=' + str(self.pk),]).delete()
+        self.delete()
+        del request.session[CART_OBJ]
 
     def flush(self, request):
         self.session = request.session.session_key

@@ -5,6 +5,8 @@ from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.views.decorators.cache import never_cache
 from paypal.standard.forms import PayPalPaymentsForm
+from paypal.standard.ipn.models import PayPalIPN
+from paypal.standard.ipn.forms import PayPalIPNForm
 from ..decorators import login_required, anti_resubmit
 from .models import *
 from .forms import *
@@ -21,7 +23,7 @@ def checkout(request, orderId):
         'item_name': 'Car Seats',
         'invoice': orderId,
         'notify_url': 'http://localhost:8000/paypal_ipn',
-        'return_url': 'http://localhost:8000/paypal_return',
+        'return_url': 'http://localhost:8000/order/paypalReturn',
         'cancel_return': 'http://localhost:8000/paypal_cancel',
         }
 
@@ -30,6 +32,17 @@ def checkout(request, orderId):
 
     return render_to_response('checkout.html', context)
 
+def paypal_return(request):
+    print request
+    try:
+        if 'POST' == request.method:
+            paypalIpnForm = PayPalIPNForm(request.POST)
+            paypalIpnForm.save()
+            return HttpResponse('return success')
+        else:
+            return HttpResponse('error')
+    except Exception, e:
+        return HttpResponse('exception')
 
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def generate_order(request):
@@ -50,11 +63,11 @@ def save_order(request):
                                         ip_address=request.META['REMOTE_ADDR'],
                                         order_status=1)
 
-    if request.method == 'POST':
+    if 'POST' == request.method:
         orderForm = OrderForm(request.POST, instance=order)
         if orderForm.is_valid():
             orderForm.save()
-            return redirect('/order/checkout' + order.pk)
+            return redirect('/order/checkout/' + order.pk)
         else:
             return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
 

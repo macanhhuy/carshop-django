@@ -1,5 +1,6 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
+import datetime
 from django.contrib.auth.models import User
 from django.db import models
 from django.core.cache import cache
@@ -46,10 +47,31 @@ class Customer(models.Model): # 客户表
         db_table = 'customer'
 
 def create_user_profile(sender, instance, created, **kwargs):  
-    if created:  
+    if created:
         profile, created = Customer.objects.get_or_create(user=instance)  
 
 post_save.connect(create_user_profile, sender=User) 
+
+
+class CustomerAddressHistory(models.Model):
+    
+    customer = models.ForeignKey(Customer)
+    
+    receive_name = models.CharField(max_length=60)
+    
+    phone_no = models.CharField(max_length=32) # 客户电话
+    fax_no = models.CharField(max_length=32, blank=True, null=True) # 客户传真
+    zip = models.CharField(max_length=10) # 客户邮编
+    
+    country = models.ForeignKey(CountryStateCity, related_name="country_history", blank=True, null=True) # 国家
+    state = models.ForeignKey(CountryStateCity, related_name="state_history", blank=True, null=True) # 州/省
+    city = models.ForeignKey(CountryStateCity, related_name="city_history", blank=True, null=True) # 城市
+    detail_address = models.CharField(max_length=500)
+
+    time_add = models.DateTimeField(default=datetime.datetime.now)
+    
+    class Meta:
+        db_table = 'customer_address_history'
 
 class CustomerMessage(models.Model): # 客户留言表
     customer = models.ForeignKey(Customer, primary_key=True) # 用户id
@@ -61,16 +83,16 @@ class CustomerMessage(models.Model): # 客户留言表
         db_table = "customer_message"
 
 
-class CustomerBasket(models.Model): # 购物篮
-    customer = models.ForeignKey(Customer, primary_key=True) # 用户id
-    product = models.ForeignKey(product.Product) # 产品ID
-    product_quantity = models.IntegerField() # 产品数量
-    product_price = models.FloatField() # 产品价格
-    product_final_price = models.FloatField() # 最终价格
-    time_basket_added = models.DateTimeField() # 添加时间
+#class CustomerBasket(models.Model): # 购物篮
+#    customer = models.ForeignKey(Customer, primary_key=True) # 用户id
+#    product = models.ForeignKey(product.Product) # 产品ID
+#    product_quantity = models.IntegerField() # 产品数量
+#    product_price = models.FloatField() # 产品价格
+#    product_final_price = models.FloatField() # 最终价格
+#    time_basket_added = models.DateTimeField() # 添加时间
 
-    class Meta:
-        db_table = "customer_basket"
+#    class Meta:
+#        db_table = "customer_basket"
 
 #class CustomerInfo(models.Model): # 客户账户部分信息
 #	customer = models.ForeignKey(Customer) # 客户ID
