@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jquery实现渐隐文字效果</title>
+<script type="text/javascript" src="jquery-1.5.1.js"></script>
+<script type="text/javascript"> $(document).ready(function(){ $("a").toggle(function(){ $(".stuff").hide('slow'); },function(){ $(".stuff").show('fast'); });});</script>
+</head>
+<body>
+<a href="#">点此测试</a>
+<div class="stuff">这是一段测试文字，点击上边的链接后，本段文字由右下向左上渐渐消失。</div>
+</body& gt; 
+</html>

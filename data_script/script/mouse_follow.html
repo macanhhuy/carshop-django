@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Follow Mouse with jQuery</title>
+<script type="text/javascript" src="jquery-1.5.1.js"></script>
+</head>
+
+<body>
+<h1>Follow Mouse with jQuery</h1>
+<style type="text/css">
+  #follower { background: #fff; padding: 5px; border: 1px solid #ddd; position: absolute; }
+  #tooltip { background: #ff0; padding: 5px; border: 1px solid #ddd; position: absolute; }
+</style>
+
+<div id="follower">I'm following you anywhere!</div>
+<div id="tooltip">I'm only over the box!</div>
+
+<div id="the-box" style="width: 200px; height: 200px; background: #f00">Hover over me.</div>
+
+<script type='text/javascript'>
+$(document).ready(function(){
+	
+    $("#follower").hide();
+    $("#tooltip").hide();
+    $(document).mousemove(function(e){
+        $("#follower").show();
+        $("#follower").css({
+            top: (e.pageY + 15) + "px",
+            left: (e.pageX + 15) + "px"
+        });
+    });
+    $("#the-box").mousemove(function(e){
+        $("#tooltip").show();
+        $("#tooltip").css({
+            top: (e.pageY + 50) + "px",
+            left: (e.pageX + 15) + "px"
+        });
+    });
+    $("#the-box").mouseout(function(e){
+        $("#tooltip").hide();
+    });
+});
+</script>
+
+
+<div style="width: 200px; height: 1000px; background: #333333">
+</body>
+</html>

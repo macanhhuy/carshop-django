@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>asdfad</title>
+<style type="text/css">
+#preview{border:1px solid #999;background:#9900CC;color:#fff;padding:5px;display:none;position:absolute;}
+</style>
+<script type="text/javascript" src="jquery-1.5.1.js"></script>
+</head>
+<body>
+ssssssssssssssss<br><br><br>
+<a class="preview">fdfdfdfdf</a>
+<script type="text/javascript">
+this.imagePreview = function(){ 
+xOffset = 10;
+yOffset = 30;
+$("a.preview").hover(function(e){
+   $("body").append("<div id='preview'>adsfadf</div>");         
+   $("#preview")
+    .css("top",(e.pageY - xOffset) + "px")
+    .css("left",(e.pageX + yOffset) + "px")
+    .fadeIn("slow");      
+    },
+function(){
+   $("#preview").fadeOut("fast");
+    }); 
+$("a.preview").mousemove(function(e){
+   $("#preview")
+    .css("top",(e.pageY - xOffset) + "px")
+    .css("left",(e.pageX + yOffset) + "px");
+});   
+};
+$(document).ready(function(){
+imagePreview();
+});
+</script>
+</body>
+</html>

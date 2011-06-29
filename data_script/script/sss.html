@@ -1,0 +1,38 @@
+
+<html>
+
+<head>
+
+
+
+
+	<script type="text/javascript" src="./jquery-1.5.1.js"></script>
+	
+	<script type="text/javascript">  
+
+
+
+
+function ss(){
+	var s = $("content")
+	alert(s.innerHTML);
+
+	alert(document.getElementById('content').innerHTML)
+}
+
+	</script> 
+</head>
+
+<body>
+
+	<a href="javascript:;" onclick="showdiv()">显示</a> 
+	<div id="showdiv"></div> 
+	<div id="content"><a href="javascript:;" onclick="closediv()">单击关闭</a></div> 
+
+	<input type="button" value="click" onclick="ss()" />
+	
+</body>
+
+
+
+</html>
