@@ -1,0 +1,84 @@
+
+<html>
+
+<head>
+
+
+	<style type="text/css">  
+
+#showdiv{  
+	position: absolute;  
+	display: none;  
+	background:#000;  
+	top:0px;  
+	left:0px;  
+	width:100%;  
+	z-index:9998;  
+	filter:alpha(opacity=50);       /* IE */ 
+	-moz-opacity:0.5;              /* Moz + FF */ 
+	opacity: 0.5;           /* 支持CSS3的浏览器（FF 1.5也支持）*/ 
+}  
+
+#content{  
+	display: none;  
+	z-index:9999;  
+	padding-bottom:10px;  
+	background:#fff;  
+	background-repeat:no-repeat;  
+	border: 3px solid #000;  
+	text-align: left;  
+	left:50%;/*FF IE7*/ 
+	top:20%;/*FF IE7*/ 
+	margin-left:-250px!important;/*FF IE7 该值为本身宽的一半 */ 
+	margin-top:-50px!important;/*FF IE7 该值为本身高的一半*/ 
+	margin-left:0px;  
+	margin-top:0px;  
+	width:500px;  
+	height:300px;  
+	position:fixed!important;/*FF IE7*/ 
+	position:absolute;/*IE6*/ 
+	_top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/ 
+
+	_left: expression(eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollLeft + (document.documentElement.clientWidth-this.offsetWidth) :/*IE6*/ document.body.scrollLeft + (document.body.clientWidth - this.clientWidth)/2);/*IE5 IE5.5*/ 
+}  
+
+	</style> 
+
+	<script type="text/javascript" src="jquery-1.3.2.js"></script>
+	<script type="text/javascript">  
+function showdiv(){  
+	var width=document.body.scrollWidth;  
+	var height=document.body.scrollHeight;  
+	var left=width/2-$("#content").width()/2;  
+	$("#showdiv").css("width",width).css("height",height);  
+	$(document.body).css("overflow","hidden");  
+	$("#showdiv").show();  
+	$("#content").show();  
+}  
+
+function closediv(){  
+	$("#showdiv").hide();  
+	$("#content").hide();  
+}
+
+function ss(){
+	var s = $("#content")
+	alert(s);
+}
+
+	</script> 
+</head>
+
+<body>
+
+	<a href="javascript:;" onclick="showdiv()">显示</a> 
+	<div id="showdiv"></div> 
+	<div id="content"><a href="javascript:;" onclick="closediv()">单击关闭</a></div> 
+
+	<input type="button" value="click" onclick="ss()" />
+	
+</body>
+
+
+
+</html>
