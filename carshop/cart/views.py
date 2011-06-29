@@ -5,8 +5,8 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import simplejson
 from django.contrib.auth.decorators import login_required
-from paypal.pro.views import PayPalPro
-from paypal.standard.forms import PayPalPaymentsForm
+from ..paypal.pro.views import PayPalPro
+from ..paypal.standard.forms import PayPalPaymentsForm
 from carshop.product.models import Product
 
 from .models import *

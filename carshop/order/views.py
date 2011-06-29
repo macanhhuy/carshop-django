@@ -4,9 +4,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.views.decorators.cache import never_cache
-from paypal.standard.forms import PayPalPaymentsForm
-from paypal.standard.ipn.models import PayPalIPN
-from paypal.standard.ipn.forms import PayPalIPNForm
+from ..paypal.standard.forms import PayPalPaymentsForm
+from ..paypal.standard.ipn.models import PayPalIPN
+from ..paypal.standard.ipn.forms import PayPalIPNForm
 from ..decorators import login_required, anti_resubmit
 from .models import *
 from .forms import *

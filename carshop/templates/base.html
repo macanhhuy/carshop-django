@@ -513,21 +513,7 @@ function refreshCheckCode(){
                     });
         });
 
-
         var qty = $('#qty' + id).attr("value");
-        /*        new Ajax.Request('/cart/' + id + "/" + qty, {
-         method: 'POST',
-         onSuccess: function(transport) {
-         //alert(transport.responseText);
-         if ('true' == transport.responseText) {
-         //mouseMsgDiv.innerHTML = 'add success';
-         }
-
-         $(document).mousemove(function(e) {
-         });
-         }
-         });
-         */
 
         $.ajax({url:'/cart/' + id + "/" + qty,
                     type: 'post',
