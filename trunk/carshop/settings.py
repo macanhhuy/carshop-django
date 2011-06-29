@@ -131,11 +131,9 @@ INSTALLED_APPS = (
 'carshop.product',
 'carshop.cart',
 
-'paypal.standard',
-'paypal.pro',
-'paypal.standard.ipn',
+'carshop.paypal.standard.ipn',
 'dmigrations',
-#    'debug_toolbar',
+#'debug_toolbar',
 'rollyourown.seo',
 )
 
