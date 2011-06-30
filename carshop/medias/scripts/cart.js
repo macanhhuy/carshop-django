@@ -26,9 +26,9 @@
                         if("true" == data){
                             //var divMsg = $('<div id="pdivMsg%s" style="display:none;background-color:#0F3; width:100px; height:25px;line-height:25px;"><strong>Success</strong></div>');
                             
-                            var divMsg = document.createElement("div");
-                            divMsg.setAttribute('style', 'display:none;background-color:#0F3; width:100px; height:25px;line-height:25px;');
-                            divMsg.innerHTML = "Success";
+                            //var divMsg = document.createElement("div");
+                            //divMsg.setAttribute('style', 'display:none;background-color:#0F3; width:100px; height:25px;line-height:25px;');
+                            //divMsg.innerHTML = "Success";
                             
                             $("#pdiv" + id).append(divMsg);
                             divMsg.show(1500, function(){

@@ -59,9 +59,10 @@ def product_general(product):
 			<input onclick="joinCart('%s')" type="button" value="ADD TO CART" class="add_cart"/>
 		</li>
 	</ul>
+	<div id="pdivMsg%s" style="display:block;background-color:#0F3; width:100px; height:25px;line-height:25px;float:left;"><strong>Success</strong></div>
 </div>
 ''' % (str(product.id), str(product.id), product.product_image, product.product_name, str(product.id), product.product_name,
-             product.product_name, str(product.product_price), str(product.id), str(product.id), )
+             product.product_name, str(product.product_price), str(product.id), str(product.id), str(product.id), )
 
 
 @register.filter()
