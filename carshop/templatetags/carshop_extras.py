@@ -31,7 +31,7 @@ def product_general(product):
     ''' '''
 
     return '''
-<div class="product1">
+<div class="product1" id="pdiv%s">
 	<ul>
 		<li>
 			<a href="/product/%s.html">
@@ -59,8 +59,9 @@ def product_general(product):
 			<input onclick="joinCart('%s')" type="button" value="ADD TO CART" class="add_cart"/>
 		</li>
 	</ul>
-</div>''' % (str(product.id), product.product_image, product.product_name, str(product.id), product.product_name,
-             product.product_name, str(product.product_price), str(product.id), str(product.id),)
+</div>
+''' % (str(product.id), str(product.id), product.product_image, product.product_name, str(product.id), product.product_name,
+             product.product_name, str(product.product_price), str(product.id), str(product.id), )
 
 
 @register.filter()

@@ -489,7 +489,7 @@
 -->
 
 <div id="mouseMsgDiv" style="display:none;position: absolute">
-
+    <img src='/medias/images/loading_icon.gif'>
 </div>
 <!--
 <script language="javascript">
@@ -501,42 +501,8 @@ function refreshCheckCode(){
 
 </script>
 -->
-<script>
 
-    function joinCart(id) {
-        $("#mouseMsgDiv").html("<img src='/medias/images/loading_icon.gif'>");
-        $("#mouseMsgDiv").show();
-        $(document).mousemove(function(e) {
-            $("#mouseMsgDiv").css({
-                        top: (e.pageY) + "px",
-                        left: (e.pageX + 15) + "px"
-                    });
-        });
-
-        var qty = $('#qty' + id).attr("value");
-
-        $.ajax({url:'/cart/' + id + "/" + qty,
-                    type: 'post',
-                    success: function(data, status) {
-                        //alert(data);
-                        //alert(status);
-                        $("#mouseMsgDiv").html("<img src='/medias/images/yes.gif'>");
-                        $("#mouseMsgDiv").hide(3000);
-                        //$(document).unbind("mousemove");
-                    },
-                    error: function(xhr, desc, err) {
-                        //alert(xhr);
-                        //alert("Desc: " + desc + "\nErr:" + err);
-                        $("#mouseMsgDiv").html("<img src='/medias/images/no.gif'>");
-                        /*$(document).mousemove(function(e) {
-                         $("#mouseMsgDiv").hide("slow");
-                         });*/
-                        $(document).unbind("mousemove");
-                    }
-                });
-    }
-
-</script>
+<script src="/medias/scripts/cart.js" type="text/javascript"></script>
 
 </body>
 <!--
