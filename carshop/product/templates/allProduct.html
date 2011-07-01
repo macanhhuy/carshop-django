@@ -12,17 +12,6 @@
 		{{ product|product_general|safe }}
 	{% endfor %}
 {% endif %}
+<script src="/medias/scripts/cart.js" type="text/javascript"></script>
 
-<script language="javascript">
-
-function checkNum(obj){
-
-	if(!obj.value.match(/^\d+$/)){
-		obj.value = "";
-	}
-
-}
-
-
-</script>
 {% endblock %}
