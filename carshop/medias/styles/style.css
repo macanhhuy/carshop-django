@@ -1398,7 +1398,7 @@ ul.slink li a:hover {
     border-bottom: solid 1px #7A9792;
     border-left: solid 1px #7A9792;
     border-right: solid 1px #7A9792;
-
+    position:relative;
 }
 
 .product1 ul {

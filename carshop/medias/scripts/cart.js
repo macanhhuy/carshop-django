@@ -24,18 +24,25 @@
                         //'
                         
                         if("true" == data){
-                            //var divMsg = $('<div id="pdivMsg%s" style="display:none;background-color:#0F3; width:100px; height:25px;line-height:25px;"><strong>Success</strong></div>');
+                            var divMsg = $('<div id="pdivMsg" style="overflow:hidden;position:absolute; top:10px; left:10px; display:block;background-color:#0F3; width:0px; height:25px;line-height:25px;float:left;"><strong>Success</strong></div>');
                             
                             //var divMsg = document.createElement("div");
                             //divMsg.setAttribute('style', 'display:none;background-color:#0F3; width:100px; height:25px;line-height:25px;');
                             //divMsg.innerHTML = "Success";
                             
+                            //$("#pdivMsg" + id).clearQueue();
+                            
                             $("#pdiv" + id).append(divMsg);
-                            divMsg.show(1500, function(){
-                                divMsg.hide(2000, function(){
-                                    $("#pdiv" + id).remove(divMsg);
-                                });
+                            divMsg.animate({width:80},"slow", function(){
+                                //$("#pdivMsg" + id).stop(true, false);
+                                //$("#pdivMsg" + id).animate({width:0},"slow");
+
                             });
+                            divMsg.fadeOut(4000, function(){
+                                    //$("#pdivMsg" + id).style.width=0;
+                                    //$("#pdivMsg" + id).show();
+                            });
+                            
                         }
                     },
                     error: function(xhr, desc, err) {
