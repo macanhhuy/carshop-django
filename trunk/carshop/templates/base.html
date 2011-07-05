@@ -13,13 +13,17 @@
     <link href="/medias/styles/style.css" type="text/css" rel="stylesheet"/>
     <link href="/medias/styles/leftNavigate.css" type="text/css" rel="stylesheet"/>
     <link href="/medias/styles/lightBox.css" type="text/css" rel="stylesheet"/>
-
+    <link type="text/css" href="/medias/styles/default/jx.stylesheet.css" rel="stylesheet" />
+    
     <script src="/medias/scripts/jquery-1.5.1.js" type="text/javascript"></script>
     <script src="/medias/scripts/leftNavigate.js" type="text/javascript"></script>
     <!--<script src="/medias/scripts/lightBox.js" type="text/javascript"></script>-->
-    <script type="text/javascript" language="javascript">
-
-
+    
+    <script type="text/javascript" src="/medias/scripts/jquery.jixedbar.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+		$("#toolbar").jixedbar();
+    }); 
     </script>
 </head>
 <body>
@@ -487,11 +491,11 @@
     </form>
 </div>
 -->
-
+<!--
 <div id="mouseMsgDiv" style="display:none;position: absolute">
     <img src='/medias/images/loading_icon.gif'>
 </div>
-<!--
+
 <script language="javascript">
 
 function refreshCheckCode(){
@@ -501,6 +505,39 @@ function refreshCheckCode(){
 
 </script>
 -->
+<div id="toolbar">
+        <ul>
+            <li title="Home"><a href="#"><img src="/medias/images/icons/home.png" alt="" /></a></li>
+        </ul>
+        <span class="jx-separator-left"></span>
+		<ul>        
+            <li title="Around The Web"><a href="#"><img src="/medias/images/icons/network.png" alt="Get Social" /></a>
+                <ul>
+                    <li><a href="#"><img src="/medias/images/icons/facebook.png" title="Facebook" />&nbsp;&nbsp;&nbsp;Facebook</a></li>
+                    <li><a href="#"><img src="/medias/images/icons/twitter.png" title="Twitter" />&nbsp;&nbsp;&nbsp;Twitter</a></li>
+                    <li><a href="#"><img src="/medias/images/icons/pictures.png" title="Flickr" />&nbsp;&nbsp;&nbsp;Flickr</a></li>
+                    <li><a href="#"><img src="/medias/images/icons/card.png" title="Linkedin" />&nbsp;&nbsp;&nbsp;Linkedin</a></li>
+                </ul>
+            </li>
+        </ul>
+        <span class="jx-separator-left"></span>
+        <ul>
+            <li title="About"><a href="#"><img src="/medias/images/icons/info.png" alt="" /></a></li>
+            <li title="Resume"><a href="#"><img src="/medias/images/icons/blogs.png" alt="" /></a></li>
+			<li title="Portfolio"><a href="#"><img src="/medias/images/icons/block.png" alt="" /></a></li>
+        </ul>
+        <span class="jx-separator-left"></span>        
+		<div class="text-container"><a href="#">jixedbar</a> - a <a href="http://jquery.com/">jQuery</a> fixed bar plugin.</div>
+        <ul class="jx-bar-button-right">
+			<li title="Feeds"><a href="#"><img src="/medias/images/icons/feed.png" alt="" /></a>
+                <ul>
+        		    <li><a href="#"><img src="/medias/images/icons/feed-doc.png" title="Content Feed" />&nbsp;&nbsp;&nbsp;Content Feed</a></li>
+		            <li><a href="#"><img src="/medias/images/icons/ballon.png" title="Comment Feed" />&nbsp;&nbsp;&nbsp;Comment Feed</a></li>
+                </ul>
+			</li>
+        </ul>
+        <span class="jx-separator-right"></span>
+</div>
 
 </body>
 <!--
