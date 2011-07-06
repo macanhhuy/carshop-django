@@ -34,13 +34,13 @@ def product_general(product):
 <div class="product1" id="pdiv%s">
 	<ul>
 		<li>
-			<a href="/product/%s.html">
+			<a href="/product/detail%s.html">
 				<img src="/medias/images/%s" title="%s">
 			</a>
 		</li>
 		<li style="height:40px;">
 			<strong>
-				<a href="/product/%s.html" title="%s">
+				<a href="/product/detail%s.html" title="%s">
 					%s
 				</a>
 			</strong>

@@ -12,7 +12,7 @@ def allCar(request):
 
 
 def findProductTypeById(request, productTypeId):
-    type = Parameter.objects.get(id=productTypeId)
+    type = Parameter.objects.get(pk=productTypeId)
     products = Product.objects.extra(
         where=['product_type_id in (select par.id from parameter as par where par.parameter_parent_id=%s)', ],
         params=[productTypeId, ])
@@ -20,18 +20,17 @@ def findProductTypeById(request, productTypeId):
     return render_to_response('productType.html', {'type': type, 'products': products}, RequestContext(request))
 
 
-def findProductById(request, productTypeId, productId):
+def findProductById(request, productId):
     #from django.db import connection
     #cursor = connection.cursor()
 
-    product = Product.objects.get(id=productId, product_category=productTypeId)
-    print(product.product_name)
+    product = Product.objects.get(pk=productId)
     return render_to_response('product.html', {'product': product}, RequestContext(request))
 
 
 def findProductByCarId(request, carId):
     try:
-        car = Car.objects.get(id=carId)
+        car = Car.objects.get(pk=carId)
         return render_to_response('productByCarId.html', {'car': car}, RequestContext(request))
 
     except Car.DoesNotExist:
