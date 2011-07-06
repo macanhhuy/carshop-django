@@ -21,8 +21,24 @@ img {
     border: 0;
 }
 
+a {
+    color: #023D7F;
+    text-decoration:none;
+}
+
 a:hover {
-    color: #666666;
+    color: #023D7F;
+    text-decoration:none;
+}
+
+span {
+    display:block;
+    font-weight:bold;
+    color:#084B9C;
+    float:left;
+    padding:3px 0 0 0;
+    margin-right:10px;
+
 }
 
 /*
@@ -1389,15 +1405,15 @@ ul.slink li a:hover {
     color: #2F2B2B;
     float: left;
     width: 140px;
-    padding: 5px;
+/*    padding: 5px;    */
     margin-left: 10px;
     margin-top: 10px;
     text-align: center;
     vertical-align: middle;
-    border-top: solid 1px #7A9792;
-    border-bottom: solid 1px #7A9792;
-    border-left: solid 1px #7A9792;
-    border-right: solid 1px #7A9792;
+    border-top: solid 1px #E8E8E8;
+    border-bottom: solid 1px #E8E8E8;
+    border-left: solid 1px #E8E8E8;
+    border-right: solid 1px #E8E8E8;
     position:relative;
 }
 
@@ -1410,12 +1426,13 @@ ul.slink li a:hover {
 }
 
 .product1 img {
-    height: 120px;
-    width: 130px;
-    border-top: solid 5px #7A9792;
-    border-bottom: solid 5px #7A9792;
-    border-left: solid 5px #7A9792;
-    border-right: solid 5px #7A9792;
+    height: 130px;
+    width: 138px;
+/*    border-top: solid 1px #7A9792;
+    border-bottom: solid 1px #7A9792;
+    border-left: solid 1px #7A9792;
+    border-right: solid 1px #7A9792;
+*/
 }
 
 .add_cart {
@@ -1474,3 +1491,5 @@ ul.slink li a:hover {
     border-left: solid 1px #7A9792;
     border-right: solid 1px #7A9792;
 }
+
+
