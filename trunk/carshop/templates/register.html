@@ -115,10 +115,11 @@ function submit(){
 										<tr>
 											<td class="textb" width="40%" valign="top">
 																Email Address: <b class="star">*</b></td>
-											<td width="60%">
+											<td>
 												{{ form.email }}
+                                                <span id="" style="color:Red;"></span>
 												<span id="" class="error" style="color:Red;">{{ form.email.errors }}</span>
-												<span id="" style="color:Red;"></span>
+												
 											</td>
 										</tr>
 										<tr>
