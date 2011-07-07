@@ -1497,6 +1497,7 @@ html{_background-image:url(about:blank);}
 #toolBar{
     display:block;
     width:100%;
+    line-height:30px;
     height:30px;
     position:fixed;
     top:0;
@@ -1509,12 +1510,12 @@ html{_background-image:url(about:blank);}
 }
 
 #toolBar{
-
 	_position:absolute;
 	_top:expression(0+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");
 
 }
 
+/*
 #toolBar  div {
     height: 30px;
     line-height: 30px;
@@ -1524,13 +1525,15 @@ html{_background-image:url(about:blank);}
     padding: 0 7px 0 7px;
     float: left;
 }
+*/
 
 #toolBar ul {
     margin: 0;
     padding: 0px;
     line-height: 30px;
+    height:30px;
     list-style:none;
-    line-height: 30px;
+    text-align:center;
 }
 
 
@@ -1540,13 +1543,16 @@ html{_background-image:url(about:blank);}
     float: left;
     padding: 0 7px 0 7px;
     line-height: 30px;
+    height:30px;
     border-top: solid 1px #fff;
     border-left: solid 1px #fff;
     border-right: solid 1px #BBBBBB;
+    text-align:center;
 }
 
 #toolBar img {
 
+    
 }
 
 #toolBar span{
