@@ -32,7 +32,7 @@
 
 </script>
 
-<table width="979" cellpadding="0" cellspacing="0" border="0"
+<table style="margin-top:40px;" width="979" cellpadding="0" cellspacing="0" border="0"
        align="center">
 <tr>
     <td>
@@ -53,6 +53,7 @@
                         </div>
                     </td>
                     <td width="50%">
+                        <!--
                         <ul class="order">
                             <li>
                                 <a href="/cart/cart.html">
@@ -81,7 +82,7 @@
                                 {% endif %}
                             </li>
                         </ul>
-
+                        -->
                     </td>
                 </tr>
                 <tr>
@@ -503,6 +504,36 @@ function refreshCheckCode(){
 
 </script>
 -->
+<div id="toolBar" align="center">
+    <ul>
+    <li>
+        <a href="/cart/cart.html">
+            <img src="/medias/images/shopping_cart.png" alt="Shopping Cart"><span>&nbsp;Checkout</span></img>
+        </a>
+    </li>
+    <li>
+        <a href="/order/orderStatus.html">
+            <img src="/medias/images/order_status.jpg" alt="Order Status"/></a>
+    </li>
+    <li>
+        <a href="/toRegister">
+            <img src="/medias/images/my_account.jpg" alt="My Account"/>
+        </a>
+    </li>
+    
+    <li>
+        {% if not user.is_authenticated %}
+        <span>
+            <a href="/login">Login</a>
+        </span>
+        {% else %}
+        <span><a style="text-decoration:none;" href="#">{{ user.username }}</a> &nbsp;</span>
+        <span><a style="text-decoration:none;" href="/logout">Log out</a></span>
+        {% endif %}
+    </li>
+    
+    </ul>
+</div>
 
 </body>
 <!--

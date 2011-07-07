@@ -14,7 +14,7 @@ function checkNum(obj){
                         //alert(status);
                         
                         if("true" == data){
-                            var divMsg = $('<div style="opacity:0.6;filter:alpha(opacity=60);overflow:hidden;position:absolute; top:10px; left:10px; display:block;background-color:#00B2EE; width:0px; height:25px;line-height:25px;float:left;"><strong>Added</strong></div>');
+                            var divMsg = $('<div style="opacity:0.6;filter:alpha(opacity=60);overflow:hidden;position:absolute; top:0px; left:0px; display:block;background-color:#00B2EE; width:0px; height:25px;line-height:25px;float:left;"><strong>Added</strong></div>');
 
                             $("#pdiv" + id).append(divMsg);
                             divMsg.animate({width:80},"slow");
@@ -26,7 +26,7 @@ function checkNum(obj){
                         //alert(xhr);
                         //alert("Desc: " + desc + "\nErr:" + err);
                         
-                        var divMsg = $('<div style="overflow:hidden;position:absolute; top:10px; left:10px; display:block;background-color:#F00; width:0px; height:25px;line-height:25px;float:left;"><strong>Error</strong></div>');
+                        var divMsg = $('<div style="overflow:hidden;position:absolute; top:0px; left:0px; display:block;background-color:#F00; width:0px; height:25px;line-height:25px;float:left;"><strong>Error</strong></div>');
 
                         $("#pdiv" + id).append(divMsg);
                         divMsg.animate({width:80},"slow");
