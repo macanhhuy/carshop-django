@@ -29,6 +29,7 @@ urlpatterns = patterns(
     (r'^product/', include('carshop.product.urls')),
     (r'^cart/', include('carshop.cart.urls')),
     (r'^order/', include('carshop.order.urls')),
+    (r'^manufacturer/', include('carshop.manufacturer.urls')),
     
     (r'^index.html$', index),
     (r'^$', index),
