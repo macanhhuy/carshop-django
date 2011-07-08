@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import simplejson
+
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -25,9 +27,9 @@ def add_item(request, productId, quantity):
         cart.put_into_cart(product, quantity)
     except Exception, e:
         print e
-        return HttpResponse('false')
+        return HttpResponse(simplejson.dumps({'result': 'false', 'cartCount': cart.cart_count}))
 
-    return HttpResponse('true')
+    return HttpResponse(simplejson.dumps({'result': 'true', 'cartCount': cart.cart_count}))
 
 
 def remove_item(request, itemId):

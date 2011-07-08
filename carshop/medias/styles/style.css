@@ -1507,6 +1507,8 @@ html{_background-image:url(about:blank);}
     z-index:9999;
     overflow:hidden;
     text-align: center;
+    margin:auto 0
+    
 }
 
 #toolBar{
@@ -1515,8 +1517,9 @@ html{_background-image:url(about:blank);}
 
 }
 
-/*
+
 #toolBar  div {
+    display: block;
     height: 30px;
     line-height: 30px;
     border-top: solid 1px #fff;
@@ -1524,20 +1527,24 @@ html{_background-image:url(about:blank);}
     border-right: solid 1px #BBBBBB;
     padding: 0 7px 0 7px;
     float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
-*/
 
+/*
 #toolBar ul {
-    margin: 0;
-    padding: 0px;
     line-height: 30px;
     height:30px;
     list-style:none;
     text-align:center;
+    padding:0;
+    margin:0;
+    display:inline;
+    list-style-type:none;
+    
 }
 
-
-#toolBar  li {
+#toolBar ul  li {
     display: inline;
     list-style: none;
     float: left;
@@ -1548,11 +1555,14 @@ html{_background-image:url(about:blank);}
     border-left: solid 1px #fff;
     border-right: solid 1px #BBBBBB;
     text-align:center;
+    margin:0px;
 }
 
+#toolBar ul li div{position:relative; float:left; margin-top:5px;}
+*/
 #toolBar img {
-
-    
+    margin: 5px 0 5px 0;
+    vertical-align:middle;
 }
 
 #toolBar span{

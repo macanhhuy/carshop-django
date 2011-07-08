@@ -94,7 +94,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 #'django.core.context_processors.i18n',
 #'django.core.context_processors.media',
 #'carshop.context_processors.getLeftNavigate',
-'carshop.context_processors.getTopNavigate'
+'carshop.context_processors.getTopNavigate',
+'carshop.context_processors.getCartCount',
 )
 
 #SESSION_EXPIRE_AT_BROWSER_CLOSE = True

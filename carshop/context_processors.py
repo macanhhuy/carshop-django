@@ -4,6 +4,7 @@ from django.core.cache import cache
 from carshop.models import Parameter
 from carshop.cache_util import *
 from carshop.product.models import Product
+from carshop.cart.models import Cart
 
 logger = logging.getLogger(__name__)
 
@@ -65,3 +66,24 @@ def getTopNavigate(request):
             cache.set('TOP_NAVIGATE_' + language, topNavigate)
 
     return {'topNavigate': topNavigate}
+
+    
+def getCartCount(request):
+    cart = Cart.objects.get_or_create_from_request(request)
+    cart_count = cart.cart_count
+
+    if cart_count is not None:
+        return {'cart_count': cart_count}
+    else:
+        return {}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
