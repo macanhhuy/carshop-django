@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.contenttypes.models import ContentType
 
+from django.db.models import Sum
+
 CART_OBJ = 'CART-OBJ'
 
 class CartManager(models.Manager):
@@ -55,6 +57,10 @@ class Cart(models.Model):
     def cart_items(self):
         return CartItem.objects.filter(cart=self)
 
+    @property
+    def cart_count(self):
+        return CartItem.objects.filter(cart=self).aggregate(Sum('quantity'))['quantity__sum']
+        
     def clean_cart(self, request):
         CartItem.objects.extra(where=['cart_id=' + str(self.pk),]).delete()
         self.delete()
