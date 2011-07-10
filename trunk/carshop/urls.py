@@ -29,7 +29,7 @@ urlpatterns = patterns(
     (r'^product/', include('carshop.product.urls')),
     (r'^cart/', include('carshop.cart.urls')),
     (r'^order/', include('carshop.order.urls')),
-    (r'^manufacturer/', include('carshop.manufacturer.urls')),
+    (r'^manufacturers/', include('carshop.manufacturer.urls')),
     
     (r'^index.html$', index),
     (r'^$', index),
@@ -43,7 +43,6 @@ urlpatterns = patterns(
 
     #(r'^checkcode/(?P<time>\d{13})$', checkcode),
 
-    (r'^allCar.html$', 'carshop.product.views.allCar'),
     (r'^allProduct.html$', 'carshop.product.views.allProduct'),
 
     #########################################

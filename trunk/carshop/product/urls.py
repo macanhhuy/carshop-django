@@ -10,5 +10,6 @@ urlpatterns = patterns(
     (r'^detail(?P<productId>\d{1,3}).html', findProductById),
     
     (r'^car(?P<carId>\d{1,4}).html', findProductByCarId),
+    (r'^car/(?P<manufacturerName>[\w|\s]{1,10}).html', findCartByMaker),
 
 )

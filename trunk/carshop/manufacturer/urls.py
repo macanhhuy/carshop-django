@@ -5,7 +5,7 @@ from .views import *
 
 urlpatterns = patterns(
     '',
-    (r'^(?P<productTypeId>\d{1,3}).html$', findProductTypeById),
+    (r'^all.html$', all),
 
 
 )
