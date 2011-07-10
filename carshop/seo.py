@@ -1,4 +1,4 @@
-# -*- coding:utf-8
+# -*- coding:utf-8 -*-
 
 from rollyourown import seo
 

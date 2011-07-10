@@ -1,0 +1,261 @@
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Polaris
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Acura
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Eagle
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('La Forza
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Pontiac
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Alfa Romeo
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Edsel
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Lamborghini
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Porsche
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('AMC
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Lancia
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Arnott-Climax
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Factory 5
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Land Rover
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Renault
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Aston Martin
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Ferrari
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Lexus
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Rolls-Royce
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Audi
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Fiat
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Lincoln
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Austin
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Ford
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Lotus
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Saab
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Avanti
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Freightliner
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Saturn
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Maserati
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Scion
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Bentley
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Geo
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Maybach
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Smart
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Bitter
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('GMC
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Mazda
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Spyker
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('BMW
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Mercedes-Benz
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Sterling
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Buick
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Honda
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Mercury
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Studebaker
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Hummer
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Merkur
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Subaru
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Cadillac
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Hyundai
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('MG
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Suzuki
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Checker
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('MINI
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Chevrolet
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Infiniti
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Mitsubishi
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Tesla
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Chrysler
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Isuzu
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Morgan
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Toyota
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Cobra
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Triumph
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Jaguar
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Nissan
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Daewoo
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Jeep
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Volkswagen
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Daihatsu
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Jensen
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Oldsmobile
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Volvo
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Daimler
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Opel
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('DeLorean
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Kawasaki
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Willys
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('DeSoto
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Kia
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Peugeot
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('DeTomaso
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Plymouth
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Yamaha
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Dodge
+', now(), now());
+
+insert into manufacturer (manufacturer_name, time_added, time_modified) value ('Yugo
+', now(), now());
+

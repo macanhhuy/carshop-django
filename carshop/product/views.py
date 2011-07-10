@@ -6,9 +6,7 @@ from django.template import RequestContext
 from carshop.models import Parameter
 from carshop.product.models import *
 
-def allCar(request):
-    cars = list(Car.objects.raw('select car.id, car.name from car order by car.name'))
-    return render_to_response('allCar.html', {'cars': cars}, RequestContext(request))
+
 
 
 def findProductTypeById(request, productTypeId):
@@ -40,4 +38,6 @@ def findProductByCarId(request, carId):
 def allProduct(request):
     products = Product.objects.all()
     return render_to_response('allProduct.html', {'products': products}, RequestContext(request))
-	
+
+def findCartByMaker(request, manufacturerName):
+    pass

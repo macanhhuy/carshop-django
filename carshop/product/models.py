@@ -2,7 +2,9 @@
 from django.db import models
 from django.contrib import admin
 from django.contrib.auth.models import User
-from carshop.models import Parameter
+
+from ..manufacturer.models import Manufacturer
+from ..models import Parameter
 
 
 class ProductBrand(models.Model):
@@ -16,6 +18,7 @@ class ProductBrandAttribute(models.Model):
 
 
 class Car(models.Model):  # 车辆表
+    manufacturer = models.ForeignKey(Manufacturer)
     name = models.CharField(u'name', max_length=50) # 名字
     time = models.DateTimeField() # -时间
     image = models.CharField(max_length=255, blank=True, null=True) # 制造商图片(LOGO)

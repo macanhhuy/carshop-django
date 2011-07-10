@@ -86,3 +86,7 @@ def check_end_sprit(url):
         return url
     else:
         return url + '/'
+
+@register.filter()
+def space2line(name):
+    return name.replace(' ', '_')
