@@ -81,13 +81,11 @@ class ProductBrandAdmin(admin.ModelAdmin):
     pass
 
 
-class CarAdmin(admin.ModelAdmin):
-    pass
+
 
 admin.site.register(Product, ProductAdmin)
 #admin.site.register(ProductAttribute, ProductAttributeAdmin)
 #admin.site.register(ProductDescription, ProductDescriptionAdmin)
-admin.site.register(Car, CarAdmin)
 admin.site.register(ProductBrand, ProductBrandAdmin)
 
 
