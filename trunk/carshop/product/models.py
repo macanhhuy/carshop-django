@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib import admin
 from django.contrib.auth.models import User
 
-from ..manufacturer.models import Manufacturer
+from ..manufacturer.models import CarModels
 from ..models import Parameter
 
 
@@ -17,25 +17,11 @@ class ProductBrandAttribute(models.Model):
     image = models.ImageField(upload_to='brand_images', blank=True, null=True)
 
 
-class Car(models.Model):  # 车辆表
-    manufacturer = models.ForeignKey(Manufacturer)
-    name = models.CharField(u'name', max_length=50) # 名字
-    time = models.DateTimeField() # -时间
-    image = models.CharField(max_length=255, blank=True, null=True) # 制造商图片(LOGO)
-    description = models.TextField(blank=True, null=True) # 描述
-
-    def __unicode__(self):
-        return self.name
-
-    class Meta:
-        db_table = 'car'
-
-
 class Product(models.Model): #
     product_name = models.CharField(u'产品名字', max_length=100) # 名称
     product_model = models.CharField(max_length=62, blank=True, null=True)
     product_image = models.ImageField(u'产品图片', upload_to='product_images', blank=True, null=True)
-    car = models.ForeignKey(Car, blank=True, null=True) # 所属
+    car_model = models.ForeignKey(CarModels, blank=True, null=True) # 所属
     product_desc = models.TextField(u'产品描述', blank=True, null=True) # 产品描述
 
     product_category = models.ForeignKey(Parameter, related_name='product_category') # 物品类别
