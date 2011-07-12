@@ -1,0 +1,69 @@
+
+detail:
+Alfa Romeo Brera 3dr coupe 2.2 JTS SV
+Engine [cc/No. of Cyl/Position]
+2198/4/F
+Max Power [bhp/rpm]
+182/6500
+Max Torque [lbft/rpm]
+169/4500
+Top Speed
+138 Mph
+0-60 Mph
+8.6 seconds
+LxHxW
+4410x1341x1830
+Weight [Kerb/Towing]
+1470/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+300/610
+
+detail:
+Alfa Romeo Brera 3dr coupe 3.2 JTS V6 Q4 SV
+Engine [cc/No. of Cyl/Position]
+3195/V6/F
+Max Power [bhp/rpm]
+256/6300
+Max Torque [lbft/rpm]
+237/4500
+Top Speed
+149 Mph
+0-60 Mph
+6.8 seconds
+LxHxW
+4410x1341x1830
+Weight [Kerb/Towing]
+1630/TBA
+Headroom [Front/Rear]
+970/810
+Legroom [Front/Rear]
+1060/760
+Boot Space [Min/Max]
+300/610
+
+detail:
+Alfa Romeo Brera 3dr coupe 2.4 JTDm SV
+Engine [cc/No. of Cyl/Position]
+2387/5/F
+Max Power [bhp/rpm]
+200/4000
+Max Torque [lbft/rpm]
+295/2000
+Top Speed
+142 Mph
+0-60 Mph
+8.1 seconds
+LxHxW
+4410x1341x1830
+Weight [Kerb/Towing]
+1600/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA

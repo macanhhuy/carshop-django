@@ -1,0 +1,18 @@
+/Vauxhall Opel GT 2dr cabriolet-car-model.html	Vauxhall Opel GT 2dr cabriolet
+/Vauxhall Pontiac 2dr open top-car-model.html	Vauxhall Pontiac 2dr open top
+/Vauxhall VXR8 4dr saloon-car-model.html	Vauxhall VXR8 4dr saloon
+/Vauxhall Agila 5dr mpv-car-model.html	Vauxhall Agila 5dr mpv
+/Vauxhall Zafira 5dr mpv-car-model.html	Vauxhall Zafira 5dr mpv
+/Vauxhall Corsa 3dr hatchback-car-model.html	Vauxhall Corsa 3dr hatchback
+/Vauxhall Corsa 5dr hatchback-car-model.html	Vauxhall Corsa 5dr hatchback
+/Vauxhall Meriva 5dr mpv-car-model.html	Vauxhall Meriva 5dr mpv
+/Vauxhall Astra 2dr cc-car-model.html	Vauxhall Astra 2dr cc
+/Vauxhall Astra 5dr hatchback-car-model.html	Vauxhall Astra 5dr hatchback
+/Vauxhall Astra 3dr sport hatch-car-model.html	Vauxhall Astra 3dr sport hatch
+/Vauxhall Astra 5dr estate-car-model.html	Vauxhall Astra 5dr estate
+/Vauxhall Vectra 4dr saloon-car-model.html	Vauxhall Vectra 4dr saloon
+/Vauxhall Vectra 5dr hatchback-car-model.html	Vauxhall Vectra 5dr hatchback
+/Vauxhall Vectra 5dr estate-car-model.html	Vauxhall Vectra 5dr estate
+/Vauxhall Signum 5dr hatchback-car-model.html	Vauxhall Signum 5dr hatchback
+/Vauxhall Tigra 2dr coupe-car-model.html	Vauxhall Tigra 2dr coupe
+/Vauxhall Antara 5dr 4x4-car-model.html	Vauxhall Antara 5dr 4x4

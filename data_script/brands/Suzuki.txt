@@ -1,0 +1,9 @@
+/Suzuki Swift 3dr hatchback-car-model.html	Suzuki Swift 3dr hatchback
+/Suzuki Swift 5dr hatchback-car-model.html	Suzuki Swift 5dr hatchback
+/Suzuki SX4 5dr 4x4-car-model.html	Suzuki SX4 5dr 4x4
+/Suzuki Grand Vitara 3dr 4x4-car-model.html	Suzuki Grand Vitara 3dr 4x4
+/Suzuki Grand Vitara 5dr 4x4-car-model.html	Suzuki Grand Vitara 5dr 4x4
+/Suzuki Ignis 5dr hatchback-car-model.html	Suzuki Ignis 5dr hatchback
+/Suzuki Wagon R+ 5dr hatchback-car-model.html	Suzuki Wagon R+ 5dr hatchback
+/Suzuki Liana 4dr saloon-car-model.html	Suzuki Liana 4dr saloon
+/Suzuki Jimny 3dr 4x4-car-model.html	Suzuki Jimny 3dr 4x4

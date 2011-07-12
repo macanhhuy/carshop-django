@@ -1,0 +1,6 @@
+/Cadillac CTS 4dr saloon-car-model.html	Cadillac CTS 4dr saloon
+/Cadillac Escalade 5dr 4x4-car-model.html	Cadillac Escalade 5dr 4x4
+/Cadillac STS-V 4dr saloon-car-model.html	Cadillac STS-V 4dr saloon
+/Cadillac SRX 5dr 4x4-car-model.html	Cadillac SRX 5dr 4x4
+/Cadillac XLR 2dr open-car-model.html	Cadillac XLR 2dr open
+/Cadillac BLS 4dr saloon-car-model.html	Cadillac BLS 4dr saloon

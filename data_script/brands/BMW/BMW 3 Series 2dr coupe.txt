@@ -1,0 +1,368 @@
+
+detail:
+BMW 3 Series 2dr coupe 320i SE
+Engine [cc/No. of Cyl/Position]
+1995/4/F
+Max Power [bhp/rpm]
+168/5750
+Max Torque [lbft/rpm]
+148/3600
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4488x1369x1757
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 320i M Sport
+Engine [cc/No. of Cyl/Position]
+1995/4/F
+Max Power [bhp/rpm]
+168/5750
+Max Torque [lbft/rpm]
+148/3600
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4488x1369x1757
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 325i SE
+Engine [cc/No. of Cyl/Position]
+2497/6/F
+Max Power [bhp/rpm]
+215/6500
+Max Torque [lbft/rpm]
+184/2750
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1395x1782
+Weight [Kerb/Towing]
+1495/1600
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 325i M Sport
+Engine [cc/No. of Cyl/Position]
+2497/6/F
+Max Power [bhp/rpm]
+215/6500
+Max Torque [lbft/rpm]
+184/2750
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1395x1782
+Weight [Kerb/Towing]
+1495/1600
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 330i SE
+Engine [cc/No. of Cyl/Position]
+2996/6/F
+Max Power [bhp/rpm]
+268/6600
+Max Torque [lbft/rpm]
+221/2500
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1395x1782
+Weight [Kerb/Towing]
+1545/1700
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 330i M Sport
+Engine [cc/No. of Cyl/Position]
+2996/6/F
+Max Power [bhp/rpm]
+268/6600
+Max Torque [lbft/rpm]
+221/2500
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1395x1782
+Weight [Kerb/Towing]
+1545/1700
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 335i SE
+Engine [cc/No. of Cyl/Position]
+2979/6/F
+Max Power [bhp/rpm]
+306/5800
+Max Torque [lbft/rpm]
+295/1300
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1375x1782
+Weight [Kerb/Towing]
+1600/1700
+Headroom [Front/Rear]
+1010/880
+Legroom [Front/Rear]
+1140/940
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 335i M Sport
+Engine [cc/No. of Cyl/Position]
+2979/6/F
+Max Power [bhp/rpm]
+306/5800
+Max Torque [lbft/rpm]
+295/1300
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1375x1782
+Weight [Kerb/Towing]
+1600/1700
+Headroom [Front/Rear]
+1010/880
+Legroom [Front/Rear]
+1140/940
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 320d SE
+Engine [cc/No. of Cyl/Position]
+1995/4/F
+Max Power [bhp/rpm]
+174/4000
+Max Torque [lbft/rpm]
+251/2000
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4488x1369x1757
+Weight [Kerb/Towing]
+1600/1800
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 320d M Sport
+Engine [cc/No. of Cyl/Position]
+1995/4/F
+Max Power [bhp/rpm]
+174/4000
+Max Torque [lbft/rpm]
+251/2000
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1369x1782
+Weight [Kerb/Towing]
+1600/1800
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 325d SE
+Engine [cc/No. of Cyl/Position]
+2993/6/F
+Max Power [bhp/rpm]
+194/3750
+Max Torque [lbft/rpm]
+295/3250
+Top Speed
+148 Mph
+0-60 Mph
+7.3 seconds
+LxHxW
+4488x1369x1757
+Weight [Kerb/Towing]
+1495/1600
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 325d M Sport
+Engine [cc/No. of Cyl/Position]
+2993/6/F
+Max Power [bhp/rpm]
+194/3750
+Max Torque [lbft/rpm]
+295/3250
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4488x1369x1757
+Weight [Kerb/Towing]
+1495/1600
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 330d SE
+Engine [cc/No. of Cyl/Position]
+2993/6/F
+Max Power [bhp/rpm]
+228/4000
+Max Torque [lbft/rpm]
+369/1750
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1395x1782
+Weight [Kerb/Towing]
+1600/1800
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 330d M Sport
+Engine [cc/No. of Cyl/Position]
+2993/6/F
+Max Power [bhp/rpm]
+228/4000
+Max Torque [lbft/rpm]
+369/1750
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1395x1782
+Weight [Kerb/Towing]
+1600/1800
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 335d SE
+Engine [cc/No. of Cyl/Position]
+2993/6/F
+Max Power [bhp/rpm]
+282/4400
+Max Torque [lbft/rpm]
+428/1750
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1375x1782
+Weight [Kerb/Towing]
+1600/1700
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+BMW 3 Series 2dr coupe 335d M Sport
+Engine [cc/No. of Cyl/Position]
+2993/6/F
+Max Power [bhp/rpm]
+282/4400
+Max Torque [lbft/rpm]
+428/1750
+Top Speed
+TBA Mph
+0-60 Mph
+TBA seconds
+LxHxW
+4580x1375x1782
+Weight [Kerb/Towing]
+1600/1700
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA

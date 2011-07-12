@@ -1,0 +1,529 @@
+
+detail:
+Audi A6 5dr avant 2.0 T FSI SE
+Engine [cc/No. of Cyl/Position]
+1984/4/F
+Max Power [bhp/rpm]
+165/TBA
+Max Torque [lbft/rpm]
+207/TBA
+Top Speed
+138 Mph
+0-60 Mph
+8.7 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1970/TBA
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.0 T FSI S line
+Engine [cc/No. of Cyl/Position]
+1984/4/F
+Max Power [bhp/rpm]
+165/TBA
+Max Torque [lbft/rpm]
+207/TBA
+Top Speed
+138 Mph
+0-60 Mph
+8.7 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.4 V6 SE
+Engine [cc/No. of Cyl/Position]
+2393/6/F
+Max Power [bhp/rpm]
+177/6000
+Max Torque [lbft/rpm]
+170/3000
+Top Speed
+143 Mph
+0-60 Mph
+8.9 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1595/1500
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.4 V6 S line
+Engine [cc/No. of Cyl/Position]
+2393/6/F
+Max Power [bhp/rpm]
+177/6000
+Max Torque [lbft/rpm]
+170/3000
+Top Speed
+143 Mph
+0-60 Mph
+8.9 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1595/1500
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.4 V6 Quattro SE
+Engine [cc/No. of Cyl/Position]
+2393/6/F
+Max Power [bhp/rpm]
+177/6000
+Max Torque [lbft/rpm]
+170/3000
+Top Speed
+142 Mph
+0-60 Mph
+9.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1595/1500
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.4 V6 Quattro S line
+Engine [cc/No. of Cyl/Position]
+2393/6/F
+Max Power [bhp/rpm]
+177/6000
+Max Torque [lbft/rpm]
+170/3000
+Top Speed
+142 Mph
+0-60 Mph
+9.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1595/1500
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.8 V6 FSI SE
+Engine [cc/No. of Cyl/Position]
+2773/V6/F
+Max Power [bhp/rpm]
+207/5500
+Max Torque [lbft/rpm]
+207/3000
+Top Speed
+151 Mph
+0-60 Mph
+7.9 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1540/1700
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.8 V6 FSI S Line
+Engine [cc/No. of Cyl/Position]
+2773/V6/F
+Max Power [bhp/rpm]
+207/5500
+Max Torque [lbft/rpm]
+207/3000
+Top Speed
+151 Mph
+0-60 Mph
+7.9 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1540/1700
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 3.2 FSI SE
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+252/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1540/1700
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 3.2 FSI S line
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+252/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1610/1700
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 3.2 FSI Quattro SE
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+252/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1610/1900
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 3.2 FSI Quattro S line
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+252/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1610/1900
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+1060/860
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 4.2 V8 FSI Quattro SE
+Engine [cc/No. of Cyl/Position]
+4163/8/F
+Max Power [bhp/rpm]
+335/6600
+Max Torque [lbft/rpm]
+310/3500
+Top Speed
+155 Mph
+0-60 Mph
+6 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1805/2100
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 4.2 V8 FSI Quattro S line
+Engine [cc/No. of Cyl/Position]
+4163/8/F
+Max Power [bhp/rpm]
+335/6600
+Max Torque [lbft/rpm]
+310/3500
+Top Speed
+155 Mph
+0-60 Mph
+6 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1805/2100
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant S6 5.2 V10
+Engine [cc/No. of Cyl/Position]
+5204/V10/F
+Max Power [bhp/rpm]
+429/6800
+Max Torque [lbft/rpm]
+398/4000
+Top Speed
+155 Mph
+0-60 Mph
+5.3 seconds
+LxHxW
+TBAxTBAxTBA
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+Audi A6 5dr avant 2.0 TDI SE
+Engine [cc/No. of Cyl/Position]
+1968/4/F
+Max Power [bhp/rpm]
+138/4000
+Max Torque [lbft/rpm]
+236/2500
+Top Speed
+127 Mph
+0-60 Mph
+11 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1610/1900
+Headroom [Front/Rear]
+900/950
+Legroom [Front/Rear]
+1100/710
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.0 TDI S line
+Engine [cc/No. of Cyl/Position]
+1968/4/F
+Max Power [bhp/rpm]
+138/4000
+Max Torque [lbft/rpm]
+236/2500
+Top Speed
+127 Mph
+0-60 Mph
+11 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1610/1900
+Headroom [Front/Rear]
+900/950
+Legroom [Front/Rear]
+1100/710
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.7 TDI SE
+Engine [cc/No. of Cyl/Position]
+2698/6/F
+Max Power [bhp/rpm]
+178/4250
+Max Torque [lbft/rpm]
+280/1400
+Top Speed
+140 Mph
+0-60 Mph
+8.3 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1695/1900
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.7 TDI S line
+Engine [cc/No. of Cyl/Position]
+2698/6/F
+Max Power [bhp/rpm]
+178/4250
+Max Torque [lbft/rpm]
+280/1400
+Top Speed
+140 Mph
+0-60 Mph
+8.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1695/1900
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.7 TDI Quattro SE
+Engine [cc/No. of Cyl/Position]
+2698/6/F
+Max Power [bhp/rpm]
+178/4250
+Max Torque [lbft/rpm]
+280/1400
+Top Speed
+138 Mph
+0-60 Mph
+9.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1695/1900
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 2.7 TDI Quattro S Line
+Engine [cc/No. of Cyl/Position]
+2698/6/F
+Max Power [bhp/rpm]
+178/4250
+Max Torque [lbft/rpm]
+280/1400
+Top Speed
+138 Mph
+0-60 Mph
+9.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1695/1900
+Headroom [Front/Rear]
+992/978
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 3.0 V6 TDI Quattro SE
+Engine [cc/No. of Cyl/Position]
+2967/V6/TBA
+Max Power [bhp/rpm]
+233/4000
+Max Torque [lbft/rpm]
+332/3250
+Top Speed
+152 Mph
+0-60 Mph
+7.3 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1805/1900
+Headroom [Front/Rear]
+920/930
+Legroom [Front/Rear]
+1085/725
+Boot Space [Min/Max]
+565/1660
+
+detail:
+Audi A6 5dr avant 3.0 V6 TDI Quattro S line
+Engine [cc/No. of Cyl/Position]
+2967/V6/TBA
+Max Power [bhp/rpm]
+233/4000
+Max Torque [lbft/rpm]
+332/3250
+Top Speed
+152 Mph
+0-60 Mph
+7.1 seconds
+LxHxW
+4933x1463x1855
+Weight [Kerb/Towing]
+1825/1900
+Headroom [Front/Rear]
+920/930
+Legroom [Front/Rear]
+1085/725
+Boot Space [Min/Max]
+565/1660

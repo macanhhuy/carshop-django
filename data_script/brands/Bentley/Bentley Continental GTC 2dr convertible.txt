@@ -1,0 +1,23 @@
+
+detail:
+Bentley Continental GTC 2dr convertible 6.0
+Engine [cc/No. of Cyl/Position]
+5998/W12/F
+Max Power [bhp/rpm]
+552/6100
+Max Torque [lbft/rpm]
+479/1600
+Top Speed
+195 Mph
+0-60 Mph
+4.8 seconds
+LxHxW
+4804x1398x1916
+Weight [Kerb/Towing]
+2475/TBA
+Headroom [Front/Rear]
+960/940
+Legroom [Front/Rear]
+1074/743
+Boot Space [Min/Max]
+TBA/TBA

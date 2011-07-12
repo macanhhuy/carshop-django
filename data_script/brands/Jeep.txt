@@ -1,0 +1,7 @@
+/Jeep Commander 5dr 4x4-car-model.html	Jeep Commander 5dr 4x4
+/Jeep Compass 5dr 4x4-car-model.html	Jeep Compass 5dr 4x4
+/Jeep Patriot 5dr 4x4-car-model.html	Jeep Patriot 5dr 4x4
+/Jeep Wrangler 3dr 4x4-car-model.html	Jeep Wrangler 3dr 4x4
+/Jeep Wrangler 5dr 4x4-car-model.html	Jeep Wrangler 5dr 4x4
+/Jeep Cherokee 5dr 4x4-car-model.html	Jeep Cherokee 5dr 4x4
+/Jeep Grand Cherokee 5dr 4x4-car-model.html	Jeep Grand Cherokee 5dr 4x4

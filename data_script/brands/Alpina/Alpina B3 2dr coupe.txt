@@ -1,0 +1,23 @@
+
+detail:
+Alpina B3 2dr coupe B3
+Engine [cc/No. of Cyl/Position]
+2975/6/F
+Max Power [bhp/rpm]
+360/5500
+Max Torque [lbft/rpm]
+368/3800
+Top Speed
+180 Mph
+0-60 Mph
+4.9 seconds
+LxHxW
+4520x1413x1817
+Weight [Kerb/Towing]
+1570/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA

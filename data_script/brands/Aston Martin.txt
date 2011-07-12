@@ -1,0 +1,4 @@
+/Aston Martin Vantage 2dr coupe-car-model.html	Aston Martin Vantage 2dr coupe
+/Aston Martin Vantage 2dr roadster-car-model.html	Aston Martin Vantage 2dr roadster
+/Aston Martin DB9 2dr volante-car-model.html	Aston Martin DB9 2dr volante
+/Aston Martin DB9 2dr coupe-car-model.html	Aston Martin DB9 2dr coupe

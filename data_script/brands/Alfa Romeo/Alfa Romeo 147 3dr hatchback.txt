@@ -1,0 +1,184 @@
+
+detail:
+Alfa Romeo 147 3dr hatchback 1.6 TS Turismo
+Engine [cc/No. of Cyl/Position]
+1598/4/F
+Max Power [bhp/rpm]
+120/6200
+Max Torque [lbft/rpm]
+108/4200
+Top Speed
+121 Mph
+0-60 Mph
+10.6 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1200/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042
+
+detail:
+Alfa Romeo 147 3dr hatchback 1.6 TS Lusso
+Engine [cc/No. of Cyl/Position]
+1598/4/F
+Max Power [bhp/rpm]
+120/6200
+Max Torque [lbft/rpm]
+108/4200
+Top Speed
+121 Mph
+0-60 Mph
+10.6 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1200/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042
+
+detail:
+Alfa Romeo 147 3dr hatchback 2.0 TS Lusso
+Engine [cc/No. of Cyl/Position]
+1970/4/F
+Max Power [bhp/rpm]
+150/6300
+Max Torque [lbft/rpm]
+134/3800
+Top Speed
+129 Mph
+0-60 Mph
+9.3 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1250/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042
+
+detail:
+Alfa Romeo 147 3dr hatchback 1.9 JTDm Turismo
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+115/4000
+Max Torque [lbft/rpm]
+202/2000
+Top Speed
+119 Mph
+0-60 Mph
+9.9 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1270/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042
+
+detail:
+Alfa Romeo 147 3dr hatchback 1.9 JTDm Lusso
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+115/4000
+Max Torque [lbft/rpm]
+202/2000
+Top Speed
+119 Mph
+0-60 Mph
+9.9 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1270/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042
+
+detail:
+Alfa Romeo 147 3dr hatchback 1.9 JTDm 16v Turismo
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+150/4000
+Max Torque [lbft/rpm]
+225/2000
+Top Speed
+129 Mph
+0-60 Mph
+8.8 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1290/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042
+
+detail:
+Alfa Romeo 147 3dr hatchback 1.9 JTDm 16v Lusso
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+150/4000
+Max Torque [lbft/rpm]
+225/2000
+Top Speed
+120 Mph
+0-60 Mph
+9.6 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1290/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042
+
+detail:
+Alfa Romeo 147 3dr hatchback 1.9 JTDm 16v Q2
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+150/4000
+Max Torque [lbft/rpm]
+225/2000
+Top Speed
+128 Mph
+0-60 Mph
+8.8 seconds
+LxHxW
+4223x1442x1729
+Weight [Kerb/Towing]
+1290/1300
+Headroom [Front/Rear]
+924/919
+Legroom [Front/Rear]
+1067/692
+Boot Space [Min/Max]
+292/1042

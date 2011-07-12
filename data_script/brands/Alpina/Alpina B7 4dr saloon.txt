@@ -1,0 +1,23 @@
+
+detail:
+Alpina B7 4dr saloon 4.4 V8
+Engine [cc/No. of Cyl/Position]
+4398/8/F
+Max Power [bhp/rpm]
+500/5500
+Max Torque [lbft/rpm]
+516/4250
+Top Speed
+186 Mph
+0-60 Mph
+5.5 seconds
+LxHxW
+TBAxTBAxTBA
+Weight [Kerb/Towing]
+1990/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA

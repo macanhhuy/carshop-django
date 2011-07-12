@@ -1,0 +1,2 @@
+/Holden Commodore 4dr saloon-car-model.html	Holden Commodore 4dr saloon
+/Holden Maloo 2dr pick-up-car-model.html	Holden Maloo 2dr pick-up

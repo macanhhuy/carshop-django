@@ -1,0 +1,9 @@
+/Chrysler 300C 5dr touring-car-model.html	Chrysler 300C 5dr touring
+/Chrysler 300C 4dr saloon-car-model.html	Chrysler 300C 4dr saloon
+/Chrysler Sebring 4dr saloon-car-model.html	Chrysler Sebring 4dr saloon
+/Chrysler PT Cruiser 5dr mpv-car-model.html	Chrysler PT Cruiser 5dr mpv
+/Chrysler PT Cruiser 2dr convertible-car-model.html	Chrysler PT Cruiser 2dr convertible
+/Chrysler Voyager 5dr mpv-car-model.html	Chrysler Voyager 5dr mpv
+/Chrysler Grand Voyager 5dr mpv-car-model.html	Chrysler Grand Voyager 5dr mpv
+/Chrysler Crossfire 2dr coupe-car-model.html	Chrysler Crossfire 2dr coupe
+/Chrysler Crossfire 2dr roadster-car-model.html	Chrysler Crossfire 2dr roadster

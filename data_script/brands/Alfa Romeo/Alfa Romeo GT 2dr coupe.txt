@@ -1,0 +1,138 @@
+
+detail:
+Alfa Romeo GT 2dr coupe 2.0 JTS Turismo
+Engine [cc/No. of Cyl/Position]
+1970/4/F
+Max Power [bhp/rpm]
+165/6400
+Max Torque [lbft/rpm]
+152/3250
+Top Speed
+134 Mph
+0-60 Mph
+8.7 seconds
+LxHxW
+4489x1362x1763
+Weight [Kerb/Towing]
+1320/TBA
+Headroom [Front/Rear]
+899/855
+Legroom [Front/Rear]
+1068/650
+Boot Space [Min/Max]
+320/905
+
+detail:
+Alfa Romeo GT 2dr coupe 2.0 JTS Lusso
+Engine [cc/No. of Cyl/Position]
+1970/4/F
+Max Power [bhp/rpm]
+165/6400
+Max Torque [lbft/rpm]
+152/3250
+Top Speed
+134 Mph
+0-60 Mph
+8.7 seconds
+LxHxW
+4489x1362x1763
+Weight [Kerb/Towing]
+1320/TBA
+Headroom [Front/Rear]
+899/855
+Legroom [Front/Rear]
+1068/650
+Boot Space [Min/Max]
+320/905
+
+detail:
+Alfa Romeo GT 2dr coupe 3.2 V6 Lusso
+Engine [cc/No. of Cyl/Position]
+3179/6/F
+Max Power [bhp/rpm]
+240/6200
+Max Torque [lbft/rpm]
+213/4800
+Top Speed
+151 Mph
+0-60 Mph
+6.7 seconds
+LxHxW
+4489x1355x1763
+Weight [Kerb/Towing]
+1410/TBA
+Headroom [Front/Rear]
+899/855
+Legroom [Front/Rear]
+1068/650
+Boot Space [Min/Max]
+TBA/320
+
+detail:
+Alfa Romeo GT 2dr coupe 1.9 JTDm 16v Turismo
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+150/4000
+Max Torque [lbft/rpm]
+225/2000
+Top Speed
+130 Mph
+0-60 Mph
+9.6 seconds
+LxHxW
+4489x1366x1763
+Weight [Kerb/Towing]
+1365/TBA
+Headroom [Front/Rear]
+899/855
+Legroom [Front/Rear]
+1068/650
+Boot Space [Min/Max]
+320/905
+
+detail:
+Alfa Romeo GT 2dr coupe 1.9 JTDm 16v Lusso
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+150/4000
+Max Torque [lbft/rpm]
+225/2000
+Top Speed
+130 Mph
+0-60 Mph
+9.6 seconds
+LxHxW
+4489x1366x1763
+Weight [Kerb/Towing]
+1365/TBA
+Headroom [Front/Rear]
+899/855
+Legroom [Front/Rear]
+1068/650
+Boot Space [Min/Max]
+320/905
+
+detail:
+Alfa Romeo GT 2dr coupe 1.9 JTDm 16v Q2
+Engine [cc/No. of Cyl/Position]
+1910/4/F
+Max Power [bhp/rpm]
+150/4000
+Max Torque [lbft/rpm]
+225/2000
+Top Speed
+130 Mph
+0-60 Mph
+9.6 seconds
+LxHxW
+4489x1366x1763
+Weight [Kerb/Towing]
+1365/TBA
+Headroom [Front/Rear]
+899/855
+Legroom [Front/Rear]
+1068/650
+Boot Space [Min/Max]
+320/905

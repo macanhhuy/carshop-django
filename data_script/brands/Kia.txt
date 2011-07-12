@@ -1,0 +1,7 @@
+/Kia Picanto 5dr hatchback-car-model.html	Kia Picanto 5dr hatchback
+/Kia Rio 5dr hatchback-car-model.html	Kia Rio 5dr hatchback
+/Kia Carens 5dr mpv-car-model.html	Kia Carens 5dr mpv
+/Kia Sedona 5dr mpv-car-model.html	Kia Sedona 5dr mpv
+/Kia Sportage 5dr 4x4-car-model.html	Kia Sportage 5dr 4x4
+/Kia Sorento 5dr 4x4-car-model.html	Kia Sorento 5dr 4x4
+/Kia Magentis 4dr saloon-car-model.html	Kia Magentis 4dr saloon

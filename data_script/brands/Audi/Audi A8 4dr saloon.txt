@@ -1,0 +1,460 @@
+
+detail:
+Audi A8 4dr saloon 3.2 V6 SE
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+256/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.7 seconds
+LxHxW
+5051x1444x1894
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.2 V6 SE LWB
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+256/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.9 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.2 V6 Sport
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+256/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.7 seconds
+LxHxW
+5051x1444x1894
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.2 V6 Sport LWB
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+256/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.7 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.2 FSI Quattro SE
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+256/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.7 seconds
+LxHxW
+5051x1444x1894
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.2 FSI Quattro Sport
+Engine [cc/No. of Cyl/Position]
+3123/6/F
+Max Power [bhp/rpm]
+256/6500
+Max Torque [lbft/rpm]
+243/3250
+Top Speed
+155 Mph
+0-60 Mph
+7.7 seconds
+LxHxW
+5051x1444x1894
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 V8 FSI Quattro SE
+Engine [cc/No. of Cyl/Position]
+4172/V8/F
+Max Power [bhp/rpm]
+345/6800
+Max Torque [lbft/rpm]
+324/3500
+Top Speed
+155 Mph
+0-60 Mph
+6.1 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1780/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 V8 FSI Quattro SE LWB
+Engine [cc/No. of Cyl/Position]
+4172/V8/F
+Max Power [bhp/rpm]
+345/6800
+Max Torque [lbft/rpm]
+324/3500
+Top Speed
+155 Mph
+0-60 Mph
+6.3 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1780/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 V8 FSI Quattro Sport
+Engine [cc/No. of Cyl/Position]
+4172/V8/F
+Max Power [bhp/rpm]
+345/6800
+Max Torque [lbft/rpm]
+324/3500
+Top Speed
+155 Mph
+0-60 Mph
+6.1 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1780/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 V8 FSI Quattro Sport LWB
+Engine [cc/No. of Cyl/Position]
+4172/V8/F
+Max Power [bhp/rpm]
+345/6800
+Max Torque [lbft/rpm]
+324/3500
+Top Speed
+155 Mph
+0-60 Mph
+6.3 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1780/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 6.0 W12 Quattro LWB
+Engine [cc/No. of Cyl/Position]
+5998/12/F
+Max Power [bhp/rpm]
+444/6200
+Max Torque [lbft/rpm]
+427/4000
+Top Speed
+155 Mph
+0-60 Mph
+5.2 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1995/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon S8 V10
+Engine [cc/No. of Cyl/Position]
+5204/V10/F
+Max Power [bhp/rpm]
+444/7000
+Max Torque [lbft/rpm]
+398/3500
+Top Speed
+155 Mph
+0-60 Mph
+5.1 seconds
+LxHxW
+5062x1424x1897
+Weight [Kerb/Towing]
+1941/2300
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+Audi A8 4dr saloon 3.0 TDI Quattro SE
+Engine [cc/No. of Cyl/Position]
+2967/6/F
+Max Power [bhp/rpm]
+230/4000
+Max Torque [lbft/rpm]
+332/1400
+Top Speed
+151 Mph
+0-60 Mph
+7.8 seconds
+LxHxW
+5051x1444x1894
+Weight [Kerb/Towing]
+1830/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.0 TDI Quattro SE LWB
+Engine [cc/No. of Cyl/Position]
+2967/6/F
+Max Power [bhp/rpm]
+230/4000
+Max Torque [lbft/rpm]
+332/1400
+Top Speed
+151 Mph
+0-60 Mph
+7.9 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1940/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.0 TDI Quattro Sport
+Engine [cc/No. of Cyl/Position]
+2967/6/F
+Max Power [bhp/rpm]
+230/4000
+Max Torque [lbft/rpm]
+332/1400
+Top Speed
+151 Mph
+0-60 Mph
+7.8 seconds
+LxHxW
+5051x1444x1894
+Weight [Kerb/Towing]
+1830/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 3.0 TDI Quattro Sport LWB
+Engine [cc/No. of Cyl/Position]
+2967/6/F
+Max Power [bhp/rpm]
+230/4000
+Max Torque [lbft/rpm]
+332/1400
+Top Speed
+151 Mph
+0-60 Mph
+7.9 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1940/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 TDI Quattro SE
+Engine [cc/No. of Cyl/Position]
+3963/V8/F
+Max Power [bhp/rpm]
+321/3750
+Max Torque [lbft/rpm]
+479/1800
+Top Speed
+155 Mph
+0-60 Mph
+5.9 seconds
+LxHxW
+TBAxTBAxTBA
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 TDI Quattro SE LWB
+Engine [cc/No. of Cyl/Position]
+3963/V8/F
+Max Power [bhp/rpm]
+321/3750
+Max Torque [lbft/rpm]
+479/1800
+Top Speed
+155 Mph
+0-60 Mph
+6.1 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1830/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 TDI Quattro Sport
+Engine [cc/No. of Cyl/Position]
+3963/V8/F
+Max Power [bhp/rpm]
+321/3750
+Max Torque [lbft/rpm]
+479/1800
+Top Speed
+155 Mph
+0-60 Mph
+5.9 seconds
+LxHxW
+TBAxTBAxTBA
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500
+
+detail:
+Audi A8 4dr saloon 4.2 TDI Quattro Sport LWB
+Engine [cc/No. of Cyl/Position]
+3963/V8/F
+Max Power [bhp/rpm]
+321/3750
+Max Torque [lbft/rpm]
+479/1800
+Top Speed
+155 Mph
+0-60 Mph
+6.1 seconds
+LxHxW
+5181x1455x1894
+Weight [Kerb/Towing]
+1830/2300
+Headroom [Front/Rear]
+939/TBA
+Legroom [Front/Rear]
+1117/736
+Boot Space [Min/Max]
+500/500

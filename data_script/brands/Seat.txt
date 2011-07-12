@@ -1,0 +1,6 @@
+/Seat Ibiza 3dr hatchback-car-model.html	Seat Ibiza 3dr hatchback
+/Seat Ibiza 5dr hatchback-car-model.html	Seat Ibiza 5dr hatchback
+/Seat Leon 5dr hatchback-car-model.html	Seat Leon 5dr hatchback
+/Seat Altea 5dr hatchback-car-model.html	Seat Altea 5dr hatchback
+/Seat Toledo 5dr hatchback-car-model.html	Seat Toledo 5dr hatchback
+/Seat Alhambra 5dr mpv-car-model.html	Seat Alhambra 5dr mpv

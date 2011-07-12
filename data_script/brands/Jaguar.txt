@@ -1,0 +1,7 @@
+/Jaguar XK Series 2dr coupe-car-model.html	Jaguar XK Series 2dr coupe
+/Jaguar XK Series 2dr convertible-car-model.html	Jaguar XK Series 2dr convertible
+/Jaguar X-type 4dr saloon-car-model.html	Jaguar X-type 4dr saloon
+/Jaguar X-type 5dr estate-car-model.html	Jaguar X-type 5dr estate
+/Jaguar S-type 4dr saloon-car-model.html	Jaguar S-type 4dr saloon
+/Jaguar Daimler 4dr saloon-car-model.html	Jaguar Daimler 4dr saloon
+/Jaguar XJ Series 4dr saloon-car-model.html	Jaguar XJ Series 4dr saloon

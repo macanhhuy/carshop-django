@@ -1,0 +1,8 @@
+/Alpina B6 2dr convertible-car-model.html	Alpina B6 2dr convertible
+/Alpina B6 3dr coupe-car-model.html	Alpina B6 3dr coupe
+/Alpina B3 2dr convertible-car-model.html	Alpina B3 2dr convertible
+/Alpina B3 2dr coupe-car-model.html	Alpina B3 2dr coupe
+/Alpina B5 4dr saloon-car-model.html	Alpina B5 4dr saloon
+/Alpina B7 4dr saloon-car-model.html	Alpina B7 4dr saloon
+/Alpina Roadster S 2dr roadster-car-model.html	Alpina Roadster S 2dr roadster
+/Alpina D3 4dr saloon-car-model.html	Alpina D3 4dr saloon

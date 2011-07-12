@@ -1,0 +1,16 @@
+/Citroën C1 3dr hatchback-car-model.html	Citroën C1 3dr hatchback
+/Citroën C1 5dr hatchback-car-model.html	Citroën C1 5dr hatchback
+/Citroën C2 3dr hatchback-car-model.html	Citroën C2 3dr hatchback
+/Citroën C3 5dr hatchback-car-model.html	Citroën C3 5dr hatchback
+/Citroën C4 Picasso 5dr mpv-car-model.html	Citroën C4 Picasso 5dr mpv
+/Citroën C6 4dr saloon-car-model.html	Citroën C6 4dr saloon
+/Citroën C-Crosser 5dr 4x4-car-model.html	Citroën C-Crosser 5dr 4x4
+/Citroën Grand C4 Picasso 5dr mpv-car-model.html	Citroën Grand C4 Picasso 5dr mpv
+/Citroën C3 Pluriel 2dr open-car-model.html	Citroën C3 Pluriel 2dr open
+/Citroën C4 3dr coupe-car-model.html	Citroën C4 3dr coupe
+/Citroën C4 5dr hatchback-car-model.html	Citroën C4 5dr hatchback
+/Citroën Xsara Picasso 5dr mpv-car-model.html	Citroën Xsara Picasso 5dr mpv
+/Citroën C5 5dr hatchback-car-model.html	Citroën C5 5dr hatchback
+/Citroën C5 5dr estate-car-model.html	Citroën C5 5dr estate
+/Citroën Berlingo Multispace 5dr mpv-car-model.html	Citroën Berlingo Multispace 5dr mpv
+/Citroën C8 5dr mpv-car-model.html	Citroën C8 5dr mpv

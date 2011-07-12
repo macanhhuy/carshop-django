@@ -1,0 +1,46 @@
+
+detail:
+Alpina Roadster S 2dr roadster 3.4 S
+Engine [cc/No. of Cyl/Position]
+3346/6/F
+Max Power [bhp/rpm]
+300/6300
+Max Torque [lbft/rpm]
+267/4800
+Top Speed
+165 Mph
+0-60 Mph
+5.3 seconds
+LxHxW
+TBAxTBAxTBA
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+Alpina Roadster S 2dr roadster 3.4 S Lux
+Engine [cc/No. of Cyl/Position]
+3346/6/F
+Max Power [bhp/rpm]
+300/6300
+Max Torque [lbft/rpm]
+267/4800
+Top Speed
+165 Mph
+0-60 Mph
+5.3 seconds
+LxHxW
+4091x1295xTBA
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
