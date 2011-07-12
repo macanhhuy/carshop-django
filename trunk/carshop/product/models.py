@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib import admin
 from django.contrib.auth.models import User
 
-from ..manufacturer.models import CarModels
+from ..manufacturer.models import CarModel
 from ..models import Parameter
 
 
@@ -21,7 +21,7 @@ class Product(models.Model): #
     product_name = models.CharField(u'产品名字', max_length=100) # 名称
     product_model = models.CharField(max_length=62, blank=True, null=True)
     product_image = models.ImageField(u'产品图片', upload_to='product_images', blank=True, null=True)
-    car_model = models.ForeignKey(CarModels, blank=True, null=True) # 所属
+    car_model = models.ForeignKey(CarModel, blank=True, null=True) # 所属
     product_desc = models.TextField(u'产品描述', blank=True, null=True) # 产品描述
 
     product_category = models.ForeignKey(Parameter, related_name='product_category') # 物品类别
