@@ -1,0 +1,9 @@
+/Volvo C30 3dr hatchback-car-model.html	Volvo C30 3dr hatchback
+/Volvo S40 4dr saloon-car-model.html	Volvo S40 4dr saloon
+/Volvo V50 5dr estate-car-model.html	Volvo V50 5dr estate
+/Volvo C70 2dr convertible-car-model.html	Volvo C70 2dr convertible
+/Volvo S60 4dr saloon-car-model.html	Volvo S60 4dr saloon
+/Volvo V70 5dr estate-car-model.html	Volvo V70 5dr estate
+/Volvo S80 4dr saloon-car-model.html	Volvo S80 4dr saloon
+/Volvo XC70 5dr 4x4-car-model.html	Volvo XC70 5dr 4x4
+/Volvo XC90 5dr 4x4-car-model.html	Volvo XC90 5dr 4x4

@@ -1,0 +1,4 @@
+/Lamborghini Gallardo 2dr spyder-car-model.html	Lamborghini Gallardo 2dr spyder
+/Lamborghini Gallardo 2dr coupe-car-model.html	Lamborghini Gallardo 2dr coupe
+/Lamborghini Murcielago 2dr coupe-car-model.html	Lamborghini Murcielago 2dr coupe
+/Lamborghini Murcielago 2dr open-car-model.html	Lamborghini Murcielago 2dr open

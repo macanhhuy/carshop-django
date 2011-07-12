@@ -1,0 +1,23 @@
+
+detail:
+Alpina D3 4dr saloon 2.0d
+Engine [cc/No. of Cyl/Position]
+1995/4/F
+Max Power [bhp/rpm]
+197/4000
+Max Torque [lbft/rpm]
+302/2000
+Top Speed
+148 Mph
+0-60 Mph
+7.4 seconds
+LxHxW
+TBAxTBAxTBA
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA

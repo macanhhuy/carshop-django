@@ -1,0 +1,23 @@
+
+detail:
+Aston Martin Vantage 2dr roadster 4.3 V8
+Engine [cc/No. of Cyl/Position]
+4280/V8/F
+Max Power [bhp/rpm]
+380/7300
+Max Torque [lbft/rpm]
+302/5000
+Top Speed
+175 Mph
+0-60 Mph
+4.9 seconds
+LxHxW
+4380x1265x1865
+Weight [Kerb/Towing]
+1710/TBA
+Headroom [Front/Rear]
+1120/TBA
+Legroom [Front/Rear]
+1090/TBA
+Boot Space [Min/Max]
+TBA/TBA

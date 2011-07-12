@@ -1,0 +1,5 @@
+/Bentley Continental 4dr saloon-car-model.html	Bentley Continental 4dr saloon
+/Bentley Continental GTC 2dr convertible-car-model.html	Bentley Continental GTC 2dr convertible
+/Bentley Arnage 4dr saloon-car-model.html	Bentley Arnage 4dr saloon
+/Bentley Azure 2dr open-car-model.html	Bentley Azure 2dr open
+/Bentley Continental GT 2dr coupe-car-model.html	Bentley Continental GT 2dr coupe

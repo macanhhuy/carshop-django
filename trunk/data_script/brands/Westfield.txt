@@ -1,0 +1,5 @@
+/Westfield XTR2 2dr open-car-model.html	Westfield XTR2 2dr open
+/Westfield XTR4 2dr open-car-model.html	Westfield XTR4 2dr open
+/Westfield Sport 2dr open-car-model.html	Westfield Sport 2dr open
+/Westfield Mega 2dr roadster-car-model.html	Westfield Mega 2dr roadster
+/Westfield SEiGHT 2dr open-car-model.html	Westfield SEiGHT 2dr open

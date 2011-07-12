@@ -1,0 +1,19 @@
+/Volkswagen Fox 3dr hatchback-car-model.html	Volkswagen Fox 3dr hatchback
+/Volkswagen Golf Plus 5dr mpv-car-model.html	Volkswagen Golf Plus 5dr mpv
+/Volkswagen Jetta 4dr saloon-car-model.html	Volkswagen Jetta 4dr saloon
+/Volkswagen Polo 3dr hatchback-car-model.html	Volkswagen Polo 3dr hatchback
+/Volkswagen Polo 5dr hatchback-car-model.html	Volkswagen Polo 5dr hatchback
+/Volkswagen Golf 5dr estate-car-model.html	Volkswagen Golf 5dr estate
+/Volkswagen Golf 3dr hatchback-car-model.html	Volkswagen Golf 3dr hatchback
+/Volkswagen Golf 5dr hatchback-car-model.html	Volkswagen Golf 5dr hatchback
+/Volkswagen Beetle 2dr cabriolet-car-model.html	Volkswagen Beetle 2dr cabriolet
+/Volkswagen Beetle 3dr hatchback-car-model.html	Volkswagen Beetle 3dr hatchback
+/Volkswagen Passat 4dr saloon-car-model.html	Volkswagen Passat 4dr saloon
+/Volkswagen Passat 5dr estate-car-model.html	Volkswagen Passat 5dr estate
+/Volkswagen Touran 5dr mpv-car-model.html	Volkswagen Touran 5dr mpv
+/Volkswagen Phaeton 4dr saloon-car-model.html	Volkswagen Phaeton 4dr saloon
+/Volkswagen Sharan 5dr mpv-car-model.html	Volkswagen Sharan 5dr mpv
+/Volkswagen Caravelle 5dr mpv-car-model.html	Volkswagen Caravelle 5dr mpv
+/Volkswagen Touareg 5dr 4x4-car-model.html	Volkswagen Touareg 5dr 4x4
+/Volkswagen California 4dr camper-car-model.html	Volkswagen California 4dr camper
+/Volkswagen Eos 2dr cc-car-model.html	Volkswagen Eos 2dr cc

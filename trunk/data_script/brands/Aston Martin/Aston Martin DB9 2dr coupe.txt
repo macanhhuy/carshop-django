@@ -1,0 +1,23 @@
+
+detail:
+Aston Martin DB9 2dr coupe 5.9 V12
+Engine [cc/No. of Cyl/Position]
+5935/12/F
+Max Power [bhp/rpm]
+450/6000
+Max Torque [lbft/rpm]
+420/5000
+Top Speed
+186 Mph
+0-60 Mph
+4.7 seconds
+LxHxW
+4697x1318x1875
+Weight [Kerb/Towing]
+1710/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+172/172

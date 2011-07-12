@@ -1,0 +1,3 @@
+/Corvette C6 2dr coupe-car-model.html	Corvette C6 2dr coupe
+/Corvette C6 2dr convertible-car-model.html	Corvette C6 2dr convertible
+/Corvette Z06 2dr coupe-car-model.html	Corvette Z06 2dr coupe

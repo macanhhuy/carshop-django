@@ -1,0 +1,21 @@
+/Peugeot 1007 3dr hatchback-car-model.html	Peugeot 1007 3dr hatchback
+/Peugeot 107 3dr hatchback-car-model.html	Peugeot 107 3dr hatchback
+/Peugeot 107 5dr hatchback-car-model.html	Peugeot 107 5dr hatchback
+/Peugeot 207 2dr cc-car-model.html	Peugeot 207 2dr cc
+/Peugeot 207 3dr hatchback-car-model.html	Peugeot 207 3dr hatchback
+/Peugeot 207 5dr hatchback-car-model.html	Peugeot 207 5dr hatchback
+/Peugeot 207 5dr sw-car-model.html	Peugeot 207 5dr sw
+/Peugeot 4007 5dr 4x4-car-model.html	Peugeot 4007 5dr 4x4
+/Peugeot 206 3dr hatchback-car-model.html	Peugeot 206 3dr hatchback
+/Peugeot 206 5dr hatchback-car-model.html	Peugeot 206 5dr hatchback
+/Peugeot 307 2dr cc-car-model.html	Peugeot 307 2dr cc
+/Peugeot 307 3dr hatchback-car-model.html	Peugeot 307 3dr hatchback
+/Peugeot 307 5dr hatchback-car-model.html	Peugeot 307 5dr hatchback
+/Peugeot 307 5dr estate-car-model.html	Peugeot 307 5dr estate
+/Peugeot 307 5dr sw-car-model.html	Peugeot 307 5dr sw
+/Peugeot 407 2dr coupe-car-model.html	Peugeot 407 2dr coupe
+/Peugeot 407 4dr saloon-car-model.html	Peugeot 407 4dr saloon
+/Peugeot 407 5dr sw-car-model.html	Peugeot 407 5dr sw
+/Peugeot 607 4dr saloon-car-model.html	Peugeot 607 4dr saloon
+/Peugeot Partner Combi 5dr mpv-car-model.html	Peugeot Partner Combi 5dr mpv
+/Peugeot 807 5dr mpv-car-model.html	Peugeot 807 5dr mpv

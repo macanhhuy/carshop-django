@@ -1,0 +1,69 @@
+
+detail:
+Bentley Arnage 4dr saloon R
+Engine [cc/No. of Cyl/Position]
+6761/V8/F
+Max Power [bhp/rpm]
+450/4100
+Max Torque [lbft/rpm]
+645/1800
+Top Speed
+168 Mph
+0-60 Mph
+5.5 seconds
+LxHxW
+5400x1515x1932
+Weight [Kerb/Towing]
+2585/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+Bentley Arnage 4dr saloon RL
+Engine [cc/No. of Cyl/Position]
+6761/V8/F
+Max Power [bhp/rpm]
+450/4100
+Max Torque [lbft/rpm]
+645/1800
+Top Speed
+168 Mph
+0-60 Mph
+5.7 seconds
+LxHxW
+5640x1515x1932
+Weight [Kerb/Towing]
+2655/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
+
+detail:
+Bentley Arnage 4dr saloon T
+Engine [cc/No. of Cyl/Position]
+6761/V8/F
+Max Power [bhp/rpm]
+500/4200
+Max Torque [lbft/rpm]
+738/3200
+Top Speed
+179 Mph
+0-60 Mph
+5.2 seconds
+LxHxW
+5400x1515x1932
+Weight [Kerb/Towing]
+2585/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA

@@ -1,0 +1,18 @@
+/Ford C-Max 5dr mpv-car-model.html	Ford C-Max 5dr mpv
+/Ford S-Max 5dr mpv-car-model.html	Ford S-Max 5dr mpv
+/Ford Ka 3dr hatchback-car-model.html	Ford Ka 3dr hatchback
+/Ford Galaxy 5dr mpv-car-model.html	Ford Galaxy 5dr mpv
+/Ford Ranger 2dr pick-up-car-model.html	Ford Ranger 2dr pick-up
+/Ford Ranger 4dr pick-up-car-model.html	Ford Ranger 4dr pick-up
+/Ford Fiesta 3dr hatchback-car-model.html	Ford Fiesta 3dr hatchback
+/Ford Fiesta 5dr hatchback-car-model.html	Ford Fiesta 5dr hatchback
+/Ford Fusion 5dr hatchback-car-model.html	Ford Fusion 5dr hatchback
+/Ford Mondeo 4dr saloon-car-model.html	Ford Mondeo 4dr saloon
+/Ford Mondeo 5dr hatchback-car-model.html	Ford Mondeo 5dr hatchback
+/Ford Mondeo 5dr estate-car-model.html	Ford Mondeo 5dr estate
+/Ford Focus 2dr coupé cabriolet-car-model.html	Ford Focus 2dr coupé cabriolet
+/Ford Focus 3dr hatchback-car-model.html	Ford Focus 3dr hatchback
+/Ford Focus 5dr hatchback-car-model.html	Ford Focus 5dr hatchback
+/Ford Focus 4dr saloon-car-model.html	Ford Focus 4dr saloon
+/Ford Focus 5dr estate-car-model.html	Ford Focus 5dr estate
+/Ford GT 2dr coupe-car-model.html	Ford GT 2dr coupe

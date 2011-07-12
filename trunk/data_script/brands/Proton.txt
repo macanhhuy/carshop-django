@@ -1,0 +1,5 @@
+/Proton Jumbuck 2dr pick-up-car-model.html	Proton Jumbuck 2dr pick-up
+/Proton Satria Neo 3dr hatchback-car-model.html	Proton Satria Neo 3dr hatchback
+/Proton Savvy 5dr hatchback-car-model.html	Proton Savvy 5dr hatchback
+/Proton Impian 4dr saloon-car-model.html	Proton Impian 4dr saloon
+/Proton GEN-2 5dr hatchback-car-model.html	Proton GEN-2 5dr hatchback

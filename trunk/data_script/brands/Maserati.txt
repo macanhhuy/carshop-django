@@ -1,0 +1,4 @@
+/Maserati MC12 2dr coupe-car-model.html	Maserati MC12 2dr coupe
+/Maserati Quattroporte 4dr saloon-car-model.html	Maserati Quattroporte 4dr saloon
+/Maserati Coupé 2dr coupe-car-model.html	Maserati Coupé 2dr coupe
+/Maserati Spyder 2dr open-car-model.html	Maserati Spyder 2dr open

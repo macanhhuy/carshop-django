@@ -1,0 +1,14 @@
+/Mitsubishi Colt 2dr cc-car-model.html	Mitsubishi Colt 2dr cc
+/Mitsubishi Colt 3dr hatchback-car-model.html	Mitsubishi Colt 3dr hatchback
+/Mitsubishi Colt 5dr hatchback-car-model.html	Mitsubishi Colt 5dr hatchback
+/Mitsubishi Evo 4dr saloon-car-model.html	Mitsubishi Evo 4dr saloon
+/Mitsubishi i 5dr hatchback-car-model.html	Mitsubishi i 5dr hatchback
+/Mitsubishi L200 2dr pick-up-car-model.html	Mitsubishi L200 2dr pick-up
+/Mitsubishi L200 4dr pick-up-car-model.html	Mitsubishi L200 4dr pick-up
+/Mitsubishi Outlander 5dr 4x4-car-model.html	Mitsubishi Outlander 5dr 4x4
+/Mitsubishi Lancer 4dr saloon-car-model.html	Mitsubishi Lancer 4dr saloon
+/Mitsubishi Lancer 5dr estate-car-model.html	Mitsubishi Lancer 5dr estate
+/Mitsubishi Shogun 3dr 4x4-car-model.html	Mitsubishi Shogun 3dr 4x4
+/Mitsubishi Shogun 5dr 4x4-car-model.html	Mitsubishi Shogun 5dr 4x4
+/Mitsubishi Grandis 5dr mpv-car-model.html	Mitsubishi Grandis 5dr mpv
+/Mitsubishi Shogun Sport 5dr 4x4-car-model.html	Mitsubishi Shogun Sport 5dr 4x4

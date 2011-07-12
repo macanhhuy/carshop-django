@@ -1,0 +1,23 @@
+
+detail:
+Ascari KZ1 2dr coupe 5.0 V8
+Engine [cc/No. of Cyl/Position]
+4941/V8/TBA
+Max Power [bhp/rpm]
+500/7000
+Max Torque [lbft/rpm]
+368/4500
+Top Speed
+200 Mph
+0-60 Mph
+3.8 seconds
+LxHxW
+4300x1138x1852
+Weight [Kerb/Towing]
+TBA/TBA
+Headroom [Front/Rear]
+TBA/TBA
+Legroom [Front/Rear]
+TBA/TBA
+Boot Space [Min/Max]
+TBA/TBA
