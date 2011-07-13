@@ -504,40 +504,45 @@ function refreshCheckCode(){
 <div id="toolBar">
     <div style="width:10px;">
     </div>
+    {% if user.is_authenticated %}
     <div class="div_item">
-        <a href="/cart/cart.html">
-            <span id="cartCount"">{{ cart_count }}</span>&nbsp;<img src="/medias/images/cart.png" alt="Shopping Cart"><span>&nbsp;Checkout</span></img>
-        </a>
+        <span>Welcome&nbsp;<a style="text-decoration:none;" href="#">{{ user.username }}</a> &nbsp;</span>
     </div>
-    <div class="div_item">
-        <a href="/order/orderStatus.html">
-            <img src="/medias/images/order_status.png" alt="Order Status"><span>&nbsp;Order Status</span></img>
-        </a>
-    </div>
-    <div class="div_item">
-        <a href="/toRegister">
-            <img src="/medias/images/register.png" alt="Register"/><span>&nbsp;Register</span></img>
-        </a>
-    </div>
+    {% endif %}
     <div style="float:right;width:10px;" class="div_item">
     </div>
-    <div style="float:right;" class="div_item">
-        {% if not user.is_authenticated %}
-        <span>
-            <a href="/login">
-                <img src="/medias/images/login.png" alt="Login"/><span>&nbsp;Login</span></img>
-            </a>
-        </span>
-        {% else %}
-        <span><a style="text-decoration:none;" href="#">{{ user.username }}</a> &nbsp;</span>
+    
+    <div style="float:right;width:60px;" class="div_item">
+        {% if user.is_authenticated %}
         <span>
             <a style="text-decoration:none;" href="/logout">
                 <img src="/medias/images/logout.png" alt="Logout"/><span>&nbsp;Logout</span></img>
             </a>
         </span>
+        {% else %}
+        <span>
+            <a href="/login">
+                <img src="/medias/images/login.png" alt="Login"/><span>&nbsp;Login</span></img>
+            </a>
+        </span>
         {% endif %}
     </div>
+    <div style="float:right;" class="div_item">
+        <a href="/toRegister">
+            <img src="/medias/images/register.png" alt="Register"/><span>&nbsp;Register</span></img>
+        </a>
+    </div>
     
+    <div style="float:right;" class="div_item">
+        <a href="/order/orderStatus.html">
+            <img src="/medias/images/order_status.png" alt="Order Status"><span>&nbsp;Order Status</span></img>
+        </a>
+    </div>
+    <div style="float:right;" class="div_item">
+        <a href="/cart/cart.html">
+            <span id="cartCount"">{{ cart_count }}</span>&nbsp;<img src="/medias/images/cart.png" alt="Shopping Cart"><span>&nbsp;Checkout</span></img>
+        </a>
+    </div>
 </div>
 
 </body>
