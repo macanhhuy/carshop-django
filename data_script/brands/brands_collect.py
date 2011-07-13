@@ -113,12 +113,14 @@ def collect_detail():
                     if detail_item_array is not None:
                         
                         f_detail.write('\ndetail:\n')
-                        #f_detail.write(detail_item_values[0] + '\n')
+                        
                         for detail_item_values in detail_item_array:
                             print('save detail: %s' %(detail_item_values[0]))
-                            for detail_item_value in detail_item_values:
-                                f_detail.write(detail_item_value + '\n')
-
+                            f_detail.write(detail_item_values[0] + '\n')
+                            for index in range(0, len(detail_item_values[1:]), 2):
+                                f_detail.write(detail_item_values[index + 1] + '\t' + detail_item_values[index + 2] + '\n')
+                    
+                    
             f_detail.close()
             
         f_brand.close()
@@ -128,7 +130,7 @@ def collect_detail():
     print('end')
 
 if __name__ == '__main__':
-    #collect()
-    #collect_single_brand()
+    collect()
+    collect_single_brand()
     collect_detail()
 
