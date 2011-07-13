@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding:utf-8 -*-
 import datetime
 from django.contrib import admin
 from django.contrib.auth.models import User
