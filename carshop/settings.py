@@ -127,7 +127,7 @@ INSTALLED_APPS = (
 
 'carshop',
 'carshop.customer',
-'carshop.manufacturer',
+'carshop.brand',
 'carshop.order',
 'carshop.product',
 'carshop.cart',
