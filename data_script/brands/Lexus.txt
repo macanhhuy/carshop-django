@@ -1,5 +1,0 @@
-/Lexus IS 4dr saloon-car-model.html	Lexus IS 4dr saloon
-/Lexus GS 4dr saloon-car-model.html	Lexus GS 4dr saloon
-/Lexus LS 4dr saloon-car-model.html	Lexus LS 4dr saloon
-/Lexus SC430 2dr open-car-model.html	Lexus SC430 2dr open
-/Lexus RX 5dr 4x4-car-model.html	Lexus RX 5dr 4x4

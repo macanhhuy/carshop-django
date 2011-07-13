@@ -1,7 +1,0 @@
-/TVR Sagaris 2dr coupe-car-model.html	TVR Sagaris 2dr coupe
-/TVR Tuscan 2dr coupe-car-model.html	TVR Tuscan 2dr coupe
-/TVR Tuscan 2dr convertible-car-model.html	TVR Tuscan 2dr convertible
-/TVR Tamora 2dr open-car-model.html	TVR Tamora 2dr open
-/TVR T350 2dr coupe-car-model.html	TVR T350 2dr coupe
-/TVR T350 2dr targa-car-model.html	TVR T350 2dr targa
-/TVR T400 2dr coupe-car-model.html	TVR T400 2dr coupe

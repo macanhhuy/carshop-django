@@ -86,7 +86,7 @@ def collect_detail():
         f_brand = open(brand_name + '.txt')
         for brand in f_brand:
             detail_url, detail_name = brand.split('\t')
-            detail_name = detail_name[:-1]
+            detail_name = detail_name[:-1].replace('/', '$') # 记得还原
 
             if not os.path.exists(brand_name):
                 os.mkdir(brand_name)

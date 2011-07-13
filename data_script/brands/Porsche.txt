@@ -1,5 +1,0 @@
-/Porsche Cayman 2dr coupe-car-model.html	Porsche Cayman 2dr coupe
-/Porsche 911 2dr coupe-car-model.html	Porsche 911 2dr coupe
-/Porsche 911 2dr cabriolet-car-model.html	Porsche 911 2dr cabriolet
-/Porsche Boxster 2dr open-car-model.html	Porsche Boxster 2dr open
-/Porsche Cayenne 5dr 4x4-car-model.html	Porsche Cayenne 5dr 4x4

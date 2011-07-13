@@ -1,8 +1,0 @@
-/Fiat Grande Punto 3dr hatchback-car-model.html	Fiat Grande Punto 3dr hatchback
-/Fiat Grande Punto 5dr hatchback-car-model.html	Fiat Grande Punto 5dr hatchback
-/Fiat Panda 5dr hatchback-car-model.html	Fiat Panda 5dr hatchback
-/Fiat Sedici 5dr 4x4-car-model.html	Fiat Sedici 5dr 4x4
-/Fiat Bravo 5dr hatchback-car-model.html	Fiat Bravo 5dr hatchback
-/Fiat Doblo 5dr mpv-car-model.html	Fiat Doblo 5dr mpv
-/Fiat Multipla 5dr mpv-car-model.html	Fiat Multipla 5dr mpv
-/Fiat Scudo 5dr mpv-car-model.html	Fiat Scudo 5dr mpv

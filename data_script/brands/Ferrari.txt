@@ -1,4 +1,0 @@
-/Ferrari 599 2dr coupe-car-model.html	Ferrari 599 2dr coupe
-/Ferrari F430 2dr coupe-car-model.html	Ferrari F430 2dr coupe
-/Ferrari F430 2dr open-car-model.html	Ferrari F430 2dr open
-/Ferrari 612 Scaglietti 2dr coupe-car-model.html	Ferrari 612 Scaglietti 2dr coupe

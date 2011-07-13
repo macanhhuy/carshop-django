@@ -1,4 +1,0 @@
-/Dodge Caliber 5dr hatchback-car-model.html	Dodge Caliber 5dr hatchback
-/Dodge Nitro 5dr 4x4-car-model.html	Dodge Nitro 5dr 4x4
-/Dodge SRT-10 2dr coupe-car-model.html	Dodge SRT-10 2dr coupe
-/Dodge SRT-10 2dr cabriolet-car-model.html	Dodge SRT-10 2dr cabriolet

@@ -1,7 +1,0 @@
-/Subaru B9 Tribeca 5dr 4x4-car-model.html	Subaru B9 Tribeca 5dr 4x4
-/Subaru Impreza 4dr saloon-car-model.html	Subaru Impreza 4dr saloon
-/Subaru Impreza 5dr sports wagon-car-model.html	Subaru Impreza 5dr sports wagon
-/Subaru Forester 5dr 4x4-car-model.html	Subaru Forester 5dr 4x4
-/Subaru Legacy 4dr saloon-car-model.html	Subaru Legacy 4dr saloon
-/Subaru Legacy 5dr estate-car-model.html	Subaru Legacy 5dr estate
-/Subaru Legacy 5dr outback-car-model.html	Subaru Legacy 5dr outback

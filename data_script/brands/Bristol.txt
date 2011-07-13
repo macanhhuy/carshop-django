@@ -1,3 +1,0 @@
-/Bristol Blenheim 2dr saloon-car-model.html	Bristol Blenheim 2dr saloon
-/Bristol Blenheim 2dr speedster-car-model.html	Bristol Blenheim 2dr speedster
-/Bristol Fighter 2dr coupe-car-model.html	Bristol Fighter 2dr coupe

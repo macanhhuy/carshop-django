@@ -1,4 +1,0 @@
-/Mini Cooper 2dr convertible-car-model.html	Mini Cooper 2dr convertible
-/Mini One 2dr convertible-car-model.html	Mini One 2dr convertible
-/Mini Cooper 3dr hatchback-car-model.html	Mini Cooper 3dr hatchback
-/Mini One 3dr hatchback-car-model.html	Mini One 3dr hatchback

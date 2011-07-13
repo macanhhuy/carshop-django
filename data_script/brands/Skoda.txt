@@ -1,6 +1,0 @@
-/Skoda Fabia 5dr estate-car-model.html	Skoda Fabia 5dr estate
-/Skoda Roomster 5dr mpv-car-model.html	Skoda Roomster 5dr mpv
-/Skoda Fabia 5dr hatchback-car-model.html	Skoda Fabia 5dr hatchback
-/Skoda Octavia 5dr hatchback-car-model.html	Skoda Octavia 5dr hatchback
-/Skoda Octavia 5dr estate-car-model.html	Skoda Octavia 5dr estate
-/Skoda Superb 4dr saloon-car-model.html	Skoda Superb 4dr saloon
