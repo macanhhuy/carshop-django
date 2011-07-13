@@ -1410,10 +1410,10 @@ ul.slink li a:hover {
     margin-top: 10px;
     text-align: center;
     vertical-align: middle;
-    border-top: solid 1px #E8E8E8;
+/*    border-top: solid 1px #E8E8E8;
     border-bottom: solid 1px #E8E8E8;
     border-left: solid 1px #E8E8E8;
-    border-right: solid 1px #E8E8E8;
+    border-right: solid 1px #E8E8E8;*/
     position:relative;
 }
 
