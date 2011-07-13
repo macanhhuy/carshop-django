@@ -1,7 +1,0 @@
-/Land Rover Defender 2dr 4x4-car-model.html	Land Rover Defender 2dr 4x4
-/Land Rover Defender 3dr 4x4-car-model.html	Land Rover Defender 3dr 4x4
-/Land Rover Defender 5dr 4x4-car-model.html	Land Rover Defender 5dr 4x4
-/Land Rover Discovery 5dr 4x4-car-model.html	Land Rover Discovery 5dr 4x4
-/Land Rover Freelander 5dr 4x4-car-model.html	Land Rover Freelander 5dr 4x4
-/Land Rover Range Rover 5dr 4x4-car-model.html	Land Rover Range Rover 5dr 4x4
-/Land Rover Range Rover Sport 5dr 4x4-car-model.html	Land Rover Range Rover Sport 5dr 4x4

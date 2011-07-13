@@ -1,5 +1,0 @@
-/Saab 9-3 2dr convertible-car-model.html	Saab 9-3 2dr convertible
-/Saab 9-3 4dr saloon-car-model.html	Saab 9-3 4dr saloon
-/Saab 9-3 5dr sport wagon-car-model.html	Saab 9-3 5dr sport wagon
-/Saab 9-5 4dr saloon-car-model.html	Saab 9-5 4dr saloon
-/Saab 9-5 5dr estate-car-model.html	Saab 9-5 5dr estate

@@ -1,7 +1,0 @@
-/Alfa Romeo 147 3dr hatchback-car-model.html	Alfa Romeo 147 3dr hatchback
-/Alfa Romeo 147 5dr hatchback-car-model.html	Alfa Romeo 147 5dr hatchback
-/Alfa Romeo 159 4dr saloon-car-model.html	Alfa Romeo 159 4dr saloon
-/Alfa Romeo 159 5dr sportwagon-car-model.html	Alfa Romeo 159 5dr sportwagon
-/Alfa Romeo Brera 3dr coupe-car-model.html	Alfa Romeo Brera 3dr coupe
-/Alfa Romeo Spider 2dr open-car-model.html	Alfa Romeo Spider 2dr open
-/Alfa Romeo GT 2dr coupe-car-model.html	Alfa Romeo GT 2dr coupe

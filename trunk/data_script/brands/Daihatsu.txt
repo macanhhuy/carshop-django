@@ -1,6 +1,0 @@
-/Daihatsu Sirion 5dr hatchback-car-model.html	Daihatsu Sirion 5dr hatchback
-/Daihatsu Charade 3dr hatchback-car-model.html	Daihatsu Charade 3dr hatchback
-/Daihatsu Charade 5dr hatchback-car-model.html	Daihatsu Charade 5dr hatchback
-/Daihatsu Copen 2dr open-car-model.html	Daihatsu Copen 2dr open
-/Daihatsu Materia 5dr hatchback-car-model.html	Daihatsu Materia 5dr hatchback
-/Daihatsu Terios 5dr 4x4-car-model.html	Daihatsu Terios 5dr 4x4
