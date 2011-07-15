@@ -1,7 +1,10 @@
 # -*- coding:utf-8 -*-
+
+import os
 from django.db import models
 from django.contrib import admin
 from django.contrib.auth.models import User
+from django.db.models.signals import post_delete
 
 from ..brand.models import Car
 from ..models import Parameter
@@ -46,6 +49,17 @@ class Product(models.Model): #
     metatag_price_status = models.IntegerField(blank=True, null=True) # ?
     metatag_title_tagline_status = models.IntegerField(blank=True, null=True) # ?
 
+
+    def save(self, force_insert=False, force_update=False):
+        try:
+            old_obj = Product.objects.get(pk=self.pk)
+            path = old_obj.product_image.path
+            os.unlink(path)
+        except:
+            pass
+        super(Product, self).save(force_insert, force_update)
+
+
     def __unicode__(self):
         return self.product_name
 
@@ -86,4 +100,9 @@ class ProductionForAndProductType(models.Model): #
 
 #class Product
 
+def remove_image(sender, **kwargs):
+    path = kwargs['instance'].product_image.path
+    if path and os.path.isfile(path):
+        os.unlink(path)
 
+post_delete.connect(remove_image, sender=Product)

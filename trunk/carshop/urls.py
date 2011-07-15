@@ -4,7 +4,7 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 
 from rollyourown.seo.admin import register_seo_admin
-from carshop.seo import CarShopMetadata
+from .seo import CarShopMetadata
 
 import settings
 

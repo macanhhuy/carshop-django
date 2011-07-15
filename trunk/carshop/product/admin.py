@@ -1,8 +1,12 @@
 # -*- coding:utf-8 -*-
+
+import os
 import datetime
 from django.contrib import admin
 from django.db.models.query import QuerySet
-from carshop.product.models import *
+from django.db.models import ImageField
+
+from .models import *
 
 from rollyourown.seo.admin import get_inline
 from carshop.seo import CarShopMetadata
@@ -56,7 +60,6 @@ class ProductAdmin(admin.ModelAdmin):
         obj.time_product_modified = now
         obj.save()
 
-
 class ProductAttributeAdmin(admin.ModelAdmin):
     pass
 
@@ -79,8 +82,6 @@ class ProductBrandAdmin(admin.ModelAdmin):
     inlines = [ProductBrandAttributeInline, ]
 
     pass
-
-
 
 
 admin.site.register(Product, ProductAdmin)
