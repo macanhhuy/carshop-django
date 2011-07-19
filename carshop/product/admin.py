@@ -9,7 +9,7 @@ from django.db.models import ImageField
 from .models import *
 
 from rollyourown.seo.admin import get_inline
-from carshop.seo import CarShopMetadata
+from ..seo import CarShopMetadata
 
 class ProductDescriptionInline(admin.StackedInline):
     model = ProductDescription
