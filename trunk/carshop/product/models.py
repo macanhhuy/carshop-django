@@ -49,6 +49,8 @@ class Product(models.Model): #
     metatag_price_status = models.IntegerField(blank=True, null=True) # ?
     metatag_title_tagline_status = models.IntegerField(blank=True, null=True) # ?
 
+    def get_absolute_url(self):
+        return self.product_name + '.html'
 
     def save(self, force_insert=False, force_update=False):
         try:
