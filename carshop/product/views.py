@@ -41,3 +41,9 @@ def allProduct(request):
 
 def findCartByMaker(request, manufacturerName):
     pass
+    
+    
+def findProductByName(request, name):
+    name = name.replace('-', ' ')
+    product = Product.objects.get(product_name=name)
+    return render_to_response('product.html', {'product': product}, RequestContext(request))

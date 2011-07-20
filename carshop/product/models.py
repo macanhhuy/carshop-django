@@ -50,7 +50,7 @@ class Product(models.Model): #
     metatag_title_tagline_status = models.IntegerField(blank=True, null=True) # ?
 
     def get_absolute_url(self):
-        return self.product_name + '.html'
+        return '/product/' + self.product_name.replace(' ', '-') + '.html'
 
     def save(self, force_insert=False, force_update=False):
         try:

@@ -34,13 +34,13 @@ def product_general(product):
 <div class="product1" id="pdiv%s">
 	<ul>
 		<li>
-			<a href="/product/detail%s.html">
+			<a href="/product/%s.html">
 				<img src="/medias/images/%s" title="%s">
 			</a>
 		</li>
 		<li style="height:40px;">
 			<strong>
-				<a href="/product/detail%s.html" title="%s">
+				<a href="/product/%s.html" title="%s">
 					%s
 				</a>
 			</strong>
@@ -61,7 +61,7 @@ def product_general(product):
 	</ul>
 
 </div>
-''' % (str(product.id), str(product.id), product.product_image, product.product_name, str(product.id), product.product_name,
+''' % (str(product.id), product.product_name.replace(' ', '-'), product.product_image, product.product_name, product.product_name.replace(' ', '-'), product.product_name,
              product.product_name, str(product.product_price), str(product.id), str(product.id), )
 
 
