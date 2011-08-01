@@ -3,8 +3,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from carshop.models import Parameter
-from carshop.product.models import *
+from .models import *
 
 
 
@@ -35,9 +36,18 @@ def findProductByCarId(request, carId):
         return render_to_response('error.html', {'e': u'don\'t have this car'}, RequestContext(request))
 
 
-def allProduct(request):
-    products = Product.objects.all()
-    return render_to_response('allProduct.html', {'products': products}, RequestContext(request))
+def all(request, pageIndex=1):
+    product_list = Product.objects.all()
+    paginator = Paginator(product_list, 8)
+
+    try:
+        products = paginator.page(pageIndex)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+
+    return render_to_response('all.html', {'products': products}, RequestContext(request))
 
 def findCartByMaker(request, manufacturerName):
     pass

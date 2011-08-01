@@ -12,6 +12,9 @@ urlpatterns = patterns(
     (r'^car(?P<carId>\d{1,4}).html', findProductByCarId),
     (r'^car/(?P<manufacturerName>[\w|\s]{1,10}).html', findCartByMaker),
     
+    (r'^all.html$', all),
+    (r'^all_(?P<pageIndex>\d{0,2}).html$', all),
+
     (r'^(?P<name>\S{5,20}).html', findProductByName)
 
 )

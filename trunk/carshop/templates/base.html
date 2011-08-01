@@ -535,12 +535,12 @@ function refreshCheckCode(){
     
     <div style="float:right;" class="div_item">
         <a href="/order/orderStatus.html">
-            <img src="/medias/images/order_status.png" alt="Order Status"><span>&nbsp;Order Status</span></img>
+            <span id="orderStatus">{{ order_status__count }}</span>&nbsp;<img src="/medias/images/order_status.png" alt="Order Status"><span>&nbsp;Order Status</span></img>
         </a>
     </div>
     <div style="float:right;" class="div_item">
         <a href="/cart/cart.html">
-            <span id="cartCount"">{{ cart_count }}</span>&nbsp;<img src="/medias/images/cart.png" alt="Shopping Cart"><span>&nbsp;Checkout</span></img>
+            <span id="cartCount"">{{ cart_count }}</span>&nbsp;<img src="/medias/images/cart.png" alt="Shopping Cart"><span>&nbsp;Shop Cart</span></img>
         </a>
     </div>
 </div>

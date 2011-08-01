@@ -1,10 +1,14 @@
 # coding: utf-8
 import logging
 from django.core.cache import cache
-from carshop.models import Parameter
-from carshop.cache_util import *
-from carshop.product.models import Product
-from carshop.cart.models import Cart
+from django.db.models import Count
+
+from .models import Parameter
+from .cache_util import *
+from .product.models import Product
+from .cart.models import Cart
+from .order.models import Order
+from .customer.models import Customer
 
 logger = logging.getLogger(__name__)
 
@@ -76,9 +80,20 @@ def getCartCount(request):
         return {'cart_count': cart_count}
     else:
         return {}
-    
-    
-    
+
+def getUnPalCount(request):
+
+    if request.user.is_authenticated():
+        try:
+            order_status__count = Order.objects.filter(customer = request.user.get_profile(), order_status=1).aggregate(Count('order_status'))['order_status__count']
+        except Order.DoesNotExist:
+            return {}
+        except Customer.DoesNotExist:
+            return {}
+        else:
+            return {'order_status__count': order_status__count}
+    else:
+        return {}
     
     
     

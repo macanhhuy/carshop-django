@@ -96,6 +96,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 #'carshop.context_processors.getLeftNavigate',
 'carshop.context_processors.getTopNavigate',
 'carshop.context_processors.getCartCount',
+'carshop.context_processors.getUnPalCount',
 )
 
 #SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -134,7 +135,7 @@ INSTALLED_APPS = (
 
 'carshop.paypal.standard.ipn',
 'dmigrations',
-#'debug_toolbar',
+'debug_toolbar',
 'rollyourown.seo',
 )
 
@@ -156,8 +157,8 @@ PAYPAL_WPP_SIGNATURE = "AKmUkXSpzyIk02Gvvi3fVluSBs3WAvhvJ3e5WlKhRgX6XYDLQFd.7xHi
 
 
 
-#try:
-#    from settings_debug_toolbar import *
-#except ImportError, e:
-#    logger.error(e)
-#    pass
+try:
+    from settings_debug_toolbar import *
+except ImportError, e:
+    logger.error(e)
+    pass

@@ -4,8 +4,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.contenttypes.models import ContentType
-
 from django.db.models import Sum
+
+from ..db.models import *
 
 CART_OBJ = 'CART-OBJ'
 
@@ -42,9 +43,10 @@ class CartManager(models.Manager):
 class Cart(models.Model):
     session = models.CharField(max_length=40, blank=True, null=True)
     user = models.ForeignKey(User, blank=True, null=True)
-    creation_date = models.DateTimeField(verbose_name=_('creation date'), default=datetime.datetime.now())
+    creation_date = models.DateTimeField(verbose_name=_('creation date'), default=datetime.datetime.now)
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
-    
+    serial_num = UUIDField(editable=False)
+
     objects = CartManager()
 
     def put_into_cart(self, product, quantity):

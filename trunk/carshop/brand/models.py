@@ -8,8 +8,8 @@ from django.contrib import admin
 class Brand(models.Model):  # 车品牌
     name = models.CharField(u'品牌名', max_length=50) # 品牌名
     url_name = models.CharField(u'url名', max_length=50)
-    time_added = models.DateTimeField(default=datetime.datetime.now()) # 注册时间/添加时间
-    time_modified = models.DateTimeField(default=datetime.datetime.now()) # 最后修改时间
+    time_added = models.DateTimeField(default=datetime.datetime.now) # 注册时间/添加时间
+    time_modified = models.DateTimeField(default=datetime.datetime.now) # 最后修改时间
     image = models.CharField(max_length=255, blank=True, null=True) # 制造商图片(LOGO)
     desc = models.CharField(max_length=2000, blank=True, null=True) # 描述
 
@@ -24,7 +24,7 @@ class BrandSeries(models.Model): # 系列
     brand = models.ForeignKey(Brand)
     
     name = models.CharField(u'系列', max_length=100)
-    date_created = models.DateField(default=datetime.datetime.now())
+    date_created = models.DateField(default=datetime.datetime.now)
     
     def __unicode__(self):
         return self.name

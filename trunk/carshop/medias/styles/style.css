@@ -1465,6 +1465,36 @@ ul.slink li a:hover {
 
 }
 
+.pay_now {
+    display: inline-block;
+    height: 20px;
+    width: 80px;
+    padding-top: 10;
+    position: relative;
+    top: 1px;
+    font-family: helvetica, arial, freesans, clean, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+    text-shadow: 1px 1px 0 #fff;
+    white-space: nowrap;
+    border: none;
+    overflow: visible;
+    background: #ddd;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr = '#efffef', endColorstr = '#e1e1e1');
+    background: -webkit-gradient(linear, 0% 0, 0% 100%, from(#fff), to(#e1e1e1));
+    background: -moz-linear-gradient(-90deg, #fff, #e1e1e1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+
+}
+
 .qty {
     width: 75px;
     margin: 4px 0 4px 0;

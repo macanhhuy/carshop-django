@@ -43,8 +43,6 @@ urlpatterns = patterns(
 
     #(r'^checkcode/(?P<time>\d{13})$', checkcode),
 
-    (r'^allProduct.html$', 'carshop.product.views.allProduct'),
-
     #########################################
     #
     #

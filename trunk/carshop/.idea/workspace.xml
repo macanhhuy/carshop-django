@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="143120f9-3e38-4803-80ba-e5d18377b47f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/brand/models.py" afterPath="$PROJECT_DIR$/brand/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/brand/urls.py" afterPath="$PROJECT_DIR$/brand/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart/models.py" afterPath="$PROJECT_DIR$/cart/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart/templates/cart.html" afterPath="$PROJECT_DIR$/cart/templates/cart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/context_processors.py" afterPath="$PROJECT_DIR$/context_processors.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/medias/styles/style.css" afterPath="$PROJECT_DIR$/medias/styles/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order/models.py" afterPath="$PROJECT_DIR$/order/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order/templates/order_status.html" afterPath="$PROJECT_DIR$/order/templates/order_status.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order/urls.py" afterPath="$PROJECT_DIR$/order/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order/views.py" afterPath="$PROJECT_DIR$/order/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product/admin.py" afterPath="$PROJECT_DIR$/product/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product/models.py" afterPath="$PROJECT_DIR$/product/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seo.py" afterPath="$PROJECT_DIR$/seo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product/urls.py" afterPath="$PROJECT_DIR$/product/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product/views.py" afterPath="$PROJECT_DIR$/product/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
     </list>
     <ignored path="carshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,73 +43,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/product/admin.py">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="43" selection-start="314" selection-end="314" vertical-scroll-proportion="-6.84">
+            <state line="13" column="55" selection-start="368" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/product/models.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="45" selection-start="2855" selection-end="2855" vertical-scroll-proportion="0.80941707">
+            <state line="104" column="24" selection-start="4137" selection-end="4137" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cart/models.py">
+        <entry file="file://$PROJECT_DIR$/order/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="4" selection-start="1830" selection-end="1839" vertical-scroll-proportion="0.0">
+            <state line="68" column="25" selection-start="2505" selection-end="2505" vertical-scroll-proportion="-20.48">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seo.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seo.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="31" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+            <state line="28" column="84" selection-start="1111" selection-end="1118" vertical-scroll-proportion="-3.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generic.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://D:/Software/Python26/Lib/site-packages/django/contrib/contenttypes/generic.py">
+      <file leaf-file-name="admin.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/product/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="45" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-9.16">
+            <state line="56" column="0" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.5972851">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/admin.py">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="10" selection-start="2185" selection-end="2185" vertical-scroll-proportion="-7.76">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="0" selection-start="7664" selection-end="7664" vertical-scroll-proportion="-6.32">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backends.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/backends.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="265" column="0" selection-start="10519" selection-end="10519" vertical-scroll-proportion="-5.28">
+            <state line="35" column="48" selection-start="1427" selection-end="1440" vertical-scroll-proportion="-6.08">
               <folding />
             </state>
           </provider>
@@ -110,42 +109,43 @@
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/cart/urls.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/medias/styles/style.css" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/cart/views.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/cart/templates/cart.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/views.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/order/urls.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/base.html" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/decorators.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/order/views.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/register.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templatetags/carshop_extras.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/login.html" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/templates/register.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cart/urls.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cart/views.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/templates/base.html" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/order/models.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/order/forms.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/product/admin.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cart/templates/cart.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/decorators.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/order/views.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/medias/styles/style.css" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/views.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/order/urls.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/urls.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/settings.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/order/forms.py" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/cart/views.py" />
-        <option value="$PROJECT_DIR$/medias/scripts/cart.js" />
-        <option value="$PROJECT_DIR$/manufacturer/urls.py" />
-        <option value="$PROJECT_DIR$/manufacturer/views.py" />
-        <option value="$PROJECT_DIR$/product/urls.py" />
-        <option value="$PROJECT_DIR$/product/views.py" />
-        <option value="$PROJECT_DIR$/manufacturer/templates/all.html" />
-        <option value="$PROJECT_DIR$/templatetags/carshop_extras.py" />
-        <option value="$PROJECT_DIR$/manufacturer/admin.py" />
-        <option value="$PROJECT_DIR$/manufacturer/models.py" />
+        <option value="$PROJECT_DIR$/product/templates/all.html" />
+        <option value="$PROJECT_DIR$/cart/models.py" />
+        <option value="$PROJECT_DIR$/models.py" />
+        <option value="$PROJECT_DIR$/brand/models.py" />
+        <option value="$PROJECT_DIR$/cart/templates/cart.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/seo.py" />
+        <option value="$PROJECT_DIR$/db/QLeftOuterJoin.py" />
+        <option value="$PROJECT_DIR$/medias/styles/style.css" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/urls.py" />
-        <option value="$PROJECT_DIR$/product/admin.py" />
+        <option value="$PROJECT_DIR$/order/urls.py" />
+        <option value="$PROJECT_DIR$/order/models.py" />
+        <option value="$PROJECT_DIR$/order/views.py" />
+        <option value="$PROJECT_DIR$/order/templates/order_status.html" />
+        <option value="$PROJECT_DIR$/context_processors.py" />
         <option value="$PROJECT_DIR$/product/models.py" />
+        <option value="$PROJECT_DIR$/product/admin.py" />
       </list>
     </option>
   </component>
@@ -202,80 +202,6 @@
               <option name="myItemId" value="carshop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.6.2 (D:/Software/Python26/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.6.2 (D:/Software/Python26/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjangoSEO-1.0-py2.6.egg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rollyourown" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.6.2 (D:/Software/Python26/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjangoSEO-1.0-py2.6.egg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rollyourown" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Python 2.6.2 (D:/Software/Python26/python.exe) &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjangoSEO-1.0-py2.6.egg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -301,46 +227,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="140" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="138" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="143" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="141" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="45" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="153" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="157" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="129" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="131" />
     <property name="recentsLimit" value="5" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="117" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="120" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="126" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="801" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="127" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="129" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="803" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="130" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="824" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="827" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.lastSelected" value="editor.preferences.tabs" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
@@ -362,7 +274,7 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
-      <module name="" />
+      <module name="carshop" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -517,17 +429,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="778" extended-state="6" />
+    <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31914893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19300912" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206687" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17595541" sideWeight="0.2325228" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25796178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17585693" sideWeight="0.36305732" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17595541" sideWeight="0.51367784" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35410336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="24" y="277" width="1232" height="215" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24164134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1676602" sideWeight="0.74840766" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25159237" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="24" y="277" width="1232" height="215" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28503186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23407644" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -567,117 +479,124 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/product/admin.py</url>
+          <line>56</line>
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/management/__init__.py">
+    <entry file="file://$PROJECT_DIR$/product/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.49752066">
+        <state line="34" column="27" selection-start="1145" selection-end="1157" vertical-scroll-proportion="0.20342612">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/templatetags/carshop_extras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="10" selection-start="4031" selection-end="4031" vertical-scroll-proportion="-10.64">
+        <state line="34" column="8" selection-start="689" selection-end="689" vertical-scroll-proportion="0.3324468">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm10/system/python_stubs/-1213716000/__builtin__.py">
+    <entry file="file://D:/Software/Python26/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="604" column="8" selection-start="18863" selection-end="18863" vertical-scroll-proportion="0.33333334">
+        <state line="110" column="0" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.33231708">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/django/utils/datastructures.py">
+    <entry file="file://$PROJECT_DIR$/order/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="8" selection-start="2795" selection-end="2795" vertical-scroll-proportion="-1.462963">
+        <state line="13" column="55" selection-start="368" selection-end="382" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/django/contrib/admin/options.py">
+    <entry file="file://$PROJECT_DIR$/cart/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1344" column="6" selection-start="58001" selection-end="58001" vertical-scroll-proportion="0.5803213">
+        <state line="29" column="44" selection-start="987" selection-end="992" vertical-scroll-proportion="0.43930635">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0781893">
+        <state line="105" column="27" selection-start="4454" selection-end="4454" vertical-scroll-proportion="5.025189">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/product/admin.py">
+    <entry file="file://$PROJECT_DIR$/medias/scripts/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="314" selection-end="314" vertical-scroll-proportion="-6.84">
+        <state line="20" column="71" selection-start="935" selection-end="935" vertical-scroll-proportion="0.28941175">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/admin.py">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="10" selection-start="2185" selection-end="2185" vertical-scroll-proportion="-7.76">
+        <state line="537" column="57" selection-start="22328" selection-end="22347" vertical-scroll-proportion="0.3084577">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/base.py">
+    <entry file="file://$PROJECT_DIR$/order/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="0" selection-start="7664" selection-end="7664" vertical-scroll-proportion="-6.32">
+        <state line="104" column="24" selection-start="4137" selection-end="4137" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/django/contrib/contenttypes/generic.py">
+    <entry file="file://$PROJECT_DIR$/order/templates/order_status.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="45" selection-start="1065" selection-end="1065" vertical-scroll-proportion="-9.16">
+        <state line="17" column="73" selection-start="675" selection-end="675" vertical-scroll-proportion="0.55">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seo.py">
+    <entry file="file://$PROJECT_DIR$/customer/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+        <state line="99" column="66" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.48825064">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/options.py">
+    <entry file="file://$PROJECT_DIR$/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.36827958">
+        <state line="91" column="21" selection-start="3371" selection-end="3371" vertical-scroll-proportion="0.6127451">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/django/db/models/base.py">
+    <entry file="file://$PROJECT_DIR$/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="465" column="11" selection-start="20926" selection-end="20926" vertical-scroll-proportion="1.2083334">
+        <state line="28" column="84" selection-start="1111" selection-end="1118" vertical-scroll-proportion="-3.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Software/Python26/Lib/site-packages/DjangoSEO-1.0-py2.6.egg/rollyourown/seo/backends.py">
+    <entry file="file://$PROJECT_DIR$/order/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="0" selection-start="10519" selection-end="10519" vertical-scroll-proportion="-5.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="4" selection-start="1830" selection-end="1839" vertical-scroll-proportion="0.0">
+        <state line="68" column="25" selection-start="2505" selection-end="2505" vertical-scroll-proportion="-20.48">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/product/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="45" selection-start="2855" selection-end="2855" vertical-scroll-proportion="0.80941707">
+        <state line="35" column="48" selection-start="1427" selection-end="1440" vertical-scroll-proportion="-6.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.5972851">
           <folding />
         </state>
       </provider>
