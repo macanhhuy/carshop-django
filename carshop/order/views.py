@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import simplejson
+
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
@@ -55,14 +57,14 @@ def generate_order(request):
 def save_order(request):
     cart = Cart.objects.get_or_create_from_request(request)
 
-    order = Order.objects.create_or_get(cart=cart,
+    order = Order.objects.create_from_cart(request, cart,
                                         customer=request.user.get_profile(),
                                         billing_first_name=request.user.first_name,
                                         billing_last_name=request.user.last_name,
                                         order_total_price=cart.total_price,
                                         ip_address=request.META['REMOTE_ADDR'],
                                         order_status=1)
-
+    
     if 'POST' == request.method:
         orderForm = OrderForm(request.POST, instance=order)
         if orderForm.is_valid():
@@ -79,7 +81,28 @@ def save_order(request):
 
 @login_required(redirect_field_name='/order/orderStatus.html', login_url='/login')
 def order_status(request):
+    orders = Order.objects.get_order_and_order_products(customer=request.user.get_profile(), order_status=1)
 
-    orders = Order.objects.filter(customer=request.user.get_profile(), order_status=1)
-    
     return render_to_response('order_status.html', {'orders': orders}, RequestContext(request))
+
+
+def change_qty(request, orderId, orderProductId, count):
+    try:
+        order = Order.objects.get(pk=orderId)
+        orderProduct = OrderProduct.objects.get(pk=orderProductId, order=orderId)
+    except Order.DoesNotExist:
+        return 'error'
+    except OrderProduct.DoesNotExist:
+        return 'error'
+    else:
+        orderProduct.product_quantity = orderProduct.product_quantity + int(count)
+
+        if orderProduct.product_quantity < 0:
+            orderProduct.product_quantity = 0
+            return HttpResponse(simplejson.dumps({'total':str(order.order_total_price), 'qty':0}))
+        else:
+            order.order_total_price = order.order_total_price + orderProduct.product_unit_price * int(count)
+            order.save()
+            orderProduct.save()
+            return HttpResponse(simplejson.dumps({'total':str(order.order_total_price), 'qty':str(orderProduct.product_quantity)}))
+

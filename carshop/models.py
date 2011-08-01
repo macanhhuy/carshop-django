@@ -158,7 +158,7 @@ class UserManager(auth.UserManager):
         """
         Creates and saves a User with the given username, e-mail and password.
         """
-        now = datetime.datetime.now()
+        now = datetime.datetime.now
 
         # Normalize the address by lowercasing the domain part of the email
         # address.

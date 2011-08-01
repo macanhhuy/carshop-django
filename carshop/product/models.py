@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import os
+import datetime
 from django.db import models
 from django.contrib import admin
 from django.contrib.auth.models import User
@@ -28,16 +29,16 @@ class Product(models.Model): #
     product_desc = models.TextField(u'产品描述', blank=True, null=True) # 产品描述
 
     product_category = models.ForeignKey(Parameter, related_name='product_category') # 物品类别
-    product_price = models.DecimalField(max_digits=18, decimal_places=2) # 价格
+    product_price = models.DecimalField(max_digits=10, decimal_places=2) # 价格
     product_order_desc = models.CharField(u'订购说明', max_length=1000, blank=True, null=True) # 订购说明
     product_count = models.IntegerField() # 库存
-    time_product_register = models.DateTimeField() # 上架时间
-    time_product_modified = models.DateTimeField() # 修改时间
+    time_product_register = models.DateTimeField(default=datetime.datetime.now) # 上架时间
+    time_product_modified = models.DateTimeField(default=datetime.datetime.now) # 修改时间
     time_product_available = models.DateTimeField(u'到期时间', blank=True, null=True) # 到期时间?
     product_added_user = models.ForeignKey(User, related_name='product_added_user') # 添加人员
     product_modified_user = models.ForeignKey(User, related_name='product_modified_user') # 修改人员
     product_status = models.ForeignKey(Parameter, related_name='product_status', blank=True, null=True) # 产品状态
-    product_weight = models.FloatField(u'产品重', blank=True, null=True) # 产品重
+    product_weight = models.DecimalField(u'产品重', max_digits=10, decimal_places=2, blank=True, null=True) # 产品重
     product_tax = models.ForeignKey(Parameter, related_name='product_tax', blank=True, null=True) # 税 外键
     product_quantity_order_min = models.IntegerField(u'单次购买下限', default=1) # 单次购买最小数量
     product_quantity_order_max = models.IntegerField(u'单次购买上限', default=999) # 单次购买最大数量
@@ -52,14 +53,14 @@ class Product(models.Model): #
     def get_absolute_url(self):
         return '/product/' + self.product_name.replace(' ', '-') + '.html'
 
-    def save(self, force_insert=False, force_update=False):
-        try:
-            old_obj = Product.objects.get(pk=self.pk)
-            path = old_obj.product_image.path
-            os.unlink(path)
-        except:
-            pass
-        super(Product, self).save(force_insert, force_update)
+    #def save(self, force_insert=False, force_update=False):
+    #    try:
+    #        old_obj = Product.objects.get(pk=self.pk)
+    #        path = old_obj.product_image.path
+    #        os.unlink(path)
+    #    except:
+    #        pass
+    #    super(Product, self).save(force_insert, force_update)
 
 
     def __unicode__(self):

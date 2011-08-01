@@ -13,15 +13,19 @@ class OrderManager(models.Manager):
     def merge_order(self, orders):
         pass
 
-    def create_from_cart(self, request, **kwargs):
-        if 'cart' in kwargs:
+    def create_from_cart(self, request, cart=None, **kwargs):
+        if cart is not None:
             try:
-                order = self.get(cart=kwargs['cart'])
-            except Order.DoesNotExist, e:
-                self.create(kwargs)
-                return None
+                cart_items = cart.cart_items
+                if len(cart_items) > 0:
+                    order = self.create(**kwargs)
+                    OrderProduct.objects.add_or_update_order_products(order, cart_items)
+
+                    cart.clean_cart(request)
+
             except Exception, e:
                 print e
+                return None
             else:
                 return order
         else:
@@ -47,6 +51,22 @@ class OrderManager(models.Manager):
             return order
         return None
 
+    def get_order_and_order_products(self, customer=None, order_status=1):
+        try:
+            orders = self.filter(customer=customer, order_status=order_status)
+        except Order.DoesNotExist:
+            return None
+        else:
+            for order in orders:
+                try:
+                    orderProducts = OrderProduct.objects.filter(order=order)
+                except OrderProduct.DoesNotExist:
+                    setattr(order, 'order_products', None)
+                else:
+                    setattr(order, 'order_products', orderProducts)
+                    for orderProduct in orderProducts:
+                        setattr(orderProduct, 'product_image', orderProduct.product.product_image)
+            return orders
 
 class Order(models.Model): # 订单表
 
@@ -60,7 +80,9 @@ class Order(models.Model): # 订单表
 
     id = UUIDField(primary_key=True, editable=False)
     customer = models.ForeignKey(Customer) # 客户ID
-    cart = models.OneToOneField(Cart)
+
+    #cart = models.OneToOneField(Cart)
+
     #    customer_name = models.CharField(max_length=64) # 客户名(接收人)
     #    customer_company = models.CharField(max_length=64, blank=True, null=True) # 客户公司
     #    customer_street_address = models.CharField(max_length=64, blank=True, null=True) # 客户街道地址
@@ -103,13 +125,14 @@ class Order(models.Model): # 订单表
     #coupon_code
     time_purchased = models.DateTimeField(blank=True, null=True) # 购置时间
 
-    order_total_price = models.FloatField() # 总价格
+    order_total_price = models.DecimalField(max_digits=10, decimal_places=2) # 总价格
     currency = models.CharField(max_length=3, blank=True, null=True) # ?
     #paypal_ipn
     ip_address = models.CharField(max_length=96) # 下单IP
     order_status = models.CharField(max_length=2, choices=STATUS_CHOICES) # 订单状态
 
     objects = OrderManager()
+
 
     class Meta:
         db_table = "order"
@@ -153,10 +176,11 @@ class OrderProduct(models.Model): # 订单项表
     product = models.ForeignKey(Product) # 产品ID
     product_name = models.CharField(max_length=64)
     product_quantity = models.IntegerField() # 产品数量
-    product_unit_price = models.FloatField() # 产品单价
-    product_final_price = models.FloatField() # 产品最终单价
-    product_tax = models.FloatField(blank=True, null=True) # 产品税
-    onetime_charge = models.FloatField(blank=True, null=True) # 一次性付款数目？
+    product_unit_price = models.DecimalField(max_digits=10, decimal_places=2) # 产品单价
+    product_final_price = models.DecimalField(max_digits=10, decimal_places=2) # 产品最终单价
+    product_tax = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True) # 产品税
+    #product_image = models.ImageField(u'产品图片', upload_to='product_images', blank=True, null=True)
+    onetime_charge = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True) # 一次性付款数目？
 
     #product_is_free # 是否免费
     #product_discount = models.ForeignKey(Discount) # 优惠券ID

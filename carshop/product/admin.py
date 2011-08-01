@@ -54,10 +54,8 @@ class ProductAdmin(admin.ModelAdmin):
             obj.product_added_user_id = request.user.id
         obj.product_modified_user_id = request.user.id
 
-        now = datetime.datetime.now()
-        if not obj.time_product_register:
-            obj.time_product_register = now
-        obj.time_product_modified = now
+        obj.time_product_modified = datetime.datetime.now
+        
         obj.save()
 
 class ProductAttributeAdmin(admin.ModelAdmin):
