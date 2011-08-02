@@ -5,12 +5,11 @@
 
 {% block main %}
 
-<form action="/order/saveOrder" method="POST" >
+<form action="/order/checkout" method="POST" >
 
 <table class="order">
 {{ orderForm.as_table }}
 </table>
-<input name="haha" type="text" value="hahaha" />
 <input type="submit" value="next" />
 
 </form>

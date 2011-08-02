@@ -54,9 +54,17 @@ class ProductAdmin(admin.ModelAdmin):
             obj.product_added_user_id = request.user.id
         obj.product_modified_user_id = request.user.id
 
-        obj.time_product_modified = datetime.datetime.now
-        
-        obj.save()
+        obj.time_product_modified = datetime.datetime.now()
+
+        if obj:
+            for field in obj._meta.fields:
+                if not isinstance(field, ImageField):
+                    continue
+                if field.name in form.changed_data:
+                    os.unlink(Product.objects.get(pk=obj.pk).product_image.path)
+
+        return super(ProductAdmin, self).save_model(request, obj, form, change)
+
 
 class ProductAttributeAdmin(admin.ModelAdmin):
     pass
