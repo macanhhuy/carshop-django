@@ -34,17 +34,7 @@ def checkout(request, orderId):
 
     return render_to_response('checkout.html', context)
 
-def paypal_return(request):
-    print request
-    try:
-        if 'POST' == request.method:
-            paypalIpnForm = PayPalIPNForm(request.POST)
-            paypalIpnForm.save()
-            return HttpResponse('return success')
-        else:
-            return HttpResponse('error')
-    except Exception, e:
-        return HttpResponse('exception')
+
 
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def generate_order(request):
@@ -57,14 +47,17 @@ def generate_order(request):
 def save_order(request):
     cart = Cart.objects.get_or_create_from_request(request)
 
-    order = Order.objects.create_from_cart(request, cart,
-                                        customer=request.user.get_profile(),
-                                        billing_first_name=request.user.first_name,
-                                        billing_last_name=request.user.last_name,
-                                        order_total_price=cart.total_price,
-                                        ip_address=request.META['REMOTE_ADDR'],
-                                        order_status=1)
-    
+    try:
+        order = Order.objects.create_from_cart(request, cart,
+                                            customer=request.user.get_profile(),
+                                            billing_first_name=request.user.first_name,
+                                            billing_last_name=request.user.last_name,
+                                            order_total_price=cart.total_price,
+                                            ip_address=request.META['REMOTE_ADDR'],
+                                            order_status=1)
+    except Customer.DoesNotExist:
+        return HttpResponse('error')
+
     if 'POST' == request.method:
         orderForm = OrderForm(request.POST, instance=order)
         if orderForm.is_valid():
@@ -72,9 +65,6 @@ def save_order(request):
             return redirect('/order/checkout/' + order.pk)
         else:
             return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
-
-    #    if order is None:
-    #        return render_to_response('no_cart.html', None, RequestContext(request))
 
     orderForm = OrderForm(instance=order)
     return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
@@ -91,9 +81,9 @@ def change_qty(request, orderId, orderProductId, count):
         order = Order.objects.get(pk=orderId)
         orderProduct = OrderProduct.objects.get(pk=orderProductId, order=orderId)
     except Order.DoesNotExist:
-        return 'error'
+        return HttpResponse('error')
     except OrderProduct.DoesNotExist:
-        return 'error'
+        return HttpResponse('error')
     else:
         orderProduct.product_quantity = orderProduct.product_quantity + int(count)
 
@@ -106,3 +96,14 @@ def change_qty(request, orderId, orderProductId, count):
             orderProduct.save()
             return HttpResponse(simplejson.dumps({'total':str(order.order_total_price), 'qty':str(orderProduct.product_quantity)}))
 
+def paypal_return(request):
+    print request
+    try:
+        if 'POST' == request.method:
+            paypalIpnForm = PayPalIPNForm(request.POST)
+            paypalIpnForm.save()
+            return HttpResponse('return success')
+        else:
+            return HttpResponse('error')
+    except Exception, e:
+        return HttpResponse('exception')
