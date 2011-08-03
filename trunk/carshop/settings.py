@@ -84,7 +84,7 @@ MIDDLEWARE_CLASSES = (
 'django.middleware.locale.LocaleMiddleware',
 'django.contrib.auth.middleware.AuthenticationMiddleware',
 'django.contrib.messages.middleware.MessageMiddleware',
-#'debug_toolbar.middleware.DebugToolbarMiddleware',
+'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

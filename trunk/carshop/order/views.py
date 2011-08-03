@@ -17,7 +17,25 @@ from ..cart.models import Cart
 
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def checkout(request, orderId):
-    order = Order.objects.get(pk=orderId)
+
+    #print(Order.objects.select_related().get(pk=orderId).as_sql())
+    #print(Order.objects.get(pk=orderId).as_sql())
+
+    order = Order.objects.select_related().get(pk=orderId)
+
+    if request.user.pk != order.customer_id:
+        return HttpResponse('error')
+
+    if 'POST' == request.method:
+        orderForm = OrderForm(request.POST, instance=order)
+        if orderForm.is_valid():
+            orderForm.save()
+            #return redirect('/order/checkout/' + order.pk)
+        else:
+            return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
+    elif 'GET' == request.method:
+        orderForm = OrderForm(instance=order)
+        return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk}, RequestContext(request))
 
     paypal_dict = {
         'business': 'xtwxfx_1303744118_biz@gmail.com',
@@ -58,16 +76,8 @@ def save_order(request):
     except Customer.DoesNotExist:
         return HttpResponse('error')
 
-    if 'POST' == request.method:
-        orderForm = OrderForm(request.POST, instance=order)
-        if orderForm.is_valid():
-            orderForm.save()
-            return redirect('/order/checkout/' + order.pk)
-        else:
-            return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
-
     orderForm = OrderForm(instance=order)
-    return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
+    return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk}, RequestContext(request))
 
 @login_required(redirect_field_name='/order/orderStatus.html', login_url='/login')
 def order_status(request):
@@ -95,6 +105,34 @@ def change_qty(request, orderId, orderProductId, count):
             order.save()
             orderProduct.save()
             return HttpResponse(simplejson.dumps({'total':str(order.order_total_price), 'qty':str(orderProduct.product_quantity)}))
+
+def remove_order(request, orderId):
+    try:
+        Order.objects.get(pk=orderId).delete()
+        OrderProduct.objects.filter(order=orderId).delete()
+    except Exception, e:
+        print e
+        return HttpResponse('error')
+    else:
+        return HttpResponse(Order.objects.calc_unpal_count(request))
+
+def remove_order_product(request, orderId, orderProductId):
+    try:
+        order = Order.objects.get(pk=orderId)
+        orderProduct = OrderProduct.objects.get(pk=orderProductId)
+
+        order.order_total_price = order.order_total_price - orderProduct.product_unit_price * orderProduct.product_quantity
+        if 0 == order.order_total_price:
+            order.delete()
+        else:
+            order.save()
+        orderProduct.delete()
+    except Exception, e:
+        print e
+        return HttpResponse('error')
+    else:
+        return HttpResponse(order.order_total_price)
+
 
 def paypal_return(request):
     print request

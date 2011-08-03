@@ -3,250 +3,233 @@
 {% block title %}Register{% endblock %}
 
 {% block main %}
-<script language="javascript" type="text/javascript">
-function countryChange(countrySelect){
-	var stateSelect = document.getElementById('id_state');
-	if(countrySelect.value != -1){
-		new Ajax.Request('/findStateOrCity/' + countrySelect.value, {
-			method:'get',
-			onSuccess: function(transport){
-				var jsonData = transport.responseText.evalJSON();
-				stateSelect.options.length = 0;
-				stateSelect.options.add(new Option("Select...", "-1"));
-				for(var i=0;i<jsonData.length;i++){
-					stateSelect.options.add(new Option(jsonData[i].fields.name,jsonData[i].pk));
-				}
-			}
-		});
-	}
-	else{
-		stateSelect.options.length = 0;
-		stateSelect.options.add(new Option("Select...", "-1"));
-	}
-}
+    <script language="javascript" type="text/javascript" src="/medias/scripts/country_state_city.js"></script>
+    <script language="javascript" type="text/javascript">
 
-function stateChange(stateSelect){
-	var citySelect = document.getElementById('id_city');
-	if(stateSelect.value != -1){
-		new Ajax.Request('/findStateOrCity/' + stateSelect.value, {
-			method:'get',
-			onSuccess: function(transport){
-				var jsonData = transport.responseText.evalJSON();
-				citySelect.options.length = 0;
-				citySelect.options.add(new Option("Select...", "-1"));
-				for(var i=0;i<jsonData.length;i++){
-					citySelect.options.add(new Option(jsonData[i].fields.name,jsonData[i].pk));
-				}
-			}
-		});
-	}
-	else{
-		citySelect.options.length = 0;
-		citySelect.options.add(new Option("Select...", "-1"));
-	}
-}
-
-function checkForm(){
+        function checkForm() { // js 验证
 
 
+            return true;
+        }
 
-	return true;
-}
+        function submit() {
+            if (checkForm())
+                document.registerForm.submit();
+            return false;
+        }
 
-function submit(){
-	if(checkForm())
-		document.registerForm.submit();
-	return false;
-}
+    </script>
+    <div style="padding:0 0 0 7em;">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="2%" style="width:17px;background:url(/medias/images/conblu1.jpg) no-repeat">
 
-</script>
-<div style="padding:0 0 0 7em;">
-	<table width="90%" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td width="2%" style="width:17px;background:url(/medias/images/conblu1.jpg) no-repeat">
-				
-			</td>
-			<td width="96%" class="blu_bg" align="center">
-				<img style="display:block;" src="/medias/images/n_cust.jpg" alt="New Customer Sign Up" />
-			</td>
-			<td width="2%" style="width:17px;background:url(/medias/images/conblu2.jpg) no-repeat">
-				
-			</td>
-		</tr>
-		<tr>
-			<td colspan="3" class="blu_rl">
-				<div id="">
-					<table width="100%" cellpadding="0" cellspacing="0" border="0">
-						<tr>
-							<td width="100%">
-								<span id="" class="error" style="font-weight:bold;"></span></td>
-						</tr>
-						<tr>
-							<td width="100%">
-								<div id="" onkeypress="" style="width:100%;">
-									<div id="" style="display:none;">
-										<div class="PleaseWait" style="z-index: 150; position: absolute;">
-											<img src="/medias/images/loader.gif" alt="" /></div>
-									</div>
-									<form action="/register" name="registerForm" method="post">
-									<table cellpadding="4" cellspacing="0" border="0" width="100%">
-										<tr id="">
-											<td colspan="2" class="text_bg2" align="center">
-												<span id="">PERSONAL INFORMATION</span></td>
-										</tr>
-										<tr>
-											<td colspan="2">
-											</td>
-										</tr>
-										<tr>
-											<td class="textb" width="40%" valign="top">First Name: <b class="star">*</b></td>
-											<td width="60%">
-												{{ form.first_name }}
-												<span id="" class="error" style="color:Red;">{{ form.first_name.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">Last Name:<b class="star">*</b></td>
-											<td>
-												{{ form.last_name }}
-												<span id="" class="error" style="color:Red;">{{ form.last_name.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb" width="40%" valign="top">
-																Email Address: <b class="star">*</b></td>
-											<td>
-												{{ form.email }}
+        </td>
+        <td width="96%" class="blu_bg" align="center">
+            <img style="display:block;" src="/medias/images/n_cust.jpg" alt="New Customer Sign Up"/>
+        </td>
+        <td width="2%" style="width:17px;background:url(/medias/images/conblu2.jpg) no-repeat">
+
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" class="blu_rl">
+            <div id="">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="100%">
+                            <span id="" class="error" style="font-weight:bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="100%">
+                            <div id="" onkeypress="" style="width:100%;">
+                                <div id="" style="display:none;">
+                                    <div class="PleaseWait" style="z-index: 150; position: absolute;">
+                                        <img src="/medias/images/loader.gif" alt=""/></div>
+                                </div>
+                                <form action="/register" name="registerForm" method="post">
+                                    <table cellpadding="4" cellspacing="0" border="0" width="100%">
+                                        <tr id="">
+                                            <td colspan="2" class="text_bg2" align="center">
+                                                <span id="">PERSONAL INFORMATION</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb" width="40%" valign="top">First Name: <b
+                                                    class="star">*</b></td>
+                                            <td width="60%">
+                                                {{ form.first_name }}
+                                                        <span id="" class="error"
+                                                              style="color:Red;">{{ form.first_name.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">Last Name:<b class="star">*</b></td>
+                                            <td>
+                                                {{ form.last_name }}
+                                                        <span id="" class="error"
+                                                              style="color:Red;">{{ form.last_name.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb" width="40%" valign="top">
+                                                Email Address: <b class="star">*</b></td>
+                                            <td>
+                                                {{ form.email }}
                                                 <span id="" style="color:Red;"></span>
-												<span id="" class="error" style="color:Red;">{{ form.email.errors }}</span>
-												
-											</td>
-										</tr>
-										<tr>
-											<td class="textb" valign="top">Address: <b class="star">*</b></td>
-											<td>
-												{{ form.address }}
-												<span id="" class="error" style="color:Red;">{{ form.address.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb" valign="top">Zip: <b class="star">*</b></td>
-											<td>
-												{{ form.zip }}
-												<span id="" class="error" style="color:Red;">{{ form.zip.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">Country:<b class="star">*</b></td>
-											<td>
-												{{ form.country }}<span id="" class="error" style="color:Red;">{{ form.country.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">State:<b class="star">*</b></td>
-											<td>
-												{{ form.state }}<span id="" class="error" style="color:Red;">{{ form.state.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">City:<b class="star">*</b></td>
-											<td>
-												{{ form.city }}<span id="" class="error" style="color:Red;">{{ form.city.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">Gender:</td>
-											<td>
-												{{ form.gender }}<span id="" class="error" style="color:Red;">{{ form.gender.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">Company:</td>
-											<td>
-												{{ form.company }}<span id="" class="error" style="color:Red;">{{ form.company.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">Phone Number:</td>
-											<td>
-												{{ form.phone_number }}<span id="" class="error" style="color:Red;">{{ form.phone_numbererrors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="textb">Fax Number:</td>
-											<td>
-												{{ form.fax_number }}<span id="" class="error" style="color:Red;">{{ form.fax_number.errors }}</span>
-											</td>
-										</tr>
-										<tr id="">
-											<td colspan="2" class="textb" style="text-align:center;">
-												Would you like to subscribe for free Newsletter? :
-												{{ form.receive_email }}
-												<span id="" class="error" style="color:Red;">{{ form.receive_email.errors }}</span>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="2" width="100%">
-												<div id="" onkeypress="" style="width:100%;">
-													<table width="100%" cellpadding="4" cellspacing="0" border="0">
-														<tr>
-															<td colspan="2" class="text_bg2" align="center">
-																LOGIN INFORMATION</td>
-														</tr>
-														<tr>
-															<td class="textb" valign="top">
-																Username: <b class="star">*</b></td>
-															<td width="60%">
-																{{ form.username }}
-																<span id="" class="error" style="color:Red;">{{ form.username.errors }}</span>
-															</td>
-														</tr>
-														<tr>
-															<td class="textb" valign="top">
-																Password: <b class="star">*</b></td>
-															<td width="60%">
-																{{ form.password }}
-																<span id="" class="error" style="color:Red;">{{ form.password.errors }}</span>
-															</td>
-														</tr>
-														<tr>
-															<td class="textb" valign="top">
-																Confirm Password:<b class="star">*</b>
-															</td>
-															<td width="60%">
-																<input name="" type="password" maxlength="30" id="" class="box1" />
-															</td>
-														</tr>
-													</table>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-											</td>
-											<td>
-												<input type="image" name="" id="" src="/medias/images/buttons/submit_btn.gif" alt="Submit" onclick="submit()" value="Submit" style="border-width:0px;" />
-												<input type="image" name="" id="" src="/medias/images/buttons/reset.gif" alt="Reset" onclick="" style="border-width:0px;" />
-											</td>
-										</tr>
-									</table>
-									</form>
-							</div>
-						</td>
-					</tr>
-			</table>  
-		</div>
-	</td>
-	</tr>
-	<tr>
-		<td>
-			<img src="/medias/images/conblu3.jpg" alt="" /></td>
-		<td class="blu_bgb">&nbsp;</td>
-		<td><img src="/medias/images/conblu4.jpg" alt="" /></td>
-	</tr>
-</table>
+                                                        <span id="" class="error"
+                                                              style="color:Red;">{{ form.email.errors }}</span>
 
-</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb" valign="top">Address: <b class="star">*</b></td>
+                                            <td>
+                                                {{ form.address }}
+                                                        <span id="" class="error"
+                                                              style="color:Red;">{{ form.address.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb" valign="top">Zip: <b class="star">*</b></td>
+                                            <td>
+                                                {{ form.zip }}
+                                                        <span id="" class="error"
+                                                              style="color:Red;">{{ form.zip.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">Country:<b class="star">*</b></td>
+                                            <td>
+                                                        {{ form.country }}<span id="" class="error"
+                                                                                style="color:Red;">{{ form.country.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">State:<b class="star">*</b></td>
+                                            <td>
+                                                        {{ form.state }}<span id="" class="error"
+                                                                              style="color:Red;">{{ form.state.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">City:<b class="star">*</b></td>
+                                            <td>
+                                                        {{ form.city }}<span id="" class="error"
+                                                                             style="color:Red;">{{ form.city.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">Gender:</td>
+                                            <td>
+                                                        {{ form.gender }}<span id="" class="error"
+                                                                               style="color:Red;">{{ form.gender.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">Company:</td>
+                                            <td>
+                                                        {{ form.company }}<span id="" class="error"
+                                                                                style="color:Red;">{{ form.company.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">Phone Number:</td>
+                                            <td>
+                                                        {{ form.phone_number }}<span id="" class="error"
+                                                                                     style="color:Red;">{{ form.phone_numbererrors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="textb">Fax Number:</td>
+                                            <td>
+                                                        {{ form.fax_number }}<span id="" class="error"
+                                                                                   style="color:Red;">{{ form.fax_number.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr id="">
+                                            <td colspan="2" class="textb" style="text-align:center;">
+                                                Would you like to subscribe for free Newsletter? :
+                                                {{ form.receive_email }}
+                                                        <span id="" class="error"
+                                                              style="color:Red;">{{ form.receive_email.errors }}</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" width="100%">
+                                                <div id="" onkeypress="" style="width:100%;">
+                                                    <table width="100%" cellpadding="4" cellspacing="0"
+                                                           border="0">
+                                                        <tr>
+                                                            <td colspan="2" class="text_bg2" align="center">
+                                                                LOGIN INFORMATION
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textb" valign="top">
+                                                                Username: <b class="star">*</b></td>
+                                                            <td width="60%">
+                                                                {{ form.username }}
+                                                                        <span id="" class="error"
+                                                                              style="color:Red;">{{ form.username.errors }}</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textb" valign="top">
+                                                                Password: <b class="star">*</b></td>
+                                                            <td width="60%">
+                                                                {{ form.password }}
+                                                                        <span id="" class="error"
+                                                                              style="color:Red;">{{ form.password.errors }}</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="textb" valign="top">
+                                                                Confirm Password:<b class="star">*</b>
+                                                            </td>
+                                                            <td width="60%">
+                                                                <input name="" type="password" maxlength="30"
+                                                                       id="" class="box1"/>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <input type="image" name="" id=""
+                                                       src="/medias/images/buttons/submit_btn.gif" alt="Submit"
+                                                       onclick="submit()" value="Submit"
+                                                       style="border-width:0px;"/>
+                                                <input type="image" name="" id=""
+                                                       src="/medias/images/buttons/reset.gif" alt="Reset"
+                                                       onclick="" style="border-width:0px;"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="/medias/images/conblu3.jpg" alt=""/></td>
+        <td class="blu_bgb">&nbsp;</td>
+        <td><img src="/medias/images/conblu4.jpg" alt=""/></td>
+    </tr>
+    </table>
+
+    </div>
 
 
 {% endblock %}

@@ -1,7 +1,6 @@
 # coding: utf-8
 import logging
 from django.core.cache import cache
-from django.db.models import Count
 
 from .models import Parameter
 from .cache_util import *
@@ -84,14 +83,10 @@ def getCartCount(request):
 def getUnPalCount(request):
 
     if request.user.is_authenticated():
-        try:
-            order_status__count = Order.objects.filter(customer = request.user.get_profile(), order_status=1).aggregate(Count('order_status'))['order_status__count']
-        except Order.DoesNotExist:
-            return {}
-        except Customer.DoesNotExist:
-            return {}
-        else:
-            return {'order_status__count': order_status__count}
+        order_status__count = Order.objects.calc_unpal_count(request)
+        if 0 == order_status__count:
+                return {}
+        return {'order_status__count': order_status__count}
     else:
         return {}
     
