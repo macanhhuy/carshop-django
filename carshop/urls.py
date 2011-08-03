@@ -39,7 +39,7 @@ urlpatterns = patterns(
     (r'^logout$', logout_view),
     (r'^register$', register),
     (r'^toRegister$', toRegister),
-    (r'^findStateOrCity/(?P<countryId>\d{1,6})$', findStateOrCity),
+    (r'^findStateOrCity/(?P<countryId>\d{1,6})$', find_state_or_city),
 
     #(r'^checkcode/(?P<time>\d{13})$', checkcode),
 

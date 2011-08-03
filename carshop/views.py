@@ -155,7 +155,7 @@ def toRegister(request):
     return render_to_response('register.html', {'form': form}, RequestContext(request))
 
 
-def findStateOrCity(reqeust, countryId):
+def find_state_or_city(reqeust, countryId):
     states = CountryStateCity.objects.extra(where=['parent_id=%s', ], params=[countryId, ])
     format = 'json'
     mimetype = 'application/javascript'

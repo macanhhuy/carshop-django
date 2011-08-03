@@ -2,7 +2,7 @@
 
 from django import forms
 from carshop.widgets import NonStyleRadioFieldRenderer
-from carshop.models import CountryStateCity
+from .models import CountryStateCity
 
 class RegisterForm(forms.Form):
     #def __init__(self, *args, **kwargs):

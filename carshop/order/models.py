@@ -2,6 +2,7 @@
 
 #from django.contrib.auth.models import User
 import datetime
+from django.db.models import Count
 from django.db import models
 from ..product.models import Product
 from ..models import Parameter, AddressFormat
@@ -67,6 +68,16 @@ class OrderManager(models.Manager):
                     for orderProduct in orderProducts:
                         setattr(orderProduct, 'product_image', orderProduct.product.product_image)
             return orders
+
+    def calc_unpal_count(self, request):
+        try:
+            order_status__count = Order.objects.filter(customer = request.user.get_profile(), order_status=1).aggregate(Count('order_status'))['order_status__count']
+        except Order.DoesNotExist:
+            return 0
+        except Customer.DoesNotExist:
+            return 0
+        else:
+            return order_status__count
 
 class Order(models.Model): # 订单表
 

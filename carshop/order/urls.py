@@ -12,4 +12,8 @@ urlpatterns = patterns(
     (r'^paypalReturn$', paypal_return),
 
     (r'^changeQty/(?P<orderId>.{36})/(?P<orderProductId>\d{1,3})/(?P<count>-?\d{1,2})', change_qty),
+
+    (r'removeOrder/(?P<orderId>.{36})$', remove_order),
+
+    (r'removeOrderProduct/(?P<orderId>.{36})/(?P<orderProductId>\d{1,4})$', remove_order_product),
 )

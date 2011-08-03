@@ -4,8 +4,9 @@
 {% block title %}check order{% endblock %}
 
 {% block main %}
+<script language="javascript" type="text/javascript" src="/medias/scripts/country_state_city.js"></script>
 
-<form action="/order/checkout" method="POST" >
+<form action="/order/checkout/{{ orderId }}" method="POST" >
 
 <table class="order">
 {{ orderForm.as_table }}
