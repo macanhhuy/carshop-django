@@ -5,7 +5,9 @@ function countryChange(countrySelect) {
                     success: function(data, status) {
                         var jsonData = eval("(" + data + ")");
                         $('#id_state').empty();
+                        $('#id_city').empty();
                         $('#id_state').append("<option value='-1'>Select...</option>");
+                        $('#id_city').append("<option value='-1'>Select...</option>");
                         for (var i = 0; i < jsonData.length; i++) {
                             $("<option value='" + jsonData[i].pk + "'>" + jsonData[i].fields.name + "</option>").appendTo('#id_state');
                         }
