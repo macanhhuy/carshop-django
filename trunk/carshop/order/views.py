@@ -89,7 +89,7 @@ def generate_order(request):
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def save_order(request):
     cart = Cart.objects.get_or_create_from_request(request)
-
+    addresses = CustomerAddressHistory.objects.select_related().filter(customer=request.user)
     try:
         order = Order.objects.create_from_cart(request, cart,
                                                customer=request.user.get_profile(),
@@ -102,7 +102,7 @@ def save_order(request):
         return HttpResponse('error')
 
     orderForm = OrderForm(instance=order)
-    return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk}, RequestContext(request))
+    return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk, 'addresses': addresses}, RequestContext(request))
 
 
 @login_required(redirect_field_name='/order/orderStatus.html', login_url='/login')

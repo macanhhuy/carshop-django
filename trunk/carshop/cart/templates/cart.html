@@ -22,7 +22,8 @@
 
     Total Price: {{ totalPrice }}
     <br />
-    <a href="/order/checkout" alt="">Checkout</a>
+    <input type="button" value="PAY NOW" class="pay_now"
+                           onclick="window.location='/order/checkout'"/>
     <br />
     <a href="/cart/clean" alt="checkout">Clean Cart</a>
 {% endblock %}
