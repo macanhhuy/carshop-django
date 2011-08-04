@@ -119,7 +119,7 @@ class Order(models.Model): # 订单表
     billing_first_name = models.CharField(max_length=30) #
     billing_last_name = models.CharField(max_length=30) #
     billing_company = models.CharField(max_length=64, blank=True, null=True) #
-    billing_street_address = models.CharField(max_length=64, blank=True, null=True) #
+    billing_street_address = models.TextField(max_length=500, blank=True, null=True) #
     billing_suburb = models.CharField(max_length=32, blank=True, null=True) #
     billing_city = models.CharField(max_length=32, blank=True, null=True) #
     billing_postcode = models.CharField(max_length=10, blank=True, null=True) #

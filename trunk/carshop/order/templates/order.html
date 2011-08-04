@@ -4,15 +4,73 @@
 {% block title %}check order{% endblock %}
 
 {% block main %}
-<script language="javascript" type="text/javascript" src="/medias/scripts/country_state_city.js"></script>
+    <script language="javascript" type="text/javascript" src="/medias/scripts/country_state_city.js"></script>
+    <script language="javascript" type="text/javascript">
 
-<form action="/order/checkout/{{ orderId }}" method="POST" >
+        function changeAddress(radioAddress, countryId, stateId, cityId, firstName, lastName, streetAddress, zip) {
+            if ($('#' + radioAddress).attr("checked")) {
+                $.ajax({url:'/findStateOrCity/' + countryId,
+                            type: 'get',
+                            success: function(data, status) {
+                                var jsonData = eval("(" + data + ")");
+                                $('#id_state').empty();
+                                $('#id_state').append("<option value='-1'>Select...</option>");
+                                for (var i = 0; i < jsonData.length; i++) {
+                                    $("<option value='" + jsonData[i].pk + "'>" + jsonData[i].fields.name + "</option>").appendTo('#id_state');
+                                }
 
-<table class="order">
-{{ orderForm.as_table }}
-</table>
-<input type="submit" value="next" />
+                                $.ajax({url:'/findStateOrCity/' + stateId,
+                                            type: 'get',
+                                            success: function(data, status) {
+                                                var jsonData = eval("(" + data + ")");
 
-</form>
+                                                $('#id_city').empty();
+                                                $('#id_city').append("<option value='-1'>Select...</option>");
+                                                for (var i = 0; i < jsonData.length; i++) {
+                                                    $("<option value='" + jsonData[i].pk + "'>" + jsonData[i].fields.name + "</option>").appendTo('#id_city');
+                                                }
+
+                                                $('#id_country').attr('value', countryId);
+                                                $('#id_state').attr('value', stateId);
+                                                $('#id_city').attr('value', cityId);
+
+                                                $('#id_billing_first_name').attr('value', firstName);
+                                                $('#id_billing_last_name').attr('value', lastName);
+                                                $('#id_billing_street_address').attr('value', streetAddress);
+                                                $('#id_billing_postcode').attr('value', zip);
+                                            },
+                                            error: function(xhr, desc, err) {
+                                                alert(err);
+                                            }
+                                        });
+
+
+                            },
+                            error: function(xhr, desc, err) {
+                                alert(err);
+                            }
+                        });
+
+            }
+
+        }
+
+    </script>
+
+    <div id="div_address">
+        {% for address in addresses %}
+            <input type="radio" name="radio_address" id="radio_address_{{ address.pk }}" style="vertical-align:middle;"
+                   onclick="changeAddress('radio_address_' + {{ address.pk }}, '{{ address.country }}', '{{ address.state }}', '{{ address.city }}', '{{ address.first_name }}', '{{ address.last_name }}', '{{ address.street_address }}', '{{ address.zip }}')">
+            <label for="radio_address_{{ address.pk }}" style="vertical-align:middle;">{{ address }}</label><br/>
+        {% endfor %}
+    </div>
+    <form action="/order/checkout/{{ orderId }}" method="POST">
+
+        <table class="order">
+            {{ orderForm.as_table }}
+        </table>
+        <input type="submit" value="next"/>
+
+    </form>
 
 {% endblock %}

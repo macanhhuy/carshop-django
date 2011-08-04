@@ -106,7 +106,12 @@ class CustomerAdmin(admin.ModelAdmin):
     
     #def full_name(self, obj):
     #    return ("%s %s" % (self.customer_firstname, self.customer_lastname))
-    
+
+
+class CustomerAddressHistoryAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(CustomerMessage, CustomerMessageAdmin)
 #admin.site.register(CustomerBasket, CustomerBasketAdmin)
 admin.site.register(Customer, CustomerAdmin)
+admin.site.register(CustomerAddressHistory, CustomerAddressHistoryAdmin)

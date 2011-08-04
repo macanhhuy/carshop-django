@@ -13,11 +13,11 @@ from ..decorators import login_required, anti_resubmit
 from .models import *
 from .forms import *
 from ..cart.models import Cart
+from ..customer.models import CustomerAddressHistory
 
 
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def checkout(request, orderId):
-
     #print(Order.objects.select_related().get(pk=orderId).as_sql())
     #print(Order.objects.get(pk=orderId).as_sql())
 
@@ -26,16 +26,42 @@ def checkout(request, orderId):
     if request.user.pk != order.customer_id:
         return HttpResponse('error')
 
+    addresses = CustomerAddressHistory.objects.select_related().filter(customer=request.user)
     if 'POST' == request.method:
         orderForm = OrderForm(request.POST, instance=order)
         if orderForm.is_valid():
             orderForm.save()
-            #return redirect('/order/checkout/' + order.pk)
+
+            try:
+                customerAddressHistory = CustomerAddressHistory.objects.get(customer=request.user,
+                                                                            first_name=orderForm.cleaned_data[
+                                                                                       'billing_first_name'],
+                                                                            last_name=orderForm.cleaned_data[
+                                                                                      'billing_last_name'],
+                                                                            zip=orderForm.cleaned_data[
+                                                                                'billing_postcode'],
+                                                                            country=orderForm.cleaned_data[
+                                                                                    'billing_country'],
+                                                                            state=orderForm.cleaned_data[
+                                                                                  'billing_state'],
+                                                                            city=orderForm.cleaned_data['billing_city'],
+                                                                            street_address=orderForm.cleaned_data[
+                                                                                           'billing_street_address'], )
+            except CustomerAddressHistory.DoesNotExist:
+                CustomerAddressHistory.objects.create(customer=request.user.get_profile(),
+                                                      first_name=orderForm.cleaned_data['billing_first_name'],
+                                                      last_name=orderForm.cleaned_data['billing_last_name'],
+                                                      zip=orderForm.cleaned_data['billing_postcode'],
+                                                      country=orderForm.cleaned_data['billing_country'],
+                                                      state=orderForm.cleaned_data['billing_state'],
+                                                      city=orderForm.cleaned_data['billing_city'],
+                                                      street_address=orderForm.cleaned_data['billing_street_address'], )
+
         else:
-            return render_to_response('order.html', {'orderForm': orderForm}, RequestContext(request))
+            return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk, 'addresses': addresses}, RequestContext(request))
     elif 'GET' == request.method:
         orderForm = OrderForm(instance=order)
-        return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk}, RequestContext(request))
+        return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk, 'addresses': addresses}, RequestContext(request))
 
     paypal_dict = {
         'business': 'xtwxfx_1303744118_biz@gmail.com',
@@ -53,7 +79,6 @@ def checkout(request, orderId):
     return render_to_response('checkout.html', context)
 
 
-
 @login_required(redirect_field_name='/order/checkout', login_url='/login')
 def generate_order(request):
     return render_to_response('order.html', {}, RequestContext(request))
@@ -61,23 +86,24 @@ def generate_order(request):
 
 @never_cache
 @anti_resubmit('save_order')
-@login_required(redirect_field_name='/order/saveOrder', login_url='/login')
+@login_required(redirect_field_name='/order/checkout', login_url='/login')
 def save_order(request):
     cart = Cart.objects.get_or_create_from_request(request)
 
     try:
         order = Order.objects.create_from_cart(request, cart,
-                                            customer=request.user.get_profile(),
-                                            billing_first_name=request.user.first_name,
-                                            billing_last_name=request.user.last_name,
-                                            order_total_price=cart.total_price,
-                                            ip_address=request.META['REMOTE_ADDR'],
-                                            order_status=1)
+                                               customer=request.user.get_profile(),
+                                               billing_first_name=request.user.first_name,
+                                               billing_last_name=request.user.last_name,
+                                               order_total_price=cart.total_price,
+                                               ip_address=request.META['REMOTE_ADDR'],
+                                               order_status=1)
     except Customer.DoesNotExist:
         return HttpResponse('error')
 
     orderForm = OrderForm(instance=order)
     return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk}, RequestContext(request))
+
 
 @login_required(redirect_field_name='/order/orderStatus.html', login_url='/login')
 def order_status(request):
@@ -99,12 +125,14 @@ def change_qty(request, orderId, orderProductId, count):
 
         if orderProduct.product_quantity < 0:
             orderProduct.product_quantity = 0
-            return HttpResponse(simplejson.dumps({'total':str(order.order_total_price), 'qty':0}))
+            return HttpResponse(simplejson.dumps({'total': str(order.order_total_price), 'qty': 0}))
         else:
             order.order_total_price = order.order_total_price + orderProduct.product_unit_price * int(count)
             order.save()
             orderProduct.save()
-            return HttpResponse(simplejson.dumps({'total':str(order.order_total_price), 'qty':str(orderProduct.product_quantity)}))
+            return HttpResponse(
+                simplejson.dumps({'total': str(order.order_total_price), 'qty': str(orderProduct.product_quantity)}))
+
 
 def remove_order(request, orderId):
     try:
@@ -115,6 +143,7 @@ def remove_order(request, orderId):
         return HttpResponse('error')
     else:
         return HttpResponse(Order.objects.calc_unpal_count(request))
+
 
 def remove_order_product(request, orderId, orderProductId):
     try:

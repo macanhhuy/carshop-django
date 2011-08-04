@@ -41,7 +41,7 @@ class Customer(models.Model): # 客户表
     customer_city = models.ForeignKey(CountryStateCity, related_name="city", blank=True, null=True) # 城市
 
     def __unicode__(self):
-        return ("%s %s" % (self.customer_firstname, self.customer_lastname))
+        return ("%s" % (self.customer_name))
 
     class Meta:
         db_table = 'customer'
@@ -57,19 +57,23 @@ class CustomerAddressHistory(models.Model):
     
     customer = models.ForeignKey(Customer)
     
-    receive_name = models.CharField(max_length=60)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
     
-    phone_no = models.CharField(max_length=32) # 客户电话
+    phone_no = models.CharField(max_length=32, blank=True, null=True) # 客户电话
     fax_no = models.CharField(max_length=32, blank=True, null=True) # 客户传真
     zip = models.CharField(max_length=10) # 客户邮编
     
-    country = models.ForeignKey(CountryStateCity, related_name="country_history", blank=True, null=True) # 国家
-    state = models.ForeignKey(CountryStateCity, related_name="state_history", blank=True, null=True) # 州/省
-    city = models.ForeignKey(CountryStateCity, related_name="city_history", blank=True, null=True) # 城市
-    detail_address = models.CharField(max_length=500)
+    country = models.CharField(max_length=32, blank=True)#models.ForeignKey(CountryStateCity, related_name="country_history", blank=True, null=True) # 国家
+    state = models.CharField(max_length=32, blank=True)#models.ForeignKey(CountryStateCity, related_name="state_history", blank=True, null=True) # 州/省
+    city = models.CharField(max_length=32, blank=True)#models.ForeignKey(CountryStateCity, related_name="city_history", blank=True, null=True) # 城市
+    street_address = models.TextField(max_length=500)
 
     time_add = models.DateTimeField(default=datetime.datetime.now)
-    
+
+    def __unicode__(self):
+        return str(self.time_add) + ' ' + self.street_address
+
     class Meta:
         db_table = 'customer_address_history'
 
