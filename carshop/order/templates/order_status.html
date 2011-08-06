@@ -89,17 +89,17 @@
             </tr>
             </thead>
             {% if order.order_products %}
-                <tbody id="tbody_{{ order.pk }}">
+                <tbody id="tbody_{{ order.pk }}" style="BORDER-BOTTOM: #a8a8a8 1px dashed;">
                 {% for order_product in order.order_products %}
                     <tr id="tr_{{ order_product.pk }}">
                         <td style="width:80px;"><img style="height:80px;width:80px;margin-right:30px;"
                                                      src="/medias/images/{{ order_product.product_image }}"/></td>
                         <td>{{ order_product.product_name }}</td>
                         <td>{{ order_product.product_unit_price }}</td>
-                        <td><a href="javascript:" onclick="changeQty('{{ order.pk }}', {{ order_product.pk }},'-1');">---</a>&nbsp;<input
+                        <td><a href="javascript:" onclick="changeQty('{{ order.pk }}', {{ order_product.pk }},'-1');"><img src="/medias/images/list_sub.png"></a>&nbsp;<input
                                 id="qty_{{ order_product.pk }}" type="text" value="{{ order_product.product_quantity }}"
                                 class="qty" readonly="readonly"/>&nbsp;<a href="javascript:"
-                                                                          onclick="changeQty('{{ order.id }}', {{ order_product.pk }}, '1');">+++</a>
+                                                                          onclick="changeQty('{{ order.id }}', {{ order_product.pk }}, '1');"><img src="/medias/images/list_add.png"></a>
                         </td>
                         <td></td>
                         <td><a href="javascript:"

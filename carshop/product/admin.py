@@ -61,7 +61,10 @@ class ProductAdmin(admin.ModelAdmin):
                 if not isinstance(field, ImageField):
                     continue
                 if field.name in form.changed_data:
-                    os.unlink(Product.objects.get(pk=obj.pk).product_image.path)
+                    try:
+                        os.unlink(Product.objects.get(pk=obj.pk).product_image.path)
+                    except Product.DoesNotExist:
+                        pass
 
         return super(ProductAdmin, self).save_model(request, obj, form, change)
 

@@ -31,12 +31,34 @@ def add_item(request, productId, quantity):
 
     return HttpResponse(simplejson.dumps({'result': 'true', 'cartCount': cart.cart_count}))
 
+def change_item_qty(request, productId, quantity):
+    product = Product.objects.get(id=productId)
+
+    try:
+        cart = Cart.objects.get_or_create_from_request(request)
+        item_qty = cart.put_into_cart(product, quantity)
+    except Exception, e:
+        print e
+        return HttpResponse(simplejson.dumps({'totalPrice': str(cart.total_price), 'itemQty': str(item_qty), 'cartCount': str(cart.cart_count)}))
+    else:
+        return HttpResponse(simplejson.dumps({'totalPrice': str(cart.total_price), 'itemQty': str(item_qty), 'cartCount': str(cart.cart_count)}))
+
 
 def remove_item(request, itemId):
-    cart = Cart.objects.get_or_create_from_request(request)
-    cart.put_out_cart(itemId)
+    try:
+        cart = Cart.objects.get_or_create_from_request(request)
+        cart.put_out_cart(itemId)
+        if cart.cart_count is None:
+            cart.clean_cart(request)
+            return HttpResponse(simplejson.dumps({'totalPrice': '', 'cartCount': ''}))
 
-    return HttpResponseRedirect('/cart/cart.html')
+    except Exception, e:
+        print e
+        return render_to_response('error')
+    else:
+        return HttpResponse(simplejson.dumps({'totalPrice': str(cart.total_price), 'cartCount': str(cart.cart_count)}))
+
+    #return HttpResponseRedirect('/cart/cart.html')
     #items = cart.cart_items
     #return render_to_response('cart.html', {'items': items}, RequestContext(request))
 
@@ -44,9 +66,8 @@ def remove_item(request, itemId):
 def cart_view(request):
     cart = Cart.objects.get_or_create_from_request(request)
 
-    
     #print request.META
-    return render_to_response('cart.html', {'items': cart.cart_items, 'totalPrice': cart.total_price}, RequestContext(request))
+    return render_to_response('cart.html', {'items': cart.cart_items, 'cart': cart}, RequestContext(request))
 
 def clean_cart(request):
     cart = Cart.objects.get_or_create_from_request(request)

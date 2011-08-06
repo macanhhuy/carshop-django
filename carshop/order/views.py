@@ -24,7 +24,7 @@ def checkout(request, orderId):
     order = Order.objects.select_related().get(pk=orderId)
 
     if request.user.pk != order.customer_id:
-        return HttpResponse('error')
+        return render_to_response('error.html', {}, RequestContext(request))
 
     addresses = CustomerAddressHistory.objects.select_related().filter(customer=request.user)
     if 'POST' == request.method:
@@ -66,11 +66,11 @@ def checkout(request, orderId):
     paypal_dict = {
         'business': 'xtwxfx_1303744118_biz@gmail.com',
         'amount': order.order_total_price,
-        'item_name': 'Car Seats',
+        'item_name': orderId,
         'invoice': orderId,
         'notify_url': 'http://localhost:8000/paypal_ipn',
         'return_url': 'http://localhost:8000/order/paypalReturn',
-        'cancel_return': 'http://localhost:8000/paypal_cancel',
+        'cancel_return': 'http://localhost:8000/order/paypalCancel',
         }
 
     form = PayPalPaymentsForm(initial=paypal_dict)
@@ -99,7 +99,7 @@ def save_order(request):
                                                ip_address=request.META['REMOTE_ADDR'],
                                                order_status=1)
     except Customer.DoesNotExist:
-        return HttpResponse('error')
+        return render_to_response('error.html', {}, RequestContext(request))
 
     orderForm = OrderForm(instance=order)
     return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk, 'addresses': addresses}, RequestContext(request))
@@ -107,7 +107,10 @@ def save_order(request):
 
 @login_required(redirect_field_name='/order/orderStatus.html', login_url='/login')
 def order_status(request):
-    orders = Order.objects.get_order_and_order_products(customer=request.user.get_profile(), order_status=1)
+    try:
+        orders = Order.objects.get_order_and_order_products(customer=request.user.get_profile(), order_status=1)
+    except Customer.DoesNotExist:
+        return render_to_response('error.html', {}, RequestContext(request))
 
     return render_to_response('order_status.html', {'orders': orders}, RequestContext(request))
 
@@ -117,9 +120,9 @@ def change_qty(request, orderId, orderProductId, count):
         order = Order.objects.get(pk=orderId)
         orderProduct = OrderProduct.objects.get(pk=orderProductId, order=orderId)
     except Order.DoesNotExist:
-        return HttpResponse('error')
+        return render_to_response('error')
     except OrderProduct.DoesNotExist:
-        return HttpResponse('error')
+        return render_to_response('error')
     else:
         orderProduct.product_quantity = orderProduct.product_quantity + int(count)
 
@@ -171,6 +174,6 @@ def paypal_return(request):
             paypalIpnForm.save()
             return HttpResponse('return success')
         else:
-            return HttpResponse('error')
+            return HttpResponse('error.html', {}, RequestContext(request))
     except Exception, e:
         return HttpResponse('exception')

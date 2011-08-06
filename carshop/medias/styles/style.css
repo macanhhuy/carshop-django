@@ -1516,7 +1516,7 @@ ul.slink li a:hover {
     MARGIN: 0px 8px;
     PADDING-TOP: 8px;
     BORDER-BOTTOM: #a8a8a8 1px dashed;
-    HEIGHT: 30px;
+    HEIGHT: 100px;
     TEXT-ALIGN: right;
 }
 
@@ -1604,6 +1604,10 @@ html{_background-image:url(about:blank);}
     font-weight: bold;
     color: #084B9C;
 
+}
+
+img {
+     vertical-align:middle;
 }
  
 
