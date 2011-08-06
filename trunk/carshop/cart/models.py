@@ -7,6 +7,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.db.models import Sum
 
 from ..db.models import *
+from ..product.models import Product
 
 CART_OBJ = 'CART-OBJ'
 
@@ -50,7 +51,7 @@ class Cart(models.Model):
     objects = CartManager()
 
     def put_into_cart(self, product, quantity):
-        CartItem.objects.add_item(self, product, quantity)
+        return CartItem.objects.change_qty(self, product, quantity)
 
     def put_out_cart(self, item_id):
         CartItem.objects.remote_item(self, item_id)
@@ -61,7 +62,10 @@ class Cart(models.Model):
 
     @property
     def cart_count(self):
-        return CartItem.objects.filter(cart=self).aggregate(Sum('quantity'))['quantity__sum']
+        try:
+            return CartItem.objects.filter(cart=self).aggregate(Sum('quantity'))['quantity__sum']
+        except Exception, e:
+            return 0
         
     def clean_cart(self, request):
         CartItem.objects.extra(where=['cart_id=' + str(self.pk),]).delete()
@@ -106,39 +110,47 @@ class ItemManager(models.Manager):
     #        del(kwargs['product'])
     #    return super(ItemManager, self).get(*args, **kwargs)
 
-    def create(self, **kwargs):
-        if 'product' in kwargs:
-            kwargs['object_id'] = kwargs['product'].pk
-            kwargs['object_name'] = kwargs['product'].product_name
-            kwargs['unit_price'] = str(kwargs['product'].product_price)
-        return super(ItemManager, self).create(**kwargs)
+    #def create(self, **kwargs):
+    #    if 'product' in kwargs:
+    #        kwargs['object_id'] = kwargs['product'].pk
+    #        kwargs['object_name'] = kwargs['product'].product_name
+    #        kwargs['unit_price'] = str(kwargs['product'].product_price)
+    #    return super(ItemManager, self).create(**kwargs)
 
-    def add_item(self, cart, product, quantity):
+    def change_qty(self, cart, product, quantity):
         try:
-            cartItem = self.get(cart=cart, object_id=product.pk)
+            cartItem = self.get(cart=cart, product=product)
         except CartItem.DoesNotExist, e:
             self.create(cart=cart, product=product, quantity=quantity)
+            return quantity
         else:
             cartItem.quantity = cartItem.quantity + int(quantity)
+            if cartItem.quantity < 0:
+                cartItem.quantity = 0
             cartItem.save()
+            return cartItem.quantity
 
 
     def remote_item(self, cart, item_id):
         try:
-            cartItem = self.get(pk=item_id, cart=cart)
+            self.get(pk=item_id, cart=cart).delete()
         except CartItem.DoesNotExist, e:
-            raise CartItem.DoesNotExist()
+            #raise CartItem.DoesNotExist()
+            pass
         else:
-            cartItem.delete()
+            #cartItem.delete()
+            pass
 
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, verbose_name=_('cart'))
     quantity = models.PositiveIntegerField(verbose_name=_('quantity'))
-    unit_price = models.DecimalField(max_digits=18, decimal_places=2, verbose_name=_('unit price'))
+    product = models.ForeignKey(Product)
+    #unit_price = models.DecimalField(max_digits=18, decimal_places=2, verbose_name=_('unit price'))
     # product as generic relation
-    content_type = models.ForeignKey(ContentType)
-    object_id = models.PositiveIntegerField()
-    object_name = models.CharField(max_length=100)
+    #content_type = models.ForeignKey(ContentType)
+    #object_id = models.PositiveIntegerField()
+    #object_name = models.CharField(max_length=100)
+
 
     objects = ItemManager()
 
@@ -151,18 +163,18 @@ class CartItem(models.Model):
 
     @property
     def total_price(self):
-        return self.quantity * self.unit_price
+        return self.quantity * self.product.product_price
 
 #    total_price = property(total_price)
 
     # product
-    def get_product(self):
-        return self.content_type.get_object_for_this_type(id=self.object_id)
+    #def get_product(self):
+    #    return self.content_type.get_object_for_this_type(id=self.product_id)
 
-    def set_product(self, product):
-        self.content_type = ContentType.objects.get_for_model(type(product))
-        self.object_id = product.pk
-        self.object_name = product.product_name
+    #def set_product(self, product):
+    #    self.content_type = ContentType.objects.get_for_model(type(product))
+    #    self.object_id = product.pk
+    #    self.object_name = product.product_name
 
-    product = property(get_product, set_product)
+    #product = property(get_product, set_product)
 

@@ -6,24 +6,96 @@
 
 {% block main %}
     <script type="text/javascript">
+        function cleanCart() {
+            if (true == confirm("Are you sure you remove!")) {
+                window.location = '/cart/clean'
+            }
+        }
+
+        function changeQty(productId, count) {
+            $.ajax({url:'/cart/changeItemQty/' + productId + '/' + count,
+                        type: 'get',
+                        success: function(data, status) {
+                            var dataObj = eval("(" + data + ")");
+                            $('#total_price').text(dataObj.totalPrice);
+                            $('#qty_' + productId).attr('value', dataObj.itemQty);
+
+                            $('#cartCount').text(dataObj.cartCount);
+                        },
+                        error: function(xhr, desc, err) {
+                            alert(err);
+                        }
+                    });
+
+        }
+
+        function removeItem(itemId) {
+            if (true == confirm("Are you sure you remove!")) {
+                $.ajax({url:'/cart/remove/' + itemId,
+                            type: 'get',
+                            success: function(data, status) {
+                                if ('error' == data) {
+
+                                } else {
+                                    var dataObj = eval("(" + data + ")");
+                                    $('#total_price').text(dataObj.totalPrice);
+                                    $('#cartCount').text(dataObj.cartCount);
+
+                                    $('#tbody_' + itemId).remove();
+                                }
+
+                            },
+                            error: function(xhr, desc, err) {
+                                alert(err);
+                            }
+                        });
+            }
+        }
 
 
     </script>
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>name</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>unit price</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>quantity</b>
 
-
-    {% for item in items %}
-        {{ item|cart_item_general|safe }}
-    {% endfor %}
+    {% if items %}
+    <table style="width:100%;">
+        <thead id="thead_{{ item.pk }}">
+        <tr style="line-height:20px;">
+            <th align="left" colspan="2" style="width:360px;"></th>
+            <th align="left" colspan="2" style="width:80px;"><span id="total_price">{{ cart.total_price }}</span></th>
+            <th width="96px"></th>
+            <th><a href="javascript:" onclick="cleanCart()"><img src="/medias/images/remove.png"/></a>
+            </th>
+        </tr>
+        </thead>
+        {% for item in items %}
+            <tbody id="tbody_{{ item.pk }}">
+            <tr>
+                <td style="width:80px;"><img style="height:80px;width:80px;margin-right:30px;"
+                                             src="/medias/images/{{ item.product.product_image }}"/></td>
+                <td>{{ item.product.product_name }}</td>
+                <td>{{ item.product.product_price }}</td>
+                <td><a href="javascript:" onclick="changeQty('{{ item.product_id }}','-1');"><img
+                        src="/medias/images/list_sub.png"></a>&nbsp;
+                    <input id="qty_{{ item.product_id }}" type="text" value="{{ item.quantity }}" class="qty"
+                           readonly="readonly"/>&nbsp;
+                    <a href="javascript:" onclick="changeQty('{{ item.product_id }}', '1');"> <img
+                            src="/medias/images/list_add.png"></a>
+                </td>
+                <td></td>
+                <td><a href="javascript:"
+                       onclick="removeItem('{{ item.pk }}')"><img
+                        src="/medias/images/remove_2.png"/></a></td>
+            </tr>
+            </tbody>
+        {% endfor %}
+    </table>
 
     Total Price: {{ totalPrice }}
-    <br />
+    <br/>
     <input type="button" value="PAY NOW" class="pay_now"
-                           onclick="window.location='/order/checkout'"/>
-    <br />
-    <a href="/cart/clean" alt="checkout">Clean Cart</a>
+           onclick="window.location='/order/checkout'"/>
+    <br/>
+    <input type="button" value="Clean Cart" class="pay_now"
+           onclick="cleanCart()"/>
+
+    {% endif %}
 {% endblock %}

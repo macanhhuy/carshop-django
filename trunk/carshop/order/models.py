@@ -156,27 +156,27 @@ class OrderProductManager(models.Manager):
         for item in items:
             if len(orderProducts) != 0:
                 for orderProduct in orderProducts:
-                    if item.object_id == orderProduct.product_id and item.quantity != orderProduct.product_quantity:
+                    if item.product_id == orderProduct.product_id and item.quantity != orderProduct.product_quantity:
                         orderProduct.product_quantity = item.quantity
                         orderProduct.save()
                         break
 
             else:
-                self.create(order=order, product_id=item.object_id, product_name=item.object_name,
-                            product_quantity=item.quantity, product_unit_price=item.unit_price,
-                            product_final_price=item.unit_price)
+                self.create(order=order, product_id=item.product_id, product_name=item.product.product_name,
+                            product_quantity=item.quantity, product_unit_price=item.product.product_price,
+                            product_final_price=item.product.product_price)
 
 
     def add_order_products(self, order, items):
         for item in items:
-            self.create(order=order, product_id=item.object_id, product_name=item.object_name,
-                        product_quantity=item.quantity, product_unit_price=item.unit_price,
-                        product_final_price=item.unit_price)
+            self.create(order=order, product_id=item.product_id, product_name=item.product.product_name,
+                        product_quantity=item.quantity, product_unit_price=item.product.product_price,
+                        product_final_price=item.product.product_price)
 
     def add_order_product(self, order, item):
-        self.create(order=order, product_id=item.object_id, product_name=item.object_name,
-                    product_quantity=item.quantity, product_unit_price=item.unit_price,
-                    product_final_price=item.unit_price)
+        self.create(order=order, product_id=item.product_id, product_name=item.product.product_name,
+                    product_quantity=item.quantity, product_unit_price=item.product.product_price,
+                    product_final_price=item.product.product_price)
 
     def remove_order_product(self):
         pass

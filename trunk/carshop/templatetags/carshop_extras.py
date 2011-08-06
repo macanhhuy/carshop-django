@@ -71,12 +71,13 @@ def cart_item_general(cartItem):
 <div class="cartItem">
     <input type="hidden" value="%s"/>
     <input type="hidden" value="%s" style="margin-right:20px;"/>
+    <img src="/medias/images/%s" style="height:80px;width:80px;margin-right:30px;">
     <strong style="margin-right:20px;width:200px;">%s</strong>
     <strong style="margin-right:20px;width:200px;">%s</strong>
     <input type="text" class="qty" value="%s" style="margin-right:20px;">
     <a href="/cart/remove/%s">remove</a>
 </div>
-    ''' % (cartItem.id, cartItem.object_id, cartItem.object_name, cartItem.unit_price, cartItem.quantity, cartItem.id,)
+    ''' % (cartItem.id, cartItem.product_id, cartItem.product.product_image, cartItem.product.product_name, cartItem.product.product_price, cartItem.quantity, cartItem.id,)
 
 
 @register.filter()
