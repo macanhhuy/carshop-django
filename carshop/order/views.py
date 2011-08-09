@@ -101,14 +101,17 @@ def save_order(request):
     except Customer.DoesNotExist:
         return render_to_response('error.html', {}, RequestContext(request))
 
+    if order is None:
+        return render_to_response('prompt.html', {'prompt': 'you cart is empty'}, RequestContext(request))
+
     orderForm = OrderForm(instance=order)
     return render_to_response('order.html', {'orderForm': orderForm, 'orderId': order.pk, 'addresses': addresses}, RequestContext(request))
 
 
-@login_required(redirect_field_name='/order/orderStatus.html', login_url='/login')
-def order_status(request):
+@login_required(redirect_field_name='/order/orderStatus', login_url='/login')
+def order_status(request, pageIndex=1):
     try:
-        orders = Order.objects.get_order_and_order_products(customer=request.user.get_profile(), order_status=1)
+        orders = Order.objects.get_order_and_order_products(customer=request.user.get_profile(), order_status=1, page_index=pageIndex)
     except Customer.DoesNotExist:
         return render_to_response('error.html', {}, RequestContext(request))
 
@@ -167,13 +170,31 @@ def remove_order_product(request, orderId, orderProductId):
 
 
 def paypal_return(request):
-    print request
     try:
         if 'POST' == request.method:
             paypalIpnForm = PayPalIPNForm(request.POST)
             paypalIpnForm.save()
-            return HttpResponse('return success')
+
+            if 'Pending' == paypalIpnForm.instance.payment_status:
+                order = Order.objects.get(pk=paypalIpnForm.instance.invoice)
+                order.order_status = 2
+                order.save()
+
+            return render_to_response('success.html', {}, RequestContext(request))
         else:
-            return HttpResponse('error.html', {}, RequestContext(request))
+            return render_to_response('error.html', {}, RequestContext(request))
+    except Exception, e:
+        print e
+        return render_to_response('error.html', {'e': 'exception'}, RequestContext(request))
+
+def paypal_cancel(request):
+    try:
+        if 'POST' == request.method:
+            print(request.POST)
+            paypalIpnForm = PayPalIPNForm(request.POST)
+            paypalIpnForm.save()
+            return HttpResponse('return cancel')
+        else:
+            return render_to_response('error.html', {}, RequestContext(request))
     except Exception, e:
         return HttpResponse('exception')

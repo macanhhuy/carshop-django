@@ -4,6 +4,7 @@
 import datetime
 from django.db.models import Count
 from django.db import models
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from ..product.models import Product
 from ..models import Parameter, AddressFormat
 from ..customer.models import Customer
@@ -23,7 +24,8 @@ class OrderManager(models.Manager):
                     OrderProduct.objects.add_or_update_order_products(order, cart_items)
 
                     cart.clean_cart(request)
-
+                else:
+                    return None
             except Exception, e:
                 print e
                 return None
@@ -32,33 +34,22 @@ class OrderManager(models.Manager):
         else:
             return None
 
-    def create_or_get(self, cart=None, **kwargs):
-        if cart:
-            try:
-                if 'customer' in kwargs:
-                    order = self.get(customer=kwargs['customer'], cart=cart)
-                else:
-                    order = super(OrderManager, self).create(cart=cart, **kwargs)
-            except Order.DoesNotExist, e:
-                order = super(OrderManager, self).create(cart=cart, **kwargs)
-            except Exception, e:
-                print e
-                return None
-            cart_items = cart.cart_items
-            OrderProduct.objects.add_or_update_order_products(order, cart_items)
-            if order.order_total_price != cart.total_price:
-                order.order_total_price = cart.total_price
-                order.save()
-            return order
-        return None
-
-    def get_order_and_order_products(self, customer=None, order_status=1):
+    def get_order_and_order_products(self, customer=None, order_status=1, page_index=1, page_size=5):
         try:
-            orders = self.filter(customer=customer, order_status=order_status)
+            order_list = self.filter(customer=customer, order_status=order_status)
+            paginator = Paginator(order_list, page_size)
+
+            try:
+                orders = paginator.page(page_index)
+            except PageNotAnInteger:
+                orders = paginator.page(1)
+            except EmptyPage:
+                orders = paginator.page(paginator.num_pages)
+
         except Order.DoesNotExist:
             return None
         else:
-            for order in orders:
+            for order in orders.object_list:
                 try:
                     orderProducts = OrderProduct.objects.filter(order=order)
                 except OrderProduct.DoesNotExist:
@@ -144,6 +135,12 @@ class Order(models.Model): # 订单表
 
     objects = OrderManager()
 
+    def save(self, force_insert=False, force_update=False, using=None):
+        try:
+            self.time_purchased = datetime.datetime.now()
+        except:
+            pass
+        super(Order, self).save(force_insert, force_update, using)
 
     class Meta:
         db_table = "order"

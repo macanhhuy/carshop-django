@@ -47,10 +47,10 @@ urlpatterns = patterns(
     #
     #
     #########################################
-    (r'^paypal_success$', paypal_success),
-    (r'^paypal_ipn$', paypal_ipn),
-    (r'^paypal_return$', paypal_return),
-    (r'^paypal_cancel$', paypal_cancel),
+    #(r'^paypal_success$', paypal_success),
+    #(r'^paypal_ipn$', paypal_ipn),
+    #(r'^paypal_return$', paypal_return),
+    #(r'^paypal_cancel$', paypal_cancel),
 
 
 )

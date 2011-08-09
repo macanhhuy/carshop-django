@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background: #EEEDED url("/medias/images/body_bg.jpg") repeat-y center top;
-    font-size:10px;
+    font-size: 10px;
 }
 
 td {
@@ -15,7 +15,7 @@ td {
 }
 
 textarea {
-    font-size:12px;
+    font-size: 12px;
 }
 
 .justify {
@@ -28,21 +28,21 @@ img {
 
 a {
     color: #023D7F;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 a:hover {
     color: #023D7F;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .order span {
-    display:block;
-    font-weight:bold;
-    color:#084B9C;
-    float:left;
-    padding:3px 0 0 0;
-    margin-right:10px;
+    display: block;
+    font-weight: bold;
+    color: #084B9C;
+    float: left;
+    padding: 3px 0 0 0;
+    margin-right: 10px;
 
 }
 
@@ -600,12 +600,12 @@ ul.slink li a:hover {
 .blu_bg {
     background-image: url("/medias/images/conblu1_line.jpg");
     background-repeat: repeat-x;
+    font-size:0;// - -! 图片缝隙
 }
 
 .blu_bgb {
     background-color: #f9f8f8;
     border-bottom: 1px solid #dadada;
-    font-size: 4px;
 }
 
 .blu_rl {
@@ -867,8 +867,8 @@ ul.slink li a:hover {
     color: #000;
     width: 160px;
     border: 1px solid #a7a6aa;
-    padding-left: 2px;
     background-color: #fff !important;
+    padding: 2px 2px 2px 4px;
 }
 
 .box3 {
@@ -885,8 +885,9 @@ ul.slink li a:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     color: #000;
-    width: 170px;
+    width: 168px;
     border: 1px solid #a7a6aa;
+    padding: 2px 2px 2px 2px;
     background-color: #fff;
 }
 
@@ -1409,17 +1410,16 @@ ul.slink li a:hover {
     height: 245px;
     color: #2F2B2B;
     float: left;
-    width: 140px;
-/*    padding: 5px;    */
-    margin-left: 10px;
+    width: 140px; /*    padding: 5px;    */
+    margin-left: 28px;
     margin-top: 10px;
     text-align: center;
     vertical-align: middle;
-/*    border-top: solid 1px #E8E8E8;
-    border-bottom: solid 1px #E8E8E8;
-    border-left: solid 1px #E8E8E8;
-    border-right: solid 1px #E8E8E8;*/
-    position:relative;
+    /*    border-top: solid 1px #E8E8E8;
+ border-bottom: solid 1px #E8E8E8;
+ border-left: solid 1px #E8E8E8;
+ border-right: solid 1px #E8E8E8;*/
+    position: relative;
 }
 
 .product1 ul {
@@ -1433,11 +1433,11 @@ ul.slink li a:hover {
 .product1 img {
     height: 130px;
     width: 138px;
-/*    border-top: solid 1px #7A9792;
+    border-top: solid 1px #7A9792;
     border-bottom: solid 1px #7A9792;
     border-left: solid 1px #7A9792;
     border-right: solid 1px #7A9792;
-*/
+
 }
 
 .add_cart {
@@ -1520,40 +1520,40 @@ ul.slink li a:hover {
     TEXT-ALIGN: right;
 }
 
-.order input{
+.order input {
     border-top: solid 1px #7A9792;
     border-bottom: solid 1px #7A9792;
     border-left: solid 1px #7A9792;
     border-right: solid 1px #7A9792;
 }
 
-html{_background-image:url(about:blank);}
+html {
+    _background-image: url(about:blank);
+}
 
-#toolBar{
-    display:block;
-    width:100%;
-    line-height:30px;
-    height:30px;
-    position:fixed;
-    top:0;
-    background:#E5E5E5;
+#toolBar {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    background: #E5E5E5;
     border-bottom: solid 1px #B5B5B5;
-    background-repeat:repeat-x;
-    z-index:9999;
-    overflow:hidden;
+    background-repeat: repeat-x;
+    z-index: 999;
+    overflow: hidden;
     text-align: center;
-    margin:auto 0
-    
+    margin: auto 0;
 }
 
-#toolBar{
-	_position:absolute;
-	_top:expression(0+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");
+#toolBar {
+    _position: absolute;
+    _top: expression(0+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+"px");
 
 }
 
-
-#toolBar  div {
+#toolBar div {
     display: block;
     height: 30px;
     line-height: 30px;
@@ -1597,18 +1597,15 @@ html{_background-image:url(about:blank);}
 */
 #toolBar img {
     margin: 5px 0 5px 0;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
-#toolBar span{
+#toolBar span {
     font-weight: bold;
     color: #084B9C;
 
 }
 
 img {
-     vertical-align:middle;
+    vertical-align: middle;
 }
- 
-
-

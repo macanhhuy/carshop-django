@@ -75,8 +75,24 @@
         }
 
     </script>
+    <a href="#">more</a>
+
+    <div>
+        <span>
+            {% if orders.has_previous %}
+                <a href="/order/orderStatus/{{ orders.previous_page_number }}">previous</a>
+            {% endif %}
+        </span>
+        Page {{ orders.number }} of {{ orders.paginator.num_pages }}.
+        <span>
+            {% if orders.has_next %}
+                <a href="/order/orderStatus/{{ orders.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </div>
+
     <table style="width:100%;" id='table_order'>
-        {% for order in orders %}
+        {% for order in orders.object_list %}
             <thead id="thead_{{ order.pk }}">
             <tr>
                 <th align="left" colspan="2" style="width:360px;">No.:&nbsp;{{ order.pk }}</th>
@@ -96,10 +112,13 @@
                                                      src="/medias/images/{{ order_product.product_image }}"/></td>
                         <td>{{ order_product.product_name }}</td>
                         <td>{{ order_product.product_unit_price }}</td>
-                        <td><a href="javascript:" onclick="changeQty('{{ order.pk }}', {{ order_product.pk }},'-1');"><img src="/medias/images/list_sub.png"></a>&nbsp;<input
+                        <td><a href="javascript:"
+                               onclick="changeQty('{{ order.pk }}', {{ order_product.pk }},'-1');"><img
+                                src="/medias/images/list_sub.png"></a>&nbsp;<input
                                 id="qty_{{ order_product.pk }}" type="text" value="{{ order_product.product_quantity }}"
                                 class="qty" readonly="readonly"/>&nbsp;<a href="javascript:"
-                                                                          onclick="changeQty('{{ order.id }}', {{ order_product.pk }}, '1');"><img src="/medias/images/list_add.png"></a>
+                                                                          onclick="changeQty('{{ order.id }}', {{ order_product.pk }}, '1');"><img
+                                src="/medias/images/list_add.png"></a>
                         </td>
                         <td></td>
                         <td><a href="javascript:"
