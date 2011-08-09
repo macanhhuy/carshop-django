@@ -13,16 +13,15 @@
     <link href="/medias/styles/style.css" type="text/css" rel="stylesheet"/>
     <link href="/medias/styles/leftNavigate.css" type="text/css" rel="stylesheet"/>
     <link href="/medias/styles/lightBox.css" type="text/css" rel="stylesheet"/>
-    <link type="text/css" href="/medias/styles/default/jx.stylesheet.css" rel="stylesheet" />
-    
+    <link type="text/css" href="/medias/styles/default/jx.stylesheet.css" rel="stylesheet"/>
+
     <script src="/medias/scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
     <script src="/medias/scripts/leftNavigate.js" type="text/javascript"></script>
     <!--<script src="/medias/scripts/lightBox.js" type="text/javascript"></script>-->
-    
+
     <script type="text/javascript">
 
-    
-    
+
     </script>
 </head>
 <body>
@@ -440,9 +439,9 @@
                 <td style="width:17px;background:url(/medias/images/con4.jpg) no-repeat"></td>
             </tr>
         </table>
-					<span
-                            style="text-align: center; display: block; padding: 5px 0 5px 0;">Owned
-						and Operated by ERP Consultancy</span>
+					<span style="text-align: center; display: block; padding: 5px 0 5px 0;">
+                        Owned and Operated by ERP Consultancy
+                    </span>
 
         <br/>
 
@@ -501,26 +500,27 @@ function refreshCheckCode(){
 
 </script>
 -->
+
 <div id="toolBar">
     <div style="width:10px;">
     </div>
     {% if user.is_authenticated %}
-    <div class="div_item">
-        <span>Welcome&nbsp;<a style="text-decoration:none;" href="#">{{ user.username }}</a> &nbsp;</span>
-    </div>
+        <div class="div_item">
+            <span>Welcome&nbsp;<a style="text-decoration:none;" href="#">{{ user.username }}</a> &nbsp;</span>
+        </div>
     {% endif %}
     <div style="float:right;width:10px;" class="div_item">
     </div>
-    
+
     <div style="float:right;width:60px;" class="div_item">
         {% if user.is_authenticated %}
-        <span>
+            <span>
             <a style="text-decoration:none;" href="/logout">
                 <img src="/medias/images/logout.png" alt="Logout"/><span>&nbsp;Logout</span></img>
             </a>
         </span>
         {% else %}
-        <span>
+            <span>
             <a href="/login">
                 <img src="/medias/images/login.png" alt="Login"/><span>&nbsp;Login</span></img>
             </a>
@@ -532,15 +532,21 @@ function refreshCheckCode(){
             <img src="/medias/images/register.png" alt="Register"/><span>&nbsp;Register</span></img>
         </a>
     </div>
-    
-    <div style="float:right;" class="div_item">
-        <a href="/order/orderStatus.html">
-            <span id="orderStatus">{{ order_status__count }}</span>&nbsp;<img src="/medias/images/order_status.png" alt="Order Status"><span>&nbsp;Order Status</span></img>
-        </a>
-    </div>
+
+    {% if user.is_authenticated %}
+        <div style="float:right;" class="div_item">
+
+            <a href="/order/orderStatus">
+                <span id="orderStatus">{{ order_status__count }}</span>&nbsp;<img
+                    src="/medias/images/order_status.png" alt="Order Status"><span>&nbsp;Order Status</span></img>
+            </a>
+
+        </div>
+    {% endif %}
     <div style="float:right;" class="div_item">
         <a href="/cart/cart.html">
-            <span id="cartCount">{{ cart_count }}</span>&nbsp;<img src="/medias/images/cart.png" alt="Shopping Cart"><span>&nbsp;Shop Cart</span></img>
+            <span id="cartCount">{{ cart_count }}</span>&nbsp;<img src="/medias/images/cart.png"
+                                                                   alt="Shopping Cart"><span>&nbsp;Shop Cart</span></img>
         </a>
     </div>
 </div>

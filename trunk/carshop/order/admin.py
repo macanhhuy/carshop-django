@@ -5,7 +5,16 @@ from .models import *
 
 
 class OrderAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('pk', 'full_name', )
+
+    list_filter = ('time_purchased', 'customer')
+
+    list_per_page = 20
+
+    search_fields = ('id', 'billing_first_name', 'billing_last_name', )
+
+    def full_name(self, obj):
+        return obj.billing_first_name + ' ' + obj.billing_last_name
 
 
 class OrderProductAdmin(admin.ModelAdmin):

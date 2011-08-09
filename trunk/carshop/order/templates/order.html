@@ -60,7 +60,7 @@
     <div id="div_address">
         {% for address in addresses %}
             <input type="radio" name="radio_address" id="radio_address_{{ address.pk }}" style="vertical-align:middle;"
-                   onclick="changeAddress('radio_address_' + {{ address.pk }}, '{{ address.country }}', '{{ address.state }}', '{{ address.city }}', '{{ address.first_name }}', '{{ address.last_name }}', '{{ address.street_address }}', '{{ address.zip }}')">
+                   onchange="changeAddress('radio_address_' + {{ address.pk }}, '{{ address.country }}', '{{ address.state }}', '{{ address.city }}', '{{ address.first_name }}', '{{ address.last_name }}', '{{ address.street_address }}', '{{ address.zip }}')">
             <label for="radio_address_{{ address.pk }}" style="vertical-align:middle;">{{ address }}</label><br/>
         {% endfor %}
     </div>
@@ -69,7 +69,7 @@
         <table class="order">
             {{ orderForm.as_table }}
         </table>
-        <input type="submit" value="next"/>
+        <input type="submit" value="continue" class="pay_now"/>
 
     </form>
 

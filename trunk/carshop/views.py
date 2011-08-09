@@ -64,7 +64,8 @@ def login_view(request, redirect=None):
         except Exception, e:
             return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
     else:
-        return render_to_response('login.html', {}, RequestContext(request))
+        form = RegisterForm(error_class=NoStyleErrorList)
+        return render_to_response('login.html', {'form': form}, RequestContext(request))
 
 
 def login_ajax(request):
@@ -182,23 +183,6 @@ def checkcode(request, time):
     im.save(buf, 'gif')
     return HttpResponse(buf.getvalue(), 'image/gif')
 
-
-def paypal_ipn(request):
-    return HttpResponse('ipn')
-
-
-def paypal_return(request):
-    print request
-    return HttpResponse('return')
-
-
-def paypal_cancel(request):
-    print request
-    return HttpResponse('cancel')
-
-
-def paypal_success(request):
-    return HttpResponse('success')
 
 
 def redirect_to_login(next, login_url=None,

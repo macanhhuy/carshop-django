@@ -53,14 +53,14 @@ class Product(models.Model): #
     def get_absolute_url(self):
         return '/product/' + self.product_name.replace(' ', '-') + '.html'
 
-    def save(self, force_insert=False, force_update=False):
+    def save(self, force_insert=False, force_update=False, using=None):
         try:
             old_obj = Product.objects.get(pk=self.pk)
             path = old_obj.product_image.path
             #os.unlink(path)
         except:
             pass
-        super(Product, self).save(force_insert, force_update)
+        super(Product, self).save(force_insert, force_update, using)
 
 
     def __unicode__(self):
