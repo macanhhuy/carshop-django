@@ -134,6 +134,9 @@ INSTALLED_APPS = (
 'carshop.cart',
 
 'carshop.paypal.standard.ipn',
+#'haystack',
+'djangosphinx',
+
 
 'dmigrations',
 'debug_toolbar',
@@ -142,6 +145,22 @@ INSTALLED_APPS = (
 
 AUTH_PROFILE_MODULE = 'customer.Customer'
 
+DATABASE_ENGINE = 'mysql'
+#
+# Sphinx 0.9.9
+SPHINX_API_VERSION = 0x116
+# Sphinx 0.9.8
+SPHINX_API_VERSION = 0x113
+# Sphinx 0.9.7
+SPHINX_API_VERSION = 0x107
+
+SPHINX_PORT = 9312
+
+######################################################
+#
+#
+#
+######################################################
 PAYPAL_RECEIVER_EMAIL = 'xtwxfxk@gmail.com'
 PAYPAL_TEST = True
 PAYPAL_WPP_USER = "xtwxfxk_api1.gmail.com"

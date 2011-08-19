@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load carshop_extras %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<div>
+    <!--
+	{% if products %}
+		<p>Your search for &ldquo;<strong>{{ searchContent }}</strong>&rdquo; had <strong>{{ search_meta.total_found }}</strong> results.</p>
+		<p>search_meta object dump: {{ search_meta }}</p>
+	{% endif %}
+	<hr/>
+	-->
+
+	{% for product in products %}
+			{{ product|product_general|safe }}
+	{% empty %}
+		<p>YOU HAVEN'T SEARCHED YET.</p>
+	{% endfor %}
+</div>
+{% endblock %}

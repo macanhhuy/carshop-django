@@ -4,31 +4,27 @@
 {% block title %}Product{% endblock %}
 
 {% block main %}
-
-
-    <div>
-        <span>
-            {% if products.has_previous %}
-                <a href="all-{{ products.previous_page_number }}.html">previous</a>
-            {% endif %}
-        </span>
-        Page {{ products.number }} of {{ products.paginator.num_pages }}.
-        <span>
-            {% if products.has_next %}
-                <a href="all-{{ products.next_page_number }}.html">next</a>
-            {% endif %}
-        </span>
-    </div>
-
-    {% if not products %}
-        don't have this product
-    {% else %}
-        {% for product in products.object_list %}
-            {{ product|product_general|safe }}
-        {% endfor %}
-    {% endif %}
-
-
+    <table width="703" border="0" cellspacing="0" cellpadding="0" align="right" class="border">
+        <tr>
+            <td>{{ products|pager_generator|safe }}</td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    {% if not products %}
+                        don't have this product
+                    {% else %}
+                        {% for product in products.object_list %}
+                            {{ product|product_generalor|safe }}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>{{ products|pager_generator|safe }}</td>
+        </tr>
+    </table>
     <script src="/medias/scripts/cart.js" type="text/javascript"></script>
 
 {% endblock %}

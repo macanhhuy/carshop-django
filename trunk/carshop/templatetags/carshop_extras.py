@@ -27,7 +27,7 @@ def get_range(value):
 
 
 @register.filter()
-def product_general(product):
+def product_generalor(product):
     ''' '''
 
     return '''
@@ -61,12 +61,13 @@ def product_general(product):
 	</ul>
 
 </div>
-''' % (str(product.id), product.product_name.replace(' ', '-'), product.product_image, product.product_name, product.product_name.replace(' ', '-'), product.product_name,
-             product.product_name, str(product.product_price), str(product.id), str(product.id), )
+''' % (str(product.id), product.product_name.replace(' ', '-'), product.product_image, product.product_name,
+       product.product_name.replace(' ', '-'), product.product_name,
+       product.product_name, str(product.product_price), str(product.id), str(product.id), )
 
 
 @register.filter()
-def cart_item_general(cartItem):
+def cart_item_generalor(cartItem):
     return '''
 <div class="cartItem">
     <input type="hidden" value="%s"/>
@@ -77,17 +78,35 @@ def cart_item_general(cartItem):
     <input type="text" class="qty" value="%s" style="margin-right:20px;">
     <a href="/cart/remove/%s">remove</a>
 </div>
-    ''' % (cartItem.id, cartItem.product_id, cartItem.product.product_image, cartItem.product.product_name, cartItem.product.product_price, cartItem.quantity, cartItem.id,)
+    ''' % (cartItem.id, cartItem.product_id, cartItem.product.product_image, cartItem.product.product_name,
+           cartItem.product.product_price, cartItem.quantity, cartItem.id,)
 
 
 @register.filter()
 def check_end_sprit(url):
-
     if url.endswith('/'):
         return url
     else:
         return url + '/'
 
+
 @register.filter()
 def space2line(name):
     return name.replace(' ', '_')
+
+
+@register.filter()
+def pager_generator(page):
+
+    pager_html = '<div class="manu" style="margin-top:20px;margin-bottom:20px">'
+    pager_html = pager_html + ('<a href="all-' + str(page.previous_page_number()) + '.html">< Prev</a>' if page.has_previous() else '')
+
+    for page_num in page.paginator.page_range:
+        if page_num == page.number:
+            pager_html = pager_html + '<span class="current">' + str(page_num) + '</span>'
+        else:
+            pager_html = pager_html + '<a href="all-' + str(page_num) + '.html">' + str(page_num) + '</a>'
+
+    pager_html = pager_html + ('<a href="all-' + str(page.next_page_number()) + '.html">Next ></a>' if page.has_next() else '')
+    
+    return pager_html

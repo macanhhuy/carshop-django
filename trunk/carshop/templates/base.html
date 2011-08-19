@@ -100,15 +100,16 @@
                                 </td>
                                 <td width="20%">
                                     <!--Search Starts Here-->
+                                    <form action="/search" method="post">
                                     <table width="100%">
                                         <tr>
                                             <td height="18" width="60">
                                             </td>
                                             <td width="172">
 															<span class="search_box"> <input
-                                                                    name="PageHeader1$txtSearchBox" type="text"
-                                                                    value="Enter search text"
-                                                                    id="PageHeader1_txtSearchBox"
+                                                                    name="searchContent" type="text"
+                                                                    value="{{ searchContent }}"
+                                                                    id="searchContent"
                                                                     title="Enter search text" class="box1"
                                                                     onMouseOver="ClearSearchText();"
                                                                     onBlur="SetTopSearchText();"/> </span>
@@ -120,12 +121,14 @@
                                                 <input type="image" name="PageHeader1$imgGo"
                                                        id="PageHeader1_imgGo" src="/medias/images/go.jpg"
                                                        alt="Click here to search"
-                                                       onClick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;PageHeader1$imgGo&quot;, &quot;&quot;, true, &quot;search&quot;, &quot;&quot;, false, false))"
+                                                       onClick=""
                                                        style="border-width: 0px;"/>
                                             </td>
                                         </tr>
                                     </table>
+                                    </form>
                                     <!--Search ends Here-->
+                                    
                                     <div id="PageHeader1_ValidationSummary1"
                                          style="color: Red; display: none;">
 

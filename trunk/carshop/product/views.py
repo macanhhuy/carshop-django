@@ -10,13 +10,13 @@ from .models import *
 
 
 
-def findProductTypeById(request, productTypeId):
-    type = Parameter.objects.get(pk=productTypeId)
-    products = Product.objects.extra(
-        where=['product_type_id in (select par.id from parameter as par where par.parameter_parent_id=%s)', ],
-        params=[productTypeId, ])
+#def findProductTypeById(request, productTypeId):
+#    type = Parameter.objects.get(pk=productTypeId)
+#    products = Product.objects.extra(
+#        where=['product_type_id in (select par.id from parameter as par where par.parameter_parent_id=%s)', ],
+#        params=[productTypeId, ])
 
-    return render_to_response('productType.html', {'type': type, 'products': products}, RequestContext(request))
+#    return render_to_response('productType.html', {'type': type, 'products': products}, RequestContext(request))
 
 
 def findProductById(request, productId):
