@@ -7,6 +7,8 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.db.models.signals import post_delete
 
+from djangosphinx import SphinxSearch
+
 from ..brand.models import Car
 from ..models import Parameter
 
@@ -50,6 +52,13 @@ class Product(models.Model): #
     metatag_price_status = models.IntegerField(blank=True, null=True) # ?
     metatag_title_tagline_status = models.IntegerField(blank=True, null=True) # ?
 
+    search = SphinxSearch(
+        index='product_product',
+        #weights={
+        #    'product_name': 100,
+        #    }
+    )
+
     def get_absolute_url(self):
         return '/product/' + self.product_name.replace(' ', '-') + '.html'
 
@@ -68,6 +77,9 @@ class Product(models.Model): #
 
     class Meta:
         db_table = 'product'
+
+
+
 
 
 class ProductAttribute(models.Model): # 产品属性表

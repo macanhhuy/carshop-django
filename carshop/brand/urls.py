@@ -5,7 +5,7 @@ from .views import *
 
 urlpatterns = patterns(
     '',
-    (r'^all.html$', allBrand),
-
+    (r'^all.html$', all),
+    (r'^brand-(?P<brandName>.*).html', brand),
 
 )

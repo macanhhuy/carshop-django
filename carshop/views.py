@@ -21,6 +21,7 @@ from carshop.product.models import Product
 
 from carshop.customer.models import Customer
 from .cart.models import Cart
+from .product.models import Product
 
 import Image, ImageDraw, ImageFont, md5, random, cStringIO
 
@@ -45,7 +46,6 @@ def logout_view(request):
 
 
 def login_view(request, redirect=None):
-
     if request.method == 'POST':
         try:
             username = request.POST['username']
@@ -60,7 +60,8 @@ def login_view(request, redirect=None):
                 else:
                     return HttpResponseRedirect('/index.html')
             else:
-                return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
+                return render_to_response('login.html', {'username': username, 'message': 'error'},
+                                          RequestContext(request))
         except Exception, e:
             return render_to_response('login.html', {'username': username, 'message': 'error'}, RequestContext(request))
     else:
@@ -123,7 +124,7 @@ def register(request):
                 user.first_name = first_name
                 user.last_name = last_name
                 user.save()
-                
+
                 user.get_profile().customer_name = user.get_full_name()
                 user.get_profile().customer_address = address
                 user.get_profile().customer_zip = zip
@@ -184,7 +185,6 @@ def checkcode(request, time):
     return HttpResponse(buf.getvalue(), 'image/gif')
 
 
-
 def redirect_to_login(next, login_url=None,
                       redirect_field_name=None):
     """
@@ -199,3 +199,16 @@ def redirect_to_login(next, login_url=None,
         login_url_parts = list(urlparse.urlparse(login_url))
 
     return HttpResponseRedirect(urlparse.urlunparse(login_url_parts))
+
+
+def search(request):
+    if request.method == 'POST':
+        searchContent = request.POST.get('searchContent', None)
+        r = Product.search.query(searchContent)
+        products = list(r)
+        context = {'products': products, 'searchContent': searchContent, 'search_meta': r._sphinx}
+    else:
+        products = list()
+        context = {'products': products}
+    #return render_to_response('search.html', context)
+    return render_to_response('search.html', context, RequestContext(request))
